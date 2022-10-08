@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Projects</title>
+    <link href="https://nsafran.com/feed.xml" rel="self" />
+    <link href="https://nsafran.com" />
+    <updated>2022-10-08T15:03:23-04:00</updated>
+    <author>
+        <name>Nathan Safran</name>
+    </author>
+    <id>https://nsafran.com</id>
+
+    <entry>
+        <title> Silicon Graphics</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/silicon-graphics.html"/>
+        <id>https://nsafran.com/silicon-graphics.html</id>
+            <category term="Unix"/>
+            <category term="Silicon Graphics"/>
+
+        <updated>2022-10-08T15:01:47-04:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
+                    Indy Indigo 2 Octane
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
+                <p>Indy<br>Indigo 2<br>Octane</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Sun Fire v240</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sun-fire-v240.html"/>
+        <id>https://nsafran.com/sun-fire-v240.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T14:00:23-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Sun Fire v100</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sun-fire-v100.html"/>
+        <id>https://nsafran.com/sun-fire-v100.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T14:00:03-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Sun Blade 150</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sun-blade-150.html"/>
+        <id>https://nsafran.com/sun-blade-150.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T14:00:08-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Ultra 10</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/ultra-10.html"/>
+        <id>https://nsafran.com/ultra-10.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T13:59:45-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>SPARCStation 5</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sparcstation-5.html"/>
+        <id>https://nsafran.com/sparcstation-5.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T13:59:36-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Ultra 1</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/ultra-1.html"/>
+        <id>https://nsafran.com/ultra-1.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T13:59:22-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>SPARCStation 10</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sparcstation-10.html"/>
+        <id>https://nsafran.com/sparcstation-10.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T13:59:10-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Home Page</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/home-page.html"/>
+        <id>https://nsafran.com/home-page.html</id>
+
+        <updated>2022-10-08T15:03:23-04:00</updated>
+            <summary>
+                <![CDATA[
+                    This website will serve as documentation for my computer and electronic projects. Some projects include: Various Unix Workstations A Custom Z80 computer Various Nixie and VFD clocks
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>This website will serve as documentation for my computer and electronic projects.</p>
+<p>Some projects include:</p>
+<ul>
+<li>Various Unix Workstations</li>
+<li>A Custom Z80 computer</li>
+<li>Various Nixie and VFD clocks</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>SPARCStation IPX</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sparcstation-ipx.html"/>
+        <id>https://nsafran.com/sparcstation-ipx.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T13:58:50-04:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://nsafran.com/media/posts/5/20221008_131738.jpg" alt="" />
+                    Overview I really enjoy the lunchbox form factor of the IPX. I purchased this SPARCStation IPX on ebay as untested, but it did say it powered on. My system came with a dummy load installed where the hard disk would be, so I'm assuming it&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://nsafran.com/media/posts/5/20221008_131738.jpg" alt="" />
+                <h2>Overview</h2>
+<p>I really enjoy the lunchbox form factor of the IPX. I purchased this SPARCStation IPX on ebay as untested, but it did say it powered on. My system came with a dummy load installed where the hard disk would be, so I'm assuming it never had a hard disk and net booted Sun OS when it was in server.</p>
+<p>I installed a 2.1 GB Hard disk and purchased a SCSI cable for it. Of Course, the NVRAM battery was dead. I repaired it by bypassing the internal battery and installing an external battery holder as described on this page. <a href="http://www.tns-soft.com/nvram_redux.html" target="_blank" rel="noopener noreferrer">Sun NVRAM Repair</a></p>
+<p>The system currently has 40MB of RAM and is running SunOS 4.1.4, the last release of the BSD based operating system <span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">by Sun. The GUI on SunOS is pretty simplistic compared to the later versions of Solaris, but it works. I compiled some modern tools for it including bash, tar, gzip, and other. Its definitely the slowest workstation I have, but I enjoy messing around with it.</span></p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20221008_131728.jpg" data-size="1863x1846"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20221008_131728-thumbnail.jpg" alt="" width="720" height="713"></a>
+<figcaption>System and Hard Disk</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20220121_170012.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20220121_170012-thumbnail.jpg" alt="" width="720" height="405"></a>
+<figcaption>NVRAM Repair</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20221008_132538.jpg" data-size="2400x2025"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20221008_132538-thumbnail.jpg" alt="" width="720" height="608"></a>
+<figcaption>OpenWindows</figcaption>
+</figure>
+</div></div>
+<h2>External Hard Disk</h2>
+<p>I really like the form factor, so I purchased an external hard disk on ebay to go with it. This disk was sold as not working, does not power up. When it arrived, I opened up the PSU and saw what I expected, leaking capacitors. I ordered replacements on DigiKey for the 4 large capacitors and replaced them. Luckily that was the only issue with the supply.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20220203_181019.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20220203_181019-thumbnail.jpg" alt="" width="720" height="405"></a>
+<figcaption>Capacitors removed</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20220203_182954.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20220203_182954-thumbnail.jpg" alt="" width="720" height="405"></a>
+<figcaption>New Caps</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/5/gallery/20220203_185322.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/5/gallery/20220203_185322-thumbnail.jpg" alt="" width="720" height="405"></a>
+<figcaption>Compared to a new SSD</figcaption>
+</figure>
+</div></div>
+            ]]>
+        </content>
+    </entry>
+</feed>
