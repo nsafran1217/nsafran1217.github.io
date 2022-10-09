@@ -138,14 +138,14 @@
                    "Silicon Graphics"
             ],
             "date_published": "2022-10-08T14:58:38-04:00",
-            "date_modified": "2022-10-08T20:00:29-04:00"
+            "date_modified": "2022-10-09T01:11:34-04:00"
         },
         {
             "id": "https://nsafran.com/sun-fire-v240.html",
             "url": "https://nsafran.com/sun-fire-v240.html",
             "title": "Sun Fire v240",
-            "summary": "Sun Microsystems Home",
-            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>",
+            "summary": "Sun Microsystems Home Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.",
+            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>\n<h2>Overview</h2>\n<p>Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.</p>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -154,7 +154,7 @@
                    "Sun Microsystems"
             ],
             "date_published": "2022-10-08T14:00:23-04:00",
-            "date_modified": "2022-10-08T19:25:18-04:00"
+            "date_modified": "2022-10-09T01:11:24-04:00"
         }
     ]
 }

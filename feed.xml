@@ -3,7 +3,7 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2022-10-08T20:23:26-04:00</updated>
+    <updated>2022-10-09T01:11:34-04:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
@@ -139,7 +139,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-08T20:00:29-04:00</updated>
+        <updated>2022-10-09T01:11:34-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
@@ -165,15 +165,17 @@
             <category term="Unix"/>
             <category term="Sun Microsystems"/>
 
-        <updated>2022-10-08T19:25:18-04:00</updated>
+        <updated>2022-10-09T01:11:24-04:00</updated>
             <summary>
                 <![CDATA[
-                    Sun Microsystems Home
+                    Sun Microsystems Home Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
+<h2>Overview</h2>
+<p>Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.</p>
             ]]>
         </content>
     </entry>
