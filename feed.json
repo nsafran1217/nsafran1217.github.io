@@ -69,6 +69,8 @@
             "id": "https://nsafran.com/digital-equipment-corporation.html",
             "url": "https://nsafran.com/digital-equipment-corporation.html",
             "title": "Digital Equipment Corporation",
+            "summary": "Digital VT240 Terminal Digital VAXstation 3100 Digital PDP-11/34a",
+            "content_html": "<p><a href=\"https://nsafran.com/digital-vt240.html\">Digital VT240 Terminal</a><br><a href=\"https://nsafran.com/digital-vaxstation-3100-m38.html\">Digital VAXstation 3100</a><br><a href=\"https://nsafran.com/digital-pdp-1134a-2.html\">Digital PDP-11/34a</a></p>",
             "image": "https://nsafran.com/media/posts/18/dec-logo.png",
             "author": {
                 "name": "Nathan Safran"
@@ -78,12 +80,15 @@
                    "Digital"
             ],
             "date_published": "2022-10-08T19:19:23-04:00",
-            "date_modified": "2022-10-08T19:20:45-04:00"
+            "date_modified": "2022-10-09T15:03:38-04:00"
         },
         {
             "id": "https://nsafran.com/octane.html",
             "url": "https://nsafran.com/octane.html",
             "title": "Octane",
+            "summary": "Silicon Graphics Home The Octane was SGI's replacement for the Indigo 2. It is a powerful workstation with impressive graphics capabilities. The Octane could have 2 CPUs, and many different expansion cards installed into its proprietary XIO bus. The Octane is a modular design with&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/silicon-graphics.html\">Silicon Graphics Home</a></p>\n<h2>Overview</h2>\n<p>The Octane was SGI's replacement for the Indigo 2. It is a powerful workstation with impressive graphics capabilities. The Octane could have 2 CPUs, and many different expansion cards installed into its proprietary XIO bus. The Octane is a modular design with the XIO expansion cards and the system board connecting to a front plane. The heart of the Octane's design is the Crossbar switch, which allows high speed communication between the CPU and the expansion cards. The main connection to the front plane uses very fragile compression connectors, which have gold fingers that press onto the PCB. You should never touch these connectors. Even brushing against them could damage them.</p>\n<p>I have two Octanes but currently only one is fully workings. The Octanes I have are later models, so they have the new SGI logo on the front and updated \"cherokee\" power supplies. The working octane has a system board with 2x 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. Irix 6.5.30 is installed onto a 18GB hard disk.</p>\n<p>The non-working system has 1x 300 MHz R12000, 1GB of RAM, and EMXI/MXE graphics. The issue with the non-working system is the graphics board. I get a kernel panic as soon as X tries to initialize the graphics hardware. I've tried running the board without the TRAMs installed, which makes the board an SSE, with no luck. I even tried swapping the compression connector from an Octane personal video with no change, since the connector on the MXE board looked a little dirty.</p>\n<p>The performance difference between the Octane and my Indigo 2 is significant. The Octane compiles software very quickly and is very snappy to use.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/17/gallery/20221008_181903.jpg\" data-size=\"3757x2200\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/17/gallery/20221008_181903-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"422\"></a></figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/17/gallery/20221008_182118.jpg\" data-size=\"2944x2267\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/17/gallery/20221008_182118-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"554\"></a></figure>\n</div></div>",
+            "image": "https://nsafran.com/media/posts/17/20221008_181907.jpg",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -92,12 +97,15 @@
                    "Silicon Graphics"
             ],
             "date_published": "2022-10-08T15:28:05-04:00",
-            "date_modified": "2022-10-08T15:28:05-04:00"
+            "date_modified": "2022-10-09T15:02:35-04:00"
         },
         {
             "id": "https://nsafran.com/indigo-2.html",
             "url": "https://nsafran.com/indigo-2.html",
             "title": "Indigo 2",
+            "summary": "Silicon Graphics Home The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add a purple model to my collection one day. The teal isn't my favorite color. My system has a 150 MHz R4400 with 128MB of RAM and&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/silicon-graphics.html\">Silicon Graphics Home</a></p>\n<h2>Overview</h2>\n<p>The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add a purple model to my collection one day. The teal isn't my favorite color.<br>My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics. XZ was also known as Express graphics. The graphics board set is made up of 2 boards sandwiched together. It has 2 Geometry Engines, 1 Reality Engine, and a Z Buffer, with 24-Bit color.</p>\n<p>It has Irix 6.5.22 installed on a 36 GB SCSI hard disk. I don't have a lot of 50 pin SCSI disks, so I used an adapter to go from 50 pin SCSI to 80 pin SCA, since I have a lot of SCA drives from old servers. Its tight and it bends the hard disks board a little, but I haven't had any issues.</p>\n<p>When I first got the system, the graphics output had an issue. the screen was covered with vertical lines, but the mouse cursor was on top of the lines. Thankfully, all I had to do was split the graphics board set and reseat all the connections to fix it.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"3\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/16/gallery/20210621_184209.jpg\" data-size=\"3453x2267\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/16/gallery/20210621_184209-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"473\"></a>\n<figcaption>Graphics issue</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/16/gallery/20221008_180132.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/16/gallery/20221008_180132-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>System</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/16/gallery/20221008_180749.jpg\" data-size=\"3007x2267\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/16/gallery/20221008_180749-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"543\"></a>\n<figcaption>Desktop</figcaption>\n</figure>\n</div></div>",
+            "image": "https://nsafran.com/media/posts/16/20221008_180132.jpg",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -106,12 +114,14 @@
                    "Silicon Graphics"
             ],
             "date_published": "2022-10-08T15:27:56-04:00",
-            "date_modified": "2022-10-08T15:27:56-04:00"
+            "date_modified": "2022-10-09T14:26:00-04:00"
         },
         {
             "id": "https://nsafran.com/indy.html",
             "url": "https://nsafran.com/indy.html",
             "title": "Indy",
+            "summary": "Silicon Graphics Home The Indy is my favorite Silicon Graphics machine, just for the case design. I love the color, the speckled finish, and how the case looks like its fractured horizontally. The Indy is well known for being underpowered, an \"Indigo without the go\".",
+            "content_html": "<p><a href=\"https://nsafran.com/silicon-graphics.html\">Silicon Graphics Home</a></p>\n<h2>Overview</h2>\n<p>The Indy is my favorite Silicon Graphics machine, just for the case design. I love the color, the speckled finish, and how the case looks like its fractured horizontally.<br>The Indy is well known for being underpowered, an \"Indigo without the go\". I agree with that sentiment after using it when compared to my Indigo 2.<br>This Indy has a 100 MHz R4600 CPU with FPU, 96MB of RAM, and 8-bit graphics. It has Irix 6.5.22 installed on a 9.1 GB SCSI hard disk. Irix 6.5.22 is the latest version of Irix that will run on the Indy and other IP22 architecture machines.</p>\n<p>Overall Irix is a very nice Unix, and the 4Dwm window manager feels very snappy.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/15/gallery/20221008_175534.jpg\" data-size=\"2840x2114\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/15/gallery/20221008_175534-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"536\"></a>\n<figcaption>Desktop</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/15/gallery/20221008_174218.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/15/gallery/20221008_174218-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>I liked the labels so I left them on</figcaption>\n</figure>\n</div></div>",
             "image": "https://nsafran.com/media/posts/15/20221008_174221.jpg",
             "author": {
                 "name": "Nathan Safran"
@@ -121,7 +131,7 @@
                    "Silicon Graphics"
             ],
             "date_published": "2022-10-08T15:27:43-04:00",
-            "date_modified": "2022-10-08T19:14:30-04:00"
+            "date_modified": "2022-10-09T14:10:10-04:00"
         },
         {
             "id": "https://nsafran.com/silicon-graphics.html",
