@@ -3,12 +3,76 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2022-10-08T19:25:18-04:00</updated>
+    <updated>2022-10-08T20:23:26-04:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
     <id>https://nsafran.com</id>
 
+    <entry>
+        <title>General Sun Info and Links</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/general-sun-info-and-links.html"/>
+        <id>https://nsafran.com/general-sun-info-and-links.html</id>
+            <category term="Unix"/>
+            <category term="Sun Microsystems"/>
+
+        <updated>2022-10-08T20:23:26-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Sun Microsystems Home Sun Patches Sun Packages NVRAM FAQ More Sun Patches More Solaris Packages SunPCI Packages
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
+<h2>Links</h2>
+<p><a href="http://ftp.lanet.lv/ftp/sun-info/sun-patches/" target="_blank" rel="noopener noreferrer">Sun Patches</a><br><a href="http://download.nust.na/pub3/solaris/sparc/" target="_blank" rel="noopener noreferrer">Sun Packages</a><br><a href="http://www.lib.ru/TXT/faqsunnvram.txt" target="_blank" rel="noopener noreferrer">NVRAM FAQ</a><br><a href="http://ftp.icm.edu.pl/packages/sun-patches/all_signed/" target="_blank" rel="noopener noreferrer">More Sun Patches</a><br><a href="https://www.ibiblio.org/pub/packages/solaris/sparc/">More Solaris Packages</a><br><a href="http://vtda.org/bits/software/Sun/SunPCI/" target="_blank" rel="noopener noreferrer">SunPCI Packages</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Digital VAXstation 3100 M38</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/digital-vaxstation-3100-m38.html"/>
+        <id>https://nsafran.com/digital-vaxstation-3100-m38.html</id>
+            <category term="Unix"/>
+            <category term="Digital"/>
+
+        <updated>2022-10-08T20:17:12-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Digital PDP 11/34a</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/digital-pdp-1134a-2.html"/>
+        <id>https://nsafran.com/digital-pdp-1134a-2.html</id>
+            <category term="Digital"/>
+
+        <updated>2022-10-08T20:16:36-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Digital VT240</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/digital-vt240.html"/>
+        <id>https://nsafran.com/digital-vt240.html</id>
+            <category term="Digital"/>
+
+        <updated>2022-10-08T20:16:18-04:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Digital Equipment Corporation</title>
         <author>
@@ -75,7 +139,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-08T19:13:35-04:00</updated>
+        <updated>2022-10-08T20:00:29-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
@@ -110,94 +174,6 @@
         <content type="html">
             <![CDATA[
                 <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Sun Fire v100</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/sun-fire-v100.html"/>
-        <id>https://nsafran.com/sun-fire-v100.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-08T19:25:10-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Sun Blade 150</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/sun-blade-150.html"/>
-        <id>https://nsafran.com/sun-blade-150.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-08T19:25:00-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Ultra 10</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/ultra-10.html"/>
-        <id>https://nsafran.com/ultra-10.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-08T19:24:50-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>SPARCStation 5</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/sparcstation-5.html"/>
-        <id>https://nsafran.com/sparcstation-5.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-08T19:24:40-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a><a href="https://nsafran.com/sun-microsystems-computers.html"></a></p>
             ]]>
         </content>
     </entry>

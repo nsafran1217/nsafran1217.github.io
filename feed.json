@@ -10,6 +10,62 @@
     },
     "items": [
         {
+            "id": "https://nsafran.com/general-sun-info-and-links.html",
+            "url": "https://nsafran.com/general-sun-info-and-links.html",
+            "title": "General Sun Info and Links",
+            "summary": "Sun Microsystems Home Sun Patches Sun Packages NVRAM FAQ More Sun Patches More Solaris Packages SunPCI Packages",
+            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>\n<h2>Links</h2>\n<p><a href=\"http://ftp.lanet.lv/ftp/sun-info/sun-patches/\" target=\"_blank\" rel=\"noopener noreferrer\">Sun Patches</a><br><a href=\"http://download.nust.na/pub3/solaris/sparc/\" target=\"_blank\" rel=\"noopener noreferrer\">Sun Packages</a><br><a href=\"http://www.lib.ru/TXT/faqsunnvram.txt\" target=\"_blank\" rel=\"noopener noreferrer\">NVRAM FAQ</a><br><a href=\"http://ftp.icm.edu.pl/packages/sun-patches/all_signed/\" target=\"_blank\" rel=\"noopener noreferrer\">More Sun Patches</a><br><a href=\"https://www.ibiblio.org/pub/packages/solaris/sparc/\">More Solaris Packages</a><br><a href=\"http://vtda.org/bits/software/Sun/SunPCI/\" target=\"_blank\" rel=\"noopener noreferrer\">SunPCI Packages</a></p>",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "Unix",
+                   "Sun Microsystems"
+            ],
+            "date_published": "2022-10-08T20:18:30-04:00",
+            "date_modified": "2022-10-08T20:23:26-04:00"
+        },
+        {
+            "id": "https://nsafran.com/digital-vaxstation-3100-m38.html",
+            "url": "https://nsafran.com/digital-vaxstation-3100-m38.html",
+            "title": "Digital VAXstation 3100 M38",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "Unix",
+                   "Digital"
+            ],
+            "date_published": "2022-10-08T20:17:12-04:00",
+            "date_modified": "2022-10-08T20:17:12-04:00"
+        },
+        {
+            "id": "https://nsafran.com/digital-pdp-1134a-2.html",
+            "url": "https://nsafran.com/digital-pdp-1134a-2.html",
+            "title": "Digital PDP 11/34a",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "Digital"
+            ],
+            "date_published": "2022-10-08T20:16:36-04:00",
+            "date_modified": "2022-10-08T20:16:36-04:00"
+        },
+        {
+            "id": "https://nsafran.com/digital-vt240.html",
+            "url": "https://nsafran.com/digital-vt240.html",
+            "title": "Digital VT240",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "Digital"
+            ],
+            "date_published": "2022-10-08T20:16:18-04:00",
+            "date_modified": "2022-10-08T20:16:18-04:00"
+        },
+        {
             "id": "https://nsafran.com/digital-equipment-corporation.html",
             "url": "https://nsafran.com/digital-equipment-corporation.html",
             "title": "Digital Equipment Corporation",
@@ -82,7 +138,7 @@
                    "Silicon Graphics"
             ],
             "date_published": "2022-10-08T14:58:38-04:00",
-            "date_modified": "2022-10-08T19:13:35-04:00"
+            "date_modified": "2022-10-08T20:00:29-04:00"
         },
         {
             "id": "https://nsafran.com/sun-fire-v240.html",
@@ -99,70 +155,6 @@
             ],
             "date_published": "2022-10-08T14:00:23-04:00",
             "date_modified": "2022-10-08T19:25:18-04:00"
-        },
-        {
-            "id": "https://nsafran.com/sun-fire-v100.html",
-            "url": "https://nsafran.com/sun-fire-v100.html",
-            "title": "Sun Fire v100",
-            "summary": "Sun Microsystems Home",
-            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "Unix",
-                   "Sun Microsystems"
-            ],
-            "date_published": "2022-10-08T14:00:03-04:00",
-            "date_modified": "2022-10-08T19:25:10-04:00"
-        },
-        {
-            "id": "https://nsafran.com/sun-blade-150.html",
-            "url": "https://nsafran.com/sun-blade-150.html",
-            "title": "Sun Blade 150",
-            "summary": "Sun Microsystems Home",
-            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "Unix",
-                   "Sun Microsystems"
-            ],
-            "date_published": "2022-10-08T13:59:54-04:00",
-            "date_modified": "2022-10-08T19:25:00-04:00"
-        },
-        {
-            "id": "https://nsafran.com/ultra-10.html",
-            "url": "https://nsafran.com/ultra-10.html",
-            "title": "Ultra 10",
-            "summary": "Sun Microsystems Home",
-            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a></p>",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "Unix",
-                   "Sun Microsystems"
-            ],
-            "date_published": "2022-10-08T13:59:45-04:00",
-            "date_modified": "2022-10-08T19:24:50-04:00"
-        },
-        {
-            "id": "https://nsafran.com/sparcstation-5.html",
-            "url": "https://nsafran.com/sparcstation-5.html",
-            "title": "SPARCStation 5",
-            "summary": "Sun Microsystems Home",
-            "content_html": "<p><a href=\"https://nsafran.com/sun-microsystems-computers.html\">Sun Microsystems Home</a><a href=\"https://nsafran.com/sun-microsystems-computers.html\"></a></p>",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "Unix",
-                   "Sun Microsystems"
-            ],
-            "date_published": "2022-10-08T13:59:36-04:00",
-            "date_modified": "2022-10-08T19:24:40-04:00"
         }
     ]
 }
