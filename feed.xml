@@ -3,7 +3,7 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2022-10-09T15:07:31-04:00</updated>
+    <updated>2022-10-09T21:04:53-04:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Unix"/>
             <category term="Sun Microsystems"/>
 
-        <updated>2022-10-08T20:23:26-04:00</updated>
+        <updated>2022-10-09T15:12:07-04:00</updated>
             <summary>
                 <![CDATA[
                     Sun Microsystems Home Sun Patches Sun Packages NVRAM FAQ More Sun Patches More Solaris Packages SunPCI Packages
@@ -29,7 +29,7 @@
             <![CDATA[
                 <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
 <h2>Links</h2>
-<p><a href="http://ftp.lanet.lv/ftp/sun-info/sun-patches/" target="_blank" rel="noopener noreferrer">Sun Patches</a><br><a href="http://download.nust.na/pub3/solaris/sparc/" target="_blank" rel="noopener noreferrer">Sun Packages</a><br><a href="http://www.lib.ru/TXT/faqsunnvram.txt" target="_blank" rel="noopener noreferrer">NVRAM FAQ</a><br><a href="http://ftp.icm.edu.pl/packages/sun-patches/all_signed/" target="_blank" rel="noopener noreferrer">More Sun Patches</a><br><a href="https://www.ibiblio.org/pub/packages/solaris/sparc/">More Solaris Packages</a><br><a href="http://vtda.org/bits/software/Sun/SunPCI/" target="_blank" rel="noopener noreferrer">SunPCI Packages</a></p>
+<p><a href="http://ftp.lanet.lv/ftp/sun-info/sun-patches/" target="_blank" rel="noopener noreferrer">Sun Patches</a><br><a href="http://download.nust.na/pub3/solaris/sparc/" target="_blank" rel="noopener noreferrer">Sun Packages</a><br><a href="http://www.lib.ru/TXT/faqsunnvram.txt" target="_blank" rel="noopener noreferrer">NVRAM FAQ</a><br><a href="http://ftp.icm.edu.pl/packages/sun-patches/all_signed/" target="_blank" rel="noopener noreferrer">More Sun Patches</a><br><a href="https://www.ibiblio.org/pub/packages/solaris/sparc/" target="_blank" rel="noopener noreferrer">More Solaris Packages</a><br><a href="http://vtda.org/bits/software/Sun/SunPCI/" target="_blank" rel="noopener noreferrer">SunPCI Packages</a></p>
             ]]>
         </content>
     </entry>
@@ -43,9 +43,23 @@
             <category term="Unix"/>
             <category term="Digital"/>
 
-        <updated>2022-10-08T20:17:12-04:00</updated>
-            <summary></summary>
-        <content></content>
+        <updated>2022-10-09T21:04:53-04:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://nsafran.com/media/posts/21/20221008_183420.jpg" alt="" />
+                    Digital Home This was the first Digital computer I acquired. The system has a 100MB and a 200MB hard disk installed. Currently, I leave them disconnected because I don't want to damage them, or damage the install of OpenVMS 6.2 since I have no idea&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://nsafran.com/media/posts/21/20221008_183420.jpg" alt="" />
+                <p><a href="https://nsafran.com/digital-equipment-corporation.html">Digital Home</a></p>
+<p>This was the first Digital computer I acquired. The system has a 100MB and a 200MB hard disk installed. Currently, I leave them disconnected because I don't want to damage them, or damage the install of OpenVMS 6.2 since I have no idea how to use OpenVMS.</p>
+<p>The reason I have the front panel removed is so I can easily plug in my <a href="https://github.com/akuker/RASCSI">RaSCSI</a> to the SCSI bus. I don't have the correct cable to connect to the external SCSI connector on the back.</p>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/21/20221008_183428-Copy.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-xs.jpg 300w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-sm.jpg 480w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-md.jpg 768w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-lg.jpg 1024w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-xl.jpg 1360w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-2xl.jpg 1600w"  alt="" width="2480" height="2268"></figure>
+<p>I've tested a few different operating systems including OpenVMS 7.2, Ultrix 4.5, and NetBSD. NetBSD was interesting since it's a new OS. The SSH keys took about 45 minutes to generate. I don't think I'm going to take the effort to learn OpenVMS, but I'd like to get an OS with a GUI running on it.</p>
+            ]]>
+        </content>
     </entry>
     <entry>
         <title>Digital PDP 11/34a</title>
@@ -69,9 +83,22 @@
         <id>https://nsafran.com/digital-vt240.html</id>
             <category term="Digital"/>
 
-        <updated>2022-10-08T20:16:18-04:00</updated>
-            <summary></summary>
-        <content></content>
+        <updated>2022-10-09T20:35:16-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Digital Home The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and emulates a Tektronix 4010/4014. My VT240 has a green phosphor monochrome monitor. It looks like the case of mine has been painted. I can see the plastic under&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/digital-equipment-corporation.html">Digital Home</a></p>
+<h2>Overview</h2>
+<p>The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and emulates a Tektronix 4010/4014. My VT240 has a green phosphor monochrome monitor.</p>
+<p>It looks like the case of mine has been painted. I can see the plastic under the paint is very yellowed. I'm not sure if it came from DEC like this, or someone painted it in the past. I'm assuming it came from DEC like this since I found it in a closet at work.</p>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/19/20221008_183428.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/19/responsive/20221008_183428-xs.jpg 300w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-sm.jpg 480w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-md.jpg 768w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-lg.jpg 1024w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-xl.jpg 1360w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-2xl.jpg 1600w"  alt="" width="2262" height="1644"></figure>
+<p>TODO: Add picture of Tek Graphics emulation.</p>
+            ]]>
+        </content>
     </entry>
     <entry>
         <title>Digital Equipment Corporation</title>
@@ -83,17 +110,19 @@
             <category term="Unix"/>
             <category term="Digital"/>
 
-        <updated>2022-10-09T15:03:38-04:00</updated>
+        <updated>2022-10-09T20:12:24-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/18/dec-logo.png" alt="" />
-                    Digital VT240 Terminal Digital VAXstation 3100 Digital PDP-11/34a
+                    Digital VT240 Terminal Digital VAXstation 3100 Digital PDP-11/34a Digital Equipment Corporation is interesting to me because they were so important to shaping the computing world, but most people not interested in tech have never heard of them. DEC was out of business by the time&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://nsafran.com/media/posts/18/dec-logo.png" alt="" />
                 <p><a href="https://nsafran.com/digital-vt240.html">Digital VT240 Terminal</a><br><a href="https://nsafran.com/digital-vaxstation-3100-m38.html">Digital VAXstation 3100</a><br><a href="https://nsafran.com/digital-pdp-1134a-2.html">Digital PDP-11/34a</a></p>
+<p>Digital Equipment Corporation is interesting to me because they were so important to shaping the computing world, but most people not interested in tech have never heard of them. </p>
+<p>DEC was out of business by the time I started using computers, so I never experienced any of their computers until I got some of my own.</p>
             ]]>
         </content>
     </entry>
@@ -107,7 +136,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-09T15:02:35-04:00</updated>
+        <updated>2022-10-09T19:56:11-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/17/20221008_181907.jpg" alt="" />
@@ -120,7 +149,7 @@
                 <p><a href="https://nsafran.com/silicon-graphics.html">Silicon Graphics Home</a></p>
 <h2>Overview</h2>
 <p>The Octane was SGI's replacement for the Indigo 2. It is a powerful workstation with impressive graphics capabilities. The Octane could have 2 CPUs, and many different expansion cards installed into its proprietary XIO bus. The Octane is a modular design with the XIO expansion cards and the system board connecting to a front plane. The heart of the Octane's design is the Crossbar switch, which allows high speed communication between the CPU and the expansion cards. The main connection to the front plane uses very fragile compression connectors, which have gold fingers that press onto the PCB. You should never touch these connectors. Even brushing against them could damage them.</p>
-<p>I have two Octanes but currently only one is fully workings. The Octanes I have are later models, so they have the new SGI logo on the front and updated "cherokee" power supplies. The working octane has a system board with 2x 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. Irix 6.5.30 is installed onto a 18GB hard disk.</p>
+<p>I have two Octanes but currently only one is fully working. The Octanes I have are later models, so they have the new SGI logo on the front and updated "cherokee" power supplies. The working octane has a system board with 2x 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. Irix 6.5.30 is installed onto a 18GB hard disk.</p>
 <p>The non-working system has 1x 300 MHz R12000, 1GB of RAM, and EMXI/MXE graphics. The issue with the non-working system is the graphics board. I get a kernel panic as soon as X tries to initialize the graphics hardware. I've tried running the board without the TRAMs installed, which makes the board an SSE, with no luck. I even tried swapping the compression connector from an Octane personal video with no change, since the connector on the MXE board looked a little dirty.</p>
 <p>The performance difference between the Octane and my Indigo 2 is significant. The Octane compiles software very quickly and is very snappy to use.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
@@ -140,11 +169,11 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-09T14:26:00-04:00</updated>
+        <updated>2022-10-09T20:08:54-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/16/20221008_180132.jpg" alt="" />
-                    Silicon Graphics Home The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add a purple model to my collection one day. The teal isn't my favorite color. My system has a 150 MHz R4400 with 128MB of RAM and&hellip;
+                    Silicon Graphics Home The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add the purple model with high impact graphics to my collection one day. My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics.
                 ]]>
             </summary>
         <content type="html">
@@ -152,8 +181,8 @@
                     <img src="https://nsafran.com/media/posts/16/20221008_180132.jpg" alt="" />
                 <p><a href="https://nsafran.com/silicon-graphics.html">Silicon Graphics Home</a></p>
 <h2>Overview</h2>
-<p>The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add a purple model to my collection one day. The teal isn't my favorite color.<br>My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics. XZ was also known as Express graphics. The graphics board set is made up of 2 boards sandwiched together. It has 2 Geometry Engines, 1 Reality Engine, and a Z Buffer, with 24-Bit color.</p>
-<p>It has Irix 6.5.22 installed on a 36 GB SCSI hard disk. I don't have a lot of 50 pin SCSI disks, so I used an adapter to go from 50 pin SCSI to 80 pin SCA, since I have a lot of SCA drives from old servers. Its tight and it bends the hard disks board a little, but I haven't had any issues.</p>
+<p>The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add the purple model with high impact graphics to my collection one day. <br>My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics. XZ was also known as Express graphics. The graphics board set is made up of 2 boards sandwiched together. It has 2 Geometry Engines, 1 Reality Engine, and a Z Buffer, with 24-Bit color.</p>
+<p>It has Irix 6.5.22 installed on a 36 GB SCSI hard disk. I don't have a lot of 50 pin SCSI disks, so I used an adapter to go from 50 pin SCSI to 80 pin SCA, since I have a lot of SCA drives from old servers. It's tight and it bends the hard disks board a little, but I haven't had any issues.</p>
 <p>When I first got the system, the graphics output had an issue. the screen was covered with vertical lines, but the mouse cursor was on top of the lines. Thankfully, all I had to do was split the graphics board set and reseat all the connections to fix it.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
 <figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20210621_184209.jpg" data-size="3453x2267"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20210621_184209-thumbnail.jpg" alt="" width="720" height="473"></a>
@@ -161,6 +190,9 @@
 </figure>
 <figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221008_180132.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221008_180132-thumbnail.jpg" alt="" width="720" height="405"></a>
 <figcaption>System</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221009_141357.jpg" data-size="2895x2268"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221009_141357-thumbnail.jpg" alt="" width="720" height="564"></a>
+<figcaption>SCSI Adapter</figcaption>
 </figure>
 <figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221008_180749.jpg" data-size="3007x2267"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221008_180749-thumbnail.jpg" alt="" width="720" height="543"></a>
 <figcaption>Desktop</figcaption>
@@ -179,7 +211,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-09T15:07:31-04:00</updated>
+        <updated>2022-10-09T20:03:09-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/15/20221008_174221.jpg" alt="" />
@@ -214,7 +246,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2022-10-09T01:11:34-04:00</updated>
+        <updated>2022-10-09T20:02:36-04:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
@@ -240,17 +272,17 @@
             <category term="Unix"/>
             <category term="Sun Microsystems"/>
 
-        <updated>2022-10-09T01:11:24-04:00</updated>
+        <updated>2022-10-09T20:02:11-04:00</updated>
             <summary>
                 <![CDATA[
-                    Sun Microsystems Home Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.
+                    Sun Microsystems Home Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I'd to find a graphics card that works in it and run a modern OS.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
 <h2>Overview</h2>
-<p>Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I want to find a graphics card that works in it and run a modern OS.</p>
+<p>Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I'd to find a graphics card that works in it and run a modern OS.</p>
             ]]>
         </content>
     </entry>
