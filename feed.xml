@@ -3,12 +3,164 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2022-10-20T20:38:25-04:00</updated>
+    <updated>2022-10-22T23:12:20-04:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
     <id>https://nsafran.com</id>
 
+    <entry>
+        <title>LCD Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/lcd-board.html"/>
+        <id>https://nsafran.com/lcd-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:34-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Logic Analyzer Interface Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/logic-analyzer-interface-board.html"/>
+        <id>https://nsafran.com/logic-analyzer-interface-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:37-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Clock Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/clock-board.html"/>
+        <id>https://nsafran.com/clock-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T23:12:20-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home This board just controls the clock and reset signal for the computer. I do not have a reset circuit when the computer is turned on, so the computer needs to be manually reset. You can halt the computer with a switch&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+<h2>Clock Board</h2>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
+<figure class="gallery__item"><a href="https://nsafran.com/media/posts/27/gallery/clockboard.png" data-size="2098x1036"><img loading="lazy" src="https://nsafran.com/media/posts/27/gallery/clockboard-thumbnail.png" alt="" width="720" height="356"></a></figure>
+</div></div>
+<p>This board just controls the clock and reset signal for the computer. I do not have a reset circuit when the computer is turned on, so the computer needs to be manually reset. You can halt the computer with a switch and manually step the processor with a button on the front.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>IDE / Floppy Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/ide-floppy-board.html"/>
+        <id>https://nsafran.com/ide-floppy-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:44-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>PIO Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/pio-board.html"/>
+        <id>https://nsafran.com/pio-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:47-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>UART Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/uart-board.html"/>
+        <id>https://nsafran.com/uart-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:51-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>CPU / Memory Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/cpu-memory-board.html"/>
+        <id>https://nsafran.com/cpu-memory-board.html</id>
+            <category term="z80"/>
+
+        <updated>2022-10-22T22:46:55-04:00</updated>
+            <summary>
+                <![CDATA[
+                    Custom Z80 Computer Home
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>General Sun Info and Links</title>
         <author>
@@ -105,220 +257,6 @@
 <p>This PDP came with 2 RL01 removable pack disk drives. Each pack holds 5MB on a single platter. I only have the 2 disk packs, and RL01 packs are a lot more rare than RL02s, which is a big reason why I got the Unibone. The first disk pack was just XXDP+ diagnostics. The second was an install of Tektronix SPS Basic, a custom basic dialect made by tek based on Dartmouth basic. I uploaded an image of the disk <a href="https://archive.org/details/TEKSPS" target="_blank" rel="noopener noreferrer">here</a>. You can boot this image in simh on an emulated 11/34a easily. Some manuals for Tek SPS basic <a href="https://w140.com/tekwiki/wiki/SPS_BASIC" target="_blank" rel="noopener noreferrer">here</a>.</p>
 <h2>Power supply repair</h2>
 <p>When I received the system, one of the H7441 5v regulators was broken. With the help of some people on the VCFed forum, I was able to repair. <a href="https://forum.vcfed.org/index.php?threads/dec-h7441-5v-regulator-repair.1239569/" target="_blank" rel="noopener noreferrer">Read the thread here</a>.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Digital VT240</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/digital-vt240.html"/>
-        <id>https://nsafran.com/digital-vt240.html</id>
-            <category term="Digital"/>
-
-        <updated>2022-10-20T19:26:17-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Digital Home The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and emulates a Tektronix 4010/4014. My VT240 has a green phosphor monochrome monitor. It looks like the case of mine has been painted. I can see the plastic under&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/digital-equipment-corporation.html">Digital Home</a></p>
-<h2>Overview</h2>
-<p>The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and emulates a Tektronix 4010/4014. My VT240 has a green phosphor monochrome monitor.</p>
-<p>It looks like the case of mine has been painted. I can see the plastic under the paint is very yellowed. I'm not sure if it came from DEC like this, or someone painted it in the past. I'm assuming it came from DEC like this since I found it in a closet at work.</p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/19/20221008_183428.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/19/responsive/20221008_183428-xs.jpg 300w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-sm.jpg 480w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-md.jpg 768w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-lg.jpg 1024w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-xl.jpg 1360w ,https://nsafran.com/media/posts/19/responsive/20221008_183428-2xl.jpg 1600w"  alt="" width="2262" height="1644"></figure>
-<h3>Tektronix  Emulation</h3>
-<p>This is an example of the tektronix 4010/4014 emulation. The text is unreadable and the graphics are not the correct aspect ration. I'm not sure if there is a monitor available that would display the graphics correctly.</p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/19/20221010_200307-2.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/19/responsive/20221010_200307-2-xs.jpg 300w ,https://nsafran.com/media/posts/19/responsive/20221010_200307-2-sm.jpg 480w ,https://nsafran.com/media/posts/19/responsive/20221010_200307-2-md.jpg 768w ,https://nsafran.com/media/posts/19/responsive/20221010_200307-2-lg.jpg 1024w ,https://nsafran.com/media/posts/19/responsive/20221010_200307-2-xl.jpg 1360w ,https://nsafran.com/media/posts/19/responsive/20221010_200307-2-2xl.jpg 1600w"  alt="" width="3112" height="2268"></figure>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Digital Equipment Corporation</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/digital-equipment-corporation.html"/>
-        <id>https://nsafran.com/digital-equipment-corporation.html</id>
-            <category term="Unix"/>
-            <category term="Digital"/>
-
-        <updated>2022-10-09T20:12:24-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/18/dec-logo.png" alt="" />
-                    Digital VT240 Terminal Digital VAXstation 3100 Digital PDP-11/34a Digital Equipment Corporation is interesting to me because they were so important to shaping the computing world, but most people not interested in tech have never heard of them. DEC was out of business by the time&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/18/dec-logo.png" alt="" />
-                <p><a href="https://nsafran.com/digital-vt240.html">Digital VT240 Terminal</a><br><a href="https://nsafran.com/digital-vaxstation-3100-m38.html">Digital VAXstation 3100</a><br><a href="https://nsafran.com/digital-pdp-1134a-2.html">Digital PDP-11/34a</a></p>
-<p>Digital Equipment Corporation is interesting to me because they were so important to shaping the computing world, but most people not interested in tech have never heard of them. </p>
-<p>DEC was out of business by the time I started using computers, so I never experienced any of their computers until I got some of my own.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Octane</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/octane.html"/>
-        <id>https://nsafran.com/octane.html</id>
-            <category term="Unix"/>
-            <category term="Silicon Graphics"/>
-
-        <updated>2022-10-09T19:56:11-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/17/20221008_181907.jpg" alt="" />
-                    Silicon Graphics Home The Octane was SGI's replacement for the Indigo 2. It is a powerful workstation with impressive graphics capabilities. The Octane could have 2 CPUs, and many different expansion cards installed into its proprietary XIO bus. The Octane is a modular design with&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/17/20221008_181907.jpg" alt="" />
-                <p><a href="https://nsafran.com/silicon-graphics.html">Silicon Graphics Home</a></p>
-<h2>Overview</h2>
-<p>The Octane was SGI's replacement for the Indigo 2. It is a powerful workstation with impressive graphics capabilities. The Octane could have 2 CPUs, and many different expansion cards installed into its proprietary XIO bus. The Octane is a modular design with the XIO expansion cards and the system board connecting to a front plane. The heart of the Octane's design is the Crossbar switch, which allows high speed communication between the CPU and the expansion cards. The main connection to the front plane uses very fragile compression connectors, which have gold fingers that press onto the PCB. You should never touch these connectors. Even brushing against them could damage them.</p>
-<p>I have two Octanes but currently only one is fully working. The Octanes I have are later models, so they have the new SGI logo on the front and updated "cherokee" power supplies. The working octane has a system board with 2x 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. Irix 6.5.30 is installed onto a 18GB hard disk.</p>
-<p>The non-working system has 1x 300 MHz R12000, 1GB of RAM, and EMXI/MXE graphics. The issue with the non-working system is the graphics board. I get a kernel panic as soon as X tries to initialize the graphics hardware. I've tried running the board without the TRAMs installed, which makes the board an SSE, with no luck. I even tried swapping the compression connector from an Octane personal video with no change, since the connector on the MXE board looked a little dirty.</p>
-<p>The performance difference between the Octane and my Indigo 2 is significant. The Octane compiles software very quickly and is very snappy to use.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/17/gallery/20221008_181903.jpg" data-size="3757x2200"><img loading="lazy" src="https://nsafran.com/media/posts/17/gallery/20221008_181903-thumbnail.jpg" alt="" width="720" height="422"></a></figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/17/gallery/20221008_182118.jpg" data-size="2944x2267"><img loading="lazy" src="https://nsafran.com/media/posts/17/gallery/20221008_182118-thumbnail.jpg" alt="" width="720" height="554"></a></figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Indigo 2</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/indigo-2.html"/>
-        <id>https://nsafran.com/indigo-2.html</id>
-            <category term="Unix"/>
-            <category term="Silicon Graphics"/>
-
-        <updated>2022-10-09T20:08:54-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/16/20221008_180132.jpg" alt="" />
-                    Silicon Graphics Home The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add the purple model with high impact graphics to my collection one day. My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/16/20221008_180132.jpg" alt="" />
-                <p><a href="https://nsafran.com/silicon-graphics.html">Silicon Graphics Home</a></p>
-<h2>Overview</h2>
-<p>The Indigo 2 was the first Silicon Graphics machine I acquired. I would like to add the purple model with high impact graphics to my collection one day. <br>My system has a 150 MHz R4400 with 128MB of RAM and GR3-XZ Graphics. XZ was also known as Express graphics. The graphics board set is made up of 2 boards sandwiched together. It has 2 Geometry Engines, 1 Reality Engine, and a Z Buffer, with 24-Bit color.</p>
-<p>It has Irix 6.5.22 installed on a 36 GB SCSI hard disk. I don't have a lot of 50 pin SCSI disks, so I used an adapter to go from 50 pin SCSI to 80 pin SCA, since I have a lot of SCA drives from old servers. It's tight and it bends the hard disks board a little, but I haven't had any issues.</p>
-<p>When I first got the system, the graphics output had an issue. the screen was covered with vertical lines, but the mouse cursor was on top of the lines. Thankfully, all I had to do was split the graphics board set and reseat all the connections to fix it.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20210621_184209.jpg" data-size="3453x2267"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20210621_184209-thumbnail.jpg" alt="" width="720" height="473"></a>
-<figcaption>Graphics issue</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221008_180132.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221008_180132-thumbnail.jpg" alt="" width="720" height="405"></a>
-<figcaption>System</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221009_141357.jpg" data-size="2895x2268"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221009_141357-thumbnail.jpg" alt="" width="720" height="564"></a>
-<figcaption>SCSI Adapter</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/16/gallery/20221008_180749.jpg" data-size="3007x2267"><img loading="lazy" src="https://nsafran.com/media/posts/16/gallery/20221008_180749-thumbnail.jpg" alt="" width="720" height="543"></a>
-<figcaption>Desktop</figcaption>
-</figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Indy</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/indy.html"/>
-        <id>https://nsafran.com/indy.html</id>
-            <category term="Unix"/>
-            <category term="Silicon Graphics"/>
-
-        <updated>2022-10-09T20:03:09-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/15/20221008_174221.jpg" alt="" />
-                    Silicon Graphics Home The Indy is my favorite Silicon Graphics machine, just for the case design. I love the color, the speckled finish, and how the case looks like its fractured horizontally. The Indy is well known for being underpowered, an "Indigo without the go".
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/15/20221008_174221.jpg" alt="" />
-                <p><a href="https://nsafran.com/silicon-graphics.html">Silicon Graphics Home</a></p>
-<h2>Overview</h2>
-<p>The Indy is my favorite Silicon Graphics machine, just for the case design. I love the color, the speckled finish, and how the case looks like its fractured horizontally.<br>The Indy is well known for being underpowered, an "Indigo without the go". I agree with that sentiment after using it when compared to my Indigo 2.<br>This Indy has a 100 MHz R4600 CPU with FPU, 96MB of RAM, and 8-bit graphics. It has Irix 6.5.22 installed on a 9.1 GB SCSI hard disk. Irix 6.5.22 is the latest version of Irix that will run on the Indy and other IP22 architecture machines.</p>
-<p>Overall Irix is a very nice Unix, and the 4Dwm window manager feels very snappy, even on the underpowered hardware.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/15/gallery/20221008_175534.jpg" data-size="2840x2114"><img loading="lazy" src="https://nsafran.com/media/posts/15/gallery/20221008_175534-thumbnail.jpg" alt="" width="720" height="536"></a>
-<figcaption>Desktop</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/15/gallery/20221008_174218.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/15/gallery/20221008_174218-thumbnail.jpg" alt="" width="720" height="405"></a>
-<figcaption>I liked the labels so I left them on</figcaption>
-</figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title> Silicon Graphics</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/silicon-graphics.html"/>
-        <id>https://nsafran.com/silicon-graphics.html</id>
-            <category term="Unix"/>
-            <category term="Silicon Graphics"/>
-
-        <updated>2022-10-09T20:02:36-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
-                    Indy Indigo 2 Octane Silicon Graphics workstations are legendary among Unix workstations, mostly for their impressive graphics hardware, and their unique case designs. Another thing I find interesting is how special the workstations were. It would be very rare for someone to have an SGI&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/14/deng4ae-d475bc40-bc76-4f8c-b171-583766e05cae.png" alt="" />
-                <p><a href="https://nsafran.com/indy.html">Indy</a><br><a href="https://nsafran.com/indigo-2.html">Indigo 2</a><br><a href="https://nsafran.com/octane.html">Octane</a></p>
-<p>Silicon Graphics workstations are legendary among Unix workstations, mostly for their impressive graphics hardware, and their unique case designs.</p>
-<p>Another thing I find interesting is how special the workstations were. It would be very rare for someone to have an SGI for their home PC.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Sun Fire v240</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/sun-fire-v240.html"/>
-        <id>https://nsafran.com/sun-fire-v240.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-09T20:02:11-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I'd to find a graphics card that works in it and run a modern OS.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-<h2>Overview</h2>
-<p>Nothing to say about this since I haven't even installed an OS yet. This is the fastest Sun I have, so I'd to find a graphics card that works in it and run a modern OS.</p>
             ]]>
         </content>
     </entry>
