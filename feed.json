@@ -10,11 +10,26 @@
     },
     "items": [
         {
+            "id": "https://nsafran.com/chassis-and-backplane.html",
+            "url": "https://nsafran.com/chassis-and-backplane.html",
+            "title": "Chassis and Backplane",
+            "summary": "Custom Z80 Computer Home The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU I chose&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU I chose and the disk drives. The PSU is something I pulled out of a computer years ago, either a Dell or Compaq. The backplane is sandwiched in between two 3D printed pieces. Bolts come up through the bottom of the chassis through the  guide rails for the PCBs to hold the entire assembly together. I'm not happy with this design. Eventually I want to get a larger backplane so I can install more cards. Right now, I can't fit everything at the same time.</p>\n<p>The backplane is just a 40 row strip board with pin headers soldered on it.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/30/gallery/20221022_213609-2.jpg\" data-size=\"2565x1625\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/30/gallery/20221022_213609-2-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"456\"></a></figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/30/gallery/20221025_222821-2.jpg\" data-size=\"2819x2267\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/30/gallery/20221025_222821-2-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"579\"></a></figure>\n</div></div>",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "z80"
+            ],
+            "date_published": "2022-10-25T22:24:15-04:00",
+            "date_modified": "2022-10-25T23:16:37-04:00"
+        },
+        {
             "id": "https://nsafran.com/lcd-board.html",
             "url": "https://nsafran.com/lcd-board.html",
             "title": "LCD Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home I don't really have an application for this board, and I'm not sure why I built it. It works. Originally I didn't have a bus transceiver, but that didn't work with the graphical LCD I was trying to use, so I&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>I don't really have an application for this board, and I'm not sure why I built it. It works. Originally I didn't have a bus transceiver, but that didn't work with the graphical LCD I was trying to use, so I added one.</p>\n<p>I wrote subroutines to control both 1602 and 2004 LCD screens (in <a href=\"https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos\" target=\"_blank\" rel=\"noopener noreferrer\">DeviceDemos</a>)</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/29/gallery/20221025_230348.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/29/gallery/20221025_230348-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a></figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/29/gallery/lcd-sch.png\" data-size=\"2011x1367\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/29/gallery/lcd-sch-thumbnail.png\" alt=\"\" width=\"720\" height=\"489\"></a></figure>\n</div></div>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -22,14 +37,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:46:34-04:00",
-            "date_modified": "2022-10-22T22:46:34-04:00"
+            "date_modified": "2022-10-25T23:24:28-04:00"
         },
         {
             "id": "https://nsafran.com/logic-analyzer-interface-board.html",
             "url": "https://nsafran.com/logic-analyzer-interface-board.html",
             "title": "Logic Analyzer Interface Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home This board is a clone of the LAIR Pro for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>This board is a clone of the <a href=\"https://github.com/MustBeArt/LAIR\" target=\"_blank\" rel=\"noopener noreferrer\">LAIR Pro</a> for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"3\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/28/gallery/20221025_222556.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/28/gallery/20221025_222556-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a></figure>\n</div></div>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -37,14 +52,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:45:41-04:00",
-            "date_modified": "2022-10-22T22:46:37-04:00"
+            "date_modified": "2022-10-25T23:24:36-04:00"
         },
         {
             "id": "https://nsafran.com/clock-board.html",
             "url": "https://nsafran.com/clock-board.html",
             "title": "Clock Board",
             "summary": "Custom Z80 Computer Home This board just controls the clock and reset signal for the computer. I do not have a reset circuit when the computer is turned on, so the computer needs to be manually reset. You can halt the computer with a switch&hellip;",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Clock Board</h2>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"1\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/27/gallery/clockboard.png\" data-size=\"2098x1036\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/27/gallery/clockboard-thumbnail.png\" alt=\"\" width=\"720\" height=\"356\"></a></figure>\n</div></div>\n<p>This board just controls the clock and reset signal for the computer. I do not have a reset circuit when the computer is turned on, so the computer needs to be manually reset. You can halt the computer with a switch and manually step the processor with a button on the front.</p>",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Clock Board</h2>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/27/gallery/20221025_222544.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/27/gallery/20221025_222544-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a></figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/27/gallery/clockboard.png\" data-size=\"2098x1036\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/27/gallery/clockboard-thumbnail.png\" alt=\"\" width=\"720\" height=\"356\"></a>\n<figcaption>Incomplete</figcaption>\n</figure>\n</div></div>\n<p>This board just controls the clock and reset signal for the computer. I do not have a reset circuit when the computer is turned on, so the computer needs to be manually reset. You can halt the computer with a switch and manually step the processor with a button on the front.</p>\n<p>The schematic is not complete.</p>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -52,14 +67,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:44:44-04:00",
-            "date_modified": "2022-10-22T23:12:20-04:00"
+            "date_modified": "2022-10-25T23:24:43-04:00"
         },
         {
             "id": "https://nsafran.com/ide-floppy-board.html",
             "url": "https://nsafran.com/ide-floppy-board.html",
             "title": "IDE / Floppy Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home Currently this board is very simple because only the IDE part is implemented. Eventually, a floppy controller will be added to this board. The hard disk is connected directly to the Z80's bus. I'm considering re-making this board and adding bus&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>Currently this board is very simple because only the IDE part is implemented. Eventually, a floppy controller will be added to this board. <br>The hard disk is connected directly to the Z80's bus. I'm considering re-making this board and adding bus transceivers for both the IDE disk and the FDD controller. So far, I've only found 1 model of hard disk that works with this setup, and I'm assuming its because there's no bus transceiver. Only 8 bits of the 16 bit data bus on the hard disk is used. The other top 8 are pulled to ground. The only chip on the board is a 3 to 8 demux for address decoding.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/26/gallery/20221025_222715.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/26/gallery/20221025_222715-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>Board</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/26/gallery/IDE-board-sch.png\" data-size=\"1576x1260\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/26/gallery/IDE-board-sch-thumbnail.png\" alt=\"\" width=\"720\" height=\"576\"></a>\n<figcaption>Schematic</figcaption>\n</figure>\n</div></div>\n<h2>Software</h2>\n<p>To be added.</p>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -67,14 +82,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:44:13-04:00",
-            "date_modified": "2022-10-22T22:46:44-04:00"
+            "date_modified": "2022-10-25T23:24:50-04:00"
         },
         {
             "id": "https://nsafran.com/pio-board.html",
             "url": "https://nsafran.com/pio-board.html",
             "title": "PIO Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home I wanted to try out wire wrap, but I didn't have enough space on the back of the board, or any wire wrap sockets. So, I soldered pin headers on either side of the ICs and wire wrapped on the top&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>I wanted to try out wire wrap, but I didn't have enough space on the back of the board, or any wire wrap sockets. So, I soldered pin headers on either side of the ICs and wire wrapped on the top of the board. Its not the nicest looking wire wrap, but I'm happy with how it came out. It's also easy than doing point to point soldering in my opinion. </p>\n<p>I don't have an application yet, but eventually I'd like to write a clock program to write to my <a href=\"https://github.com/nsafran1217/VFD-IV-17\" target=\"_blank\" rel=\"noopener noreferrer\">VFD Board</a> I designed. I was going to read the time from an i2C clock chip by bit banging with the PIO.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/25/gallery/20221025_222724.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/25/gallery/20221025_222724-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>Board</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/25/gallery/pio-sch.png\" data-size=\"1697x1084\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/25/gallery/pio-sch-thumbnail.png\" alt=\"\" width=\"720\" height=\"460\"></a>\n<figcaption>Schematic</figcaption>\n</figure>\n</div></div>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -82,14 +97,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:43:56-04:00",
-            "date_modified": "2022-10-22T22:46:47-04:00"
+            "date_modified": "2022-10-25T23:02:06-04:00"
         },
         {
             "id": "https://nsafran.com/uart-board.html",
             "url": "https://nsafran.com/uart-board.html",
             "title": "UART Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home This is the second board I made in 2017. I've made some changes to it in 2020 when I started to add more boards to the system. Before, the address decoding was done with a few different 74LS logic chips. I&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>This is the second board I made in 2017. I've made some changes to it in 2020 when I started to add more boards to the system. Before, the address decoding was done with a few different 74LS logic chips. I replaced it with a single 74LS128 3 to 8 demux. I was also having issues with the 16c550 not resetting correctly, so I tied the reset signal into the computers reset circuit. It should have been like this from the start. I needed to invert the signal, so I used a 74LS00 NAND since this was already on the board from the old address decoding.<br>The crystal for the UART is 1.843200MHZ. We write 12 to the divisor latch. Then, it is divided internally by 16. This gives us 9600 baud. You can see this in <a href=\"https://github.com/nsafran1217/z80-asm/blob/master/myCode/monitorv3/uart.s\" target=\"_blank\" rel=\"noopener noreferrer\">uart.s</a> in the SetupUART routine.</p>\n<p>I still have issues with this chip not resetting sometimes, so more investigation is needed.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/24/gallery/20221025_222708.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/24/gallery/20221025_222708-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>Board</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/24/gallery/uart-board-sch.png\" data-size=\"1453x1474\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/24/gallery/uart-board-sch-thumbnail.png\" alt=\"\" width=\"720\" height=\"730\"></a>\n<figcaption>Schematic</figcaption>\n</figure>\n</div></div>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -97,14 +112,14 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:43:39-04:00",
-            "date_modified": "2022-10-22T22:46:51-04:00"
+            "date_modified": "2022-10-25T23:24:12-04:00"
         },
         {
             "id": "https://nsafran.com/cpu-memory-board.html",
             "url": "https://nsafran.com/cpu-memory-board.html",
             "title": "CPU / Memory Board",
-            "summary": "Custom Z80 Computer Home",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>",
+            "summary": "Custom Z80 Computer Home This was the first board I built for the computer. I'm not happy with how it looks, but it works. I improved my construction techniques in the later boards. This board has the z80 CPU, Flash, SRAM, an OR gate for&hellip;",
+            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>This was the first board I built for the computer. I'm not happy with how it looks, but it works. I improved my construction techniques in the later boards.<br>This board has the z80 CPU, Flash, SRAM, an OR gate for memory address decoding, a 3 to 8 demux for IO address decoding, and a latch that disables the ROM.</p>\n<p>The only change I needed to make to this board was adding the latch and IO decoding.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/23/gallery/20221025_222658.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/23/gallery/20221025_222658-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a>\n<figcaption>Board</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/23/gallery/CPU-sch.png\" data-size=\"1641x1594\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/23/gallery/CPU-sch-thumbnail.png\" alt=\"\" width=\"720\" height=\"699\"></a>\n<figcaption>Schematic</figcaption>\n</figure>\n</div></div>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -112,7 +127,7 @@
                    "z80"
             ],
             "date_published": "2022-10-22T22:35:23-04:00",
-            "date_modified": "2022-10-22T22:46:55-04:00"
+            "date_modified": "2022-10-25T22:55:53-04:00"
         },
         {
             "id": "https://nsafran.com/general-sun-info-and-links.html",
@@ -146,22 +161,6 @@
             ],
             "date_published": "2022-10-08T20:17:12-04:00",
             "date_modified": "2022-10-09T21:04:53-04:00"
-        },
-        {
-            "id": "https://nsafran.com/digital-pdp-1134a-2.html",
-            "url": "https://nsafran.com/digital-pdp-1134a-2.html",
-            "title": "Digital PDP 11/34a",
-            "summary": "Digital Home This is the oldest working computer in my collection, and in my opinion, the most impressive. This particular PDP came from a college where is was sold by Tektronix to run some test equipment. There are Tektronix serial numbers on the computer and&hellip;",
-            "content_html": "<p><a href=\"https://nsafran.com/digital-equipment-corporation.html\">Digital Home</a></p>\n<h2>PDP 11/34a</h2>\n<p>This is the oldest working computer in my collection, and in my opinion, the most impressive. This particular PDP came from a college where is was sold by Tektronix to run some test equipment. There are Tektronix serial numbers on the computer and the drives. There is also a Tektronix HP-IB interface card used to connect to the equipment. </p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://nsafran.com/media/posts/20/20221009_235034-2.jpg\" sizes=\"100vw\" srcset=\"https://nsafran.com/media/posts/20/responsive/20221009_235034-2-xs.jpg 300w ,https://nsafran.com/media/posts/20/responsive/20221009_235034-2-sm.jpg 480w ,https://nsafran.com/media/posts/20/responsive/20221009_235034-2-md.jpg 768w ,https://nsafran.com/media/posts/20/responsive/20221009_235034-2-lg.jpg 1024w ,https://nsafran.com/media/posts/20/responsive/20221009_235034-2-xl.jpg 1360w ,https://nsafran.com/media/posts/20/responsive/20221009_235034-2-2xl.jpg 1600w\"  alt=\"\" width=\"3266\" height=\"1953\"></figure>\n<h3>Specifications</h3>\n<p>My PDP has the following cards installed:</p>\n<ul>\n<li>M8266 - 11/34a control module</li>\n<li>M8265 - 11/34a data paths module</li>\n<li>M8267 - 11/34a floating point processor</li>\n<li>M7859 - Console interface</li>\n<li>M9312 - Bootstrap terminator</li>\n<li>M7856 - DL11-W Serial and realtime clock</li>\n<li>M9202 - Unibus jumper</li>\n<li>2x M7891 - 128KB / 64Kword Memory</li>\n<li>M7762 - RL11 RL01/RL02 Drive controller</li>\n<li>Tektronix interface card</li>\n<li>M9302 - Terminator</li>\n</ul>\n<p>Currently I run the system with the RL11 controller removed and a <a href=\"http://retrocmp.com/projects/unibone\" target=\"_blank\" rel=\"noopener noreferrer\">Unibone</a> in its place. The Unibone allows me to emulate drives so I can play with more operating systems. It also saves the RL01s from wear.</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://nsafran.com/media/posts/20/20221009_235109-2.jpg\" sizes=\"100vw\" srcset=\"https://nsafran.com/media/posts/20/responsive/20221009_235109-2-xs.jpg 300w ,https://nsafran.com/media/posts/20/responsive/20221009_235109-2-sm.jpg 480w ,https://nsafran.com/media/posts/20/responsive/20221009_235109-2-md.jpg 768w ,https://nsafran.com/media/posts/20/responsive/20221009_235109-2-lg.jpg 1024w ,https://nsafran.com/media/posts/20/responsive/20221009_235109-2-xl.jpg 1360w ,https://nsafran.com/media/posts/20/responsive/20221009_235109-2-2xl.jpg 1600w\"  alt=\"\" width=\"2107\" height=\"3181\"></figure>\n<h3>Drives</h3>\n<p>This PDP came with 2 RL01 removable pack disk drives. Each pack holds 5MB on a single platter. I only have the 2 disk packs, and RL01 packs are a lot more rare than RL02s, which is a big reason why I got the Unibone. The first disk pack was just XXDP+ diagnostics. The second was an install of Tektronix SPS Basic, a custom basic dialect made by tek based on Dartmouth basic. I uploaded an image of the disk <a href=\"https://archive.org/details/TEKSPS\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>. You can boot this image in simh on an emulated 11/34a easily. Some manuals for Tek SPS basic <a href=\"https://w140.com/tekwiki/wiki/SPS_BASIC\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>\n<h2>Power supply repair</h2>\n<p>When I received the system, one of the H7441 5v regulators was broken. With the help of some people on the VCFed forum, I was able to repair. <a href=\"https://forum.vcfed.org/index.php?threads/dec-h7441-5v-regulator-repair.1239569/\" target=\"_blank\" rel=\"noopener noreferrer\">Read the thread here</a>.</p>",
-            "image": "https://nsafran.com/media/posts/20/20221009_235034.jpg",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "Digital"
-            ],
-            "date_published": "2022-10-08T20:16:36-04:00",
-            "date_modified": "2022-10-20T20:38:25-04:00"
         }
     ]
 }
