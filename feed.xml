@@ -3,12 +3,108 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2022-10-25T23:24:50-04:00</updated>
+    <updated>2023-03-08T20:28:38-05:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
     <id>https://nsafran.com</id>
 
+    <entry>
+        <title>Digital Alphaserver 1000</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/digital-alphaserver-1000.html"/>
+        <id>https://nsafran.com/digital-alphaserver-1000.html</id>
+            <category term="Unix"/>
+            <category term="OpenVMS"/>
+            <category term="Digital"/>
+
+        <updated>2023-03-08T20:28:38-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Digital Home I was given this machine for free because it had a bad power supply. I took apart the power supply but all I found was a loose screw. I put it back together and the power supply seems to work fine. When I&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/digital-equipment-corporation.html">Digital Home</a></p>
+<p>I was given this machine for free because it had a bad power supply. I took apart the power supply but all I found was a loose screw. I put it back together and the power supply seems to work fine.</p>
+<p>When I first got the machine, I could not enter the ARC firmware console. When I entered "arc" at the SRM console, the console would say "ARC firmware loaded" and freeze. I found a post on <a href="https://www.vogons.org/viewtopic.php?t=89289&amp;p=1093248">vogons</a> that described a similar problem on an alphastation. Doing the same repair on the Dallas DS1287 TOY NVRAM fixed my issue.</p>
+<p>So far I have OpenVMS 8.4 installed on the system. I plan on installing Windows NT, Windows 2000, and NetBSD on the different hard disks that the system came with.</p>
+<p> </p>
+<p>TODO: Add Pictures</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>IV17 VFD Board</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/iv17-vfd-board.html"/>
+        <id>https://nsafran.com/iv17-vfd-board.html</id>
+            <category term="VFD"/>
+
+        <updated>2023-03-08T19:48:45-05:00</updated>
+            <summary>
+                <![CDATA[
+                    https://github.com/nsafran1217/VFD-IV-17 To Be added. Github project above
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/VFD-IV-17</a></p>
+<p> </p>
+<p>To Be added. Github project above</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Nixie Tube Clock</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/nixie-tube-clock.html"/>
+        <id>https://nsafran.com/nixie-tube-clock.html</id>
+            <category term="Nixie"/>
+
+        <updated>2023-03-08T19:48:56-05:00</updated>
+            <summary>
+                <![CDATA[
+                    https://github.com/nsafran1217/arduino-nixie-clock To Be added. Github project above
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://github.com/nsafran1217/arduino-nixie-clock" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/arduino-nixie-clock</a></p>
+<p>To Be added. Github project above</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Nixie and VFDs</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/nixie-and-vfds.html"/>
+        <id>https://nsafran.com/nixie-and-vfds.html</id>
+            <category term="VFD"/>
+            <category term="Nixie"/>
+
+        <updated>2023-03-08T19:48:50-05:00</updated>
+            <summary>
+                <![CDATA[
+                    IV17 VFD Board Nixie Tube Clock
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><a href="https://nsafran.com/iv17-vfd-board.html">IV17 VFD Board</a></p>
+<p><a href="https://nsafran.com/nixie-tube-clock.html">Nixie Tube Clock</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Chassis and Backplane</title>
         <author>
@@ -18,17 +114,17 @@
         <id>https://nsafran.com/chassis-and-backplane.html</id>
             <category term="z80"/>
 
-        <updated>2022-10-25T23:16:37-04:00</updated>
+        <updated>2023-03-08T19:50:04-05:00</updated>
             <summary>
                 <![CDATA[
-                    Custom Z80 Computer Home The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU I chose&hellip;
+                    Custom Z80 Computer Home The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU (from an&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
 <h2>Overview</h2>
-<p>The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU I chose and the disk drives. The PSU is something I pulled out of a computer years ago, either a Dell or Compaq. The backplane is sandwiched in between two 3D printed pieces. Bolts come up through the bottom of the chassis through the  guide rails for the PCBs to hold the entire assembly together. I'm not happy with this design. Eventually I want to get a larger backplane so I can install more cards. Right now, I can't fit everything at the same time.</p>
+<p>The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU (from an old Dell PC) and the disk drives. The backplane is sandwiched in between two 3D printed pieces. Bolts come up through the bottom of the chassis through the  guide rails for the PCBs to hold the entire assembly together. I'm not happy with this design. Eventually I want to get a larger backplane so I can install more cards. Right now, I can't fit everything at the same time.</p>
 <p>The backplane is just a 40 row strip board with pin headers soldered on it.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://nsafran.com/media/posts/30/gallery/20221022_213609-2.jpg" data-size="2565x1625"><img loading="lazy" src="https://nsafran.com/media/posts/30/gallery/20221022_213609-2-thumbnail.jpg" alt="" width="720" height="456"></a></figure>
@@ -74,7 +170,7 @@
         <id>https://nsafran.com/logic-analyzer-interface-board.html</id>
             <category term="z80"/>
 
-        <updated>2022-10-25T23:24:36-04:00</updated>
+        <updated>2023-03-08T19:50:14-05:00</updated>
             <summary>
                 <![CDATA[
                     Custom Z80 Computer Home This board is a clone of the LAIR Pro for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.
@@ -183,122 +279,6 @@
 <figcaption>Schematic</figcaption>
 </figure>
 </div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>UART Board</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/uart-board.html"/>
-        <id>https://nsafran.com/uart-board.html</id>
-            <category term="z80"/>
-
-        <updated>2022-10-25T23:24:12-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Custom Z80 Computer Home This is the second board I made in 2017. I've made some changes to it in 2020 when I started to add more boards to the system. Before, the address decoding was done with a few different 74LS logic chips. I&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
-<h2>Overview</h2>
-<p>This is the second board I made in 2017. I've made some changes to it in 2020 when I started to add more boards to the system. Before, the address decoding was done with a few different 74LS logic chips. I replaced it with a single 74LS128 3 to 8 demux. I was also having issues with the 16c550 not resetting correctly, so I tied the reset signal into the computers reset circuit. It should have been like this from the start. I needed to invert the signal, so I used a 74LS00 NAND since this was already on the board from the old address decoding.<br>The crystal for the UART is 1.843200MHZ. We write 12 to the divisor latch. Then, it is divided internally by 16. This gives us 9600 baud. You can see this in <a href="https://github.com/nsafran1217/z80-asm/blob/master/myCode/monitorv3/uart.s" target="_blank" rel="noopener noreferrer">uart.s</a> in the SetupUART routine.</p>
-<p>I still have issues with this chip not resetting sometimes, so more investigation is needed.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/24/gallery/20221025_222708.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/24/gallery/20221025_222708-thumbnail.jpg" alt="" width="720" height="405"></a>
-<figcaption>Board</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/24/gallery/uart-board-sch.png" data-size="1453x1474"><img loading="lazy" src="https://nsafran.com/media/posts/24/gallery/uart-board-sch-thumbnail.png" alt="" width="720" height="730"></a>
-<figcaption>Schematic</figcaption>
-</figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>CPU / Memory Board</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/cpu-memory-board.html"/>
-        <id>https://nsafran.com/cpu-memory-board.html</id>
-            <category term="z80"/>
-
-        <updated>2022-10-25T22:55:53-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Custom Z80 Computer Home This was the first board I built for the computer. I'm not happy with how it looks, but it works. I improved my construction techniques in the later boards. This board has the z80 CPU, Flash, SRAM, an OR gate for&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
-<h2>Overview</h2>
-<p>This was the first board I built for the computer. I'm not happy with how it looks, but it works. I improved my construction techniques in the later boards.<br>This board has the z80 CPU, Flash, SRAM, an OR gate for memory address decoding, a 3 to 8 demux for IO address decoding, and a latch that disables the ROM.</p>
-<p>The only change I needed to make to this board was adding the latch and IO decoding.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/23/gallery/20221025_222658.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/23/gallery/20221025_222658-thumbnail.jpg" alt="" width="720" height="405"></a>
-<figcaption>Board</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/23/gallery/CPU-sch.png" data-size="1641x1594"><img loading="lazy" src="https://nsafran.com/media/posts/23/gallery/CPU-sch-thumbnail.png" alt="" width="720" height="699"></a>
-<figcaption>Schematic</figcaption>
-</figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>General Sun Info and Links</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/general-sun-info-and-links.html"/>
-        <id>https://nsafran.com/general-sun-info-and-links.html</id>
-            <category term="Unix"/>
-            <category term="Sun Microsystems"/>
-
-        <updated>2022-10-09T15:12:07-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Sun Microsystems Home Sun Patches Sun Packages NVRAM FAQ More Sun Patches More Solaris Packages SunPCI Packages
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/sun-microsystems-computers.html">Sun Microsystems Home</a></p>
-<h2>Links</h2>
-<p><a href="http://ftp.lanet.lv/ftp/sun-info/sun-patches/" target="_blank" rel="noopener noreferrer">Sun Patches</a><br><a href="http://download.nust.na/pub3/solaris/sparc/" target="_blank" rel="noopener noreferrer">Sun Packages</a><br><a href="http://www.lib.ru/TXT/faqsunnvram.txt" target="_blank" rel="noopener noreferrer">NVRAM FAQ</a><br><a href="http://ftp.icm.edu.pl/packages/sun-patches/all_signed/" target="_blank" rel="noopener noreferrer">More Sun Patches</a><br><a href="https://www.ibiblio.org/pub/packages/solaris/sparc/" target="_blank" rel="noopener noreferrer">More Solaris Packages</a><br><a href="http://vtda.org/bits/software/Sun/SunPCI/" target="_blank" rel="noopener noreferrer">SunPCI Packages</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Digital VAXstation 3100 M38</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/digital-vaxstation-3100-m38.html"/>
-        <id>https://nsafran.com/digital-vaxstation-3100-m38.html</id>
-            <category term="Unix"/>
-            <category term="Digital"/>
-
-        <updated>2022-10-09T21:04:53-04:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://nsafran.com/media/posts/21/20221008_183420.jpg" alt="" />
-                    Digital Home This was the first Digital computer I acquired. The system has a 100MB and a 200MB hard disk installed. Currently, I leave them disconnected because I don't want to damage them, or damage the install of OpenVMS 6.2 since I have no idea&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://nsafran.com/media/posts/21/20221008_183420.jpg" alt="" />
-                <p><a href="https://nsafran.com/digital-equipment-corporation.html">Digital Home</a></p>
-<p>This was the first Digital computer I acquired. The system has a 100MB and a 200MB hard disk installed. Currently, I leave them disconnected because I don't want to damage them, or damage the install of OpenVMS 6.2 since I have no idea how to use OpenVMS.</p>
-<p>The reason I have the front panel removed is so I can easily plug in my <a href="https://github.com/akuker/RASCSI">RaSCSI</a> to the SCSI bus. I don't have the correct cable to connect to the external SCSI connector on the back.</p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/21/20221008_183428-Copy.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-xs.jpg 300w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-sm.jpg 480w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-md.jpg 768w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-lg.jpg 1024w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-xl.jpg 1360w ,https://nsafran.com/media/posts/21/responsive/20221008_183428-Copy-2xl.jpg 1600w"  alt="" width="2480" height="2268"></figure>
-<p>I've tested a few different operating systems including OpenVMS 7.2, Ultrix 4.5, and NetBSD. NetBSD was interesting since it's a new OS. The SSH keys took about 45 minutes to generate. I don't think I'm going to take the effort to learn OpenVMS, but I'd like to get an OS with a GUI running on it.</p>
             ]]>
         </content>
     </entry>
