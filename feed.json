@@ -82,7 +82,7 @@
             "url": "https://nsafran.com/iv17-vfd-board.html",
             "title": "IV17 VFD Board",
             "summary": "https://github.com/nsafran1217/VFD-IV-17 This board now has a permanent home in my Nixie/VFD Weather clock I finally built a case for this board, though I still don't have a permanent use for it. I 3d printed a case that let me fit the 2 power supplies and&hellip;",
-            "content_html": "<p><a href=\"https://github.com/nsafran1217/VFD-IV-17\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/nsafran1217/VFD-IV-17</a></p>\n<p>This board now has a permanent home in my Nixie/VFD Weather clock</p>\n<p>I finally built a case for this board, <span style=\"text-decoration: line-through;\">though I still don't have a permanent use for it.</span> I 3d printed a case that let me fit the 2 power supplies and connectors in one place.</p>\n<p>I wrote a few assembly routines to use the display with my z80 computer. It uses the z80-pio to talk to it. </p>\n<p>The assembly is in the files called \"iv17*.s\" in my GitHub repo for my computer:<br><a href=\"https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos\">https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos</a></p>\n<p>As a part of this, I also wrote a simple clock program with an RTCDS3231 connected to the z80-pio. I bit-banged the i2c.<br>If anyone is looking for examples of i2c bit banging on the z80, look at i2c.s and RTCDS3231bitBang.s. clock-iv17.s puts it all together into one program.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/33/gallery/20230621_222751.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/33/gallery/20230621_222751-thumbnail.jpg\" alt=\"Clock and front view\" width=\"720\" height=\"405\"></a>\n<figcaption>Clock and front view</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/33/gallery/20230623_152055.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/33/gallery/20230623_152055-thumbnail.jpg\" alt=\"Connectors\" width=\"720\" height=\"405\"></a>\n<figcaption>Connectors</figcaption>\n</figure>\n</div></div>\n<p> </p>",
+            "content_html": "<p><a href=\"https://github.com/nsafran1217/VFD-IV-17\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/nsafran1217/VFD-IV-17</a></p>\n<p>This board now has a permanent home in my <a href=\"https://nsafran.com/nixie-and-vfd-weather-clock.html\">Nixie/VFD Weather clock</a></p>\n<p>I finally built a case for this board, <span style=\"text-decoration: line-through;\">though I still don't have a permanent use for it.</span> I 3d printed a case that let me fit the 2 power supplies and connectors in one place.</p>\n<p>I wrote a few assembly routines to use the display with my z80 computer. It uses the z80-pio to talk to it. </p>\n<p>The assembly is in the files called \"iv17*.s\" in my GitHub repo for my computer:<br><a href=\"https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos\">https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos</a></p>\n<p>As a part of this, I also wrote a simple clock program with an RTCDS3231 connected to the z80-pio. I bit-banged the i2c.<br>If anyone is looking for examples of i2c bit banging on the z80, look at i2c.s and RTCDS3231bitBang.s. clock-iv17.s puts it all together into one program.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/33/gallery/20230621_222751.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/33/gallery/20230621_222751-thumbnail.jpg\" alt=\"Clock and front view\" width=\"720\" height=\"405\"></a>\n<figcaption>Clock and front view</figcaption>\n</figure>\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/33/gallery/20230623_152055.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/33/gallery/20230623_152055-thumbnail.jpg\" alt=\"Connectors\" width=\"720\" height=\"405\"></a>\n<figcaption>Connectors</figcaption>\n</figure>\n</div></div>\n<p> </p>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -93,7 +93,7 @@
                    "Arduino"
             ],
             "date_published": "2022-10-26T18:41:31-04:00",
-            "date_modified": "2023-12-03T21:48:22-05:00"
+            "date_modified": "2023-12-03T22:30:11-05:00"
         },
         {
             "id": "https://nsafran.com/nixie-tube-clock.html",
@@ -117,7 +117,7 @@
             "url": "https://nsafran.com/nixie-and-vfds.html",
             "title": "Nixie and VFDs",
             "summary": "Nixie and VFD Weather Clock INS-1 Nixie Tube Matrix IV17 VFD Board Nixie Tube Clock",
-            "content_html": "<p><a href=\"https://nsafran.com/nixie-and-vfd-weather-clock.html\">Nixie and VFD Weather Clock</a></p>\n<p>INS-1 Nixie Tube Matrix</p>\n<p><a href=\"https://nsafran.com/iv17-vfd-board.html\">IV17 VFD Board</a></p>\n<p><a href=\"https://nsafran.com/nixie-tube-clock.html\">Nixie Tube Clock</a></p>",
+            "content_html": "<p><a href=\"https://nsafran.com/nixie-and-vfd-weather-clock.html\">Nixie and VFD Weather Clock</a></p>\n<p><a href=\"https://nsafran.com/ins-1-nixie-tube-matrix.html\">INS-1 Nixie Tube Matrix</a></p>\n<p><a href=\"https://nsafran.com/iv17-vfd-board.html\">IV17 VFD Board</a></p>\n<p><a href=\"https://nsafran.com/nixie-tube-clock.html\">Nixie Tube Clock</a></p>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -127,7 +127,7 @@
                    "Electronics"
             ],
             "date_published": "2022-10-26T18:30:24-04:00",
-            "date_modified": "2023-12-03T21:49:56-05:00"
+            "date_modified": "2023-12-03T22:29:22-05:00"
         },
         {
             "id": "https://nsafran.com/chassis-and-backplane.html",

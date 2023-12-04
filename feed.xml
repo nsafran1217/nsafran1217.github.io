@@ -3,7 +3,7 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2023-12-03T22:26:43-05:00</updated>
+    <updated>2023-12-03T22:30:11-05:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
@@ -142,7 +142,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2023-12-03T21:48:22-05:00</updated>
+        <updated>2023-12-03T22:30:11-05:00</updated>
             <summary>
                 <![CDATA[
                     https://github.com/nsafran1217/VFD-IV-17 This board now has a permanent home in my Nixie/VFD Weather clock I finally built a case for this board, though I still don't have a permanent use for it. I 3d printed a case that let me fit the 2 power supplies and&hellip;
@@ -151,7 +151,7 @@
         <content type="html">
             <![CDATA[
                 <p><a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/VFD-IV-17</a></p>
-<p>This board now has a permanent home in my Nixie/VFD Weather clock</p>
+<p>This board now has a permanent home in my <a href="https://nsafran.com/nixie-and-vfd-weather-clock.html">Nixie/VFD Weather clock</a></p>
 <p>I finally built a case for this board, <span style="text-decoration: line-through;">though I still don't have a permanent use for it.</span> I 3d printed a case that let me fit the 2 power supplies and connectors in one place.</p>
 <p>I wrote a few assembly routines to use the display with my z80 computer. It uses the z80-pio to talk to it. </p>
 <p>The assembly is in the files called "iv17*.s" in my GitHub repo for my computer:<br><a href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos">https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos</a></p>
@@ -214,7 +214,7 @@
             <category term="Nixie"/>
             <category term="Electronics"/>
 
-        <updated>2023-12-03T21:49:56-05:00</updated>
+        <updated>2023-12-03T22:29:22-05:00</updated>
             <summary>
                 <![CDATA[
                     Nixie and VFD Weather Clock INS-1 Nixie Tube Matrix IV17 VFD Board Nixie Tube Clock
@@ -223,7 +223,7 @@
         <content type="html">
             <![CDATA[
                 <p><a href="https://nsafran.com/nixie-and-vfd-weather-clock.html">Nixie and VFD Weather Clock</a></p>
-<p>INS-1 Nixie Tube Matrix</p>
+<p><a href="https://nsafran.com/ins-1-nixie-tube-matrix.html">INS-1 Nixie Tube Matrix</a></p>
 <p><a href="https://nsafran.com/iv17-vfd-board.html">IV17 VFD Board</a></p>
 <p><a href="https://nsafran.com/nixie-tube-clock.html">Nixie Tube Clock</a></p>
             ]]>
