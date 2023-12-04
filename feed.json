@@ -31,7 +31,7 @@
             "url": "https://nsafran.com/nixie-and-vfd-weather-clock.html",
             "title": "Nixie and VFD Weather Clock",
             "summary": "Coming soon https://github.com/nsafran1217/NixieWeatherClock",
-            "content_html": "<p>Coming soon</p>\n<p><a href=\"#INTERNAL_LINK#/post/null\">https://github.com/nsafran1217/NixieWeatherClock</a></p>",
+            "content_html": "<p>Coming soon</p>\n<p><a href=\"#INTERNAL_LINK#/post/null\">https://github.com/nsafran1217/NixieWeatherClock</a></p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://nsafran.com/media/posts/36/20230925_224626.jpg\" sizes=\"100vw\" srcset=\"https://nsafran.com/media/posts/36/responsive/20230925_224626-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-2xl.jpg 1600w\"  alt=\"\" width=\"1948\" height=\"1888\"></figure>",
             "author": {
                 "name": "Nathan Safran"
             },
@@ -42,7 +42,7 @@
                    "Arduino"
             ],
             "date_published": "2023-12-03T21:48:55-05:00",
-            "date_modified": "2023-12-03T22:26:43-05:00"
+            "date_modified": "2023-12-03T22:32:01-05:00"
         },
         {
             "id": "https://nsafran.com/enabling-nfsv2-on-ubuntu-2204.html",

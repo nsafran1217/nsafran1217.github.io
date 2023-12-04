@@ -3,7 +3,7 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2023-12-03T22:30:11-05:00</updated>
+    <updated>2023-12-03T22:32:01-05:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
@@ -54,7 +54,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2023-12-03T22:26:43-05:00</updated>
+        <updated>2023-12-03T22:32:01-05:00</updated>
             <summary>
                 <![CDATA[
                     Coming soon https://github.com/nsafran1217/NixieWeatherClock
@@ -64,6 +64,7 @@
             <![CDATA[
                 <p>Coming soon</p>
 <p><a href="#INTERNAL_LINK#/post/null">https://github.com/nsafran1217/NixieWeatherClock</a></p>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20230925_224626.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20230925_224626-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-2xl.jpg 1600w"  alt="" width="1948" height="1888"></figure>
             ]]>
         </content>
     </entry>
