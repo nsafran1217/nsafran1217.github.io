@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://nsafran.com/soyuz-clock-744h-replica.html",
+            "url": "https://nsafran.com/soyuz-clock-744h-replica.html",
+            "title": "Soyuz Clock 744H Replica",
+            "summary": "GitHub Link: https://github.com/nsafran1217/SoyuzClock I created a replica of a Soyuz 744H clock, as seen on the Curious Marc YouTube channel. https://www.curiousmarc.com/space/soyuz-clock-744h-digital I recreated the 3D model made by Gwyllym Suter, since I had some issues modifying the FreeCAD files they provided. My FreeCAD files are&hellip;",
+            "content_html": "<p>GitHub Link: <a href=\"https://github.com/nsafran1217/SoyuzClock\">https://github.com/nsafran1217/SoyuzClock</a> </p>\n<p>I created a replica of a Soyuz 744H clock, as seen on the Curious Marc YouTube channel.<br><a href=\"https://www.curiousmarc.com/space/soyuz-clock-744h-digital\">https://www.curiousmarc.com/space/soyuz-clock-744h-digital</a><br><br>I recreated the <a href=\"https://grabcad.com/library/soyuz-spacecraft-clock-1\" target=\"_blank\" rel=\"noopener noreferrer\">3D model made by Gwyllym Suter</a>, since I had some issues modifying the FreeCAD files they provided.</p>\n<p>My FreeCAD files are available on the project's GitHub page. (soon, I need to finalize)</p>\n<p>I found the part numbers for the switches and displays used in the original hardware. Unfortunately, the buttons are hard to find in the west and expensive, so I designed the case around the cheaper buttons that are smaller than the real ones.</p>\n<p>I designed 2 custom boards for this project. One contains the displays and LED drives, and the other has the ESP32, and connections for other peripherals. There are provisions on the board for extra hardware that I did not implement.</p>\n<p>The clock has two modes. Currently the clock mode can only be changed on power up, or the default mode can be changed in the wifi settings page<br>\"Emulation mode\" makes the clock behave like the real thing.<br>\"Normal mode\" makes the clock act like a normal clock. It retrieves the time from NTP, and displays the date in the stopwatch display. 12 and 24 hour time can be changed in the wifi settings page.</p>\n<p> </p>\n<h2>Part Numbers</h2>\n<ul>\n<li dir=\"auto\">АЛС324А is the 7 segment LED display. They are available on eBay or at tubes-store.com. They have the same quality issues as found in the real clock.</li>\n<li dir=\"auto\">МТ-1 is the toggle switch. They are available on eBay.</li>\n<li dir=\"auto\">ПКн2-1 is the correct push button, however, they are hard to find in the west. I found some stores selling them in Ukraine and Russia, but each switch is at least $15 US, plus you need to convince the seller its worth their time to ship it to you.</li>\n<li dir=\"auto\">KM1-1 is the next best option. They are easily found on eBay. The push button is smaller than the real switch. This is what I am using for now.</li>\n</ul>\n<p> </p>",
+            "author": {
+                "name": "Nathan Safran"
+            },
+            "tags": [
+                   "Electronics",
+                   "Arduino"
+            ],
+            "date_published": "2024-04-15T23:34:00-04:00",
+            "date_modified": "2024-04-15T23:34:00-04:00"
+        },
+        {
             "id": "https://nsafran.com/ins-1-nixie-tube-matrix.html",
             "url": "https://nsafran.com/ins-1-nixie-tube-matrix.html",
             "title": "INS-1 Nixie Tube Matrix",
@@ -158,21 +174,6 @@
             ],
             "date_published": "2022-10-22T22:46:34-04:00",
             "date_modified": "2022-10-25T23:24:28-04:00"
-        },
-        {
-            "id": "https://nsafran.com/logic-analyzer-interface-board.html",
-            "url": "https://nsafran.com/logic-analyzer-interface-board.html",
-            "title": "Logic Analyzer Interface Board",
-            "summary": "Custom Z80 Computer Home This board is a clone of the LAIR Pro for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.",
-            "content_html": "<p><a href=\"https://nsafran.com/custom-z80-computer.html\">Custom Z80 Computer Home</a></p>\n<h2>Overview</h2>\n<p>This board is a clone of the <a href=\"https://github.com/MustBeArt/LAIR\" target=\"_blank\" rel=\"noopener noreferrer\">LAIR Pro</a> for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.</p>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-translation=\"Add images\" data-columns=\"3\">\n<figure class=\"gallery__item\"><a href=\"https://nsafran.com/media/posts/28/gallery/20221025_222556.jpg\" data-size=\"4032x2268\"><img loading=\"lazy\" src=\"https://nsafran.com/media/posts/28/gallery/20221025_222556-thumbnail.jpg\" alt=\"\" width=\"720\" height=\"405\"></a></figure>\n</div></div>",
-            "author": {
-                "name": "Nathan Safran"
-            },
-            "tags": [
-                   "z80"
-            ],
-            "date_published": "2022-10-22T22:45:41-04:00",
-            "date_modified": "2023-03-08T19:50:14-05:00"
         }
     ]
 }
