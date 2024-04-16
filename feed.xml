@@ -3,7 +3,7 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2023-12-05T23:45:44-05:00</updated>
+    <updated>2024-04-15T23:20:55-04:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
@@ -20,17 +20,17 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2023-12-04T19:59:56-05:00</updated>
+        <updated>2024-04-15T23:13:09-04:00</updated>
             <summary>
                 <![CDATA[
-                    Code and Board design files: https://github.com/nsafran1217/INS-1_Matrix Project where the board is used: Nixie and VFD Weather Clock This was inspired by the excellent Neon Pixels project I designed my own board because Neon Pixels seems too difficult to build and too expensive for parts (though&hellip;
+                    Code and Board design files: https://github.com/nsafran1217/INS-1_Matrix Project where the board is used: Nixie and VFD Weather Clock This was inspired by the excellent Neon Pixels project I designed my own board because Neon Pixels seems too difficult to build. This board is an 6x10 matrix&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/37/test-pattern-ins1.gif" alt="" width="600" height="450"></figure>
 <p>Code and Board design files: <a href="https://github.com/nsafran1217/INS-1_Matrix">https://github.com/nsafran1217/INS-1_Matrix</a><br>Project where the board is used: <a href="https://nsafran.com/nixie-and-vfd-weather-clock.html">Nixie and VFD Weather Clock</a></p>
-<p>This was inspired by the excellent <a href="https://hackaday.io/project/173636-neon-pixels" target="_blank" rel="noopener noreferrer">Neon Pixels project</a><br>I designed my own board because Neon Pixels seems too difficult to build and too expensive for parts (though I did not actually check).</p>
+<p>This was inspired by the excellent <a href="https://hackaday.io/project/173636-neon-pixels" target="_blank" rel="noopener noreferrer">Neon Pixels project</a><br>I designed my own board because Neon Pixels seems too difficult to build.</p>
 <p>This board is an 6x10 matrix of INS-1 (ИНС-1) Nixie tube indicators. I chose 6X10 because I wanted to use the board to display weather icons (a cloud, the sun, rain, etc.). Putting 2 together would give me a 12x10 display, which gave enough pixels to play with and wasn't too physically big. 6x10 also is 60 tubes per board, so we used most of the shift register outputs.</p>
 <p>I used HV5530 32-bit high voltage shift registers to control each tube. The HV and 12V supply for the board would be provided on the input connector. I made the displays chainable with a simple 8 pin connector.<br>I wish I was able to make the board smaller, but there was no where to put the chip or route the traces.</p>
 <p>This was the first board where I had JLCPCB assemble the boards. They did all the resistors and capacitors, which was well worth the money. Soldering the HV5530 by hand was not too difficult.</p>
@@ -63,22 +63,23 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2023-12-05T23:45:44-05:00</updated>
+        <updated>2024-04-15T23:20:01-04:00</updated>
             <summary>
                 <![CDATA[
-                    This is still a work in progress. https://github.com/nsafran1217/NixieWeatherClock This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10 INS-1 Neon Indicator matrix, and a 6 character IV-27 VFD display. The clock retrieves the time and weather from the internet&hellip;
+                    This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed. https://github.com/nsafran1217/NixieWeatherClock This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>This is still a work in progress.<br><a href="#INTERNAL_LINK#/post/null">https://github.com/nsafran1217/NixieWeatherClock</a></p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20230925_224626.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20230925_224626-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20230925_224626-2xl.jpg 1600w"  alt="" width="1948" height="1888"></figure>
+                <p>This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed.<br><a href="#INTERNAL_LINK#/post/null">https://github.com/nsafran1217/NixieWeatherClock</a></p>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20240415_231353.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20240415_231353-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-2xl.jpg 1600w"  alt="" width="2079" height="1099"></figure>
 <h1>Nixie and VFD Weather clock</h1>
 <p>This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10 INS-1 Neon Indicator matrix, and a 6 character IV-27 VFD display. The clock retrieves the time and weather from the internet at regular intervals and displays current or future weather. The weather display can be set to either future, current, or a rotation of both times. The current weather time frame displayed is indicated by an AL102 LED.</p>
 <p>All of the displays including LEDs in this clock are soviet surplus, so I wanted it to look like an old piece of soviet military equipment. All of the front panel lettering and messages displayed on the alphanumeric IV-17 tubes are written in Russian.</p>
-<p>This clock uses the three boards I designed, plus one aditional board that was hand made.<br><a href="https://github.com/nsafran1217/NixieBoard">Nixie Tube Board</a> - A variation on my <a href="https://nsafran.com/nixie-tube-clock.html">nixie tube clock</a> board that is smaller and take input on a connector<br><a href="https://nsafran.com/iv17-vfd-board.html">IV-17  VFD Board</a><br><a href="https://nsafran.com/ins-1-nixie-tube-matrix.html">INS-1 Matrix Board</a><br>All board designs and Arduino libraries are available on GitHub.</p>
+<p>This clock uses the three boards I designed, plus one additional board that was hand made.<br><a href="https://github.com/nsafran1217/NixieBoard">Nixie Tube Board</a> - A variation on my <a href="https://nsafran.com/nixie-tube-clock.html">nixie tube clock</a> board that is smaller and takes input on a connector.<br><a href="https://nsafran.com/iv17-vfd-board.html">IV-17  VFD Board</a><br><a href="https://nsafran.com/ins-1-nixie-tube-matrix.html">INS-1 Matrix Board</a><br>All board designs and Arduino libraries are available on GitHub.</p>
 <p>For the HV power supply, I use a <a href="https://omnixie.com/products/nch6300hv-nixie-hv-power-module">NCH6300HV</a> by Omnixie. I used their older design in my first Nixie clock and was happy with its performance.</p>
-<p>The clock is supplied with 12V. A buck converter generates the 2.4V for the VFD filaments and a boost converter makes the 25V for the anode voltage. 5V for the VFD and nixie board is provided by a linear regulator. This also feeds the 5V input on the esp32.</p>
+<p>The clock is supplied with 12V from a USB-C connection. A small power trigger board requests 12V from the USB adapter.<br>When the adapter is first plugged in, 5V is sent to the clock. Some voltage makes it through the 7805 that supplies the esp32, but not enough to turn it on. After a few seconds, the voltage increases to 12V and the esp32 starts bringing up the other supplies. I have not seen any issues with this arrangement. </p>
+<p>A buck converter generates the 2.4V for the VFD filaments and a boost converter makes the 25V for the anode voltage. 5V for the VFD and nixie board is provided by a linear regulator. This also feeds the 5V input on the esp32.</p>
             ]]>
         </content>
     </entry>
@@ -92,7 +93,7 @@
             <category term="Unix"/>
             <category term="Digital"/>
 
-        <updated>2023-12-03T21:42:54-05:00</updated>
+        <updated>2024-04-15T23:20:32-04:00</updated>
             <summary>
                 <![CDATA[
                     I had issues mounting an NFS export on a Ubuntu 22.04 server on some older OSes like HP-UX and Tru64. I had to enable NFSv2 to allow these systems to mount the NFS export. In /etc/default/nfs-kernel-server, change RPCNFSDOPTS to include version 2, like this:
@@ -128,7 +129,7 @@
             <category term="OpenVMS"/>
             <category term="Digital"/>
 
-        <updated>2023-12-03T21:43:05-05:00</updated>
+        <updated>2024-04-15T23:20:38-04:00</updated>
             <summary>
                 <![CDATA[
                     Digital Home I was given this machine for free because it had a bad power supply. I took apart the power supply, but didn't see any damage. All I found was a loose screw, so I put it back together and the power supply seems&hellip;
@@ -157,7 +158,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2023-12-03T22:30:11-05:00</updated>
+        <updated>2024-04-15T23:20:55-04:00</updated>
             <summary>
                 <![CDATA[
                     https://github.com/nsafran1217/VFD-IV-17 This board now has a permanent home in my Nixie/VFD Weather clock I finally built a case for this board, though I still don't have a permanent use for it. I 3d printed a case that let me fit the 2 power supplies and&hellip;
