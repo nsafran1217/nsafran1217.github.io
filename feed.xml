@@ -3,12 +3,108 @@
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
-    <updated>2024-04-15T23:35:45-04:00</updated>
+    <updated>2025-02-06T22:14:22-05:00</updated>
     <author>
         <name>Nathan Safran</name>
     </author>
     <id>https://nsafran.com</id>
 
+    <entry>
+        <title>HP UNIX Computers</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/hp-unix-computers.html"/>
+        <id>https://nsafran.com/hp-unix-computers.html</id>
+            <category term="Unix"/>
+            <category term="HP"/>
+
+        <updated>2025-02-06T22:01:01-05:00</updated>
+            <summary>
+                <![CDATA[
+                    I have 4 HP UNIX machines currently. HP 9000 715/125 HP 9000 rp3440 HP c8000 HP Integrity rx3620
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I have 4 HP UNIX machines currently.</p>
+<ul>
+<li>HP 9000 715/125</li>
+<li>HP 9000 rp3440</li>
+<li><a href="https://nsafran.com/hp-c8000.html">HP c8000</a></li>
+<li>HP Integrity rx3620</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>HP c8000</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/hp-c8000.html"/>
+        <id>https://nsafran.com/hp-c8000.html</id>
+            <category term="Unix"/>
+            <category term="HP"/>
+
+        <updated>2025-02-06T21:56:24-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Overview Installing HP-UX is relatively straight forward (at least compared to IRIX). I installed the TCOE version of HP-UX so I would have graphics. The filename I used was HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - DVD.rar. I needed to&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h1>Overview</h1>
+<p> </p>
+<p> </p>
+<h1>Installing HP-UX 11i v1 (11.11)</h1>
+<p>Installing HP-UX is relatively straight forward (at least compared to IRIX). I installed the TCOE version of HP-UX so I would have graphics. The filename I used was <code>HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - DVD.rar</code>. I needed to use a dual layer DVD when burning it.</p>
+<p>I removed the separate partitions for /usr, /var, etc. and put them all on /. I also made sure the graphics application was selected to be installed, and added a few additional tools I wanted.</p>
+<h2>Installing GOLDQPK11i</h2>
+<p>Download the ISO from osarchive.org or the tenox archives. The file name is <code>HP-UX 11.11 (2004-12) - Support Plus - Diagnostics and Tested Patch bundles.rar</code><br>I found that the ISO was corrupted and I had to use a specific tool to copy the data out.  I used this command to extract the iso: <!--StartFragment --></p>
+<div><code>xorriso -osirrox on -indev ./HP-UX\ 11.11\ \(2004-12\)\ -\ Support\ Plus\ -\ Diagnostics\ and\ Tested\ Patch\ bundles.iso -extract / ./patches</code><!--EndFragment --></div>
+<div> </div>
+<div>Then, I mounted my nfs server on the HP-UX machine and set the depot path to the GOLDQPK11i directory. All the depots are found, and you can mark them for install.</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>SGI Altix 350</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sgi-altix-350.html"/>
+        <id>https://nsafran.com/sgi-altix-350.html</id>
+            <category term="Unix"/>
+            <category term="Silicon Graphics"/>
+
+        <updated>2025-02-06T22:14:22-05:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>SGI Altix 3700</title>
+        <author>
+            <name>Nathan Safran</name>
+        </author>
+        <link href="https://nsafran.com/sgi-altix-3700.html"/>
+        <id>https://nsafran.com/sgi-altix-3700.html</id>
+            <category term="Unix"/>
+            <category term="Silicon Graphics"/>
+
+        <updated>2025-02-04T20:38:53-05:00</updated>
+            <summary>
+                <![CDATA[
+                    TODO
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>TODO</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Soyuz Clock 744H Replica</title>
         <author>
@@ -99,7 +195,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2024-04-15T23:20:01-04:00</updated>
+        <updated>2025-02-06T22:14:12-05:00</updated>
             <summary>
                 <![CDATA[
                     This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed. https://github.com/nsafran1217/NixieWeatherClock This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10&hellip;
@@ -107,7 +203,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p>This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed.<br><a href="#INTERNAL_LINK#/post/null">https://github.com/nsafran1217/NixieWeatherClock</a></p>
+                <p>This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed.<br><a href="https://github.com/nsafran1217/NixieWeatherClock">https://github.com/nsafran1217/NixieWeatherClock</a></p>
 <figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20240415_231353.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20240415_231353-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-2xl.jpg 1600w"  alt="" width="2079" height="1099"></figure>
 <h1>Nixie and VFD Weather clock</h1>
 <p>This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10 INS-1 Neon Indicator matrix, and a 6 character IV-27 VFD display. The clock retrieves the time and weather from the internet at regular intervals and displays current or future weather. The weather display can be set to either future, current, or a rotation of both times. The current weather time frame displayed is indicated by an AL102 LED.</p>
@@ -217,124 +313,6 @@
 </figure>
 </div></div>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Nixie Tube Clock</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/nixie-tube-clock.html"/>
-        <id>https://nsafran.com/nixie-tube-clock.html</id>
-            <category term="Nixie"/>
-            <category term="Electronics"/>
-            <category term="Arduino"/>
-
-        <updated>2023-12-03T21:47:22-05:00</updated>
-            <summary>
-                <![CDATA[
-                    https://github.com/nsafran1217/arduino-nixie-clock Custom Nixie tube clock using in-12 tubes This was the first project I've completed with professionally made boards. I used JLCPCB, since they were cheap. This was also the first time I used a EDA tool. I use Eagle since there were a lot&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://github.com/nsafran1217/arduino-nixie-clock" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/arduino-nixie-clock</a></p>
-<p>Custom Nixie tube clock using in-12 tubes</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/32/gallery/20211219_154010.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/32/gallery/20211219_154010-thumbnail.jpg" alt="Completed clock" width="720" height="405"></a>
-<figcaption>Completed clock</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/32/gallery/20200404_224704.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/32/gallery/20200404_224704-thumbnail.jpg" alt="" width="720" height="405"></a></figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/32/gallery/20200404_224722.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/32/gallery/20200404_224722-thumbnail.jpg" alt="" width="720" height="405"></a></figure>
-</div></div>
-<p>This was the first project I've completed with professionally made boards. I used JLCPCB, since they were cheap.</p>
-<p>This was also the first time I used a EDA tool. I use Eagle since there were a lot of tutorials available.</p>
-<p>I made some mistakes related to spacing of the traces. I used one spacing for all the signal, and I think the HV traces are still to close.</p>
-<p>The code is messy, but it works well for what it is. I did have to make one change to the board to bring 5v out to the connector for the rotary encoder, but that was a simple bodge wire to add.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Nixie and VFDs</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/nixie-and-vfds.html"/>
-        <id>https://nsafran.com/nixie-and-vfds.html</id>
-            <category term="VFD"/>
-            <category term="Nixie"/>
-            <category term="Electronics"/>
-
-        <updated>2024-04-15T23:35:45-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Nixie and VFD Weather Clock INS-1 Nixie Tube Matrix IV17 VFD Board Nixie Tube Clock Soyuz 744H Clock Replica
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/nixie-and-vfd-weather-clock.html">Nixie and VFD Weather Clock</a></p>
-<p><a href="https://nsafran.com/ins-1-nixie-tube-matrix.html">INS-1 Nixie Tube Matrix</a></p>
-<p><a href="https://nsafran.com/iv17-vfd-board.html">IV17 VFD Board</a></p>
-<p><a href="https://nsafran.com/nixie-tube-clock.html">Nixie Tube Clock</a></p>
-<p><a href="https://nsafran.com/soyuz-clock-744h-replica.html">Soyuz 744H Clock Replica</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Chassis and Backplane</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/chassis-and-backplane.html"/>
-        <id>https://nsafran.com/chassis-and-backplane.html</id>
-            <category term="z80"/>
-
-        <updated>2023-03-08T19:50:04-05:00</updated>
-            <summary>
-                <![CDATA[
-                    Custom Z80 Computer Home The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU (from an&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
-<h2>Overview</h2>
-<p>The chassis is a cheap metal project box that you can find all over Amazon or eBay. I liked it because the color reminded me of an Altair 8800. I 3D printed some parts to help hold the PSU (from an old Dell PC) and the disk drives. The backplane is sandwiched in between two 3D printed pieces. Bolts come up through the bottom of the chassis through the  guide rails for the PCBs to hold the entire assembly together. I'm not happy with this design. Eventually I want to get a larger backplane so I can install more cards. Right now, I can't fit everything at the same time.</p>
-<p>The backplane is just a 40 row strip board with pin headers soldered on it.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/30/gallery/20221022_213609-2.jpg" data-size="2565x1625"><img loading="lazy" src="https://nsafran.com/media/posts/30/gallery/20221022_213609-2-thumbnail.jpg" alt="" width="720" height="456"></a></figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/30/gallery/20221025_222821-2.jpg" data-size="2819x2267"><img loading="lazy" src="https://nsafran.com/media/posts/30/gallery/20221025_222821-2-thumbnail.jpg" alt="" width="720" height="579"></a></figure>
-</div></div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>LCD Board</title>
-        <author>
-            <name>Nathan Safran</name>
-        </author>
-        <link href="https://nsafran.com/lcd-board.html"/>
-        <id>https://nsafran.com/lcd-board.html</id>
-            <category term="z80"/>
-
-        <updated>2022-10-25T23:24:28-04:00</updated>
-            <summary>
-                <![CDATA[
-                    Custom Z80 Computer Home I don't really have an application for this board, and I'm not sure why I built it. It works. Originally I didn't have a bus transceiver, but that didn't work with the graphical LCD I was trying to use, so I&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><a href="https://nsafran.com/custom-z80-computer.html">Custom Z80 Computer Home</a></p>
-<h2>Overview</h2>
-<p>I don't really have an application for this board, and I'm not sure why I built it. It works. Originally I didn't have a bus transceiver, but that didn't work with the graphical LCD I was trying to use, so I added one.</p>
-<p>I wrote subroutines to control both 1602 and 2004 LCD screens (in <a href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos" target="_blank" rel="noopener noreferrer">DeviceDemos</a>)</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/29/gallery/20221025_230348.jpg" data-size="4032x2268"><img loading="lazy" src="https://nsafran.com/media/posts/29/gallery/20221025_230348-thumbnail.jpg" alt="" width="720" height="405"></a></figure>
-<figure class="gallery__item"><a href="https://nsafran.com/media/posts/29/gallery/lcd-sch.png" data-size="2011x1367"><img loading="lazy" src="https://nsafran.com/media/posts/29/gallery/lcd-sch-thumbnail.png" alt="" width="720" height="489"></a></figure>
-</div></div>
             ]]>
         </content>
     </entry>
