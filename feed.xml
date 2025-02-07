@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>My Projects</title>
     <link href="https://nsafran.com/feed.xml" rel="self" />
     <link href="https://nsafran.com" />
@@ -19,7 +19,7 @@
             <category term="Unix"/>
             <category term="HP"/>
 
-        <updated>2025-02-06T22:01:01-05:00</updated>
+        <updated>2025-02-06T21:59:45-05:00</updated>
             <summary>
                 <![CDATA[
                     I have 4 HP UNIX machines currently. HP 9000 715/125 HP 9000 rp3440 HP c8000 HP Integrity rx3620
@@ -47,7 +47,7 @@
             <category term="Unix"/>
             <category term="HP"/>
 
-        <updated>2025-02-06T21:56:24-05:00</updated>
+        <updated>2025-02-06T21:56:08-05:00</updated>
             <summary>
                 <![CDATA[
                     Overview Installing HP-UX is relatively straight forward (at least compared to IRIX). I installed the TCOE version of HP-UX so I would have graphics. The filename I used was HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - DVD.rar. I needed to&hellip;
@@ -79,7 +79,7 @@
             <category term="Unix"/>
             <category term="Silicon Graphics"/>
 
-        <updated>2025-02-06T22:14:22-05:00</updated>
+        <updated>2025-02-04T20:39:08-05:00</updated>
             <summary></summary>
         <content></content>
     </entry>
@@ -152,7 +152,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2024-04-15T23:13:09-04:00</updated>
+        <updated>2023-12-03T21:50:07-05:00</updated>
             <summary>
                 <![CDATA[
                     Code and Board design files: https://github.com/nsafran1217/INS-1_Matrix Project where the board is used: Nixie and VFD Weather Clock This was inspired by the excellent Neon Pixels project I designed my own board because Neon Pixels seems too difficult to build. This board is an 6x10 matrix&hellip;
@@ -179,7 +179,7 @@
 <h2>Image Design Program</h2>
 <p>I made a very sloppy program in c# with winforms to help design the images/animations and generate the arrays for the matrix display.<br>This program allows you to input a custom display size, and number of displays. It makes many assumptions about the display, so its really only usable for this project.<br>It supports saving and loading images and animations from JSON files, scrolling through the animation, deleting frames, specifying the frame time in ms, and properly counts the number of frames in the animates. It provides formatted code that you can paste directly into your Arduino source files. You just need to define the array.</p>
 <p>I'm sure there's an easier way to do this, but this is what I came up with.</p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/37/matrixdesigner.PNG" sizes="100vw" srcset="https://nsafran.com/media/posts/37/responsive/matrixdesigner-xs.PNG 300w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-sm.PNG 480w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-md.PNG 768w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-lg.PNG 1024w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-xl.PNG 1360w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-2xl.PNG 1600w"  alt="" width="1032" height="631"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/37/matrixdesigner.PNG" alt="" width="1032" height="631" sizes="100vw" srcset="https://nsafran.com/media/posts/37/responsive/matrixdesigner-xs.PNG 300w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-sm.PNG 480w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-md.PNG 768w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-lg.PNG 1024w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-xl.PNG 1360w ,https://nsafran.com/media/posts/37/responsive/matrixdesigner-2xl.PNG 1600w"></figure>
             ]]>
         </content>
     </entry>
@@ -195,7 +195,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2025-02-06T22:14:12-05:00</updated>
+        <updated>2023-12-03T21:48:55-05:00</updated>
             <summary>
                 <![CDATA[
                     This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed. https://github.com/nsafran1217/NixieWeatherClock This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10&hellip;
@@ -204,7 +204,7 @@
         <content type="html">
             <![CDATA[
                 <p>This project is mostly finished. I still want to modify some of the animations I made, and get a front panel made from aluminum rather than 3D printed.<br><a href="https://github.com/nsafran1217/NixieWeatherClock">https://github.com/nsafran1217/NixieWeatherClock</a></p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20240415_231353.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20240415_231353-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-2xl.jpg 1600w"  alt="" width="2079" height="1099"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/36/20240415_231353.jpg" alt="" width="2079" height="1099" sizes="100vw" srcset="https://nsafran.com/media/posts/36/responsive/20240415_231353-xs.jpg 300w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-sm.jpg 480w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-md.jpg 768w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-lg.jpg 1024w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-xl.jpg 1360w ,https://nsafran.com/media/posts/36/responsive/20240415_231353-2xl.jpg 1600w"></figure>
 <h1>Nixie and VFD Weather clock</h1>
 <p>This clock is powered by an esp32 and features a IN-12 Nixie tube clock, a 12x10 INS-1 Neon Indicator matrix, and a 6 character IV-27 VFD display. The clock retrieves the time and weather from the internet at regular intervals and displays current or future weather. The weather display can be set to either future, current, or a rotation of both times. The current weather time frame displayed is indicated by an AL102 LED.</p>
 <p>All of the displays including LEDs in this clock are soviet surplus, so I wanted it to look like an old piece of soviet military equipment. All of the front panel lettering and messages displayed on the alphanumeric IV-17 tubes are written in Russian.</p>
@@ -225,7 +225,7 @@
             <category term="Unix"/>
             <category term="Digital"/>
 
-        <updated>2024-04-15T23:20:32-04:00</updated>
+        <updated>2023-07-28T00:04:19-04:00</updated>
             <summary>
                 <![CDATA[
                     I had issues mounting an NFS export on a Ubuntu 22.04 server on some older OSes like HP-UX and Tru64. I had to enable NFSv2 to allow these systems to mount the NFS export. In /etc/default/nfs-kernel-server, change RPCNFSDOPTS to include version 2, like this:
@@ -261,7 +261,7 @@
             <category term="OpenVMS"/>
             <category term="Digital"/>
 
-        <updated>2024-04-15T23:20:38-04:00</updated>
+        <updated>2023-03-08T20:28:28-05:00</updated>
             <summary>
                 <![CDATA[
                     Digital Home I was given this machine for free because it had a bad power supply. I took apart the power supply, but didn't see any damage. All I found was a loose screw, so I put it back together and the power supply seems&hellip;
@@ -274,7 +274,7 @@
 <p>When I first got the machine, I could not enter the ARC firmware console. When I entered "arc" at the SRM console, the console would say "ARC firmware loaded" and freeze. I found a post on <a href="https://www.vogons.org/viewtopic.php?t=89289&amp;p=1093248">vogons</a> that described a similar problem on an alphastation. Doing the same repair on the Dallas DS1287 TOY NVRAM fixed my issue.</p>
 <p>I have OpenVMS 8.4, Tru64 5.1B, Windows NT, and Windows 2000 installed on the system.</p>
 <p> </p>
-<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/34/20230306_232957-3.jpg" sizes="100vw" srcset="https://nsafran.com/media/posts/34/responsive/20230306_232957-3-xs.jpg 300w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-sm.jpg 480w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-md.jpg 768w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-lg.jpg 1024w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-xl.jpg 1360w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-2xl.jpg 1600w"  alt="" width="2091" height="2523"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://nsafran.com/media/posts/34/20230306_232957-3.jpg" alt="" width="2091" height="2523" sizes="100vw" srcset="https://nsafran.com/media/posts/34/responsive/20230306_232957-3-xs.jpg 300w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-sm.jpg 480w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-md.jpg 768w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-lg.jpg 1024w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-xl.jpg 1360w ,https://nsafran.com/media/posts/34/responsive/20230306_232957-3-2xl.jpg 1600w"></figure>
             ]]>
         </content>
     </entry>
@@ -290,7 +290,7 @@
             <category term="Electronics"/>
             <category term="Arduino"/>
 
-        <updated>2024-04-15T23:20:55-04:00</updated>
+        <updated>2022-10-26T18:41:31-04:00</updated>
             <summary>
                 <![CDATA[
                     https://github.com/nsafran1217/VFD-IV-17 This board now has a permanent home in my Nixie/VFD Weather clock I finally built a case for this board, though I still don't have a permanent use for it. I 3d printed a case that let me fit the 2 power supplies and&hellip;
