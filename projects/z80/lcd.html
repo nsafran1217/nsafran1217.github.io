@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 LCD</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 LCD</div>
+
+                        <div class="main-body">
+                            </p>
+                            <h2>Z80 LCD Board</h2>
+
+                            <p>I don't really have an application for this board, and I'm not sure why I built it. It
+                                works. Originally I didn't have a bus transceiver, but that didn't work with the
+                                graphical LCD I was trying to use, so I added one.</p>
+                            <p>
+                                I wrote subroutines to control both 1602 and 2004 LCD screens (in <a
+                                    href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos"
+                                    target="_blank" rel="noopener noreferrer">DeviceDemos</a>
+                                )
+                            </p>
+                            <a href="/img/z80/lcd-board.jpg"><img src="/img/z80/lcd-board.jpg" alt="Z80 LCD"
+                                    class="fullwidth"></a>
+                            <a href="/img/z80/lcd-sch.png"><img src="/img/z80/lcd-sch.png" alt="Z80 LCD"
+                                    class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

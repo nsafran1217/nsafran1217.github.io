@@ -1,0 +1,83 @@
+/*Set images for SUN CDE theme*/
+
+body {
+    background: url(/img/bgs/solarislogo.png) left top repeat;
+}
+
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*order is important*/
+    background: url(/img/sun-css/term-topleft.png) top left no-repeat,
+        url(/img/sun-css/term-topright.png) top right no-repeat,
+        url(/img/sun-css/term-topmiddle.png) top center repeat-x,
+
+        url(/img/sun-css/term-botleft.png) bottom left no-repeat,
+        url(/img/sun-css/term-botright.png) bottom right no-repeat,
+
+        url(/img/sun-css/term-centerleft.png) center left repeat-y,
+        url(/img/sun-css/term-centerright.png) center right repeat-y,
+
+        url(/img/sun-css/term-botmiddle.png) bottom center repeat-x;
+        /*url(/img/sun-css/term-centermiddle.png) center center repeat;*/
+        background-color: #686f82;
+
+}
+
+div.navbar {
+    /* order is important */
+    background: url(/img/sun-css/navmenu-top.png) top center no-repeat,
+        url(/img/sun-css/navmenu-bot.png) bottom center no-repeat,
+        url(/img/sun-css/navmenu-mid.png) center center repeat-y;      
+}
+/* THIS works, but not sure if I want to use it.
+div.navbar {
+        background: url(/img/sun-css/navmenu-topleft.png) top left no-repeat,
+        url(/img/sun-css/navmenu-topright.png) top right no-repeat,
+        url(/img/sun-css/navmenu-topmiddle.png) top center repeat-x,
+
+        url(/img/sun-css/navmenu-botleft.png) bottom left no-repeat,
+        url(/img/sun-css/navmenu-botright.png) bottom right no-repeat,
+
+        url(/img/sun-css/navmenu-centerleft.png) center left repeat-y,
+        url(/img/sun-css/navmenu-centerright.png) center right repeat-y,
+
+        url(/img/sun-css/navmenu-botmiddle.png) bottom center repeat-x,
+        url(/img/sun-css/navmenu-centermiddle.png) center center repeat;
+}
+
+.section-heading {
+    background: url(/img/sun-css/navmenu-section-left.png) top left no-repeat,
+    url(/img/sun-css/navmenu-section-right.png) top right no-repeat,
+    url(/img/sun-css/navmenu-section-middle.png) top center repeat-x;
+    
+    color: black;
+    padding-left: 30px;
+    margin: 0px -10px;
+}
+*/
+
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #aeb2c3;
+    border: 3px outset #aeb2c3;
+    border-top-color: #dcdee5;
+    border-left-color: #dcdee5;
+    border-right-color: #5d6069;
+    border-bottom-color: #5d6069;
+ }
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: black;
+}
+/* Section headings */
+.section-heading {
+    background: url(/img/sun-css/navmenu-mid-section.png) top center no-repeat;
+    color: black
+}
+.section-heading span {
+    background-color:  #AEB2C3;
+}
+

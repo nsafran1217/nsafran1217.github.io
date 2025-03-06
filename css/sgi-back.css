@@ -1,0 +1,73 @@
+/*Set images for default CDE theme*/
+
+body {
+    background: url(/img/bgs/scatter.png) left top repeat;
+}
+
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*order is important*/
+    background: url(/img/sgi-css/term-topleft.png) top left no-repeat,
+        url(/img/sgi-css/term-topright.png) top right no-repeat,
+        url(/img/sgi-css/term-topmiddle.png) top center repeat-x,
+
+        url(/img/sgi-css/term-botleft.png) bottom left no-repeat,
+        url(/img/sgi-css/term-botright.png) bottom right no-repeat,
+
+        url(/img/sgi-css/term-centerleft.png) center left repeat-y,
+        url(/img/sgi-css/term-centerright.png) center right repeat-y,
+
+        url(/img/sgi-css/term-botmiddle.png) bottom center repeat-x;
+        
+
+        background-color: #00003f;
+
+}
+.window-title {
+    position: absolute;
+    top: 4px;
+    color: black;
+    font-style: italic;
+}
+table.specs,
+table.specs th,
+table.specs td {
+    border: 1px grey solid;
+}
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #bdbdbd;
+    border: 3px outset #bdbdbd;
+    border-top-color: #ebebeb;
+    border-left-color: #ebebeb;
+    border-right-color: #5e5e5e;
+    border-bottom-color: #5e5e5e;
+ }
+ /* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: black;
+}
+div.navbar {
+    /*order is important*/
+    background: url(/img/sgi-css/navmenu-top.png) top center no-repeat,
+        url(/img/sgi-css/navmenu-bot.png) bottom center no-repeat,
+        url(/img/sgi-css/navmenu-mid.png) center center repeat-y;
+}
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: black;
+}
+/* Section headings */
+.section-heading {
+    background: url(/img/sgi-css/navmenu-mid-section.png) top center no-repeat;
+    color: black
+}
+
+.section-heading span {
+    background-color: #d9d9d9;
+}
+

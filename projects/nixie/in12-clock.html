@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - ИН-12 Nixie Clock</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - ИН-12 Nixie Clock</div>
+
+                        <div class="main-body">
+                            <h2>ИН-12 Nixie Tube Clock</h2>
+
+                            <p>
+                                <a href="https://github.com/nsafran1217/arduino-nixie-clock" target="_blank"
+                                    rel="noopener noreferrer">https://github.com/nsafran1217/arduino-nixie-clock</a>
+                            </p>
+                            <p>Custom Nixie tube clock using IN-12 Nixie tubes</p>
+                            <a href="/img/nixie/in12-clock.jpg"><img src="/img/nixie/in12-clock.jpg"
+                                    alt="Completed Clock" class="fullwidth"></a>
+
+                            <p>This was the first project I completed with professionally made boards. I used JLCPCB
+                                since they were inexpensive.<br>
+                                This was also the first time I used an EDA tool. I chose Eagle because there were many
+                                tutorials available.</p>
+                            <p>I made some mistakes related to trace spacing. I used the same spacing for all signals,
+                                and I think the HV traces are still too close.</p>
+                            <p>The code is messy, but it works well for what it is. I did have to make one modification
+                                to the board to bring 5V out to the connector for the rotary encoder, but that was a
+                                simple bodge wire fix.</p>
+                            <p>After the board and code were working, I designed a case to 3D print. The case is
+                                assembled using only four long screws, one in each corner. All the sides are made of
+                                Lexan, allowing you to see every side of the clock.</p>
+
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/nixie/in12clock-off.jpg"><img
+                                                        src="/img/nixie/in12clock-off.jpg"
+                                                        alt="Board outside of case"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/nixie/in12clock-back.jpg"><img
+                                                        src="/img/nixie/in12clock-back.jpg" alt="Back of board"></a>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

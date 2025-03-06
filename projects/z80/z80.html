@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 Computer</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 Computer</div>
+
+                        <div class="main-body">
+                            <h2>Custom Z80 Computer</h2>
+                            <p>
+                                I started building this computer in late 2017, starting with the CPU/memory board and
+                                the UART board. I was inspired by <a href="https://www.youtube.com/watch?v=QbCGhkbKLBY"
+                                    target="_blank" rel="noopener noreferrer">jpkiwigeek's</a>
+                                videos on YouTube of his breadboard z80. I originally followed his <a
+                                    href="http://www.geekpalace.info/z80_schem_flash+rom+uart.html" target="_blank"
+                                    rel="noopener noreferrer">netlist</a>
+                                for his computer as described on his website. Once I built it and got it to execute NOPs
+                                and send a character to the UART, I put it away until late 2019. When Ben Eater released
+                                the first part of his excellent video series on a <a
+                                    href="https://www.youtube.com/watch?v=LnzuMJLZRdU" target="_blank"
+                                    rel="noopener noreferrer">simple 6502 computer,</a>
+                                I was inspired to get my computer working and actually do some programming in assembly.
+                            </p>
+                            <p>As of now I have a ROM monitor written for it, and CP/M boots off an IDE hard disk. I heavily refrerence <a href="http://cpuville.com/Code/CPM-on-a-new-computer.html">this page at cpuville.com</a> when getting CP/M running on it.
+                                Future plans are getting a floppy controller made for it and using a period correct 8 inch
+                                floppy drive.</p>
+                            <h2>Hardware</h2>
+                            <p>
+                                <a href="/projects/z80/cpu.html">CPU / Memory
+                                    Board</a>
+                                <br>
+                                <a href="/projects/z80/uart.html">UART Board</a>
+                                <br>
+                                <a href="/projects/z80/pio.html">PIO Board</a>
+                                <br>
+                                <a href="/projects/z80/ide.html">IDE / Floppy
+                                    Board</a>
+                                <br>
+                                <a href="/projects/z80/clock.html">Clock Board</a>
+                                <br>
+                                <a href="/projects/z80/lair.html">Logic
+                                    Analyzer Interface Board</a>
+                                <br>
+                                <a href="/projects/z80/lcd.html">LCD Board</a>
+                            </p>
+                            <img src="/img/z80/z80-computer.jpg" alt="Z80 Computer" class="fullwidth">
+                            <p>The computer is a Z80 CPU with a 16c550 UART. When it boots, there is 16k of ROM at
+                                $0000-$3FFF and 48k of RAM from $4000-$FFFF. The first thing the computer does when
+                                starting is copy the ROM monitor up into RAM at $4000, disables the ROM, and then copies
+                                it back to $0000. This gets us ready to run CP/M by default, and allows us to modify
+                                variables in the ROM memory space.</p>
+                            <p>
+                                Base addresses:<br>
+                                $0x - UART<br>
+                                $3x - FDD<br>
+                                $4x - IDE<br>
+                                $5x - PIO<br>$70 - Disable ROM. Send bit 0=1 to disable rom. Currently, a reboot is
+                                needed to reset. eventually I will add a software re-enable.
+                            </p>
+                            <h2>Software</h2>
+                            <p>
+                                <a href="https://github.com/nsafran1217/z80-asm">https://github.com/nsafran1217/z80-asm</a>
+                            </p>
+                            <p><em><strong>Disclaimer</strong>
+                                    - I am not good at assembly
+                            </em></p>
+                            <img src="/img/z80/z80-bios.PNG" alt="Z80 BIOS"  class="fullwidth"><br>
+                            Commands:<p></p>
+                            <p>Most commands will save the last address used and automatically increment to the next
+                                address. All entered values are in hexadecimal.</p>
+                            <p>
+                                <code>:L [$xxxx] [$xxxx] | Load data from COM to [address]{$4000} len [bytes]{$1000} </code>
+                                <br>
+                                Load data from the serial port. I use this to upload software to test it. <br>
+                                <code>:D [$xxxx] [$xxxx] | Dump [address] of len [bytes]{$0100}. Next addr default   </code>
+                                <br>
+                                Dump data to display. Also displays ascii values for each byte.<br>
+                                <code>:W $xx [$xxxx]     | Write (value) to [address]. Write next address by default </code>
+                                <br>
+                                <code>:R [$xxxx]         | Read value at [address]. Read next address by default      </code>
+                                <br>
+                                <code>:G [$xxxx]         | Jump execution to [address]{address from L cmd}            <br></code>
+                                Default address if not specified is the address entered for the Load command.<br>
+                                <code>:O $xx $xx         | Write (value) to (IO Port)                                  </code>
+                                <br>
+                                <code>:I $xx             | Read value from (IO Port)                                  </code>
+                                <br>
+                                <code>:B                 | Enter Boot Menu                                            </code>
+                                <br>
+                                <code>:Q                 | Ring Bell                                                 </code>
+                            </p>
+                            <img src="/img/z80/z80-hexdump.PNG" alt="Z80 Hexdump"  class="fullwidth"><br>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

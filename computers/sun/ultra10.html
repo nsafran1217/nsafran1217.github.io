@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Ultra 10</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sun-back.css">
+    <style>
+        .cde-menu ul li.sun-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Ultra 10</div>
+
+                        <div class="main-body">
+                            <h2>Ultra 10</h2>
+                            <p>TThe Ultra 5 and Ultra 10 were the first Sun computers to adopt a more PC-like
+                                architecture. Both feature a PCI bus and IDE controllers for the hard disk and CD-ROM
+                                instead of SCSI. They still use Sun's proprietary keyboard interface unlike the later
+                                SunBlade series.</p>
+
+                            <p>This Ultra 10 is well-equipped with a 333 MHz UltraSPARC IIi, 256MB of RAM, an 80GB IDE
+                                hard disk, a SCSI controller, Creator 3D graphics, and a SunPCI card.</p>
+                            <img src="/img/sun/ultra10.jpg" alt="Ultra 10" class="fullwidth">
+
+                            <h2>Sun PCi</h2>
+                            <p>The SunPCI was Sun's solution for businesses that still needed to run Windows software.
+                                It's essentially a single-board computer on a PCI card, with software that passes I/O to
+                                Solaris. When launched, it functions similarly to a virtual machine—you'll see the
+                                SunPCI boot like a normal PC. The SunPCI hard disk is an image file stored on the
+                                Solaris file system, which can be moved like any other file.</p>
+                            <p>The SunPCI also has dedicated video output, keyboard, USB, and Ethernet ports, allowing
+                                it to be used as a standalone computer if needed.</p>
+                            <p>I haven't been able to get the SunPCI working properly on my system. Either I'm missing
+                                patches, or I'm using an incompatible version of Solaris. Eventually, I plan to try
+                                installing Solaris 9 to see if that improves compatibility.
+                                <br>NCommander made an in-depth video about the SunPCI here: <a
+                                    href="https://www.youtube.com/watch?v=51oDEFJNxp0">Video</a>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

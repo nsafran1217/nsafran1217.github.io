@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - HP 9000 rp3440</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/hp-back.css">
+    <style>
+        .cde-menu ul li.hp-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - HP 9000 rp3440</div>
+
+                        <div class="main-body">
+                            <h2>HP 9000 rp3440</h2>
+                            <p>I have HP-UX 11.31, the last version, installed on the system. I haven't done much with
+                                it yet, but more will come in the future. I didn't get any drive caddies with it, so I
+                                designed some to 3D print. I made them look similar to the original caddies, as well as
+                                blank ones."</p>
+                                <a href="https://www.thingiverse.com/thing:6703437" target="_blank" rel="noopener noreferrer">Thingiverse link to caddy</a>
+                                <br/>
+
+                                <img src="/img/hp/rp3440.jpg" alt="System" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

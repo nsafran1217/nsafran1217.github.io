@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 CPU</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 CPU</div>
+
+                        <div class="main-body">
+                            </p>
+                            <h2>Z80 CPU and Memory Board</h2>
+                            <p>
+                                This was the first board I built for the computer. I'm not happy with how it looks, but
+                                it works. I improved my construction techniques in the later boards.<br>This board has
+                                the z80 CPU, Flash, SRAM, an OR gate for memory address decoding, a 3 to 8 demux for IO
+                                address decoding, and a latch that disables the ROM.
+                            </p>
+                            <p>The only change I needed to make to this board was adding the latch and IO decoding.</p>
+                            <a href="/img/z80/cpu-board.jpg"><img src="/img/z80/cpu-board.jpg" alt="Z80 CPU and Memory Board" class="fullwidth"></a>
+                            <a href="/img/z80/cpu-sch.png"><img src="/img/z80/cpu-sch.png" alt="Z80 CPU and Memory Board" class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

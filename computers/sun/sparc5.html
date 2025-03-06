@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - SPARCStation 5</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sun-back.css">
+    <style>
+        .cde-menu ul li.sun-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - SPARCStation 5</div>
+
+                        <div class="main-body">
+                            <h2>SPARCStation 5</h2>
+                            <p>This is another pizza box workstation, equipped with 32MB of RAM and a ~60MHz MicroSPARC
+                                processor. Unfortunately, the memory in this system is proprietary and relatively rare,
+                                making upgrades difficult. The prices for RAM on eBay don’t seem worth it for an
+                                upgrade.</p>
+
+                            <p>This system is running Solaris 2.6. I've installed a decent number of modern tools,
+                                including gzip, bash, wget, etc.</p>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sun/sparc5.jpg">
+                                                    <img src="/img/sun/sparc5.jpg" alt="System">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sun/sparc5-os.jpg">
+                                                    <img src="/img/sun/sparc5-os.jpg" alt="Solaris 2.6">
+                                                </a>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

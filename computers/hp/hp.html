@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - HP</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/hp-back.css">
+    <style>
+        .cde-menu ul li.hp-nested {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - HP</div>
+
+                        <div class="main-body">
+                            <h2>Hewlett-Packard</h2>
+                            <img src="/img/hp/hp-logo.jpg" alt="HP Logo" class="inline" width="200px">
+                            <p>I currently have four HP-UX machines. HP and HP-UX feel very "business-like" when
+                                interacting with them, similar to how IBM machines feel.<br>
+                                HP-UX's system administration tool, SAM, is well-designed and feels complete. In later
+                                versions of HP-UX, they transitioned from Motif GUI applications to a web-based
+                                management tool called SMH, which has a similar look and feel to iLO interfaces. I
+                                haven't spent much time with the later HP-UX versions yet, but I plan to experiment with
+                                HP 9000 containers and Integrity VM.</p>
+                            <p>Of course, I'll also keep an OpenVMS 8.4 installation on my Integrity machine. One day, I
+                                hope to build a VMS cluster with x86-64, Itanium, Alpha, and VAX (if it's supported).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - Systems</div>
+                        <div class="main-body">
+                            <h2>Featured Systems:</h2>
+                            <p>Systems which I have more to say about</p>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/hp/715.html">
+                                                    <img src="/img/hp/715.jpg" height="100px" alt="715/100">
+                                                </a>
+                                                <a href="/computers/hp/715.html">715/100</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/hp/c8000.html">
+                                                    <img src="/img/hp/c8000.jpg" height="100px" alt="C8000">
+                                                </a>
+                                                <a href="/computers/hp/c8000.html">C8000</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/hp/rx2660.html">
+                                                    <img src="/img/hp/rx2660.jpg" height="100px" alt="rx2660">
+                                                </a>
+                                                <a href="/computers/hp/rx2660.html">rx2660</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/hp/rp3440.html">
+                                                    <img src="/img/hp/rp3440.jpg" height="100px" alt="rp3440">
+                                                </a>
+                                                <a href="/computers/hp/rp3440.html">rp3440</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>All Systems:</h2>
+                            Will update eventually with all specs
+                            <table class="specs">
+                                <tbody>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Processor</th>
+                                        <th>RAM</th>
+                                        <th>Graphics</th>
+                                        <th>Disk</th>
+                                        <th>OS</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                    <tr>
+                                        <td>HP 9000 715/100</td>
+                                        <td>??</td>
+                                        <td>??</td>
+                                        <td>?</td>
+                                        <td>4.2 GB</td>
+                                        <td>HP-UX 10.20</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>C8000</td>
+                                        <td>PA-8900</td>
+                                        <td>48 MB</td>
+                                        <td>ATi FireGL</td>
+                                        <td>36 GB</td>
+                                        <td>HP-UX 11.11 (11i v1)</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>HP 9000 rp3440</td>
+                                        <td>2x PA-8900</td>
+                                        <td>2 GB</td>
+                                        <td>None</td>
+                                        <td>36 GB</td>
+                                        <td>HP-UX 11.31</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Integrity rx2660</td>
+                                        <td>Itanium2</td>
+                                        <td>4 GB</td>
+                                        <td>Integrated</td>
+                                        <td>300 GB SAS</td>
+                                        <td>HP-UX 11.31 / OpenVMS 8.4</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - Info and Links</div>
+                        <div class="main-body">
+
+                            <h2>Enabling NFSv2 on Ubuntu 22.04</h2>
+                            <p>I had issues mounting an NFS export on a Ubuntu 22.04 server on some older OSes like
+                                HP-UX and Tru64. I had to enable NFSv2 to allow these systems to mount the NFS export.
+                            </p>
+                            <p>
+                                In <code>/etc/default/nfs-kernel-server</code>
+                                , change <code>RPCNFSDOPTS</code>
+                                to include version 2, like this:<br>
+                            </p>
+                            <div>
+                                <div>
+                                    <code>RPCNFSDOPTS="--nfs-version 2,3,4 --debug --syslog"</code>
+                                </div>
+                            </div>
+                            <div>
+                                Then, in <code>/etc/nfs.conf</code>
+                                , in <code>[nfsd]</code>
+                                , add <code>vers2=y</code>
+                            </div>
+                            <div>
+                                Then restart nfs:
+                                <code>sudo systemctl restart nfs-kernel-server
+                        </code>
+                            </div>
+                            <div></div>
+                            <div>I have my directory exported like this:</div>
+                            <div></div>
+                            <div>
+                                <div>
+                                    <code>/nfs 10.35.0.0/24(rw,no_root_squash,insecure)</code>
+                                </div>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html')  //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

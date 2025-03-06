@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 UART</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 UART</div>
+
+                        <div class="main-body">
+                            <h2>Z80 UART Serial Board</h2>
+                            <p>
+                                This is the second board I made in 2017. I've made some changes to it in 2020 when I
+                                started to add more boards to the system. Before, the address decoding was done with a
+                                few different 74LS logic chips. I replaced it with a single 74LS128 3 to 8 demux. I was
+                                also having issues with the 16c550 not resetting correctly, so I tied the reset signal
+                                into the computers reset circuit. It should have been like this from the start. I needed
+                                to invert the signal, so I used a 74LS00 NAND since this was already on the board from
+                                the old address decoding.<br>
+                                The crystal for the UART is 1.843200MHZ. We write 12 to the divisor latch. Then, it is
+                                divided internally by 16. This gives us 9600 baud. You can see this in <a
+                                    href="https://github.com/nsafran1217/z80-asm/blob/master/myCode/monitorv3/uart.s"
+                                    target="_blank" rel="noopener noreferrer">uart.s</a>
+                                in the SetupUART routine.
+                            </p>
+                            <p>I still have issues with this chip not resetting sometimes, so more investigation is
+                                needed.</p>
+                            <a href="/img/z80/uart-board.jpg"><img src="/img/z80/uart-board.jpg" alt="Z80 UART "
+                                    class="fullwidth"></a>
+                            <a href="/img/z80/uart-sch.png"><img src="/img/z80/uart-sch.png" alt="Z80 UART"
+                                    class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

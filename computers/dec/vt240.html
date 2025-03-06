@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - VT 240</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dec-back.css">
+    <style>
+        body {
+            background: url(/img/bgs/water.png) left top repeat;
+        }
+
+        .cde-menu ul li.dec-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">DECterm - VT 240</div>
+
+                        <div class="main-body">
+                            <h2>VT 240</h2>
+                            <img src="/img/dec/vt240.jpg" alt="VT 240" class="inline" width="300px">
+                            <p>The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and
+                                emulates a Tektronix 4010/4014. My VT240 has a green phosphor monochrome monitor.
+                                <br>
+                                It seems that the case has been painted. The plastic underneath the paint is noticeably
+                                yellowed. I'm not sure if it came from DEC this way or if someone painted it in the
+                                past. I'm assuming it came from DEC like this, as I found it in a closet at work.
+                            </p>
+                            <br>
+                            <h3>ReGIS Graphics</h3>
+
+                            <p>I wrote a <a href="https://github.com/nsafran1217/svg2ReGIS">python script</a> to convert
+                                an svg file to ReGIS commands to demonstrate the graphics capabilities of the terminal.
+                                <img src="/img/dec/svg-regis.PNG" alt="SVG to ReGIS" class="fullwidth" width="400px">
+                            </p>
+
+                            <h3>Tektronix Emulation</h3>
+                            <p>This is an example of the tektronix 4010/4014 emulation. The text is unreadable and the
+                                graphics are not the correct aspect ratio. I'm not sure if there is a monitor available
+                                that would display the graphics correctly.</p>
+                            <img src="/img/dec/vt240-tek.jpg" alt="VT 240 Tek emu" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

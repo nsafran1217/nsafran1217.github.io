@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Indigo2</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sgi-back.css">
+    <style>
+        .cde-menu ul li.sgi-nested {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">winterm - Indigo2</div>
+
+                        <div class="main-body">
+                            <h2>Indigo2</h2>
+                            <p>The Indigo2 was the first Silicon Graphics machine I acquired, and I'd love to add the
+                                purple model with High Impact graphics to my collection someday.<br />
+                                My system is equipped with a 150 MHz R4400 processor, 128MB of RAM, and GR3-XZ graphics.
+                                Also known as Express graphics, the XZ board set consists of two stacked boards. It
+                                features two Geometry Engines, one Reality Engine, and a Z-buffer, supporting 24-bit
+                                color.
+                            <p>It runs IRIX 6.5.22 on a 36GB SCSI hard disk. Since I don't have many 50-pin SCSI drives,
+                                I used an adapter to convert from 50-pin SCSI to 80-pin SCA, as I have plenty of SCA
+                                drives from old servers. The fit is tight, and it slightly bends the drive's circuit
+                                board, but I haven't had any issues.</p>
+                            <p>When I first got the system, the graphics output had a problem—the screen was covered in
+                                vertical lines, though the mouse cursor appeared correctly on top. Fortunately, all it
+                                took to fix the issue was separating the graphics board set and reseating all the
+                                connections.
+                            </p>
+                            <p>I recently acquired a second Indigo2; a purple one with an R4400 250 MHz and Extreme
+                                graphics. </p>
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">winterm - Pictures</div>
+
+                        <div class="main-body">
+                            <h2>Pictures</h2>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/indigo2-error.jpg"><img src="/img/sgi/indigo2-error.jpg" alt="lines on gfx"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/indigo2.jpg"><img src="/img/sgi/indigo2.jpg" alt="Both Indigo2s"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/indigo2-scsi.jpg"><img src="/img/sgi/indigo2-scsi.jpg" alt="scsi adapter"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

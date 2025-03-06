@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Nixie and VFDs</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Nixie and VFDs</div>
+
+                        <div class="main-body">
+                            <h2>Nixie and VFD projects</h2>
+                            Like many others, I am fascinated by old display technologies, especially those from the
+                            Soviet Union. I've completed a few projects using old neon, Nixie, and VFD displays. I also
+                            have some other interesting display tubes sitting on the shelf, such as thyratrons and EL
+                            displays. When I have time, I plan to build a clock featuring six different numeric displays.
+                            </p>
+                            <h2>Featured Projects</h2>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/projects/nixie/in12-clock.html">
+                                                    <img src="/img/nixie/in12-clock.jpg" alt="IN-12 clock">
+                                                </a>
+                                                <a href="/projects/nixie/in12-clock.html">IN-12 Nixie Clock</a>
+                                            </div>
+                                        </td>
+                                        <td><div class="image-showcase">
+                                            <a href="/projects/nixie/weather-clock.html">
+                                                <img src="/img/nixie/nixie-weather.jpg" alt="Weather Clock">
+                                            </a>
+                                            <a href="/projects/nixie/weather-clock.html">Nixie and VFD Weather Clock</a>
+                                        </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/projects/nixie/soyuz.html">
+                                                    <img src="/img/nixie/soyuz.jpg" alt="Soyuz 744H">
+                                                </a>
+                                                <a href="/projects/nixie/soyuz.html">Soyuz 744H Clock Replica</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/projects/nixie/ins1-matrix.html">
+                                                    <img src="/img/nixie/ins1-clouds.jpg" alt="INS-1 Matrix">
+                                                </a>
+                                                <a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

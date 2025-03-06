@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 Clock</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 Clock</div>
+
+                        <div class="main-body">
+                            </p>
+
+                            <h2>Z80 Clock Board</h2>
+                            <p>This board just controls the clock and reset signal for the computer. I do not have a
+                                reset circuit when the computer is turned on, so the computer needs to be manually
+                                reset. You can halt the computer with a switch and manually step the processor with a
+                                button on the front.<br>
+                            The board design is based on Ben Eater's design for his 6502 computer.</p>
+                            <p>The schematic is not complete.</p>
+                            <a href="/img/z80/clock-board.jpg"><img src="/img/z80/clock-board.jpg" alt="Z80 Clock"
+                                    class="fullwidth"></a>
+                            <a href="/img/z80/clock-sch.png"><img src="/img/z80/clock-sch.png" alt="Z80 Clock"
+                                    class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

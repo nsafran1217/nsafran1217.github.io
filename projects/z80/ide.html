@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 IDE</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 IDE</div>
+
+                        <div class="main-body">
+                            </p>
+
+                            <h2>Z80 IDE Interface Board</h2>
+                            <p>
+                                Currently this board is very simple because only the IDE part is implemented.
+                                Eventually, a floppy controller will be added to this board.<br>The hard disk is
+                                connected directly to the Z80's bus. I'm considering re-making this board and adding bus
+                                transceivers for both the IDE disk and the FDD controller.<br>So far, I've only found 1
+                                model of hard disk that works with this setup, and I'm assuming its because there's no
+                                bus transceiver. Only 8 bits of the 16 bit data bus on the hard disk is used. The other
+                                top 8 are pulled to ground. The only chip on the board is a 3 to 8 demux for address
+                                decoding.
+                            </p>
+                            <a href="/img/z80/ide-board.jpg"><img src="/img/z80/ide-board.jpg" alt="Z80 IDE"
+                                    class="fullwidth"></a>
+                            <a href="/img/z80/ide-sch.png"><img src="/img/z80/ide-sch.png" alt="Z80 IDE"
+                                    class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

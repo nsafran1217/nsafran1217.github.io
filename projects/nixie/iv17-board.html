@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - ИВ-17 Tube Board</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - ИВ-17 Tube Board</div>
+
+                        <div class="main-body">
+                            <h2>ИВ-17 Tube Board</h2>
+                            <p>
+                            <a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/VFD-IV-17</a>
+                        </p>
+                        <p>This board now has a permanent home in my <a href="/projects/nixie/weather-clock.html">Nixie/VFD Weather clock</a></p>
+                        <p>
+                            I finally built a case for this board, <span style="text-decoration: line-through;">though I still don't have a permanent use for it.</span> I 3d printed a case that let me fit the 2 power supplies and connectors in one place.
+                        </p>
+                        <p>I wrote a few assembly routines to use the display with my z80 computer. It uses the z80-pio to talk to it. </p>
+                        <p>
+                            The assembly is in the files called "iv17*.s" in my GitHub repo for my computer:<br>
+                            <a href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos">https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos</a>
+                        </p>
+                        <p>
+                            As a part of this, I also wrote a simple clock program with an RTCDS3231 connected to the z80-pio. I bit-banged the i2c.<br>If anyone is looking for examples of i2c bit banging on the z80, look at i2c.s and RTCDS3231bitBang.s. clock-iv17.s puts it all together into one program.
+                        </p>
+                            <a href="/img/nixie/iv17-z80.jpg"><img src="/img/nixie/iv17-z80.jpg" alt="Connected to z80"
+                                class="fullwidth"></a>
+                            <a href="/img/nixie/iv17-top.jpg"><img src="/img/nixie/iv17-top.jpg" alt="From top"
+                                    class="fullwidth"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+</html>

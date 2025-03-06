@@ -1,0 +1,46 @@
+/*Set images for default CDE theme*/
+
+body {
+    background: url(/img/bgs/toronto.png) left top repeat;
+}
+
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*order is important*/
+    
+    background: url(/img/default-css/term-topleft.png) top left no-repeat,
+        url(/img/default-css/term-topright.png) top right no-repeat,
+        url(/img/default-css/term-topmiddle.png) top center repeat-x,
+
+        url(/img/default-css/term-botleft.png) bottom left no-repeat,
+        url(/img/default-css/term-botright.png) bottom right no-repeat,
+
+        url(/img/default-css/term-centerleft.png) center left repeat-y,
+        url(/img/default-css/term-centerright.png) center right repeat-y,
+
+        url(/img/default-css/term-botmiddle.png) bottom center repeat-x;
+       /* url(/img/default-css/term-centermiddle.png) center center repeat;*/
+       background-color: #686f82;
+}
+
+div.navbar {
+    /*order is important*/
+    background: url(/img/default-css/navmenu-top.png) top center no-repeat,
+        url(/img/default-css/navmenu-bot.png) bottom center no-repeat,
+        url(/img/default-css/navmenu-mid.png) center center repeat-y;
+}
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: white;
+}
+/* Section headings */
+.section-heading {
+    background: url(/img/default-css/navmenu-mid-section.png) top center no-repeat;
+    color: white;
+}
+
+.section-heading span {
+    background-color: #4992A7;
+}
+

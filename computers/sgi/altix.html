@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Altix</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sgi-back.css">
+    <style>
+        .cde-menu ul li.sgi-nested {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">winterm - SGI Altix</div>
+
+                        <div class="main-body">
+                            <h2>SGI Altix 3700 and Altix 350</h2>
+                            <p>I recently acquired both of these systems, just before they were nearly scrapped. While I was able to save the NUMAlink cables and the systems themselves, the racks were unfortunately already gone. Along with them, there was a UV1000 and an Altix 4700, but their racks and blade chassis had also been scrapped--only the blades remained. The L2 controllers were gone as well.
+
+                                <p>I haven't had much time to go through everything yet, but the 3700 appears to be working correctly. The 350, however, has a few bricks that didn't power up, and I still need to investigate the issue."</p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">winterm - Pictures</div>
+
+                        <div class="main-body">
+                            <h2>Pictures</h2>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/altix3700.jpg"><img src="/img/sgi/altix3700.jpg" alt="3700"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/altix3700-rear.jpg"><img src="/img/sgi/altix3700-rear.jpg" alt="3700 rear"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/sgi/altix350.jpg"><img src="/img/sgi/altix350.jpg" alt="350 "></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+</html>

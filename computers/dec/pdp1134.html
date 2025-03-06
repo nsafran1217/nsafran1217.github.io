@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - PDP 11/34a</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dec-back.css">
+    <style>
+        body {
+            background: url(/img/bgs/water.png) left top repeat;
+        }
+
+        .cde-menu ul li.dec-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">DECterm - PDP 11/34a</div>
+
+                        <div class="main-body">
+                            <h2>PDP 11/34a</h2>
+                            <p>This is the oldest working computer in my collection and, in my opinion, the most
+                                impressive. This particular PDP came from a college, where it was sold by Tektronix to
+                                operate test equipment. The computer and drives have Tektronix serial numbers, and there
+                                is also a Tektronix HP-IB interface card used for connecting to the equipment.</p>
+                            <img src="/img/dec/pdp11-34a.jpg" alt="PDP 11/34a" class="fullwidth">
+                            <p>My PDP has the following cards installed:</p>
+                            <ul>
+                                <li>M8266 - 11/34a control module</li>
+                                <li>M8265 - 11/34a data paths module</li>
+                                <li>M8267 - 11/34a floating point processor</li>
+                                <li>M7859 - Console interface</li>
+                                <li>M9312 - Bootstrap terminator</li>
+                                <li>M7856 - DL11-W Serial and realtime clock</li>
+                                <li>M9202 - Unibus jumper</li>
+                                <li>2x M7891 - 128KB / 64Kword Memory</li>
+                                <li>M7762 - RL11 RL01/RL02 Drive controller</li>
+                                <li>Tektronix interface card</li>
+                                <li>M9302 - Terminator</li>
+                            </ul>
+                            <p>
+                                Currently, I run the system with the RL11 controller removed and a <a
+                                    href="http://retrocmp.com/projects/unibone" target="_blank"
+                                    rel="noopener noreferrer">Unibone</a> in its place. The Unibone allows me to emulate
+                                drives, letting me experiment with more operating systems while also preserving the
+                                RL01s from wear.
+                            </p>
+                            <img src="/img/dec/pdp11-34a-inside.jpg" alt="Inside" class="fullwidth">
+                            <h2>Drives</h2>
+                            <p>
+                                This PDP came with two RL01 removable pack disk drives, each holding 5MB on a single
+                                platter. I only have two disk packs, and RL01 packs are much rarer than RL02s, which is
+                                a big reason why I opted for the Unibone. The first disk pack contained only XXDP+
+                                diagnostics, while the second had an installation of Tektronix SPS BASIC, a custom
+                                dialect of BASIC developed by Tektronix based on Dartmouth BASIC. I uploaded an image of
+                                the disk <a href="https://archive.org/details/TEKSPS" target="_blank"
+                                    rel="noopener noreferrer">here</a>
+                                . You can easily boot this image in SIMH on an emulated 11/34A. Some manuals for Tek SPS
+                                BASIC can be found
+                                basic <a href="https://w140.com/tekwiki/wiki/SPS_BASIC" target="_blank"
+                                    rel="noopener noreferrer">here</a>.
+                            </p>
+                            <h2>Power supply repair</h2>
+                            <p>
+                                When I received the system, one of the H7441 5V regulators was broken. With help from
+                                some people on the VCFed forum, I was able to repair it. <a
+                                    href="https://forum.vcfed.org/index.php?threads/dec-h7441-5v-regulator-repair.1239569/"
+                                    target="_blank" rel="noopener noreferrer">Read the thread here</a>.
+                            </p>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

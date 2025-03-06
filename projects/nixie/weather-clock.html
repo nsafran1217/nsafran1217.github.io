@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Nixie Weather Clock</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Nixie Weather Clock</div>
+
+                        <div class="main-body">
+                            <h1>Nixie and VFD Weather Clock</h1>
+
+                            <p>
+                                This project is mostly finished. I still want to modify some of the animations I created
+                                and replace the 3D-printed front panel with one made from aluminum.<br>
+                                <a href="https://github.com/nsafran1217/NixieWeatherClock">Project GitHub Repository</a>
+                            </p>
+
+                            <a href="/img/nixie/nixie-weather.jpg">
+                                <img src="/img/nixie/nixie-weather.jpg" alt="Completed Clock" class="fullwidth">
+                            </a>
+
+                            <p>
+                                This clock is powered by an ESP32 and features an IN-12 Nixie tube clock, a 12×10 INS-1
+                                neon indicator matrix, and a six-character IV-17 VFD display. It retrieves time and
+                                weather data from the internet at regular intervals and can display either current or
+                                future
+                                weather, or cycle between both. The current weather time frame being displayed is
+                                indicated by an
+                                AL102 LED.
+                            </p>
+
+                            <p>
+                                All of the displays, including the LEDs, are Soviet surplus, so I wanted the clock to
+                                resemble an old piece of Soviet military equipment. All front panel lettering and
+                                messages displayed on the alphanumeric IV-17 tubes are written in Russian.
+                            </p>
+
+                            <p>
+                                This clock incorporates three circuit boards I designed, plus one additional hand-made
+                                board.<br>
+                                <a href="https://github.com/nsafran1217/NixieBoard">Nixie Tube Board</a> - A variation
+                                of my
+                                <a href="/projects/nixie/in12-clock.html">Nixie tube clock</a> board, designed to be
+                                smaller and accept input via a connector.<br>
+                                <a href="/projects/nixie/iv17-board.html">IV-17 VFD Board</a><br>
+                                <a href="/projects/nixie/ins1-matrix.html">INS-1 Matrix Board</a><br>
+                                All board designs and Arduino libraries are available on GitHub.
+                            </p>
+
+                            <p>
+                                For the high-voltage power supply, I use an
+                                <a href="https://omnixie.com/products/nch6300hv-nixie-hv-power-module">NCH6300HV</a> by
+                                Omnixie. I used their older design in my first Nixie clock and was pleased with its
+                                performance.
+                            </p>
+
+                            <p>
+                                The clock is powered by 12V through a USB-C connection. A small power trigger board
+                                requests 12V from the USB adapter.<br>
+                                When the adapter is first plugged in, 5V is supplied to the clock. Some voltage reaches
+                                the 7805 voltage regulator that powers the ESP32, but not enough to turn it on. After a
+                                few
+                                seconds, the voltage increases to 12V, and the ESP32 begins bringing up the other power
+                                supplies.
+                                I have not encountered any issues with this arrangement.
+                            </p>
+
+                            <p>
+                                A buck converter generates the 2.4V required for the VFD filaments, while a boost
+                                converter
+                                produces the 25V needed for the anode voltage. A linear regulator provides 5V for the
+                                VFD and
+                                Nixie board, which also powers the ESP32.
+                            </p>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

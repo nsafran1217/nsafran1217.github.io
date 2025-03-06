@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - HP 715/100</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/hp-back.css">
+    <style>
+        .cde-menu ul li.hp-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - HP 715/100</div>
+
+                        <div class="main-body">
+                            <h2>HP 715/100</h2>
+                            <p>The case design of the 700 series workstations is pretty basic, but it does have an industrial charm that I can appreciate. Some of the later Visualize systems, such as the C360, have a much more appealing design.</p>
+                            <p>I have HP-UX 10.20 installed on the system, along with some open-source software from the HP-UX Porting Archive. Since many packages for 10.20 were erased, I had to find them on archive.org. I scraped all the copies and versions of the HP-UX Porting Archive, including mirrors, from archive.org and combined them into one directory tree. Eventually, I'll host this mirror somewhere.</p>
+                            <p>I also need to figure out if a SCSI replacement board will work in this system, as the original 4.2 GB disk is failing. Most of the time, when I turn it on, the disk is stuck, and I need to pick up the system and rotate it while the disk tries to spin up.</p>
+                            <img src="/img/hp/715.jpg" alt="System" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

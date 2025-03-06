@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Z80 LAIR</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">Terminal - Z80 LAIR</div>
+
+                        <div class="main-body">
+                            </p>
+
+                            <h2>Z80 Logic Analyzer Interface Board</h2>
+
+                            <p>
+                                When I was first getting started with writing assembly, I found it very difficult to
+                                know what was happening after I burned the ROM and turned the comptuer on.<br>
+                                I purchased an Agilent 1670G to connect to the comptuer and get some visability into
+                                what the computer was doing. There is an inverse z80 assembler avaliable for the 1670G,
+                                which make it very easy to decode what the computer is doing.
+                                <br>This board is a clone of the <a href="https://github.com/MustBeArt/LAIR"
+                                    target="_blank" rel="noopener noreferrer">LAIR Pro</a>
+                                for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.
+                            </p>
+                            <a href="/img/z80/lair-board.jpg"><img src="/img/z80/lair-board.jpg" alt="Z80 LAIR"
+                                    class="fullwidth"></a>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

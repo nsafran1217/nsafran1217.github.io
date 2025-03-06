@@ -1,0 +1,253 @@
+html {
+    height: 100%;
+}
+body {
+    image-rendering: pixelated;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+/* all background images are set in default-back.css or sun-back.css*/
+
+table {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+td {
+    vertical-align: top;
+    padding: 0px 10px
+}
+/* TEST REMOVE
+td.main-bodytd {
+    width: 100%;
+}
+*/
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*flex-grow: 1; TEST REMOVE */
+    padding: 20px;
+    position: relative;
+    text-align: left;
+   /* vertical-align: top; TEST REMOVE*/
+    max-width: 900px;
+    margin: 0 auto;
+    min-width: 300px;
+    margin-bottom: 20px;
+   
+    /*transform: translateX(-125px);*/
+}
+code {
+    color: #ffc074;
+    background-color: #4b4f5a;
+}
+table.specs,
+table.specs th,
+table.specs td {
+    border: 1px black solid;
+    border-collapse: collapse;
+    cellspacing: 0px;
+    padding: 1px 1px;
+}
+/*title at top of a window*/
+.window-title {
+    position: absolute;
+    /* Fixes the position */
+    top: 0px;
+    font-size: 14px;
+    height: 14px;
+    overflow: hidden;
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Ensures exact centering */
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.main-body {
+    margin-top: 40px;
+    /* space down for terminal png*/
+    color: white;
+}
+
+/*Links in main body*/
+.main-body a {
+    color: rgb(236, 233, 233);
+}
+
+img.inline {
+    float: right;
+    margin: 4px;
+    margin-left: 16px;
+    image-rendering: auto;
+}
+img.fullwidth {
+    max-width: 100%;
+    image-rendering: auto;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+img.halfwidth {
+    max-width: 100%;
+    image-rendering: auto;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+table.image-showcase,
+table.image-showcase th,
+table.image-showcase td {
+    border: 1px black solid;
+    border-collapse: collapse;
+    cellspacing: 0px;
+    padding: 1px 1px;
+}
+table.image-showcase td {
+    width: 25%; /* Ensure each column takes up an equal portion of the table */
+    padding: 5px;
+    vertical-align: middle;
+    ;
+}
+table.image-showcase div.image-showcase{
+    vertical-align: middle;
+    text-align: center;
+}
+table.image-showcase img {
+    max-width: 100%; /* Ensure the image takes up the full width of its parent */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any inline spacing */
+    image-rendering: auto;
+    
+
+}
+/* navigation bar */
+#nav {
+    width: 100%;
+}
+.navbar {
+    width: 250px;
+    position: relative;
+    /*background-size: 100% auto, 100% auto, 100% auto; TEST REMOVE */
+    /*vertical-align: top;TEST REMOVE */
+    /*position: relative;TEST REMOVE */
+    padding-bottom: 20px;
+}
+
+.cde-menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.cde-menu ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border: 0px;   
+}
+
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    /* this is overridden for different styles */
+    background-color: #4992a7;
+    border: 3px outset #4992a7;
+    border-top-color: #adced7;
+    border-left-color: #adced7;
+    border-right-color: #244953;
+    border-bottom-color: #244953;
+    
+    border-style: solid;
+    padding-left: 4px;
+    display: block;
+    align-items: center; 
+    padding: 8px;
+    margin-bottom: 4px;
+}
+/* home link,top button*/
+.home-link {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    
+    margin-bottom: 4px;
+    padding: 6px 20px;
+    margin: 15px;
+    margin-top: 32px;
+}
+/* section headings */
+.cde-menu li.section-heading {
+    border-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px;
+    padding-left: 20px;
+
+}
+/*main section links*/
+.cde-menu ul li.section-link {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    text-align: center;
+    margin: 4px 15px;
+
+}
+/*subsection links*/
+.cde-menu ul li.subsection-link {
+    text-align: left;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px 15px;
+    margin-left: 40px;
+}
+
+.cde-menu ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.cde-menu ul li a img {
+    float: none;
+    display: inline-block;
+}
+
+/* Hover effects */
+.cde-menu ul li.section-link:hover,
+.cde-menu ul li.subsection-link:hover,
+.cde-menu ul li.home-link:hover {
+    text-decoration: underline;
+}
+
+.cde-menu ul li.sgi-nested {
+    display: none;
+}
+
+.cde-menu ul li.sun-nested {
+    display: none;
+}
+
+.cde-menu ul li.hp-nested {
+    display: none;
+}
+
+.cde-menu ul li.dec-nested {
+    display: none;
+}
+
+.cde-menu ul li.ibm-nested {
+    display: none;
+}

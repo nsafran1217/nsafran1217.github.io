@@ -1,0 +1,76 @@
+/*Set images for HP-VUE theme*/
+
+body {
+    background: url(/img/hp-css/bg-topleft.png) top left no-repeat,
+    url(/img/hp-css/bg-topright.png) top right no-repeat,
+    url(/img/hp-css/bg-topmid.png) top center repeat-x,
+
+    url(/img/hp-css/bg-botleft.png) bottom left no-repeat,
+    url(/img/hp-css/bg-botright.png) bottom right no-repeat,
+
+    url(/img/hp-css/bg-midleft.png) center left repeat-y,
+    url(/img/hp-css/bg-midright.png) center right repeat-y,
+
+    url(/img/hp-css/bg-botmid.png) bottom center repeat-x;
+    background-color: #252c3f;
+    height: 100%;
+}
+
+.window-title {
+    position: absolute;
+    top: 7px;
+}
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*order is important*/
+    background: url(/img/hp-css/term-topleft.png) top left no-repeat,
+        url(/img/hp-css/term-topright.png) top right no-repeat,
+        url(/img/hp-css/term-topmiddle.png) top center repeat-x,
+
+        url(/img/hp-css/term-botleft.png) bottom left no-repeat,
+        url(/img/hp-css/term-botright.png) bottom right no-repeat,
+
+        url(/img/hp-css/term-centerleft.png) center left repeat-y,
+        url(/img/hp-css/term-centerright.png) center right repeat-y,
+
+        url(/img/hp-css/term-botmiddle.png) bottom center repeat-x;
+    background-color: #78a0d4;
+        
+
+}
+
+
+
+div.navbar {
+    /*order is important*/
+    background: url(/img/hp-css/navmenu-top.png) top center no-repeat,
+        url(/img/hp-css/navmenu-bot.png) bottom center no-repeat,
+        url(/img/hp-css/navmenu-mid.png) center center repeat-y;
+}
+
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #78a0d4;
+    border: 3px outset #78a0d4;
+    border-top-color: #c4d5ed;
+    border-left-color: #c4d5ed;
+    border-right-color: #3e536e;
+    border-bottom-color: #3e536e;
+ }
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: white;
+}
+/* Section headings */
+.section-heading {
+    background: url(/img/hp-css/navmenu-mid-section.png) top center no-repeat;
+    color: white;
+}
+
+.section-heading span {
+    background-color: #78a0d4;
+}
+

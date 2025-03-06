@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Digital</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dec-back.css">
+    <style>
+        body {
+            background: url(/img/bgs/water.png) left top repeat;
+        }
+
+        .cde-menu ul li.dec-nested {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">DECterm - Digital Equipment Corporation</div>
+
+                        <div class="main-body">
+                            <h2>Digital Equipment Corporation</h2>
+                            <img src="/img/dec/dec-logo.png" alt="DEC Logo" class="inline" width="200px">
+                            <p>Digital Equipment Corporation (DEC) fascinates me because of its significant impact on
+                                the computing world, yet most people outside of tech have never heard of it.</p>
+                            <br>
+                            By the time I started using computers, DEC was already out of business, so I never had the
+                            chance to experience their machines in everyday life.
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">DECterm - Systems</div>
+                        <div class="main-body">
+                            <h2>Featured Systems:</h2>
+                            <p>Systems which I have more to say about</p>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/dec/pdp1134.html">
+                                                    <img src="/img/dec/pdp11-34a.jpg" height="100px" alt="PDP 11/34a">
+                                                </a>
+                                                <a href="/computers/dec/pdp1134">PDP 11/34a</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/dec/vax3100.html">
+                                                    <img src="/img/dec/vaxstation-front.jpg" height="100px" alt="VAXstation 3100">
+                                                </a>
+                                                <a href="/computers/dec/vax3100.html">VAXstation 3100</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/dec/alpha1000.html">
+                                                    <img src="/img/dec/alphaserver.jpg" height="100px" alt="AlphaServer 1000">
+                                                </a>
+                                                <a href="/computers/dec/alpha1000.html">AlphaServer 1000</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/computers/dec/vt240.html">
+                                                    <img src="/img/dec/vt240.jpg" height="100px" alt="VT240 Terminal">
+                                                </a>
+                                                <a href="/computers/dec/vt240.html">VT240 Terminal</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>All Systems:</h2>
+                            Will update eventually with all specs
+                            <table class="specs">
+                                <tbody>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Processor</th>
+                                        <th>RAM</th>
+                                        <th>Graphics</th>
+                                        <th>Disk</th>
+                                        <th>OS</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                    <tr>
+                                        <td>PDP 11/34a</td>
+                                        <td>11/34a, No Floating Point</td>
+                                        <td>256 KB</td>
+                                        <td>N/A</td>
+                                        <td>RL01</td>
+                                        <td>Many</td>
+                                        <td>Unibone</td>
+                                    </tr>
+                                    <tr>
+                                        <td>VAXstation 3100 m38</td>
+                                        <td>KA42-B</td>
+                                        <td>24 MB</td>
+                                        <td>Color</td>
+                                        <td>BlueSCSI V2</td>
+                                        <td>OpenVMS 7.3/Ultrix 4.5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>AlphaServer 1000 4/266</td>
+                                        <td>266 MHz Alpha</td>
+                                        <td>256 MB</td>
+                                        <td>s3 Virge</td>
+                                        <td>Many 4.3GB</td>
+                                        <td>Many</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html')  //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - Integrity rx2660</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/hp-back.css">
+    <style>
+        .cde-menu ul li.hp-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - Integrity rx2660</div>
+
+                        <div class="main-body">
+                            <h2>Integrity rx2660</h2>
+                            <p>This was my first Itanium system. I currently have OpenVMS 8.4 and HP-UX 11.31 installed.
+                                I haven't done much with it yet, but I hope to experiment with Integrity VM on HP-UX and
+                                build a multi-architecture OpenVMS cluster.</p>
+
+
+
+                            <img src="/img/hp/rx2660.jpg" alt="System" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

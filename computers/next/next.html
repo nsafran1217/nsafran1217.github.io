@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - NeXT</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dec-back.css">
+    <!--<style>
+        .cde-menu ul li.NeXT-nested {
+            display: block;
+        }
+    </style>
+-->
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">dtterm - NeXT</div>
+
+                        <div class="main-body">
+                            <h2>NeXT</h2>
+                            <p>Coming Soon</p>
+
+                        </div>
+                    </div>
+                    <div class="main-body-container">
+                        <div class="window-title">dtterm - Systems</div>
+                        <div class="main-body">
+                            <h2>Featured Systems:</h2>
+                            <p>Systems which I have more to say about</p>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <!--<a href="/computers/NeXT/nextstation.html">-->
+                                                    <img src="/img/NeXT/nextstation.jpg" height="100px" alt="NeXTstation">
+                                                <!--</a>-->
+                                                <!--<a href="/computers/NeXT/nextstation.html">43p</a>-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>All Systems:</h2>
+                            Will update eventually with all specs
+                            <table class="specs">
+                                <tbody>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Processor</th>
+                                        <th>RAM</th>
+                                        <th>Graphics</th>
+                                        <th>Disk</th>
+                                        <th>OS</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                    <tr>
+                                        <td>NeXTstation Turbo</td>
+                                        <td>??</td>
+                                        <td>??</td>
+                                        <td>?</td>
+                                        <td>??</td>
+                                        <td>??</td>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html')  //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

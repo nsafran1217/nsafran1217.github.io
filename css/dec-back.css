@@ -1,0 +1,57 @@
+/*Set images for default CDE theme*/
+
+body {
+    background: url(/img/bgs/brick.png) left top repeat;
+}
+
+/*Mainly setups up the terminal background*/
+.main-body-container {
+    /*order is important*/
+    background: url(/img/decibm-css/term-topleft.png) top left no-repeat,
+        url(/img/decibm-css/term-topright.png) top right no-repeat,
+        url(/img/decibm-css/term-topmiddle.png) top center repeat-x,
+
+        url(/img/decibm-css/term-botleft.png) bottom left no-repeat,
+        url(/img/decibm-css/term-botright.png) bottom right no-repeat,
+
+        url(/img/decibm-css/term-centerleft.png) center left repeat-y,
+        url(/img/decibm-css/term-centerright.png) center right repeat-y,
+
+        url(/img/decibm-css/term-botmiddle.png) bottom center repeat-x,
+        url(/img/decibm-css/term-centermiddle.png) center center repeat;
+
+}
+
+div.navbar {
+    /*order is important*/
+    background: url(/img/decibm-css/navmenu-top.png) top center no-repeat,
+        url(/img/decibm-css/navmenu-bot.png) bottom center no-repeat,
+        url(/img/decibm-css/navmenu-mid.png) center center repeat-y;
+}
+
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #999999;
+    border: 3px outset #999999;
+    border-top-color: #d1d1d2;
+    border-left-color: #d1d1d2;
+    border-right-color: #4e4e4e;
+    border-bottom-color: #4e4e4e;
+ }
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: white;
+}
+/* Section headings */
+.section-heading {
+    background: url(/img/decibm-css/navmenu-mid-section.png) top center no-repeat;
+    color: white;
+}
+
+.section-heading span {
+    background-color: #999999;
+}
+

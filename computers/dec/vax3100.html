@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - VAXstation 3100 m38</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dec-back.css">
+    <style>
+        body {
+            background: url(/img/bgs/water.png) left top repeat;
+        }
+
+        .cde-menu ul li.dec-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">DECterm - VAXstation 3100 m38</div>
+
+                        <div class="main-body">
+                            <h2>VAXstation 3100 m38</h2>
+                            <img src="/img/dec/vaxstation-front.jpg" alt="VAXstation 3100 m38" class="fullwidth">
+                            <p>This was the first Digital computer I acquired. The system came with a 100MB and a 200MB
+                                hard disk installed, but I currently leave them disconnected to avoid potential damage,
+                                both to the drives and to the OpenVMS 6.2 installation. Instead, I use a BlueSCSI V2
+                                with multiple virtual hard disks, allowing me to easily boot different operating
+                                systems.</p>
+                            <table class="image-showcase">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/dec/vaxvt240.jpg">
+                                                    <img src="/img/dec/vaxvt240.jpg" alt="With VT240">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="image-showcase">
+                                                <a href="/img/dec/vms73.jpg">
+                                                    <img src="/img/dec/vms73.jpg" alt="DECwindows">
+                                                </a>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>I've been experimenting with OpenVMS 7.3, the last version released for VAX. This is my
+                                first experience with OpenVMS, and it's a very different environment compared to Windows
+                                or UNIX.</p>
+                            <p>I was able to install and configure TCP/IP, as well as the <a
+                                    href="https://wasd.vsm.com.au/">WASD web server</a>. Compiling WASD took about 10
+                                hours on this system, and even a simple HTML webpage with four pictures takes around
+                                five seconds to load.</p>
+                            <p>I've tested several operating systems, including OpenVMS 7.3, Ultrix 4.5, and NetBSD.
+                                NetBSD was particularly interesting since it's a modern OS running on old
+                                hardware—though generating SSH keys took about 45 minutes.</p>
+                            <h2>Mouse Adapter</h2>
+                            <p>I don't have a DEC mouse, so I assembled a converter board using <a
+                                    href="https://hackaday.io/project/19576-dec-mouse-adapter">this code.</a>
+                                <br>EEventually, I want to build a USB-based mouse and keyboard adapter using a
+                                Raspberry Pi Pico.
+                            </p>
+                            <img src="/img/dec/dec-mouse-adapter.jpg" alt="Mouse Adapter" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>

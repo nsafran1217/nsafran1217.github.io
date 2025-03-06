@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsafran.com - HP C8000</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/hp-back.css">
+    <style>
+        .cde-menu ul li.hp-nested {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="navbar">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-container">
+                        <div class="window-title">hpterm - HP C8000</div>
+
+                        <div class="main-body">
+                            <h2>HP C8000</h2>
+                            <p>The C8000 was HP's last PA-RISC workstation. All later PA-RISC systems lacked graphical consoles. This system features a single PA-8900 1.1 GHz dual-core processor.
+                               <br/> More information can be found here: <a href="https://www.openpa.net/systems/hp_c8000.html" target="_blank" rel="noopener noreferrer">HP C8000 on OpenPA.</a>
+  
+                               <p>I have HP-UX 11.11 (11i v1) TCOE installed, as it is the latest version that supports the C8000. I've been working on getting pkgsrc running but haven't had much success yet. HP-UX 11 has proven to be very particular about compilers and linkers, and I have yet to find a reliable way to compile software for the system.</p>
+
+                            <img src="/img/hp/c8000.jpg" alt="System" class="fullwidth">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        fetch('/html/nav.html') //insert nav bar
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+</body>
+
+</html>
