@@ -1,58 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - HP C8000</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/hp-back.css">
-    <style>
-        .cde-menu ul li.hp-nested {
-            display: block;
-        }
-    </style>
-
-
-
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - C8000</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/hp-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">hpterm - HP C8000</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>HP C8000</h2>
-                            <p>The C8000 was HP's last PA-RISC workstation. All later PA-RISC systems lacked graphical consoles. This system features a single PA-8900 1.1 GHz dual-core processor.
-                               <br/> More information can be found here: <a href="https://www.openpa.net/systems/hp_c8000.html" target="_blank" rel="noopener noreferrer">HP C8000 on OpenPA.</a>
-  
-                               <p>I have HP-UX 11.11 (11i v1) TCOE installed, as it is the latest version that supports the C8000. I've been working on getting pkgsrc running but haven't had much success yet. HP-UX 11 has proven to be very particular about compilers and linkers, and I have yet to find a reliable way to compile software for the system.</p>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                            <img src="/img/hp/c8000.jpg" alt="System" class="fullwidth">
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-    </script>
-</body>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td><div class="main-body-container">
+<div class="window-title">hpterm - C8000</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>C8000</h2>
+                <p>The C8000 was HP's last PA-RISC workstation. All later PA-RISC systems lacked graphical consoles. 
+                This system features a single PA-8900 1.1 GHz dual-core processor.
+                </p>
+                More information can be found here: <a href="https://www.openpa.net/systems/hp_c8000.html" target="_blank" rel="noopener noreferrer">HP C8000 on OpenPA.</a>
+                <p>I have HP-UX 11.11 (11i v1) TCOE installed, as it is the latest version that supports the C8000. I've been working on getting pkgsrc running but haven't had much success yet. 
+                HP-UX 11 has proven to be very particular about compilers and linkers, and I have yet to find a reliable way to compile software for the system.
+                <br>
+                I'm sure its just something I'm doing wrong.
+                </p>
+                <img src="/img/hp/c8000.jpg" alt="System" class="fullwidth">
+            </content></div>
+</div></td>
+</tr></tbody></table></body>
 </html>

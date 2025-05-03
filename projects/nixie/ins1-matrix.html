@@ -1,165 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - INS-1 Matrix</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/default-back.css">
-
-
-
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - INS-1 Matrix</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">Terminal - INS-1 Matrix</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>INS-1 Nixie Tube Matrix</h2>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                            <p>
-                                Code and board design files:
-                                <a href="https://github.com/nsafran1217/INS-1_Matrix">GitHub Repository</a><br>
-                                Project where the board is used:
-                                <a href="https://nsafran.com/nixie-and-vfds/nixie-and-vfd-weather-clock/">Nixie and VFD
-                                    Weather Clock</a>
-                            </p>
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-                            <a href="/img/nixie/test-pattern-ins1.gif">
-                                <img src="/img/nixie/test-pattern-ins1.gif" alt="Test Pattern" class="fullwidth">
-                            </a>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
-                            <p>
-                                This project was inspired by the excellent
-                                <a href="https://hackaday.io/project/173636-neon-pixels" target="_blank"
-                                    rel="noopener noreferrer">Neon Pixels project</a>.
-                                I designed my own board because Neon Pixels seemed too difficult to build.
-                            </p>
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
 
-                            <p>
-                                This board is a 6x10 matrix of INS-1 (ИНС-1) Nixie tube indicators. I chose a 6x10
-                                layout because I wanted to use the board to display weather icons (clouds, sun, rain,
-                                etc.). Combining two boards creates a 12x10 display, providing enough resolution for
-                                basic graphics while keeping the physical size manageable. The 6x10 design also utilizes
-                                most of the outputs on the shift registers, with 60 tubes per board.
-                            </p>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
 
-                            <p>
-                                To control the tubes, I used HV5530 32-bit high-voltage shift registers. Power (both
-                                high voltage and 12V) is supplied through the input connector. The displays are
-                                chainable via a simple 8-pin connector.<br> I wanted to make the board smaller, but
-                                there was no room to place the chip or route the traces.
-                            </p>
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
 
-                            <p>
-                                This was the first board I had assembled by JLCPCB. They handled the resistors and
-                                capacitors, which was well worth the cost. Soldering the HV5530 by hand was not too
-                                difficult.
-                            </p>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
 
-                            <h3>Design Mistakes</h3>
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
 
-                            <p>While designing this board, I made two major mistakes:</p>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
 
-                            <ol>
-                                <li>
-                                    I connected the polarity (POL) pin on the HV5530 to GND. Since POL is active low,
-                                    this caused all bits to be inverted. I initially did this because I knew I would be
-                                    driving the logic signals through transistors, which also invert the signal.
-                                    However, this setup caused the BLNK pin to light up the display when it was active,
-                                    eliminating any possibility of PWM dimming. To fix this, I disconnected POL from GND
-                                    and ran a bodge wire to 12V. This has been corrected in the KiCAD design files, and
-                                    the code has been adjusted accordingly.
-                                </li>
-                                <li>
-                                    I placed the anode resistors too close to the plated through-holes for the tubes.
-                                    When JLCPCB assembled the board, solder from the resistors flowed into the holes,
-                                    requiring me to manually remove solder from most of the anode holes before inserting
-                                    the tubes. If I produce more of these boards, I will likely redesign them to fix
-                                    this issue. This change has not yet been applied to the KiCAD files.
-                                </li>
-                            </ol>
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-                            <h2>Image Design Program</h2>
-                            <a href="/img/nixie/matrixdesigner.PNG"><img src="/img/nixie/matrixdesigner.PNG"
-                                    alt="Weather Icon" class="inline" width="500"></a>
-                            <p>
-                                I created a sloppy C# WinForms program to help design images and animations for the
-                                matrix display.
-                                <br> The program allows users to define a custom display size and number of displays. It
-                                makes several assumptions about the display, so it's only useful for this project.<br>
-                                Features include:
-                            </p>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
 
-                            <ul>
-                                <li>Saving and loading images/animations from JSON files</li>
-                                <li>Scrolling through animation frames</li>
-                                <li>Deleting frames</li>
-                                <li>Setting frame duration (in milliseconds)</li>
-                                <li>Accurately counting the number of frames in an animation</li>
-                                <li>Generating formatted C++ code that can be pasted directly into Arduino source files
-                                </li>
-                            </ul>
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
-                            <p>
-                                I'm sure there are better ways to accomplish this, but this was the solution I came up
-                                with.
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td>
+<div class="main-body-container">
+<div class="window-title">Terminal - INS-1 Matrix</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>INS-1 Nixie Tube Matrix</h2>
+                <p>
+                Code and board design files: <a href="https://github.com/nsafran1217/INS-1_Matrix">GitHub Repository</a>
+                </p>
+                <p>
+                Project where the board is used: <a href="https://nsafran.com/nixie-and-vfds/nixie-and-vfd-weather-clock/">Nixie and VFD Weather Clock</a>
+                </p>
+                <img src="/img/nixie/test-pattern-ins1.gif" alt="Test Pattern" class="fullwidth">
+                <p>
+                This project was inspired by the excellent <a href="https://hackaday.io/project/173636-neon-pixels">Neon Pixels project</a>.
+                I designed my own board because Neon Pixels seemed too difficult to build.
+                </p>
+                <p>
+                This board is a 6x10 matrix of INS-1 (ИНС-1) Nixie tube indicators. I chose a 6x10
+                layout because I wanted to use the board to display weather icons (clouds, sun, rain,
+                etc.). Combining two boards creates a 12x10 display, providing enough resolution for
+                basic graphics while keeping the physical size manageable. The 6x10 design also utilizes
+                most of the outputs on the shift registers, with 60 tubes per board.
+                </p>
+                <p>
+                To control the tubes, I used HV5530 32-bit high-voltage shift registers. Power (both
+                high voltage and 12V) is supplied through the input connector. The displays are
+                chainable via a simple 8-pin connector.<br>
+                I wanted to make the board smaller, but there was no room to place the chip or route the traces.
+                </p>
+                <p>
+                This was the first board I had assembled by JLCPCB. They handled the resistors and
+                capacitors, which was well worth the cost. Soldering the HV5530 by hand was not too
+                difficult.
+                </p>
 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="main-body-container">
-                        <div class="window-title">Terminal - Pictures</div>
+                <h3>Design Mistakes</h3>
+                <p>
+                While designing this board, I made two major mistakes:
+                </p>
+                <ol>
+                    <li>
+                    I connected the polarity (POL) pin on the HV5530 to GND. Since POL is active low,
+                    this caused all bits to be inverted. I initially did this because I knew I would be
+                    driving the logic signals through transistors, which also invert the signal.
+                    However, this setup caused the BLNK pin to light up the display when it was active,
+                    eliminating any possibility of PWM dimming. To fix this, I disconnected POL from GND
+                    and ran a bodge wire to 12V. This has been corrected in the KiCAD design files, and
+                    the code has been adjusted accordingly.
+                    </li>
+                    <li>
+                    I placed the anode resistors too close to the plated through-holes for the tubes.
+                    When JLCPCB assembled the board, solder from the resistors flowed into the holes,
+                    requiring me to manually remove solder from most of the anode holes before inserting
+                    the tubes. If I produce more of these boards, I will likely redesign them to fix
+                    this issue. This change has not yet been applied to the KiCAD files.
+                    </li>
+                </ol>
+                <h2>Image Design Program</h2>
+                <a href="/img/nixie/matrixdesigner.PNG">
+                    <img src="/img/nixie/matrixdesigner.PNG" alt="Weather Icon" class="inline" width="500">
+                </a>
+                <p>
+                I created a sloppy C# WinForms program to help design images and animations for the
+                matrix display.<br>
+                The program allows users to define a custom display size and number of displays. It
+                makes several assumptions about the display, so it's only useful for this project.<br>
+                Features include:
+                </p>
 
-                        <div class="main-body">
-                            <h2>Pictures</h2>
-                            <table class="image-showcase">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/nixie/ins1-clouds.jpg"><img
-                                                        src="/img/nixie/ins1-clouds.jpg" alt="Weather Icon"></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/nixie/ins1-back.jpg"><img src="/img/nixie/ins1-back.jpg"
-                                                        alt="2 Boards Connected"></a>
+                <ul>
+                    <li>Saving and loading images/animations from JSON files</li>
+                    <li>Scrolling through animation frames</li>
+                    <li>Deleting frames</li>
+                    <li>Setting frame duration (in milliseconds)</li>
+                    <li>Accurately counting the number of frames in an animation</li>
+                    <li>Generating formatted C++ code that can be pasted directly into Arduino source files
+                    </li>
+                </ul>
+                <p>
+                I'm sure there are better ways to accomplish this, but this was the solution I came up with.
+                </p>
+            </content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Pictures</div>
+<div class="main-body"><content>
 
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="/img/nixie/ins1-board.jpg"><img src="/img/nixie/ins1-board.jpg"
-                                    alt="Unpopulated Board" height=800 class="fullwidth"></a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
-
-    </script>
-</body>
-
+            <h2>Pictures</h2>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/nixie/ins1-clouds.jpg">
+                                        <img src="/img/nixie/ins1-clouds.jpg" alt="Weather Icon">
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/nixie/ins1-back.jpg">
+                                        <img src="/img/nixie/ins1-back.jpg" alt="2 Boards Connected">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/img/nixie/ins1-board.jpg">
+                    <img src="/img/nixie/ins1-board.jpg" alt="Unpopulated Board" height="800" class="fullwidth">
+                </a>
+            </content></div>
+</div>
+</td>
+</tr></tbody></table></body>
 </html>

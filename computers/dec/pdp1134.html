@@ -1,104 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - PDP 11/34a</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/dec-back.css">
-    <style>
-        body {
-            background: url(/img/bgs/water.png) left top repeat;
-        }
-
-        .cde-menu ul li.dec-nested {
-            display: block;
-        }
-    </style>
-
-
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - PDP 11/34a</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/dec-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">DECterm - PDP 11/34a</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>PDP 11/34a</h2>
-                            <p>This is the oldest working computer in my collection and, in my opinion, the most
-                                impressive. This particular PDP came from a college, where it was sold by Tektronix to
-                                operate test equipment. The computer and drives have Tektronix serial numbers, and there
-                                is also a Tektronix HP-IB interface card used for connecting to the equipment.</p>
-                            <img src="/img/dec/pdp11-34a.jpg" alt="PDP 11/34a" class="fullwidth">
-                            <p>My PDP has the following cards installed:</p>
-                            <ul>
-                                <li>M8266 - 11/34a control module</li>
-                                <li>M8265 - 11/34a data paths module</li>
-                                <li>M8267 - 11/34a floating point processor</li>
-                                <li>M7859 - Console interface</li>
-                                <li>M9312 - Bootstrap terminator</li>
-                                <li>M7856 - DL11-W Serial and realtime clock</li>
-                                <li>M9202 - Unibus jumper</li>
-                                <li>2x M7891 - 128KB / 64Kword Memory</li>
-                                <li>M7762 - RL11 RL01/RL02 Drive controller</li>
-                                <li>Tektronix interface card</li>
-                                <li>M9302 - Terminator</li>
-                            </ul>
-                            <p>
-                                Currently, I run the system with the RL11 controller removed and a <a
-                                    href="http://retrocmp.com/projects/unibone" target="_blank"
-                                    rel="noopener noreferrer">Unibone</a> in its place. The Unibone allows me to emulate
-                                drives, letting me experiment with more operating systems while also preserving the
-                                RL01s from wear.
-                            </p>
-                            <img src="/img/dec/pdp11-34a-inside.jpg" alt="Inside" class="fullwidth">
-                            <h2>Drives</h2>
-                            <p>
-                                This PDP came with two RL01 removable pack disk drives, each holding 5MB on a single
-                                platter. I only have two disk packs, and RL01 packs are much rarer than RL02s, which is
-                                a big reason why I opted for the Unibone. The first disk pack contained only XXDP+
-                                diagnostics, while the second had an installation of Tektronix SPS BASIC, a custom
-                                dialect of BASIC developed by Tektronix based on Dartmouth BASIC. I uploaded an image of
-                                the disk <a href="https://archive.org/details/TEKSPS" target="_blank"
-                                    rel="noopener noreferrer">here</a>
-                                . You can easily boot this image in SIMH on an emulated 11/34A. Some manuals for Tek SPS
-                                BASIC can be found
-                                basic <a href="https://w140.com/tekwiki/wiki/SPS_BASIC" target="_blank"
-                                    rel="noopener noreferrer">here</a>.
-                            </p>
-                            <h2>Power supply repair</h2>
-                            <p>
-                                When I received the system, one of the H7441 5V regulators was broken. With help from
-                                some people on the VCFed forum, I was able to repair it. <a
-                                    href="https://forum.vcfed.org/index.php?threads/dec-h7441-5v-regulator-repair.1239569/"
-                                    target="_blank" rel="noopener noreferrer">Read the thread here</a>.
-                            </p>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-    </script>
-</body>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td><div class="main-body-container">
+<div class="window-title">DECterm - PDP 11/34a</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+                <h2>PDP 11/34a</h2>
+                <p>This is the oldest working computer in my collection and, in my opinion, the most
+                    impressive. This particular PDP came from a college, where it was sold by Tektronix to
+                    operate test equipment. The computer and drives have Tektronix serial numbers, and there
+                    is also a Tektronix HP-IB interface card used for connecting to the equipment.</p>
+                <img src="/img/dec/pdp11-34a.jpg" alt="PDP 11/34a" class="fullwidth">
+                <p>My PDP has the following cards installed:</p>
+                <ul>
+                    <li>M8266 - 11/34a control module</li>
+                    <li>M8265 - 11/34a data paths module</li>
+                    <li>M8267 - 11/34a floating point processor</li>
+                    <li>M7859 - Console interface</li>
+                    <li>M9312 - Bootstrap terminator</li>
+                    <li>M7856 - DL11-W Serial and realtime clock</li>
+                    <li>M9202 - Unibus jumper</li>
+                    <li>2x M7891 - 128KB / 64Kword Memory</li>
+                    <li>M7762 - RL11 RL01/RL02 Drive controller</li>
+                    <li>Tektronix interface card</li>
+                    <li>M9302 - Terminator</li>
+                </ul>
+                <p>
+                    Currently, I run the system with the RL11 controller removed and a <a href="http://retrocmp.com/projects/unibone" target="_blank" rel="noopener noreferrer">Unibone</a> in its place. The Unibone allows me to emulate
+                    drives, letting me experiment with more operating systems while also preserving the
+                    RL01s from wear.
+                </p>
+                <img src="/img/dec/pdp11-34a-inside.jpg" alt="Inside" class="fullwidth">
+                <h2>Drives</h2>
+                <p>
+                    This PDP came with two RL01 removable pack disk drives, each holding 5MB on a single
+                    platter. I only have two disk packs, and RL01 packs are much rarer than RL02s, which is
+                    a big reason why I opted for the Unibone. The first disk pack contained only XXDP+
+                    diagnostics, while the second had an installation of Tektronix SPS BASIC, a custom
+                    dialect of BASIC developed by Tektronix based on Dartmouth BASIC. I uploaded an image of
+                    the disk <a href="https://archive.org/details/TEKSPS" target="_blank" rel="noopener noreferrer">here</a>
+                    . You can easily boot this image in SIMH on an emulated 11/34A. Some manuals for Tek SPS
+                    BASIC can be found
+                    basic <a href="https://w140.com/tekwiki/wiki/SPS_BASIC" target="_blank" rel="noopener noreferrer">here</a>.
+                </p>
+                <h2>Power supply repair</h2>
+                <p>
+                    When I received the system, one of the H7441 5V regulators was broken. With help from
+                    some people on the VCFed forum, I was able to repair it. <a href="https://forum.vcfed.org/index.php?threads/dec-h7441-5v-regulator-repair.1239569/" target="_blank" rel="noopener noreferrer">Read the thread here</a>.
+                </p>
+            </content></div>
+</div></td>
+</tr></tbody></table></body>
 </html>

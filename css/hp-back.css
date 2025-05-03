@@ -13,7 +13,9 @@ body {
 
     url(/img/hp-css/bg-botmid.png) bottom center repeat-x;
     background-color: #252c3f;
-    height: 100%;
+}
+.cde-menu ul li.hp-nested {
+    display: block;
 }
 
 .window-title {
@@ -38,9 +40,11 @@ body {
         
 
 }
-
-
-
+/* custom for hpterm */
+.main-body {
+    margin-top: 20px;
+    /* space down for terminal png*/
+}
 div.navbar {
     /*order is important*/
     background: url(/img/hp-css/navmenu-top.png) top center no-repeat,

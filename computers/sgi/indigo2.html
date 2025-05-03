@@ -1,92 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - Indigo2</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/sgi-back.css">
-    <style>
-        .cde-menu ul li.sgi-nested {
-            display: block;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Indigo2</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/sgi-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">winterm - Indigo2</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>Indigo2</h2>
-                            <p>The Indigo2 was the first Silicon Graphics machine I acquired, and I'd love to add the
-                                purple model with High Impact graphics to my collection someday.<br />
-                                My system is equipped with a 150 MHz R4400 processor, 128MB of RAM, and GR3-XZ graphics.
-                                Also known as Express graphics, the XZ board set consists of two stacked boards. It
-                                features two Geometry Engines, one Reality Engine, and a Z-buffer, supporting 24-bit
-                                color.
-                            <p>It runs IRIX 6.5.22 on a 36GB SCSI hard disk. Since I don't have many 50-pin SCSI drives,
-                                I used an adapter to convert from 50-pin SCSI to 80-pin SCA, as I have plenty of SCA
-                                drives from old servers. The fit is tight, and it slightly bends the drive's circuit
-                                board, but I haven't had any issues.</p>
-                            <p>When I first got the system, the graphics output had a problem—the screen was covered in
-                                vertical lines, though the mouse cursor appeared correctly on top. Fortunately, all it
-                                took to fix the issue was separating the graphics board set and reseating all the
-                                connections.
-                            </p>
-                            <p>I recently acquired a second Indigo2; a purple one with an R4400 250 MHz and Extreme
-                                graphics. </p>
-                        </div>
-                    </div>
-                    <div class="main-body-container">
-                        <div class="window-title">winterm - Pictures</div>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                        <div class="main-body">
-                            <h2>Pictures</h2>
-                            <table class="image-showcase">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/sgi/indigo2-error.jpg"><img src="/img/sgi/indigo2-error.jpg" alt="lines on gfx"></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/sgi/indigo2.jpg"><img src="/img/sgi/indigo2.jpg" alt="Both Indigo2s"></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/sgi/indigo2-scsi.jpg"><img src="/img/sgi/indigo2-scsi.jpg" alt="scsi adapter"></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-    </script>
-</body>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td>
+<div class="main-body-container">
+<div class="window-title">winterm - Indigo2</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Indigo2</h2>
+            <p>The Indigo2 was the first Silicon Graphics machine I acquired, and I'd love to add the
+                purple model with High Impact graphics to my collection someday.<br>
+                My system is equipped with a 150 MHz R4400 processor, 128MB of RAM, and GR3-XZ graphics.
+                Also known as Express graphics, the XZ board set consists of two stacked boards. It
+                features two Geometry Engines, one Reality Engine, and a Z-buffer, supporting 24-bit
+                color.
+                </p>
+            <p>It runs IRIX 6.5.22 on a 36GB SCSI hard disk. Since I don't have many 50-pin SCSI drives,
+                I used an adapter to convert from 50-pin SCSI to 80-pin SCA, as I have plenty of SCA
+                drives from old servers. The fit is tight, and it slightly bends the drive's circuit
+                board, but I haven't had any issues.</p>
+            <p>When I first got the system, the graphics output had a problem—the screen was covered in
+                vertical lines, though the mouse cursor appeared correctly on top. Fortunately, all it
+                took to fix the issue was separating the graphics board set and reseating all the
+                connections.
+            </p>
+            <p>I recently acquired a second Indigo2; a purple one with an R4400 250 MHz and Extreme
+                graphics. </p>
+            </content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">winterm - Pictures</div>
+<div class="main-body"><content>
+            <h2>Pictures</h2>
+            <table class="image-showcase">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="image-showcase">
+                                <a href="/img/sgi/indigo2-error.jpg"><img src="/img/sgi/indigo2-error.jpg" alt="lines on gfx"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-showcase">
+                                <a href="/img/sgi/indigo2.jpg"><img src="/img/sgi/indigo2.jpg" alt="Both Indigo2s"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="image-showcase">
+                                <a href="/img/sgi/indigo2-scsi.jpg"><img src="/img/sgi/indigo2-scsi.jpg" alt="scsi adapter"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </content></div>
+</div>
+</td>
+</tr></tbody></table></body>
 </html>

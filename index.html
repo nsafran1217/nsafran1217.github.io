@@ -1,66 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - Home</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/default-back.css">
-
-
-
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Home Page</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
 </head>
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">Terminal - Home Page</div>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-                        <div class="main-body">
-                            <h2>My Projects and Computers</h2>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                            <p>
-                                <img src="/img/icons/tM18j.gif" class="inline">
-                                This website will serve as documentation for my computer and electronics projects.
-                            </p>
-                            <p>
-                                <ul>
-                                    <li>Various UNIX workstations and servers:</li>
-                                        <ul>
-                                            <li><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
-                                            <li><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
-                                            <li><a href="/computers/hp/hp.html">HP</a></li>
-                                            <li><a href="/computers/dec/dec.html">Digital</a></li>
-                                            <li><a href="/computers/ibm/ibm.html">IBM</a></li>
-                                            <li><a href="/computers/next/next.html">NeXT</a></li>
-                                        </ul>
-                                    <li><a href="/projects/z80/z80.html"> A custom Z80 computer</a></li>
-                                    <li><a href="/projects/nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
-                                    <li><a href="/projects/nixie/soyuz.html">Soyuz 744H clock replica</a></li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-    </script>
-</body>
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td>
+<div class="main-body-container">
+<div class="window-title">Terminal - Home Page</div>
+<div class="main-body"><content>
+            <h2>My Projects and Computers</h2>
+            <p>
+            <img src="/img/icons/tM18j.gif" class="inline">
+            This website will serve as documentation for my computer and electronics projects.
+            </p>
+            <p>
+            <ul>
+                <li>Various UNIX workstations and servers:</li>
+                    <ul>
+                        <li><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+                        <li><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+                        <li><a href="/computers/hp/hp.html">HP</a></li>
+                        <li><a href="/computers/dec/dec.html">Digital</a></li>
+                        <li><a href="/computers/ibm/ibm.html">IBM</a></li>
+                        <li><a href="/computers/next/next.html">NeXT</a></li>
+                    </ul>
+                <li><a href="/projects/z80/z80.html"> A custom Z80 computer</a></li>
+                <li><a href="/projects/nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
+                <li><a href="/projects/nixie/soyuz.html">Soyuz 744H clock replica</a></li>
+            </ul>
+            </p>
+            </content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Teminal - Recent Blog Articles</div>
+<div class="main-body"><content>
+    <h2>Recent Blog Articles</h2>
+        <hr>
+<p><a href="/blog/altix-linux.html"><span style="font-weight: bold;">Modern Linux on SGI Altix</span> - 02-May-2025</a><br>
+        I recently purchased two SGI Altixes, an Altix 350 and Altix 3700. 
+            The IA64 Altix computers came with a RHEL based distro, then switched to SuSE Enterprise Linux Server (SLES). The latest officially supported is SLES 11, which I installed fine on both atlixes. 
+            SLES works ok...</p>
+        <hr>
+<p><a href="/blog/bacula.html"><span style="font-weight: bold;">Bacula Backup Setup</span> - 01-May-2025</a><br>
+        Loren ipusm dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu...</p>
+    <hr>
+    <a href="/blog/index.html"><h3>All blog articles</h3></a>
+    </content></div>
+</div>
+</td>
+</tr></tbody></table></body>
 </html>

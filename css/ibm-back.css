@@ -1,11 +1,13 @@
 /*Set images for default CDE theme*/
 
 body {
-    background: url(/img/bgs/water.png) left top repeat;
+    background: url(/img/bgs/brick.png) left top repeat;
 }
-.cde-menu ul li.dec-nested {
+/* Dont expose buttons yet. pages not made
+.cde-menu ul li.ibm-nested {
     display: block;
 }
+*/
 /*Mainly setups up the terminal background*/
 .main-body-container {
     /*order is important*/

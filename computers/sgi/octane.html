@@ -1,90 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - Octane</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/sgi-back.css">
-    <style>
-        .cde-menu ul li.sgi-nested {
-            display: block;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Octane</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/sgi-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">winterm - Octane</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>Octane</h2>
-                            <p>The Octane was SGI's successor to the Indigo2, offering impressive graphics capabilities
-                                and a modular design. It supports dual CPUs and various expansion cards through its
-                                proprietary XIO bus. At the core of its architecture is the Crossbar switch, enabling
-                                high-speed communication between the CPU and expansion cards. The system board and XIO
-                                cards connect to a front plane via delicate compression connectors with gold fingers
-                                that press against the PCB—these are extremely fragile and should never be touched, as
-                                even slight contact can cause damage.
-                            <p>I have two Octanes, though only one is fully functional. Both are later models featuring
-                                the updated SGI logo and "Cherokee" power supplies. My working Octane has a system board
-                                with dual 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. It runs IRIX 6.5.30 on
-                                an 18GB hard disk.</p>
-                            <p>The non-working system has a single 300 MHz R12000 CPU, 1GB of RAM, and EMXI/MXE
-                                graphics. Its issue appears to be with the graphics board, as it triggers a kernel panic
-                                as soon as X tries to initialize. I attempted running it without the TRAMs (which
-                                effectively downgrades it to an SSE), but that didn't help. I even swapped the
-                                compression connector from an Octane Personal Video card, since the one on the MXE board
-                                looked slightly dirty, but that also made no difference.</p>
-                            <p>The performance leap from my Indigo2 to the Octane is substantial. The Octane compiles
-                                software much faster and feels significantly more responsive in use.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="main-body-container">
-                        <div class="window-title">winterm - Pictures</div>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                        <div class="main-body">
-                            <h2>Pictures</h2>
-                            <table class="image-showcase">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/sgi/octane.jpg"><img src="/img/sgi/octane.jpg" alt="3700"></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="image-showcase">
-                                                <a href="/img/sgi/octane-hinv.jpg"><img src="/img/sgi/octane-hinv.jpg" alt="3700 rear"></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-    </script>
-</body>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td>
+<div class="main-body-container">
+<div class="window-title">winterm - Octane</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+                <h2>Octane</h2>
+                <p>The Octane was SGI's successor to the Indigo2, offering impressive graphics capabilities
+                    and a modular design. It supports dual CPUs and various expansion cards through its
+                    proprietary XIO bus. At the core of its architecture is the Crossbar switch, enabling
+                    high-speed communication between the CPU and expansion cards. The system board and XIO
+                    cards connect to a front plane via delicate compression connectors with gold fingers
+                    that press against the PCB—these are extremely fragile and should never be touched, as
+                    even slight contact can cause damage.</p>
+                <p>I have two Octanes, though only one is fully functional. Both are later models featuring
+                    the updated SGI logo and "Cherokee" power supplies. My working Octane has a system board
+                    with dual 300 MHz R12000 CPUs, 2GB of RAM, and ESI/SE graphics. It runs IRIX 6.5.30 on
+                    an 18GB hard disk.</p>
+                <p>The non-working system has a single 300 MHz R12000 CPU, 1GB of RAM, and EMXI/MXE
+                    graphics. Its issue appears to be with the graphics board, as it triggers a kernel panic
+                    as soon as X tries to initialize. I attempted running it without the TRAMs (which
+                    effectively downgrades it to an SSE), but that didn't help. I even swapped the
+                    compression connector from an Octane Personal Video card, since the one on the MXE board
+                    looked slightly dirty, but that also made no difference.</p>
+                <p>The performance leap from my Indigo2 to the Octane is substantial. The Octane compiles
+                    software much faster and feels significantly more responsive in use.
+                </p>
+            </content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">winterm - Pictures</div>
+<div class="main-body"><content>
+                <h2>Pictures</h2>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/sgi/octane.jpg"><img src="/img/sgi/octane.jpg" alt="Octane"></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/sgi/octane-hinv.jpg"><img src="/img/sgi/octane-hinv.jpg" alt="hinv"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </content></div>
+</div>
+</td>
+</tr></tbody></table></body>
 </html>

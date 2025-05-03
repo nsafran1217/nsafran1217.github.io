@@ -4,7 +4,6 @@ html {
 body {
     image-rendering: pixelated;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    height: 100%;
 }
 
 /* all background images are set in default-back.css or sun-back.css*/
@@ -50,6 +49,7 @@ table.specs td {
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
+    color: white;
 }
 /*title at top of a window*/
 .window-title {
@@ -76,7 +76,7 @@ table.specs td {
 
 /*Links in main body*/
 .main-body a {
-    color: rgb(236, 233, 233);
+    color: rgb(255, 202, 123);
 }
 
 img.inline {

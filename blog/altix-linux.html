@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - ИВ-17 VFD Board</title>
+<title>nsafran.com - Modern Linux on SGI Altix</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -75,33 +75,32 @@
         </content></div>
 </div></td>
 <td><div class="main-body-container">
-<div class="window-title">Terminal - ИВ-17 VFD Board</div>
+<div class="window-title">Terminal - Modern Linux on SGI Altix</div>
 <div class="main-body"><content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
-            <h2>ИВ-17 Tube Board</h2>
+            <span style="text-align: right; font-style: italic; display: block;">Published: 02-May-2025 - Last Updated: 02-May-2025</span>
+            <h2>Modern Linux on SGI Altix</h2>
             <p>
-            <a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/VFD-IV-17</a>
-            </p>
-            <p>This board now has a permanent home in my <a href="/projects/nixie/weather-clock.html">Nixie/VFD Weather clock</a></p>
+            I recently purchased two SGI Altixes, <a href="/computers/sgi/altix.html">an Altix 350 and Altix 3700</a>. 
+            The IA64 Altix computers came with a RHEL based distro, then switched to SuSE Enterprise Linux Server (SLES). The latest officially supported is SLES 11, which I installed fine on both atlixes. 
+            SLES works okay, but I've found that using it is difficult as there don't seem to be any archives of packages for it avaliable.</p>
             <p>
-            I finally built a case for this board, <span style="text-decoration: line-through;">though I still don't have a permanent use for it.</span> 
-            I 3d printed a case that let me fit the 2 power supplies and connectors in one place.
-            </p>
-            <p>I wrote a few assembly routines to use the display with my z80 computer. It uses the z80-pio to talk to it.</p>
-            <p>
-            The assembly is in the files called "iv17*.s" in my GitHub repo for my computer:<br>
-            <a href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos">https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos</a>
+            I know others have gotten Debian to install on the Altix, but I was looking for a more modern OS. 
+            I first attempted to install Gentoo, which did work, but since Gentoo removed IA 64 support, I dont think its worth documenting this process. 
+            My rough notes are here: <a href="https://gist.github.com/nsafran1217/c51affd600a221dfd1e22941ad069cb3">Getting circa 2022 Gentoo IA64 on an SGI Altix 350</a>.
             </p>
             <p>
-            As a part of this, I also wrote a simple clock program with an RTCDS3231 connected to the z80-pio. I bit-banged the i2c.<br>
-            If anyone is looking for examples of i2c bit banging on the z80, look at i2c.s and RTCDS3231bitBang.s. clock-iv17.s puts it all together into one program.
+            <h2>T2 SDE Linux</h2>
+            I was pointed at <a href="https://www.t2sde.org/">T2 SDE Linux</a>, which is a source based distro that supports IA64, by one of the devs working on out of branch Linux kernel support for IA64.
             </p>
-            <a href="/img/nixie/iv17-z80.jpg">
-                <img src="/img/nixie/iv17-z80.jpg" alt="Connected to z80" class="fullwidth">
-            </a>
-            <a href="/img/nixie/iv17-top.jpg">
-                <img src="/img/nixie/iv17-top.jpg" alt="From top" class="fullwidth">
-            </a>
+            <p>
+            I bootstrapped T2 from my Gentoo install, but I think it should be possible to do it from a SLED 11 install as well.
+            </p>
+            <p>
+            UNDER CONSTRUCTION: I will clean up these notes next time I install on the Altix 3700. I also need to figure out elilo on T2.
+            </p>
+            <p>
+            <a href="https://gist.github.com/nsafran1217/d9dda0427704fd5ff18ab06df0cbb2eb">Very rough notes.</a>
+            </p>
             </content></div>
 </div></td>
 </tr></tbody></table></body>

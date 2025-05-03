@@ -3,6 +3,9 @@
 body {
     background: url(/img/bgs/scatter.png) left top repeat;
 }
+.cde-menu ul li.sgi-nested {
+    display: block;
+}
 
 /*Mainly setups up the terminal background*/
 .main-body-container {
@@ -22,6 +25,11 @@ body {
 
         background-color: #00003f;
 
+}
+/* custom for winterm */
+.main-body {
+    margin-top: 20px;
+    /* space down for terminal png*/
 }
 .window-title {
     position: absolute;

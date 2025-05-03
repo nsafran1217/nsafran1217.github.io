@@ -1,75 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nsafran.com - Ultra 10</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/sun-back.css">
-    <style>
-        .cde-menu ul li.sun-nested {
-            display: block;
-        }
-    </style>
-
-
-
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Ultra 10</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/sun-back.css">
 </head>
+<body><table><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
 
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td class="navbar">
-                    <div class="navbar">
-                        <div id="nav-container"></div>
-                    </div>
-                </td>
-                <td>
-                    <div class="main-body-container">
-                        <div class="window-title">Terminal - Ultra 10</div>
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-                        <div class="main-body">
-                            <h2>Ultra 10</h2>
-                            <p>TThe Ultra 5 and Ultra 10 were the first Sun computers to adopt a more PC-like
-                                architecture. Both feature a PCI bus and IDE controllers for the hard disk and CD-ROM
-                                instead of SCSI. They still use Sun's proprietary keyboard interface unlike the later
-                                SunBlade series.</p>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/Indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
-                            <p>This Ultra 10 is well-equipped with a 333 MHz UltraSPARC IIi, 256MB of RAM, an 80GB IDE
-                                hard disk, a SCSI controller, Creator 3D graphics, and a SunPCI card.</p>
-                            <img src="/img/sun/ultra10.jpg" alt="Ultra 10" class="fullwidth">
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
 
-                            <h2>Sun PCi</h2>
-                            <p>The SunPCI was Sun's solution for businesses that still needed to run Windows software.
-                                It's essentially a single-board computer on a PCI card, with software that passes I/O to
-                                Solaris. When launched, it functions similarly to a virtual machine—you'll see the
-                                SunPCI boot like a normal PC. The SunPCI hard disk is an image file stored on the
-                                Solaris file system, which can be moved like any other file.</p>
-                            <p>The SunPCI also has dedicated video output, keyboard, USB, and Ethernet ports, allowing
-                                it to be used as a standalone computer if needed.</p>
-                            <p>I haven't been able to get the SunPCI working properly on my system. Either I'm missing
-                                patches, or I'm using an incompatible version of Solaris. Eventually, I plan to try
-                                installing Solaris 9 to see if that improves compatibility.
-                                <br>NCommander made an in-depth video about the SunPCI here: <a
-                                    href="https://www.youtube.com/watch?v=51oDEFJNxp0">Video</a>
-                            </p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        fetch('/html/nav.html') //insert nav bar
-            .then(response => response.text())
-            .then(data => document.getElementById('nav-container').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
 
-    </script>
-</body>
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
 
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td><div class="main-body-container">
+<div class="window-title">Terminal - Ultra 10</div>
+<div class="main-body"><content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+                <h2>Ultra 10</h2>
+                <p>TThe Ultra 5 and Ultra 10 were the first Sun computers to adopt a more PC-like
+                    architecture. Both feature a PCI bus and IDE controllers for the hard disk and CD-ROM
+                    instead of SCSI. They still use Sun's proprietary keyboard interface unlike the later
+                    SunBlade series.</p>
+                <p>This Ultra 10 is well-equipped with a 333 MHz UltraSPARC IIi, 256MB of RAM, an 80GB IDE
+                    hard disk, a SCSI controller, Creator 3D graphics, and a SunPCI card.</p>
+                <img src="/img/sun/ultra10.jpg" alt="Ultra 10" class="fullwidth">
+                <h2>Sun PCi</h2>
+                <p>The SunPCI was Sun's solution for businesses that still needed to run Windows software.
+                    It's essentially a single-board computer on a PCI card, with software that passes I/O to
+                    Solaris. When launched, it functions similarly to a virtual machine—you'll see the
+                    SunPCI boot like a normal PC. The SunPCI hard disk is an image file stored on the
+                    Solaris file system, which can be moved like any other file.</p>
+                <p>The SunPCI also has dedicated video output, keyboard, USB, and Ethernet ports, allowing
+                    it to be used as a standalone computer if needed.</p>
+                <p>I haven't been able to get the SunPCI working properly on my system. Either I'm missing
+                    patches, or I'm using an incompatible version of Solaris. Eventually, I plan to try
+                    installing Solaris 9 to see if that improves compatibility.
+                    <br>NCommander made an in-depth video about the SunPCI here: <a href="https://www.youtube.com/watch?v=51oDEFJNxp0">Video</a>
+                </p>
+            </content></div>
+</div></td>
+</tr></tbody></table></body>
 </html>

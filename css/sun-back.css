@@ -3,7 +3,9 @@
 body {
     background: url(/img/bgs/solarislogo.png) left top repeat;
 }
-
+.cde-menu ul li.sun-nested {
+    display: block;
+}
 /*Mainly setups up the terminal background*/
 .main-body-container {
     /*order is important*/
