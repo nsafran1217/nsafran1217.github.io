@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - Bacula Backup Setup</title>
+<title>nsafran.com - This Website's Design</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -75,13 +75,42 @@
         </content></div>
 </div></td>
 <td><div class="main-body-container">
-<div class="window-title">Terminal - Bacula Backup Setup</div>
+<div class="window-title">Terminal - This Website's Design</div>
 <div class="main-body"><content>
-            <span style="text-align: right; font-style: italic; display: block;">Published: 01-May-2025 - Last Updated: 02-May-2025</span>
-            <h2>Bacula Backup Setup</h2>
-            <p>
-            Loren ipusm dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+<h1>This Website's Design</h1>
+
+<p><em>Published: 22-May-2025 - Last Updated: 22-May-2025</em></p>
+
+<p>When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked good, but I wanted a bit more control over the layout and organization of the site.</p>
+
+<p>I had a few goals for the site: Make it static, so I can host it on GitHub Pages, no Javascript so older browsers can at least load the site, and for it to be somewhat easy to update with new content.
+<a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a></p>
+
+<h3>Inspiration</h3>
+
+<p><a href="http://www.cosam.org/">cosam.org</a> was my inspiration for the layout of the site, with a sidebar that changed depending on the page. <br>
+<a href="https://www.4dwm.com/">4dwm.com</a> inspired me to make the site look like a CDE/HP VUE/4DWM desktop. </p>
+
+<p>Making this website ended up being a lot of work since I have no experience with web design, except for one class I took in 10th grade making websites in Adobe Dreamweaver CS3 (which was very outdated by then).
+Orignally, it was going to look much closer to cosam.org with a simpler theme. I was planning on using <a href="https://simplecss.org/">https://simplecss.org/</a> for the styling, but ended up just making my own.  </p>
+
+<h3>Details</h3>
+
+<p>The first draft of the site was all HTML with a small amount of Javascript to load the navbar on each page, but that didn't meet my goal for no JS. I then came across <a href="https://www.w3schools.com/xml/xsl_intro.asp">xslt</a>, which allows you to use a template file to convert an XML file into an HTML file.</p>
+
+<p>With some help from ChatGPT, I started tweaking the template to insert the navbar template on each site. The xslt template also let me generate multiple "Windows" on the site relatively easily. </p>
+
+<p>xslt templates are in <code>/src/templates</code>. All the XML and MD files are in <code>/src/content</code>. </p>
+
+<p><code>make-website.sh</code> calls <code>gen-blog.sh</code>, which converts the markdown into xml, then creates the <code>index.html</code> page for the blog list. </p>
+
+<p><code>gen-articles.py</code> converts all the xml files into html with xsltproc. ChatGPT made this script and is over complicated. One day I'll replace it with a shell script.</p>
+
+<p><code>gen-index.py</code> is currently a mess. The goal was to get an excerpt from each blog entry to have on the home page. It kind of works, but is very complicated. Also written by ChatGPT.</p>
+
+<h3>Conclusion</h3>
+
+<p>I'm happy with how the website looks on modern browsers, but old browsers struggle a lot with most of the css formatting used to make the "windows". I'm not sure if there's a solution to that, but at least the text loads on old browsers.</p>
             </content></div>
 </div></td>
 </tr></tbody></table></body>

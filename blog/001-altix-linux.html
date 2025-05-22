@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - Template</title>
+<title>nsafran.com - Modern Linux on SGI Altix</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -19,7 +19,9 @@
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-            <li class="sgi-nested subsection-link"><a href="/computers/sgi/o2.html">O2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
 
             <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
@@ -61,17 +63,41 @@
             <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
             <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
             <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
         </ul>
         </content></div>
 </div></td>
 <td><div class="main-body-container">
-<div class="window-title">Terminal - Template</div>
+<div class="window-title">Terminal - Modern Linux on SGI Altix</div>
 <div class="main-body"><content>
+<h1>Modern Linux on SGI Altix</h1>
 
-            <h2>Template</h2>
-                <p>
-                Template
-                </p>
+<p><em>Published: 22-May-2025 - Last Updated: 23-May-2025</em></p>
+
+<p>I recently purchased two SGI Altixes, <a href="/computers/sgi/altix.html">an Altix 350 and Altix 3700.</a>
+The IA64 Altix computers came with a RHEL based distro, then switched to SuSE Enterprise Linux Server (SLES). The latest officially supported is SLES 11, which I installed fine on both atlixes. <br>
+SLES works okay, but I've found that using it is difficult as there don't seem to be any archives of packages for it avaliable.</p>
+
+<p>I know others have gotten Debian to install on the Altix, but I was looking for a more modern OS. 
+I first attempted to install Gentoo, which did work, but since Gentoo removed IA 64 support, I dont think its worth documenting this process. 
+My rough notes are here:  <a href="https://gist.github.com/nsafran1217/c51affd600a221dfd1e22941ad069cb3">Getting circa 2022 Gentoo IA64 on an SGI Altix 350</a></p>
+
+<h2>T2 SDE Linux</h2>
+
+<p>I was pointed at  <a href="https://www.t2sde.org/">T2 SDE Linux</a>, which is a source based distro that supports IA64, by one of the devs working on out of branch Linux kernel support for IA64.</p>
+
+<p>I bootstrapped T2 from my Gentoo install, but I think it should be possible to do it from a SLED 11 install as well.</p>
+
+<p>UNDER CONSTRUCTION: I will clean up these notes next time I install on the Altix 3700. I also need to figure out elilo on T2.</p>
+
+<p><a href="https://gist.github.com/nsafran1217/d9dda0427704fd5ff18ab06df0cbb2eb">Very rough notes.</a></p>
             </content></div>
 </div></td>
 </tr></tbody></table></body>
