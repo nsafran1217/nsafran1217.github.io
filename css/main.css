@@ -12,18 +12,18 @@ table {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 2px;
+    border: 1px rgb(182, 182, 182) solid;
+    
 }
 td {
     vertical-align: top;
-    padding: 0px 10px
+    padding: 0px 10px;
+    border: 1px rgb(182, 182, 182) solid;
+    border-collapse: collapse;
+    color: white;
 }
-/* TEST REMOVE
-td.main-bodytd {
-    width: 100%;
-}
-*/
 /*Mainly setups up the terminal background*/
 .main-body-container {
     /*flex-grow: 1; TEST REMOVE */
@@ -38,14 +38,20 @@ td.main-bodytd {
    
     /*transform: translateX(-125px);*/
 }
+/*Inline code*/
 code {
     color: #ffc074;
     background-color: #4b4f5a;
 }
+/*Code blocks*/
+pre {
+    color: #ffc074;
+    background-color: #4b4f5a;
+    white-space: pre-wrap;
+}
 table.specs,
 table.specs th,
 table.specs td {
-    border: 1px black solid;
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
@@ -78,7 +84,24 @@ table.specs td {
 .main-body a {
     color: rgb(255, 202, 123);
 }
-
+img {
+    max-width: 100%;
+    image-rendering: auto;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+img.nav-icon {
+    max-width: unset;
+    image-rendering: pixelated;
+    padding-bottom: unset;
+    margin-left: unset;
+    margin-right: unset;
+    display: unset;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
 img.inline {
     float: right;
     margin: 4px;
@@ -87,24 +110,13 @@ img.inline {
 }
 img.fullwidth {
     max-width: 100%;
-    image-rendering: auto;
-    padding-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
 }
 img.halfwidth {
-    max-width: 100%;
-    image-rendering: auto;
-    padding-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    max-width: 50%;
 }
 table.image-showcase,
 table.image-showcase th,
 table.image-showcase td {
-    border: 1px black solid;
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
@@ -113,7 +125,6 @@ table.image-showcase td {
     width: 25%; /* Ensure each column takes up an equal portion of the table */
     padding: 5px;
     vertical-align: middle;
-    ;
 }
 table.image-showcase div.image-showcase{
     vertical-align: middle;

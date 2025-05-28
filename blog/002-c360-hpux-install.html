@@ -16,7 +16,7 @@
                     <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
                 </a>
             </li>
-            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
@@ -53,7 +53,7 @@
 
             <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
 
             <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
@@ -135,9 +135,11 @@ So lets just install 11.11 (aka 11i v1)</p>
 <p><img src="/img/blog/002-software.png" alt="software" title=""></p>
 
 <p>Tip for installing from ISOs: <br>
-I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my NFS export. Then, I can point <code>swinstall</code> at this location. <br>
-<code>$ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso</code> <br>
-<code>$ sudo mount --bind /mnt/iso /data/nfs/iso</code></p>
+I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my NFS export. Then, I can point <code>swinstall</code> at this location.  </p>
+
+<pre><code>$ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso
+$ sudo mount --bind /mnt/iso /data/nfs/iso
+</code></pre>
 
 <hr>
 
@@ -157,6 +159,8 @@ I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my
 </ol>
 
 <h2>GCC</h2>
+
+<p>I'll work on this later.</p>
 
 <hr>
 
@@ -178,7 +182,13 @@ mikmod is having issues with HP's curses. I'm going to try to build ncurses.</p>
 
 <p>Built with ./configure and installed into /usr/local</p>
 
-<p>mikmod: <code>./configure CPPFLAGS="-I/usr/local/include -I/usr/local/include/ncurses" LDFLAGS="-L/usr/local/lib"</code></p>
+<p>mikmod: <code>./configure CPPFLAGS="-I/usr/local/include -I/usr/local/include/ncurses" LDFLAGS="-L/usr/local/lib"</code> <br>
+Then I get this error:  </p>
+
+<pre><code>usr/ccs/bin/ld: Unsatisfied symbols:
+    __getmaxy (code)
+    __getmaxx (code)
+</code></pre>
 
 <p>Now, on line 162 in <code>src/mwindow.c</code>, we run into an issue since its assuming we have the broken HP-UX curses. Just change the name of the variable in <code>#if defined(__hpux)</code> to make it not define those macros.</p>
 
@@ -189,6 +199,8 @@ mikmod is having issues with HP's curses. I'm going to try to build ncurses.</p>
 <p>ncurses-6.5 <br>
 Fetched from gnu and it built without any issues. Build non wide character support: <br>
 <code>./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec</code></p>
+
+<hr>
 
 <h1>Adding a second disk</h1>
 

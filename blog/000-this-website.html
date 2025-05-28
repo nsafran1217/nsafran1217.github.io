@@ -15,7 +15,7 @@
                     <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
                 </a>
             </li>
-            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" style="vertical-align: middle;"> Computers</span></li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
@@ -52,7 +52,7 @@
 
             <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" style="vertical-align: middle;">Projects</span></li>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
 
             <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
@@ -81,26 +81,26 @@
 
 <p><em>Published: 22-May-2025 - Last Updated: 22-May-2025</em></p>
 
-<p>When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked good, but I wanted a bit more control over the layout and organization of the site.</p>
+<p>When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked fine, but I wanted a bit more control over the layout and organization of the site.</p>
 
-<p>I had a few goals for the site: Make it static, so I can host it on GitHub Pages, no Javascript so older browsers can at least load the site, and for it to be somewhat easy to update with new content.
+<p>I had a few goals for the site: Make it static so I can host it on GitHub Pages, no Javascript so older browsers can at least load the site, and for it to be somewhat easy to update with new content.
 <a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a></p>
 
-<h3>Inspiration</h3>
+<h2>Inspiration</h2>
 
 <p><a href="http://www.cosam.org/">cosam.org</a> was my inspiration for the layout of the site, with a sidebar that changed depending on the page. <br>
 <a href="https://www.4dwm.com/">4dwm.com</a> inspired me to make the site look like a CDE/HP VUE/4DWM desktop. </p>
 
 <p>Making this website ended up being a lot of work since I have no experience with web design, except for one class I took in 10th grade making websites in Adobe Dreamweaver CS3 (which was very outdated by then).
-Orignally, it was going to look much closer to cosam.org with a simpler theme. I was planning on using <a href="https://simplecss.org/">https://simplecss.org/</a> for the styling, but ended up just making my own.  </p>
+Originally, it was going to look much closer to cosam.org with a simpler theme. I was planning on using <a href="https://simplecss.org/">https://simplecss.org/</a> for the styling, but I got inspired when I saw 4dwm.com.</p>
 
-<h3>Details</h3>
+<h2>Details</h2>
 
 <p>The first draft of the site was all HTML with a small amount of Javascript to load the navbar on each page, but that didn't meet my goal for no JS. I then came across <a href="https://www.w3schools.com/xml/xsl_intro.asp">xslt</a>, which allows you to use a template file to convert an XML file into an HTML file.</p>
 
 <p>With some help from ChatGPT, I started tweaking the template to insert the navbar template on each site. The xslt template also let me generate multiple "Windows" on the site relatively easily. </p>
 
-<p>xslt templates are in <code>/src/templates</code>. All the XML and MD files are in <code>/src/content</code>. </p>
+<p>XSLT templates are in <code>/src/templates</code>. All the XML and MD files are in <code>/src/content</code>. </p>
 
 <p><code>make-website.sh</code> calls <code>gen-blog.sh</code>, which converts the markdown into xml, then creates the <code>index.html</code> page for the blog list. </p>
 
@@ -108,7 +108,9 @@ Orignally, it was going to look much closer to cosam.org with a simpler theme. I
 
 <p><code>gen-index.py</code> is currently a mess. The goal was to get an excerpt from each blog entry to have on the home page. It kind of works, but is very complicated. Also written by ChatGPT.</p>
 
-<h3>Conclusion</h3>
+<p>I need to come back to this and try to integrate it into the main github pages repo. Currently, I manually copy the contents of OUTPUT into the github pages repo to update the site.</p>
+
+<h2>Conclusion</h2>
 
 <p>I'm happy with how the website looks on modern browsers, but old browsers struggle a lot with most of the css formatting used to make the "windows". I'm not sure if there's a solution to that, but at least the text loads on old browsers.</p>
             </content></div>
