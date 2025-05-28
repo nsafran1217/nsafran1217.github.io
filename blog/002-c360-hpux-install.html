@@ -1,7 +1,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - Home Page</title>
+<title>nsafran.com - Installing HP-UX 11.11 on a C360
+</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -74,50 +75,107 @@
         </ul>
         </content></div>
 </div></td>
-<td>
-<div class="main-body-container">
-<div class="window-title">Terminal - Home Page</div>
+<td><div class="main-body-container">
+<div class="window-title">Terminal - Installing HP-UX 11.11 on a C360
+</div>
 <div class="main-body"><content>
-            <h2>My Projects and Computers</h2>
-            <p>
-            <img src="/img/icons/tM18j.gif" class="inline">
-            This website will serve as documentation for my computer and electronics projects.
-            </p>
-            <p>
-            <ul>
-                <li>Various UNIX workstations and servers:</li>
-                    <ul>
-                        <li><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
-                        <li><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
-                        <li><a href="/computers/hp/hp.html">HP</a></li>
-                        <li><a href="/computers/dec/dec.html">Digital</a></li>
-                        <li><a href="/computers/ibm/ibm.html">IBM</a></li>
-                        <li><a href="/computers/next/next.html">NeXT</a></li>
-                    </ul>
-                <li><a href="/projects/z80/z80.html"> A custom Z80 computer</a></li>
-                <li><a href="/projects/nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
-                <li><a href="/projects/nixie/soyuz.html">Soyuz 744H clock replica</a></li>
-            </ul>
-            </p>
+<h1>Installing HP-UX 11.11 on a C360</h1>
+
+<p><em>Published: 27-May-2025 - Last Updated: 27-May-2025</em></p>
+
+<p>I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc. <br>
+So lets just install 11.11 (aka 11i v1)</p>
+
+<h3>Install Media</h3>
+
+<p>From the <a href="http://tenox.pdp-11.ru/">Tenox OS Archive</a>:</p>
+
+<ul>
+<li>
+<code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD1.rar</code> - <em>Boot from this one</em>
+</li>
+<li><code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD2.rar</code></li>
+<li><code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD3.rar</code></li>
+<li>
+<code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - Support Plus - Diagnostics and Tested Patch bundles.iso</code> - <em>Patches after install</em>
+</li>
+</ul>
+
+<p>I connected an external SCSI CDROM (512 byte sectors, not sure if thats required) to the single ended fast wide 68 pin scsi port. My drive ID was set to 1, but it shows up as 4 on the workstation for some reason. The SEArch command will tell you what devices you have.</p>
+
+<p>To Boot: <code>boot fwscsi.4.0</code></p>
+
+<h3>Install notes</h3>
+
+<ul>
+<li>I chose the guided install and let it configure partitioning by itself. </li>
+<li>I picked HP-UX 11i TCOE-64bit for the environment. I'm not sure if there's any downsides to choosing a 64 bit system.</li>
+<li>During software selection, I marked:
+<ul>
+<li>JAVAOOB</li>
+<li>SwPkgBuilder</li>
+<li>B5725AA (IgniteUX)</li>
+<li>Ignite-UX-11-11</li>
+<li>Ignite-UX-11-00</li>
+</ul>
+</li>
+<li>Its incredible how slow the install for HP-UX is.</li>
+</ul>
+
+<h3>Post install</h3>
+
+<ul>
+<li>Login and run sam. Add your user. Then, open software management, Install software to local host</li>
+<li>With the support cd inserted, mount it: <code>mount /dev/dsk/c0t4d0 /SD_CDROM/</code>
+</li>
+<li>In the add source dialog, point at /SD_CDROM/GOLDQPK11i</li>
+<li>Mark both for install, click Actions-&gt;Install.</li>
+</ul>
+
+<p><img src="/img/blog/002-software.png" alt="software" title=""></p>
+
+<p>Tip for installing from ISOs: <br>
+I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my NFS export. Then, I can point <code>swinstall</code> at this location. <br>
+<code>$ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso</code> <br>
+<code>$ sudo mount --bind /mnt/iso /data/nfs/iso</code></p>
+
+<hr>
+
+<h1>C compilers</h1>
+
+<p>The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.</p>
+
+<h2>ansic</h2>
+
+<p>You can download ansic from from osarchive.org: <br>
+* <code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
+
+<ol>
+<li>Run <code>swinstall</code> and open B9007AA<em>B.11.11.20</em>HP-UX<em>B.11.11</em>32_64.depot</li>
+<li>Mark everything for install. Go to Actions-&gt;Install, and let it do its thing.</li>
+</ol>
+
+<h2>GCC</h2>
+
+<hr>
+
+<h1>Software building</h1>
+
+<p>Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.</p>
+
+<h1>Adding a second disk</h1>
+
+<p>I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.</p>
+
+<p>In SAM, Disks and File systems, I selected the disk, Actions-&gt;Configure. I added this to a new Volume Group, vg01.</p>
+
+<p>Next, I went to Logical Volumes and created 2 new LVs, both 1GB each, to allow room to grow the LVs in the future.
+Next, I went to file systems and mounted the new LVs in temporary locations. I copied all the data to the new filesystem. <code>cd /home; tar cpf - . | (cd /home2 &amp;&amp; tar xpf -)</code></p>
+
+<p>Then, unmounted the old ones, mounted the new ones in the correct locations, and made sure the new LVs didn't automount and the new ones did. My LVs look like this now:</p>
+
+<p><img src="/img/blog/002-lv.png" alt="LVM" title=""></p>
             </content></div>
-</div>
-<div class="main-body-container">
-<div class="window-title">Teminal - Recent Blog Articles</div>
-<div class="main-body"><content>
-    <h2>Recent Blog Articles</h2>
-        <hr>
-<p><a href="/blog/002-c360-hpux-install.html"><span style="font-weight: bold;">Installing HP-UX 11.11 on a C360</span> - 27-May-2025</a><br>
-        I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc....</p>
-        <hr>
-<p><a href="/blog/000-this-website.html"><span style="font-weight: bold;">This Website's Design</span> - 22-May-2025</a><br>
-        When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked good, but I wanted a bit more control over the layout and organization of the site....</p>
-        <hr>
-<p><a href="/blog/001-altix-linux.html"><span style="font-weight: bold;">Modern Linux on SGI Altix</span> - 22-May-2025</a><br>
-        I recently purchased two SGI Altixes, [an Altix 350 and Altix 3700.](/computers/sgi/altix.html)...</p>
-    <hr>
-    <a href="/blog/index.html"><h3>All blog articles</h3></a>
-    </content></div>
-</div>
-</td>
+</div></td>
 </tr></tbody></table></body>
 </html>
