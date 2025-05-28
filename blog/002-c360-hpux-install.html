@@ -151,7 +151,8 @@ I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my
 * <code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
 
 <ol>
-<li>Run <code>swinstall</code> and open B9007AA<em>B.11.11.20</em>HP-UX<em>B.11.11</em>32_64.depot</li>
+<li>Run <code>swinstall</code> and open <code>B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot</code>
+</li>
 <li>Mark everything for install. Go to Actions-&gt;Install, and let it do its thing.</li>
 </ol>
 
@@ -162,6 +163,32 @@ I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my
 <h1>Software building</h1>
 
 <p>Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.</p>
+
+<ul>
+<li>libmikmod-3.1.10</li>
+<li>mikmod-3.2.7</li>
+</ul>
+
+<p>libmikmod built wihtout issues. <br>
+mikmod is having issues with HP's curses. I'm going to try to build ncurses.</p>
+
+<ul>
+<li>ncurses-5.2</li>
+</ul>
+
+<p>Built with ./configure and installed into /usr/local</p>
+
+<p>mikmod: <code>./configure CPPFLAGS="-I/usr/local/include -I/usr/local/include/ncurses" LDFLAGS="-L/usr/local/lib"</code></p>
+
+<p>Now, on line 162 in <code>src/mwindow.c</code>, we run into an issue since its assuming we have the broken HP-UX curses. Just change the name of the variable in <code>#if defined(__hpux)</code> to make it not define those macros.</p>
+
+<p><em>And, success!</em>  We have sound output on the C360! Eventually, I want to figure out if a new mikmod works out of the box without changes.</p>
+
+<p><em>I failed to make ncurses 6.5 work because the the test program for mikmod wont build with aCC. I need GCC for that to work I believe. Leave notes here for future work with GCC.</em></p>
+
+<p>ncurses-6.5 <br>
+Fetched from gnu and it built without any issues. Build non wide character support: <br>
+<code>./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec</code></p>
 
 <h1>Adding a second disk</h1>
 
@@ -175,6 +202,8 @@ Next, I went to file systems and mounted the new LVs in temporary locations. I c
 <p>Then, unmounted the old ones, mounted the new ones in the correct locations, and made sure the new LVs didn't automount and the new ones did. My LVs look like this now:</p>
 
 <p><img src="/img/blog/002-lv.png" alt="LVM" title=""></p>
+
+<p>I also added my NFS server to auto mount at startup in Filesystems.</p>
             </content></div>
 </div></td>
 </tr></tbody></table></body>
