@@ -17,13 +17,54 @@ table {
     border: 1px rgb(182, 182, 182) solid;
     
 }
-td {
+td,
+th {
     vertical-align: top;
     padding: 0px 10px;
     border: 1px rgb(182, 182, 182) solid;
     border-collapse: collapse;
     color: white;
 }
+table.main-body-table{
+    border: none;
+}
+td.main-body-td {
+    border: none;
+}
+
+/*this spacer helps center the content in the window, rather than having it offset by 250px to the right*/
+/* a little janky, but it works well enough */
+/* Default spacer size */
+td.td-spacer {
+    border: none;
+    width: 250px;
+    padding: 0px;
+    min-width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Shrink to 150px below 1200px */
+@media (max-width: 1600px) {
+    td.td-spacer {
+        width: 150px;
+    }
+}
+
+/* Shrink to 50px below 900px */
+@media (max-width: 1400px) {
+    td.td-spacer {
+        width: 50px;
+    }
+}
+
+/* Hide completely below 700px */
+@media (max-width: 1200px) {
+    td.td-spacer {
+        width: 0px;
+    }
+}
+
+
 /*Mainly setups up the terminal background*/
 .main-body-container {
     /*flex-grow: 1; TEST REMOVE */
@@ -31,7 +72,7 @@ td {
     position: relative;
     text-align: left;
    /* vertical-align: top; TEST REMOVE*/
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     min-width: 300px;
     margin-bottom: 20px;
@@ -142,6 +183,9 @@ table.image-showcase img {
 #nav {
     width: 100%;
 }
+td.navbar {
+    border: none;
+}
 .navbar {
     width: 250px;
     position: relative;
@@ -149,6 +193,7 @@ table.image-showcase img {
     /*vertical-align: top;TEST REMOVE */
     /*position: relative;TEST REMOVE */
     padding-bottom: 20px;
+
 }
 
 .cde-menu {

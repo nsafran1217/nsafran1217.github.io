@@ -30,6 +30,7 @@ body {
 .main-body {
     margin-top: 20px;
     /* space down for terminal png*/
+    color: #ebebeb;
 }
 .window-title {
     position: absolute;
@@ -37,11 +38,7 @@ body {
     color: black;
     font-style: italic;
 }
-table.specs,
-table.specs th,
-table.specs td {
-    border: 1px grey solid;
-}
+
 .cde-menu ul li.section-link,
 .cde-menu ul li.subsection-link,
 .cde-menu ul li.home-link
