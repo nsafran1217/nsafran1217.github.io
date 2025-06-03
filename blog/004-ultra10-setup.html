@@ -1,7 +1,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - All Blog Entires</title>
+<title>nsafran.com - Setting up Solaris 8 on Ultra 10
+</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -75,40 +76,76 @@
         </content></div>
 </div></td>
 <td class="main-body-td"><div class="main-body-container">
-<div class="window-title">Terminal - All Blog Entries</div>
+<div class="window-title">Terminal - Setting up Solaris 8 on Ultra 10
+</div>
 <div class="main-body"><content>
-    <h2>All Blog Entries by Date</h2>
-    <p>These posts are mostly for my own reference, but someone may find them useful.</p>
-    <hr>
-    <table>
-    <tr>
-<td>Title</td>
-<td>Date Published</td>
-</tr>
-    
-<tr>
-<td><a href="004-ultra10-setup.html">Setting up Solaris 8 on Ultra 10
-</a></td>
-<td>31-May-2025</td>
-</tr>
-<tr>
-<td><a href="003-synergy-unix.html">Setting up Synergy on UNIX workstations to share mouse and keyboards</a></td>
-<td>30-May-2025</td>
-</tr>
-<tr>
-<td><a href="002-c360-hpux-install.html">Installing HP-UX 11.11 on a C360
-</a></td>
-<td>27-May-2025</td>
-</tr>
-<tr>
-<td><a href="001-altix-linux.html">Modern Linux on SGI Altix</a></td>
-<td>22-May-2025</td>
-</tr>
-<tr>
-<td><a href="000-this-website.html">This Website's Design</a></td>
-<td>22-May-2025</td>
-</tr>
-</table></content></div>
+<h1>Setting up Solaris 8 on Ultra 10</h1>
+
+<p><em>Published: 31-May-2025 - Last Updated: 31-May-2025</em></p>
+
+<p>Some notes about setting up a build environment on Solaris 8, specifically my Ultra 10.</p>
+
+<h2>OS</h2>
+
+<p>I don't have notes for the OS install. Solaris 8. 2003 release.</p>
+
+<h2>Packages</h2>
+
+<p>I installed all these from the sunfreeware archives:</p>
+
+<pre><code>autoconf-2.60-sol8-sparc-local     libgcc-3.4.1-sol8-sparc-local      synergy-1.3.1-sol8-sparc-local
+automake-1.7.1-sol8-sparc-local    libiconv-1.11-sol8-sparc-local     tar-1.26-sol8-sparc-local
+bash-3.2-sol8-sparc-local          libintl-3.4.0-sol8-sparc-local     vim-7.0-sol8-sparc-local
+binutils-2.21.1a-sol8-sparc-local  libtool-1.5-sol8-sparc-local       wget-1.10.2-sol8-sparc-local
+gcc-3.4.6-sol8-sparc-local         m4-1.4.7-sol8-sparc-local          xv-3.10a-sol8-sparc-local
+gettext-0.14.1-sol8-sparc-local    make-3.81-sol8-sparc-local         zlib-1.2.3-sol8-sparc-local
+</code></pre>
+
+<p><code>pkgadd -d filename</code></p>
+
+<p>Make symlink from libintl-3.4.0 to libintl.so.8: <br>
+<code>ln -s libintl.so.3.4.0 /usr/local/lib/libintl.so.8</code></p>
+
+<p>Lots of software was installed from the 4 CDs that the OS comes on, including OpenGL from the Supplemental CD.</p>
+
+<h2>GCC 4.6.4</h2>
+
+<p>Starting with the packages above. Make sure you use GNU tar to extract. I put <code>/usr/local/bin</code> first in <code>$PATH</code>.</p>
+
+<p>To add /usr/local/lib to the system library search path:
+<code>crle -l /usr/lib:/usr/lib/secure:/usr/local/lib</code>  </p>
+
+<p>We want 32 bit ABI for the following.
+<code>export ABI=32</code></p>
+
+<p>All were just <code>./configure; make; make install</code>. Easy.
+1. gmp-4.3.2
+2. mpfr-2.4.2
+3. mpc-1.0.1  </p>
+
+<p>We provide the paths to as and ld so that gcc can find /usr/local/lib/gcc/sparc-sun-solaris2.8/3.4.6/sparcv9/crt1.o. Also, unset the ABI so we get multilib support.</p>
+
+<pre><code>unset ABI
+./configure --prefix=/usr/local/gcc-4.6.4 --enable-languages=c,c++ --disable-nls --enable-threads=posix --with-gnu-ld --with-gnu-as --with-as=/usr/local/bin/as  --with-ld=/usr/local/bin/ld
+</code></pre>
+
+<p><code>make</code></p>
+
+<p>Quick hack needed in <code>sparc-sun-solaris2.8/libstdc++-v3/include/ext/concurrence.h</code></p>
+
+<p>On line 345, change <code>__GTHREAD_COND_INIT</code> to <code>__GTHREAD_COND_INITzzz</code> so that conditional evaluates false.</p>
+
+<p>And just above that #if, add this</p>
+
+<pre><code>#ifndef __GTHREAD_COND_INIT_FUNCTION
+#define __GTHREAD_COND_INIT_FUNCTION(p) pthread_cond_init((p), NULL)
+#endif
+</code></pre>
+
+<p>This ended up taking about 12 hours to compile, if not more. Maybe it would be faster if I had a SCSI disk rather than IDE in the system.</p>
+
+<p>You may have luck with a slightly newer or older GCC. This process worked fine on Solaris 9, but was less smooth on Solaris 8.</p>
+            </content></div>
 </div></td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>

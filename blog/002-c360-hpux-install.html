@@ -81,7 +81,7 @@
 <div class="main-body"><content>
 <h1>Installing HP-UX 11.11 on a C360</h1>
 
-<p><em>Published: 27-May-2025 - Last Updated: 27-May-2025</em></p>
+<p><em>Published: 27-May-2025 - Last Updated: 02-Jun-2025</em></p>
 
 <p>I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc. <br>
 So lets just install 11.11 (aka 11i v1)</p>
@@ -122,7 +122,7 @@ So lets just install 11.11 (aka 11i v1)</p>
 <li>Its incredible how slow the install for HP-UX is.</li>
 </ul>
 
-<h3>Post install</h3>
+<h3>Post install, install patches</h3>
 
 <ul>
 <li>Login and run sam. Add your user. Then, open software management, Install software to local host</li>
@@ -141,13 +141,23 @@ I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my
 $ sudo mount --bind /mnt/iso /data/nfs/iso
 </code></pre>
 
+<h3>2009 GOLDQPK Install</h3>
+
+<p>I think the final GOLD pack was in 2009. This is also in Tenox's osarchive. I recommend using this file: <code>os/hpux/OS/11.11/HP-UX 11.11 Support Plus 2009-12.tar.lz</code> <br>
+Extract it and point swinstall at GOLDQPK11i_B.11.11.0912.483.depot</p>
+
+<h3>misc</h3>
+
+<p>I was having issues with my stty setting over telnet. I added this to my .bash_profile: <code>stty intr ^C erase ^H</code> <br>
+Also, bash is my shell for my user.</p>
+
 <hr>
 
 <h1>C compilers</h1>
 
 <p>The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.</p>
 
-<h2>ansic</h2>
+<h2>ansic (HP aCC)</h2>
 
 <p>You can download ansic from from osarchive.org: <br>
 * <code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
@@ -158,9 +168,77 @@ $ sudo mount --bind /mnt/iso /data/nfs/iso
 <li>Mark everything for install. Go to Actions-&gt;Install, and let it do its thing.</li>
 </ol>
 
-<h2>GCC</h2>
+<h2>GCC Toolchain</h2>
 
-<p>I'll work on this later.</p>
+<p>I'm going to install GCC 4.2.3 from this archive: http://ftp.netbsd.org/pub/pkgsrc/misc/tnn/ <br>
+This person used it to build pkgsrc a few years ago: https://vanalboom.org/node/17.html</p>
+
+<p>Just untar it in <code>/</code> and add <code>/usr/local/gcc4/bin</code> to your PATH and make the headers.</p>
+
+<pre><code>/usr/local/gcc4/libexec/gcc/hppa2.0w-hp-hpux11.11/4.2.3/install-tools/mkheaders
+</code></pre>
+
+<h3>Various tools, in order</h3>
+
+<p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
+
+<p><em>I picked these version numbers randomly</em> <br>
+<em>Assume gcc unless otherwise specified</em></p>
+
+<p>make-1.79: <code>export CC=cc; ./configure; make</code> <em>you can probably go straight to 3.80+ here instead of 3.79</em> <br>
+m4-1.4.16: <code>./configure; make</code> <br>
+autoconf-2.69: <code>./configure; make</code> <br>
+automake-1.6.3: <code>./configure; make</code> <br>
+automake-1.8.5: <code>./configure; make</code></p>
+
+<p>If you get this error:  <code>/usr/ccs/bin/ld: Unrecognized argument: +init</code> <br>
+Make sure <code>PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative patch)</code> is installed. It is included in the 2009 Support Plus depot.  </p>
+
+<p>With that patch, it seems like HP's ld is good enough and we don't need binutils.</p>
+
+<h2>GCC 4.8.5</h2>
+
+<p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
+
+<p>I build some tools first:
+* tar-1.27.1
+* gawk-3.1.8
+* sed-4.2.2
+* grep-2.6.3
+* make-3.82
+* binutils-2.23.2
+    * <code>./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls</code></p>
+
+<p><em>I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. 2.23.2 seems to work well</em></p>
+
+<p>GCC build reqs:</p>
+
+<p><code>export CC=gcc</code> <br>
+Add binutils to PATH: <br>
+<code>export PATH=/usr/local/gcc-4.8.5/bin:$PATH</code>  </p>
+
+<p>gmp should detect <code>ABI=2.0n</code>. If not, <code>export ABI=2.0n</code>.</p>
+
+<ol>
+<li>gmp-6.1.2</li>
+<li>mpfr-3.1.6</li>
+<li>mpc-1.0.3</li>
+</ol>
+
+<p>I skipped <code>make check</code>. I'm lazy.</p>
+
+<pre><code>./configure --prefix=/usr/local/gcc-4.8.5 --enable-languages=c,c++ --disable-nls --enable-threads=posix --with-gmp=/usr/local --with-mpfr=/usr/local --with-mpc=/usr/local --with-gnu-as --with-as=/usr/local/gcc-4.8.5/bin/as --without-gnu-ld
+</code></pre>
+
+<p>This compile took over 12 hours on the C360.</p>
+
+<p>I ended up recompiling because I did <code>--without-gnu-as</code> the first time and that doesn't work; you want gnu as. <br>
+I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed way faster (I dont know how long because I was asleep.)</p>
+
+<p>My PATH order was: <br>
+<code>export PATH=/usr/local/gcc-4.8.5/bin:/usr/local/gcc4/bin:/usr/local/bin:$PATH</code></p>
+
+<p>DONE. You now have GCC 4.8.5 in /usr/local/gcc-4.8.5 with GNU as V2.23.2.</p>
 
 <hr>
 

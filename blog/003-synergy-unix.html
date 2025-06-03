@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - All Blog Entires</title>
+<title>nsafran.com - Setting up Synergy on UNIX workstations to share mouse and keyboards</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -75,40 +75,107 @@
         </content></div>
 </div></td>
 <td class="main-body-td"><div class="main-body-container">
-<div class="window-title">Terminal - All Blog Entries</div>
+<div class="window-title">Terminal - Setting up Synergy on UNIX workstations to share mouse and keyboards</div>
 <div class="main-body"><content>
-    <h2>All Blog Entries by Date</h2>
-    <p>These posts are mostly for my own reference, but someone may find them useful.</p>
-    <hr>
-    <table>
-    <tr>
-<td>Title</td>
-<td>Date Published</td>
-</tr>
-    
-<tr>
-<td><a href="004-ultra10-setup.html">Setting up Solaris 8 on Ultra 10
-</a></td>
-<td>31-May-2025</td>
-</tr>
-<tr>
-<td><a href="003-synergy-unix.html">Setting up Synergy on UNIX workstations to share mouse and keyboards</a></td>
-<td>30-May-2025</td>
-</tr>
-<tr>
-<td><a href="002-c360-hpux-install.html">Installing HP-UX 11.11 on a C360
-</a></td>
-<td>27-May-2025</td>
-</tr>
-<tr>
-<td><a href="001-altix-linux.html">Modern Linux on SGI Altix</a></td>
-<td>22-May-2025</td>
-</tr>
-<tr>
-<td><a href="000-this-website.html">This Website's Design</a></td>
-<td>22-May-2025</td>
-</tr>
-</table></content></div>
+<h1>Setting up Synergy on UNIX workstations to share mouse and keyboards</h1>
+
+<p><em>Published: 30-May-2025 - Last Updated: 30-May-2025</em></p>
+
+<p>When I first read about Synergy when I was kid, I was so excited about it. I had a slight obsession with KVMs, and Synergy seemed like an even cooler experience. I remember I set it up on 2 Windows XP computers, but I think I had issues getting it to work on boot up, so I never ended up using it much.</p>
+
+<p>Now, I'd like to get it working on some of my UNIX workstations since keyboards and mice take up too much space. Although I mostly access the computers via terminal or remote X session, I still like to have a physical setup that I can use.</p>
+
+<p>I will add to this page when I setup more systems with synergy.</p>
+
+<h1>Synergy 1.2.8</h1>
+
+<p>This is the last release before they moved to cmake, so this is the one I used.</p>
+
+<h2>Solaris 9</h2>
+
+<h3>Build &amp; Install</h3>
+
+<p>Building  was easy. I have GNU binutils and GCC. <br>
+<code>GNU ld (GNU Binutils) 2.24</code> <br>
+<code>gcc version 4.2.4</code> <br>
+I don't have a good list of everything installed for this system.</p>
+
+<h3>Server Configuration</h3>
+
+<p>XDM doesn't allow the mouse or keyboard to be shared, so we only put the startup in Xsession.d. You have to login before you can share the mouse and keyboard.</p>
+
+<h3>
+<code>/usr/dt/config/Xsession.d/0099.synergys</code> :</h3>
+
+<pre><code>ps -ef | grep synergys | grep -v grep | awk '{print $2}' | xargs kill
+sleep 1
+/usr/local/bin/synergys --config /etc/synergy.conf
+</code></pre>
+
+<p><code>chmod +x /usr/dt/config/Xsession.d/0099.synergys</code></p>
+
+<p>Config file: <code>/etc/synergy.conf</code></p>
+
+<pre><code>section: screens
+    blade150:
+    c360:
+end
+section: links
+    blade150:
+       right = c360
+    c360:
+       left = blade150
+end
+</code></pre>
+
+<h2>HP-UX 11.11</h2>
+
+<h3>Build &amp; Install</h3>
+
+<p>You must have either gnu ld or a fully patched HP ld with patch PHSS_39749. This can be found on the 2009-12 Support Plus CD. See my <a href="002-c360-hpux-install.html">blog entry about setting up my C360 for specifics</a>. <br>
+If you don't, you will get an error about XTest not existing. This is due to a linker error.</p>
+
+<p>I also used GNU make 1.79 to build it. HP's make may or may not work.</p>
+
+<p><code>./configure</code> <br>
+<code>make</code> <br>
+<code>make install</code></p>
+
+<p>There are many keymaps that need commented out in <code>lib/platform/CXWindowsUtil.cpp</code> since HP-UX 11.11 X11 headers do not have them. Then we need automake aclocal-1.6 to make since we changed the file. <a href="002-c360-hpux-install.html">See my setup blog for details</a>. <br>
+You can download the modified file here: <a href="https://gist.github.com/nsafran1217/6ca46271ab33d60256d0ee4c7797c94f">https://gist.github.com/nsafran1217/6ca46271ab33d60256d0ee4c7797c94f</a></p>
+
+<p>With the modified file, it build and works just fine.</p>
+
+<h3>Client Configuration</h3>
+
+<p>We want synergy to startup automatically at dtlogin so we can interact with the login screen. Note that you must have a mouse and keyboard connected to the computer, otherwise X will fail to start. There is a way around this, but I didn't configure that. I just leave a mouse and keyboard connected.</p>
+
+<p>I ignored the warning in these files about not modifying them. <br>
+My synergy server's name is <code>blade150</code></p>
+
+<h3>
+<code>/usr/dt/config/Xsetup</code> :</h3>
+
+<pre><code>ps -ef | grep synergyc | grep -v grep | awk '{print $2}' | xargs kill
+sleep 1
+/usr/local/bin/synergyc blade150
+</code></pre>
+
+<h3>
+<code>/usr/dt/config/Xstartup</code> :</h3>
+
+<pre><code>ps -ef | grep synergyc | grep -v grep | awk '{print $2}' | xargs kill
+sleep 1
+</code></pre>
+
+<h3>
+<code>/usr/dt/config/Xsession.d/0099.synergyc</code> :</h3>
+
+<pre><code>ps -ef | grep synergyc | grep -v grep | awk '{print $2}' | xargs kill
+sleep 1
+/usr/local/bin/synergyc blade150
+</code></pre>
+            </content></div>
 </div></td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>
