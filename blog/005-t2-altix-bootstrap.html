@@ -83,23 +83,27 @@
 
 <p><em>Published: 10-Jun-2025 - Last Updated: 10-Jun-2025</em></p>
 
-<p>T2 SDE is a linux source based linux distribution and package manager that run on many older OSes. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.</p>
+<p>T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.</p>
 
-<p>In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix and other IA64 systems.</p>
+<p>In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix. </p>
 
 <h2>Overview</h2>
 
-<p>To get T2 on Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux Kernel version 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.</p>
+<p>To get T2 on an Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux kernel versions 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.</p>
 
-<p>The steps are roughly: <br>
-1. Create T2 root disk tarball from T2 ISO
-1. Use IA64 cross compiler to compile Linux kernel
-1. Boot SLES11 SP3 DVD into rescue mode and setup networking
-1. Format destination disk
-1. Copy T2 onto disk
-1. <code>chroot</code> into T2
-1. Configure T2
-1. Configure EFI partition</p>
+<p>The steps are roughly:  </p>
+
+<ol>
+<li>Create T2 root disk tarball from T2 ISO</li>
+<li>Use IA64 cross compiler to compile Linux kernel</li>
+<li>Boot SLES11 SP3 DVD into rescue mode and setup networking</li>
+<li>Format destination disk</li>
+<li>Copy T2 onto disk</li>
+<li>
+<code>chroot</code> into T2</li>
+<li>Configure T2</li>
+<li>Configure EFI partition</li>
+</ol>
 
 <h2>T2 root disk from ISO</h2>
 
@@ -120,11 +124,11 @@ sudo tar cf ../t2-ia64full.tar .
 
 <h4>3.14.79:</h4>
 
-<p>The last working kernel with a simple patch to fix a compile issue. This kernel works well over the serial console, but I can't get SSH or NFS working on it. <code>svn up</code> also fails to work on this version. I assume there a compatibility issues with the binaries included with T2 and is too old. I recommend using this for initial setup since the serial console works well.</p>
+<p>The last working kernel with a simple patch to fix a compile issue. This kernel works well over the serial console, but I can't get SSH or NFS working on it. <code>svn up</code> also fails on this version. I assume there are compatibility issues with the binaries included with T2 and the kernel. I recommend using this for initial setup since the serial console works well.</p>
 
 <h4>4.19.325</h4>
 
-<p>With 1 additional patch, this kernel works well. The biggest issue is with the serial console. It seems to drop input, or not echo your input back until you send another character. SSH, NFS, and other tools work correct on this kernel. I recommend using this kernel version.</p>
+<p>With 1 additional patch, this kernel works well. The biggest issue is with the serial console. It seems to drop input, or not echo your input back until you send another character. SSH, NFS, and other tools work correctly on this kernel. I recommend using this kernel version.</p>
 
 <h3>3.14.79 Patch:</h3>
 
@@ -193,15 +197,25 @@ Link: <a href="https://gist.github.com/nsafran1217/e9a5732999334a5df8c50b2ce314a
 
 <h3>Cross Compiling</h3>
 
-<p>https://ftp.machine-hall.org/pub/toolchains/x86_64/</p>
+<p>Download the cross toolchain from here: <a href="https://ftp.machine-hall.org/pub/toolchains/x86_64/">https://ftp.machine-hall.org/pub/toolchains/x86_64/</a> <br>
+Thanks to <a href="https://github.com/johnny-mnemonic">Johnny Mnemonic for this</a></p>
+
+<p>I used gcc-14.2 on Ubuntu 24.04. You need this gcc first in your PATH.</p>
+
+<p>Put my config in the linux source tree and run this: <br>
+<code>make ARCH=ia64 CROSS_COMPILE=ia64-linux- olddefconfig</code></p>
+
+<p>If you need to modify the config, you can use menuconfig: <br>
+<code>make ARCH=ia64 CROSS_COMPILE=ia64-linux- menuconfig</code></p>
+
+<p>And this command to make it: <br>
+<code>make -j$(nproc) ARCH=ia64 CROSS_COMPILE=ia64-linux- tar-pkg scripts/kconfig/conf  --syncconfig Kconfig</code></p>
+
+<p>Additional References:</p>
 
 <p>http://epic-slack.org/#!articles/2024-12-15-building-your-own-kernel.md</p>
 
 <p>https://github.com/linux-ia64/linux-stable-rc/blob/__mirror/.github/workflows/mirror.yml#L124</p>
-
-<p><code>make ARCH=ia64 CROSS_COMPILE=ia64-linux- olddefconfig</code></p>
-
-<p><code>make -j$(nproc) ARCH=ia64 CROSS_COMPILE=ia64-linux- tar-pkg scripts/kconfig/conf  --syncconfig Kconfig</code></p>
 
 <hr>
 
@@ -215,10 +229,10 @@ Read this if you don't: <a href="https://techpubs.jurassic.nl/library/manuals/50
 Arrow key down to rescue system and add the correct boot flags: <br>
 <code>boot: console=ttySG0,38400n8</code></p>
 
-<h3>Networking</h3>
+<h3>Networking in rescue mode</h3>
 
 <p><code>ifconfig eth0 &lt;ip address&gt; netmask &lt;netmask value&gt;</code> <br>
-<code>route add default gw &lt;route value&gt; dev &lt;network interface&gt;</code> <br>
+<code>route add default gw &lt;route value&gt; dev eth0</code> <br>
 Edit <code>resolv.conf</code> and add a nameserver if you need DNS.</p>
 
 <p>I mount my NFS server, but you can get the files to the system however you want: <br>
@@ -309,9 +323,9 @@ source /etc/profile
 <p>run <code>passwd</code> to set a root password <br>
 edit <code>/etc/resolv.conf</code> and setup DNS  </p>
 
-<p>In <code>/etc/inittab</code>, we need to add the SGI ttySG0 device as a console, otherwise, you wont be able to login via the L2 console.</p>
+<p>In <code>/etc/inittab</code>, we need to add the SGI ttySG0 device as a console, otherwise, you won't be able to login via the L2 console.</p>
 
-<p>Add this line. I added it around line 62 near the other virtual consoles. Renumber the other virtual consoles. <br>
+<p>Add this line. I added it around line 62 near the other virtual consoles. Re-number the other virtual consoles if needed. <br>
 <code>0:12345:respawn:/sbin/agetty --noclear 38400 ttySG0 linux</code> <br>
 My file has this under Virtual Consoles:</p>
 
@@ -328,20 +342,19 @@ My file has this under Virtual Consoles:</p>
 
 <h2>EFI elilo setup</h2>
 
-<p><a href="https://sourceforge.net/projects/elilo/files/elilo/elilo-3.16/">Download elilo-3.16-all.tar.gz</a></p>
-
-<p>extract it, copy elilo-3.16-ia64.efi to /boot/efi/EFI/</p>
-
-<p>SLES11 rescue mode doesn't have efivars, so we need to manually setup the EFI partition for now.</p>
+<p>I couldn't get grub working, so we'll stay with elilo.</p>
 
 <pre><code>mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 mkdir /boot/efi/EFI
+</code></pre>
 
-(we are still in elilo-3.12 source tree)
-cp elilo.efi /boot/efi/EFI
+<p><a href="https://sourceforge.net/projects/elilo/files/elilo/elilo-3.16/">Download elilo-3.16-all.tar.gz</a>
+Extract it, copy elilo-3.16-ia64.efi to /boot/efi/EFI/</p>
 
-cd /boot
+<p>We don't have efivars, so we need to manually setup the EFI partition for now.</p>
+
+<pre><code>cd /boot
 mkdir /boot/efi/EFI/boot
 cp vmlinux-4.19.325-NS-SN2 efi/EFI/boot/
 cp vmlinux-3.14.79-NS-SN2 efi/EFI/boot/
@@ -372,15 +385,16 @@ image=/EFI/boot/vmlinux-3.14.79-NS-SN2
 
 <h2>Reboot, we are ready to boot</h2>
 
-<p>exit the chroot, and reboot</p>
+<p>Exit the chroot, and reboot.</p>
 
-<p>At the efi prompt, boot elilo-3.16-ia64.efi from the disk.</p>
+<p>At the efi prompt, boot elilo-3.16-ia64.efi from the disk. <br>
+Type <code>t2-314</code> to boot the older kernel to do initial setup.</p>
 
-<p>You should be booted up! I recommend booting into 3.14.79 and setup networking with <code>stone</code>, then switch to 4.19.325 and do the rest over SSH.</p>
+<p>You should be booted up! If you see it finish booting but never get a login prompt, check your agetty configuration in <code>/etc/inittab</code>.</p>
 
-<p>Login with the root password you set, and run the <code>stone</code> program to start configuring the system.</p>
+<p>You can used <code>stone</code> to do initial setup tasks. After networking is setup, reboot into t2-419 and SSH to the system.</p>
 
-<p>After done with inital configuration, reboot into 4.19 and we can start installing packages from the t2 sources.</p>
+<p>Now we can start installing packages from the t2 sources.</p>
 
 <pre><code>cd /usr/src/t2-src
 svn up
