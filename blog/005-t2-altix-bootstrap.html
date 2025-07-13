@@ -1,0 +1,406 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Bootstraping T2 SDE Linux on SGI Altix From SLES
+</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
+</head>
+<body><table class="main-body-table"><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
+
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td class="main-body-td"><div class="main-body-container">
+<div class="window-title">Terminal - Bootstraping T2 SDE Linux on SGI Altix From SLES
+</div>
+<div class="main-body"><content>
+<h1>Bootstraping T2 SDE Linux on SGI Altix From SLES</h1>
+
+<p><em>Published: 10-Jun-2025 - Last Updated: 10-Jun-2025</em></p>
+
+<p>T2 SDE is a linux source based linux distribution and package manager that run on many older OSes. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.</p>
+
+<p>In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix and other IA64 systems.</p>
+
+<h2>Overview</h2>
+
+<p>To get T2 on Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux Kernel version 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.</p>
+
+<p>The steps are roughly: <br>
+1. Create T2 root disk tarball from T2 ISO
+1. Use IA64 cross compiler to compile Linux kernel
+1. Boot SLES11 SP3 DVD into rescue mode and setup networking
+1. Format destination disk
+1. Copy T2 onto disk
+1. <code>chroot</code> into T2
+1. Configure T2
+1. Configure EFI partition</p>
+
+<h2>T2 root disk from ISO</h2>
+
+<p><a href="https://gist.github.com/johnny-mnemonic/debbe04cb11532ff894297b18f5d0180">Script to generate root FS from ISO</a></p>
+
+<pre><code>sudo ./t2trap.bash ia64 t2-24.12-ia64-base-desktop-glibc-gcc-itanium2.iso full
+cd ia64
+sudo tar cf ../t2-ia64full.tar .
+</code></pre>
+
+<hr>
+
+<h2>Cross compile Linux Kernel</h2>
+
+<h3>Kernel Versions:</h3>
+
+<p>I am a beginer when it comes to customizing the Linux kernel. These are my observations. This may change if I fix more issues in the later kernel.</p>
+
+<h4>3.14.79:</h4>
+
+<p>The last working kernel with a simple patch to fix a compile issue. This kernel works well over the serial console, but I can't get SSH or NFS working on it. <code>svn up</code> also fails to work on this version. I assume there a compatibility issues with the binaries included with T2 and is too old. I recommend using this for initial setup since the serial console works well.</p>
+
+<h4>4.19.325</h4>
+
+<p>With 1 additional patch, this kernel works well. The biggest issue is with the serial console. It seems to drop input, or not echo your input back until you send another character. SSH, NFS, and other tools work correct on this kernel. I recommend using this kernel version.</p>
+
+<h3>3.14.79 Patch:</h3>
+
+<p>All you need to do is change <code>u64</code> to <code>unsigned long</code> in the <code>sn_dma_flush</code> function in <code>arch/ia64/sn/pci/pcibr/pcibr_dma.c</code>:</p>
+
+<pre><code>diff --git a/arch/ia64/sn/pci/pcibr/pcibr_dma.c b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
+index 1e863b277ac9..6b632c290af2 100644
+--- a/arch/ia64/sn/pci/pcibr/pcibr_dma.c
++++ b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
+@@ -235,7 +235,7 @@ pcibr_dma_unmap(struct pci_dev *hwdev, dma_addr_t dma_handle, int direction)
+  * unlike the PIC Device(x) Write Request Buffer Flush register.
+  */
+
+-void sn_dma_flush(u64 addr)
++void sn_dma_flush(unsigned long addr)
+ {
+        nasid_t nasid;
+        int is_tio;
+</code></pre>
+
+<h3>4.19.325 Patch:</h3>
+
+<p>You need to make the patch above, as well as commenting out 2 lines in 1 other files. This is not a safe/correct change, but it works. <br>
+Comment out 2 instances of <code>res-&gt;flags |= IORESOURCE_UNSET;</code> in <code>drivers/pci/setup-res.c</code></p>
+
+<pre><code>diff --git a/arch/ia64/sn/pci/pcibr/pcibr_dma.c b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
+index 1e863b277ac9..6b632c290af2 100644
+--- a/arch/ia64/sn/pci/pcibr/pcibr_dma.c
++++ b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
+@@ -235,7 +235,7 @@ pcibr_dma_unmap(struct pci_dev *hwdev, dma_addr_t dma_handle, int direction)
+  * unlike the PIC Device(x) Write Request Buffer Flush register.
+  */
+
+-void sn_dma_flush(u64 addr)
++void sn_dma_flush(unsigned long addr)
+ {
+        nasid_t nasid;
+        int is_tio;
+diff --git a/drivers/pci/setup-res.c b/drivers/pci/setup-res.c
+index c35c61816903..d48cd5a832a0 100644
+--- a/drivers/pci/setup-res.c
++++ b/drivers/pci/setup-res.c
+@@ -150,7 +150,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
+        if (!root) {
+                pci_info(dev, "can't claim BAR %d %pR: no compatible bridge window\n",
+                         resource, res);
+-               res-&gt;flags |= IORESOURCE_UNSET;
++               //res-&gt;flags |= IORESOURCE_UNSET;
+                return -EINVAL;
+        }
+
+@@ -158,7 +158,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
+        if (conflict) {
+                pci_info(dev, "can't claim BAR %d %pR: address conflict with %s %pR\n",
+                         resource, res, conflict-&gt;name, conflict);
+-               res-&gt;flags |= IORESOURCE_UNSET;
++               //res-&gt;flags |= IORESOURCE_UNSET;
+                return -EBUSY;
+        }
+</code></pre>
+
+<h3>Kernel Config</h3>
+
+<p>Here is my kernel config. It is very bare bones, however, I will update it as needed. I'm still debugging some issues.
+Link: <a href="https://gist.github.com/nsafran1217/e9a5732999334a5df8c50b2ce314a92b#file-sn2-config">https://gist.github.com/nsafran1217/e9a5732999334a5df8c50b2ce314a92b#file-sn2-config</a></p>
+
+<h3>Cross Compiling</h3>
+
+<p>https://ftp.machine-hall.org/pub/toolchains/x86_64/</p>
+
+<p>http://epic-slack.org/#!articles/2024-12-15-building-your-own-kernel.md</p>
+
+<p>https://github.com/linux-ia64/linux-stable-rc/blob/__mirror/.github/workflows/mirror.yml#L124</p>
+
+<p><code>make ARCH=ia64 CROSS_COMPILE=ia64-linux- olddefconfig</code></p>
+
+<p><code>make -j$(nproc) ARCH=ia64 CROSS_COMPILE=ia64-linux- tar-pkg scripts/kconfig/conf  --syncconfig Kconfig</code></p>
+
+<hr>
+
+<h2>Booting SLES11</h2>
+
+<p>Im going to assume you know how to get to the EFI console on an SGI Altix. <br>
+Read this if you don't: <a href="https://techpubs.jurassic.nl/library/manuals/5000/007-5640-001/sgi_html/ch02.html">007-5640-001: Chapter 2. Software Planning and Installation</a></p>
+
+<p>Boot from the DVD. Your filesystem device may be different: <br>
+<code>fs0:\&gt; efi\boot\bootia64.efi</code> <br>
+Arrow key down to rescue system and add the correct boot flags: <br>
+<code>boot: console=ttySG0,38400n8</code></p>
+
+<h3>Networking</h3>
+
+<p><code>ifconfig eth0 &lt;ip address&gt; netmask &lt;netmask value&gt;</code> <br>
+<code>route add default gw &lt;route value&gt; dev &lt;network interface&gt;</code> <br>
+Edit <code>resolv.conf</code> and add a nameserver if you need DNS.</p>
+
+<p>I mount my NFS server, but you can get the files to the system however you want: <br>
+<code>mkdir /nfs</code> <br>
+<code>mount -o nolock nfs_server:/nfs /nfs</code></p>
+
+<h3>Partitioning</h3>
+
+<p>I only have one disk installed while doing this, so my disk is /dev/sda. Please confirm with lsblk that you are working on the correct disk. I made a 2GB EFI partition and 98GB root. You can change these or add swap if you want. We are going to format root as XFS since SLES11 has XFS support.</p>
+
+<pre><code>Rescue:~ # parted /dev/sda
+GNU Parted 2.3
+Using /dev/sda
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) mklabel gpt
+Warning: The existing disk label on /dev/sda will be destroyed and all data on
+this disk will be lost. Do you want to continue?
+Yes/No? yes
+(parted) unit GB
+(parted) mkpart
+Partition name?  []?
+File system type?  [ext2]? fat32
+Start? 0
+End? 2GB
+(parted) mkpart
+Partition name?  []?
+File system type?  [ext2]? xfs
+Start? 2GB
+End? 100GB
+(parted) set 1 esp on
+(parted) quit
+Information: You may need to update /etc/fstab.
+</code></pre>
+
+<h3>Formatting</h3>
+
+<p><code>mkfs.vfat /dev/sda1</code> <br>
+<code>mkfs.xfs /dev/sda2</code></p>
+
+<h3>mount</h3>
+
+<p><code>mkdir /mnt/t2</code> <br>
+<code>mount /dev/sda2 /mnt/t2</code></p>
+
+<hr>
+
+<h2>Copying T2 to root disk</h2>
+
+<p>Lets extract the T2 root tar into the new disk.</p>
+
+<p><code>cd /mnt/t2</code> <br>
+<code>tar xf /nfs/altix/t2/t2-ia64full.tar</code></p>
+
+<p>Grab your kernels. I copy the tars in /mnt/t2/root. I'm going to setup both versions.</p>
+
+<pre><code>cd /mnt/t2/root
+tar xf linux-4.19.325-NS-SN2-ia64.tar
+tar xf linux-4.19.325-NS-SN2-ia64.tar
+cp boot/* /mnt/t2/boot
+cp -r lib /mnt/t2/
+</code></pre>
+
+<hr>
+
+<h2>chroot to T2</h2>
+
+<p>So I have NFS available in T2: <br>
+<code>mkdir /mnt/t2/nfs</code> <br>
+<code>mount --bind /nfs /mnt/t2/nfs</code> <br>
+<code>mount --make-slave /mnt/t2/nfs</code>  </p>
+
+<pre><code>mount --types proc /proc /mnt/t2/proc
+mount --rbind /sys /mnt/t2/sys
+mount --make-rslave /mnt/t2/sys
+mount --rbind /dev /mnt/t2/dev
+mount --make-rslave /mnt/t2/dev
+mount --bind /run /mnt/t2/run
+mount --make-slave /mnt/t2/run
+
+chroot /mnt/t2/ /bin/bash
+source /etc/profile
+</code></pre>
+
+<hr>
+
+<h2>Initial T2 configuration</h2>
+
+<p>run <code>passwd</code> to set a root password <br>
+edit <code>/etc/resolv.conf</code> and setup DNS  </p>
+
+<p>In <code>/etc/inittab</code>, we need to add the SGI ttySG0 device as a console, otherwise, you wont be able to login via the L2 console.</p>
+
+<p>Add this line. I added it around line 62 near the other virtual consoles. Renumber the other virtual consoles. <br>
+<code>0:12345:respawn:/sbin/agetty --noclear 38400 ttySG0 linux</code> <br>
+My file has this under Virtual Consoles:</p>
+
+<pre><code>0:12345:respawn:/sbin/agetty --noclear 38400 ttySG0 linux
+1:12345:respawn:/sbin/agetty -L -J -i -I '\012\015' tty1 linux
+2:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty2 linux
+3:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty3 linux
+4:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty4 linux
+5:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty5 linux
+6:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty6 linux
+</code></pre>
+
+<hr>
+
+<h2>EFI elilo setup</h2>
+
+<p><a href="https://sourceforge.net/projects/elilo/files/elilo/elilo-3.16/">Download elilo-3.16-all.tar.gz</a></p>
+
+<p>extract it, copy elilo-3.16-ia64.efi to /boot/efi/EFI/</p>
+
+<p>SLES11 rescue mode doesn't have efivars, so we need to manually setup the EFI partition for now.</p>
+
+<pre><code>mkdir /boot/efi
+mount /dev/sda1 /boot/efi
+mkdir /boot/efi/EFI
+
+(we are still in elilo-3.12 source tree)
+cp elilo.efi /boot/efi/EFI
+
+cd /boot
+mkdir /boot/efi/EFI/boot
+cp vmlinux-4.19.325-NS-SN2 efi/EFI/boot/
+cp vmlinux-3.14.79-NS-SN2 efi/EFI/boot/
+vi /boot/efi/EFI/elilo.conf
+</code></pre>
+
+<p><code>/boot/efi/elilo.conf</code>:</p>
+
+<pre><code># boot=/dev/sda1
+delay=30
+timeout=30
+default=t2-419
+append="console=ttySG0,38400n8"
+relocatable
+prompt
+
+image=/EFI/boot/vmlinux-4.19.325-NS-SN2
+        label=t2-419
+        root=/dev/sda2
+        read-only
+image=/EFI/boot/vmlinux-3.14.79-NS-SN2
+        label=t2-314
+        root=/dev/sda2
+        read-only
+</code></pre>
+
+<hr>
+
+<h2>Reboot, we are ready to boot</h2>
+
+<p>exit the chroot, and reboot</p>
+
+<p>At the efi prompt, boot elilo-3.16-ia64.efi from the disk.</p>
+
+<p>You should be booted up! I recommend booting into 3.14.79 and setup networking with <code>stone</code>, then switch to 4.19.325 and do the rest over SSH.</p>
+
+<p>Login with the root password you set, and run the <code>stone</code> program to start configuring the system.</p>
+
+<p>After done with inital configuration, reboot into 4.19 and we can start installing packages from the t2 sources.</p>
+
+<pre><code>cd /usr/src/t2-src
+svn up
+
+t2 install htop
+t2 install sudo
+</code></pre>
+
+<p><a href="https://t2sde.org/packages/">Here's the list of packages in T2</a> <br>
+Note that not all work on Itanium</p>
+
+<h2>Future work</h2>
+
+<ul>
+<li>I want to get graphics output working via a PCI video card. </li>
+<li>I want to install Java (I think Java 6 is the latest that works on IA64)</li>
+<li>I want to play Minecraft on an Altix</li>
+</ul>
+            </content></div>
+</div></td>
+<td class="td-spacer"></td>
+</tr></tbody></table></body>
+</html>

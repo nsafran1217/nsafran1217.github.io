@@ -209,7 +209,7 @@ Make sure <code>PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative pat
 * binutils-2.23.2
     * <code>./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls</code></p>
 
-<p><em>I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. 2.23.2 seems to work well</em></p>
+<p><em>I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. <code>ar</code> may have been broken. 2.23.2 seems to work well</em></p>
 
 <p>GCC build reqs:</p>
 
@@ -233,7 +233,7 @@ Add binutils to PATH: <br>
 <p>This compile took over 12 hours on the C360.</p>
 
 <p>I ended up recompiling because I did <code>--without-gnu-as</code> the first time and that doesn't work; you want gnu as. <br>
-I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed way faster (I dont know how long because I was asleep.)</p>
+I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed in 4 ish hours.</p>
 
 <p>My PATH order was: <br>
 <code>export PATH=/usr/local/gcc-4.8.5/bin:/usr/local/gcc4/bin:/usr/local/bin:$PATH</code></p>
