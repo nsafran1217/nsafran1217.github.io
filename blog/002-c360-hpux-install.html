@@ -160,7 +160,7 @@ Also, bash is my shell for my user.</p>
 <h2>ansic (HP aCC)</h2>
 
 <p>You can download ansic from from osarchive.org: <br>
-* <code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
+<code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
 
 <ol>
 <li>Run <code>swinstall</code> and open <code>B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot</code>
@@ -194,20 +194,23 @@ automake-1.8.5: <code>./configure; make</code></p>
 <p>If you get this error:  <code>/usr/ccs/bin/ld: Unrecognized argument: +init</code> <br>
 Make sure <code>PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative patch)</code> is installed. It is included in the 2009 Support Plus depot.  </p>
 
-<p>With that patch, it seems like HP's ld is good enough and we don't need binutils.</p>
+<p>That fixes HP's ld so it actually works.</p>
 
 <h2>GCC 4.8.5</h2>
 
 <p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
 
-<p>I build some tools first:
-* tar-1.27.1
-* gawk-3.1.8
-* sed-4.2.2
-* grep-2.6.3
-* make-3.82
-* binutils-2.23.2
-    * <code>./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls</code></p>
+<p>I build some tools first:</p>
+
+<ol>
+<li>tar-1.27.1</li>
+<li>gawk-3.1.8</li>
+<li>sed-4.2.2</li>
+<li>grep-2.6.3</li>
+<li>make-3.82</li>
+<li>binutils-2.23.2: configure like this: <code>./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls</code>
+</li>
+</ol>
 
 <p><em>I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. <code>ar</code> may have been broken. 2.23.2 seems to work well</em></p>
 
