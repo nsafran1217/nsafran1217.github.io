@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - Home Page</title>
+<title>nsafran.com - Configuring an HP Integrity rx2800 i2</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -74,57 +74,84 @@
         </ul>
         </content></div>
 </div></td>
-<td class="main-body-td">
-<div class="main-body-container">
-<div class="window-title">Terminal - Home Page</div>
+<td class="main-body-td"><div class="main-body-container">
+<div class="window-title">Terminal - Configuring an HP Integrity rx2800 i2</div>
 <div class="main-body"><content>
-            <h2>My Projects and Computers</h2>
-            <p>
-            <img src="/img/icons/tM18j.gif" class="inline">
-            This website will serve as documentation for my computer and electronics projects.
-            </p>
-            <p>
-            <ul>
-                <li>Various UNIX workstations and servers:</li>
-                    <ul>
-                        <li><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
-                        <li><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
-                        <li><a href="/computers/hp/hp.html">HP</a></li>
-                        <li><a href="/computers/dec/dec.html">Digital</a></li>
-                        <li><a href="/computers/ibm/ibm.html">IBM</a></li>
-                        <li><a href="/computers/next/next.html">NeXT</a></li>
-                    </ul>
-                <li><a href="/projects/z80/z80.html"> A custom Z80 computer</a></li>
-                <li><a href="/projects/nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
-                <li><a href="/projects/nixie/soyuz.html">Soyuz 744H clock replica</a></li>
-            </ul>
-            </p>
+<h1>Configuring an HP Integrity rx2800 i2</h1>
+
+<p><em>Published: 11-Nov-2025 - Last Updated: 11-Nov-2025</em></p>
+
+<p>I recently picked up an HP Integrity rx2800 i2 server in a lot of server equipment. This is the newest Itanium server I own. In this article I will walk through configuring the system including setting up RAID array on the integrated p410i controller and installing HP-UX 11.31, along with installing setting up a GCC toolchain (eventually).</p>
+
+<h2>First powerup</h2>
+
+<p>When I first powered on the server, all the warning lights for the RAM, were lit. It looks like somebody took RAM out of the server and reinstalled the RAM riser in the wrong slot. Following the diagrams on the lid, I moved the RAM into a valid configuration. Currently I have 64GB of RAM, which is way more than I need.</p>
+
+<p>The RAM test on these machines takes a long time. The POST on this system takes over 5 minutes.</p>
+
+<h2>iLO password</h2>
+
+<p>I followed <a href="https://portal-iam-ext-pro.it.hpe.com/hpesc/public/docDisplay?docId=c02728748&amp;docLocale=en_US">these instructions</a> to reset the iLO password. 
+Note that the username is Administrator on this version of iLO/MP, not Admin like the older servers. <br>
+Make sure you set a password for Administrator before the timer 15 minute timer runs out</p>
+
+<h2>Configuring a RAID array on the p410i</h2>
+
+<p>There's no graphical menu on this system like the rx2660, so you need to drop to the EFI shell to load the array configration tool. The <a href="https://community.hpe.com/hpeb/attachments/hpeb/itrc-275/13000/1/rx2800-Maint.pdf">HP Integrity rx2800 i2 Server User Service Guide</a> is a great reference.</p>
+
+<ul>
+<li>Drop to to EFI shell by pressing S at the boot menu.</li>
+<li>Find out the Driver ID and CTRL ID (Page 147 of the PDF linked above)</li>
+<li><ul>
+<li>Run <code>drivers</code>  and find the SAS Host Bus Adapter. The ID is the left most column. My controller name was <code>Smart Array SAS Driver v3.24</code> and it was ID <code>9C</code>
+</li>
+</ul></li>
+<li><ul>
+<li>Run <code>drvcfg</code> and take nnote of the Ctrl ID of your Drv. In my case it was [9A]. The output looks like this:
+<code>
+Shell&gt; drvcfg 9C
+Configurable Components
+Drv[9C]  Ctrl[9A]  Lang[eng]
+</code>
+</li>
+</ul></li>
+<li><ul>
+<li>Now run the graphical array tool with the command <code>drvcfg -s 9C 9A</code>
+</li>
+</ul></li>
+</ul>
+
+<p>Note that I could not get the array config tool to accept my changes when viewing the serial console over a telnet iLO session. I had to use the remote serial console on a Windows XP machine. I'm sure connecting a VGA montitor and keyboard would have worked as well.</p>
+
+<p>The manual I linked also has instructions for chaning the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. </p>
+
+<h2>Installing HP-UX 11.31 (11i v3)</h2>
+
+<p>I used HP-UX 11.31 DC-OE from Tenox's OS Archive:</p>
+
+<p><code>os/hpux/OS/11.31/Update 13 (2014-03)/DC-OE_11i_v3_DVD_BA931-10018.rar</code> <br>
+<code>os/hpux/OS/11.31/Update 13 (2014-03)/DC-OE_11i_v3_DVD_BA931-10019.rar</code> <br>
+<code>os/hpux/OS/11.31/Update 13 (2014-03)/SE_Apps_11i_v3_DVD_BA960-40016.rar</code></p>
+
+<p>Note that these are large ISOs and you will need dual layer DVDs to burn them. </p>
+
+<h3>Installation</h3>
+
+<p>The installer will autoboot with the disc in the drive. <br>
+It takes a LONG time to go anywhere after it says <code>AUTOBOOTING...</code>  </p>
+
+<p>You can choose the default. I do want to configure the disk partitioning.</p>
+
+<p>I selected some additional software like CDE, Graphics, EnergySaver, HP 9000 containers, and some others. <br>
+I also increase some of the partition sizes, but we can do all of that after install in <code>sam</code></p>
+
+<p>HP-UX installs take a LONG time. I think this install took about 3 hours</p>
+
+<h2>Next Steps</h2>
+
+<p>Next I want to setup a modern GCC toolchain, but I have set this project asside for now. I will return at a later date. I'd also like to finally play with Integrity VM.</p>
             </content></div>
-</div>
-<div class="main-body-container">
-<div class="window-title">Teminal - Recent Blog Articles</div>
-<div class="main-body"><content>
-    <h2>Recent Blog Articles</h2>
-        <hr>
-<p><a href="/blog/006-rx2800i2-config.html"><span style="font-weight: bold;">Configuring an HP Integrity rx2800 i2</span> - 11-Nov-2025</a><br>
-        I recently picked up an HP Integrity rx2800 i2 server in a lot of server equipment. This is the newest Itanium server I own. In this article I will walk through configuring the system including setting up RAID array on the integrated p410i controller and installing HP-UX 11.31, along with installing setting up a GCC toolchain (eventually)....</p>
-        <hr>
-<p><a href="/blog/005-t2-altix-bootstrap.html"><span style="font-weight: bold;">Bootstraping T2 SDE Linux on SGI Altix From SLES</span> - 10-Jun-2025</a><br>
-        T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well....</p>
-        <hr>
-<p><a href="/blog/004-ultra10-setup.html"><span style="font-weight: bold;">Setting up Solaris 8 on Ultra 10</span> - 31-May-2025</a><br>
-        Some notes about setting up a build environment on Solaris 8, specifically my Ultra 10....</p>
-        <hr>
-<p><a href="/blog/003-synergy-unix.html"><span style="font-weight: bold;">Setting up Synergy on UNIX workstations to share mouse and keyboards</span> - 30-May-2025</a><br>
-        When I first read about Synergy when I was kid, I was so excited about it. I had a slight obsession with KVMs, and Synergy seemed like an even cooler experience. I remember I set it up on 2 Windows XP computers, but I think I had issues getting it to work on boot up, so I never ended up using it much....</p>
-        <hr>
-<p><a href="/blog/002-c360-hpux-install.html"><span style="font-weight: bold;">Installing HP-UX 11.11 on a C360</span> - 27-May-2025</a><br>
-        I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc....</p>
-    <hr>
-    <a href="/blog/index.html"><h3>All blog articles</h3></a>
-    </content></div>
-</div>
-</td>
+</div></td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>
 </html>

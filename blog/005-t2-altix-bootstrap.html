@@ -1,8 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - Bootstraping T2 SDE Linux on SGI Altix From SLES
-</title>
+<title>nsafran.com - Bootstraping T2 SDE Linux on SGI Altix From SLES</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -76,8 +75,7 @@
         </content></div>
 </div></td>
 <td class="main-body-td"><div class="main-body-container">
-<div class="window-title">Terminal - Bootstraping T2 SDE Linux on SGI Altix From SLES
-</div>
+<div class="window-title">Terminal - Bootstraping T2 SDE Linux on SGI Altix From SLES</div>
 <div class="main-body"><content>
 <h1>Bootstraping T2 SDE Linux on SGI Altix From SLES</h1>
 
@@ -167,27 +165,21 @@ index 1e863b277ac9..6b632c290af2 100644
  {
         nasid_t nasid;
         int is_tio;
-diff --git a/drivers/pci/setup-res.c b/drivers/pci/setup-res.c
-index c35c61816903..d48cd5a832a0 100644
---- a/drivers/pci/setup-res.c
-+++ b/drivers/pci/setup-res.c
-@@ -150,7 +150,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
-        if (!root) {
-                pci_info(dev, "can't claim BAR %d %pR: no compatible bridge window\n",
-                         resource, res);
--               res-&gt;flags |= IORESOURCE_UNSET;
-+               //res-&gt;flags |= IORESOURCE_UNSET;
-                return -EINVAL;
-        }
 
-@@ -158,7 +158,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
-        if (conflict) {
-                pci_info(dev, "can't claim BAR %d %pR: address conflict with %s %pR\n",
-                         resource, res, conflict-&gt;name, conflict);
--               res-&gt;flags |= IORESOURCE_UNSET;
-+               //res-&gt;flags |= IORESOURCE_UNSET;
-                return -EBUSY;
-        }
+diff --git a/arch/ia64/sn/kernel/io_init.c b/arch/ia64/sn/kernel/io_init.c
+index d63809a6adfa..2446ffa0957a 100644
+--- a/arch/ia64/sn/kernel/io_init.c
++++ b/arch/ia64/sn/kernel/io_init.c
+@@ -195,6 +195,9 @@ sn_io_slot_fixup(struct pci_dev *dev)
+        if (res-&gt;parent &amp;&amp; res-&gt;parent-&gt;child)
+            release_resource(res);
+
++       /* Ensure resource is marked as assigned so parent lookups succeed */
++       res-&gt;flags &amp;= ~IORESOURCE_UNSET;
++
+        if (res-&gt;flags &amp; IORESOURCE_IO)
+            insert_resource(&amp;ioport_resource, res);
+        else
 </code></pre>
 
 <h3>Kernel Config</h3>
