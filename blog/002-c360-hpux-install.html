@@ -19,7 +19,8 @@
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
@@ -74,7 +75,8 @@
         </ul>
         </content></div>
 </div></td>
-<td class="main-body-td"><div class="main-body-container">
+<td class="main-body-td">
+<div class="main-body-container">
 <div class="window-title">Terminal - Installing HP-UX 11.11 on a C360</div>
 <div class="main-body"><content>
 <h1>Installing HP-UX 11.11 on a C360</h1>
@@ -149,13 +151,16 @@ Extract it and point swinstall at GOLDQPK11i_B.11.11.0912.483.depot</p>
 <p>I was having issues with my stty setting over telnet. I added this to my .bash_profile: <code>stty intr ^C erase ^H</code> <br>
 Also, bash is my shell for my user.</p>
 
-<hr>
-
-<h1>C compilers</h1>
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - C compilers</div>
+<div class="main-body"><content>
+<h2>C compilers</h2>
 
 <p>The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.</p>
 
-<h2>ansic (HP aCC)</h2>
+<h3>ansic (HP aCC)</h3>
 
 <p>You can download ansic from from osarchive.org: <br>
 <code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
@@ -166,7 +171,7 @@ Also, bash is my shell for my user.</p>
 <li>Mark everything for install. Go to Actions-&gt;Install, and let it do its thing.</li>
 </ol>
 
-<h2>GCC Toolchain</h2>
+<h3>GCC Toolchain</h3>
 
 <p>I'm going to install GCC 4.2.3 from this archive: http://ftp.netbsd.org/pub/pkgsrc/misc/tnn/ <br>
 This person used it to build pkgsrc a few years ago: https://vanalboom.org/node/17.html</p>
@@ -194,7 +199,7 @@ Make sure <code>PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative pat
 
 <p>That fixes HP's ld so it actually works.</p>
 
-<h2>GCC 4.8.5</h2>
+<h3>GCC 4.8.5</h3>
 
 <p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
 
@@ -241,9 +246,12 @@ I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it complet
 
 <p>DONE. You now have GCC 4.8.5 in /usr/local/gcc-4.8.5 with GNU as V2.23.2.</p>
 
-<hr>
-
-<h1>Software building</h1>
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Software building</div>
+<div class="main-body"><content>
+<h2>Software building</h2>
 
 <p>Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.</p>
 
@@ -279,9 +287,12 @@ Then I get this error:  </p>
 Fetched from gnu and it built without any issues. Build non wide character support: <br>
 <code>./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec</code></p>
 
-<hr>
-
-<h1>Adding a second disk</h1>
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Adding a second disk</div>
+<div class="main-body"><content>
+<h2>Adding a second disk</h2>
 
 <p>I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.</p>
 
@@ -295,8 +306,9 @@ Next, I went to file systems and mounted the new LVs in temporary locations. I c
 <p><img src="/img/blog/002-lv.png" alt="LVM" title=""></p>
 
 <p>I also added my NFS server to auto mount at startup in Filesystems.</p>
-            </content></div>
-</div></td>
+</content></div>
+</div>
+</td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>
 </html>

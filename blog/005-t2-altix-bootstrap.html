@@ -19,7 +19,8 @@
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
@@ -74,18 +75,19 @@
         </ul>
         </content></div>
 </div></td>
-<td class="main-body-td"><div class="main-body-container">
+<td class="main-body-td">
+<div class="main-body-container">
 <div class="window-title">Terminal - Bootstraping T2 SDE Linux on SGI Altix From SLES</div>
 <div class="main-body"><content>
 <h1>Bootstraping T2 SDE Linux on SGI Altix From SLES</h1>
 
-<p><em>Published: 10-Jun-2025 - Last Updated: 12-Jul-2025</em></p>
+<p><em>Published: 10-Jun-2025 - Last Updated: 13-Mar-2026</em></p>
 
 <p>T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.</p>
 
 <p>In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix. </p>
 
-<h2>Overview</h2>
+<h1>Overview</h1>
 
 <p>To get T2 on an Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux kernel versions 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.</p>
 
@@ -103,7 +105,7 @@
 <li>Configure EFI partition</li>
 </ol>
 
-<h2>T2 root disk from ISO</h2>
+<h3>T2 root disk from ISO</h3>
 
 <p><a href="https://gist.github.com/johnny-mnemonic/debbe04cb11532ff894297b18f5d0180">Script to generate root FS from ISO</a></p>
 
@@ -112,8 +114,11 @@ cd ia64
 sudo tar cf ../t2-ia64full.tar .
 </code></pre>
 
-<hr>
-
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Cross compile Linux Kernel</div>
+<div class="main-body"><content>
 <h2>Cross compile Linux Kernel</h2>
 
 <h3>Kernel Versions:</h3>
@@ -149,8 +154,7 @@ index 1e863b277ac9..6b632c290af2 100644
 
 <h3>4.19.325 Patch:</h3>
 
-<p>You need to make the patch above, as well as commenting out 2 lines in 1 other files. This is not a safe/correct change, but it works. <br>
-Comment out 2 instances of <code>res-&gt;flags |= IORESOURCE_UNSET;</code> in <code>drivers/pci/setup-res.c</code></p>
+<p>You need to make the patch above, as well as adding one line in arch/ia64/sn/kernel/io_init.c. <code>res-&gt;flags &amp;= ~IORESOURCE_UNSET;</code>. Below is a combined patch.   </p>
 
 <pre><code>diff --git a/arch/ia64/sn/pci/pcibr/pcibr_dma.c b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
 index 1e863b277ac9..6b632c290af2 100644
@@ -209,8 +213,11 @@ Thanks to <a href="https://github.com/johnny-mnemonic">Johnny Mnemonic for this<
 
 <p>https://github.com/linux-ia64/linux-stable-rc/blob/__mirror/.github/workflows/mirror.yml#L124</p>
 
-<hr>
-
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Booting SLES11</div>
+<div class="main-body"><content>
 <h2>Booting SLES11</h2>
 
 <p>Im going to assume you know how to get to the EFI console on an SGI Altix. <br>
@@ -271,7 +278,7 @@ Information: You may need to update /etc/fstab.
 
 <hr>
 
-<h2>Copying T2 to root disk</h2>
+<h3>Copying T2 to root disk</h3>
 
 <p>Lets extract the T2 root tar into the new disk.</p>
 
@@ -289,7 +296,7 @@ cp -r lib /mnt/t2/
 
 <hr>
 
-<h2>chroot to T2</h2>
+<h3>chroot to T2</h3>
 
 <p>So I have NFS available in T2: <br>
 <code>mkdir /mnt/t2/nfs</code> <br>
@@ -308,9 +315,7 @@ chroot /mnt/t2/ /bin/bash
 source /etc/profile
 </code></pre>
 
-<hr>
-
-<h2>Initial T2 configuration</h2>
+<h3>Initial T2 configuration</h3>
 
 <p>run <code>passwd</code> to set a root password <br>
 edit <code>/etc/resolv.conf</code> and setup DNS  </p>
@@ -330,9 +335,7 @@ My file has this under Virtual Consoles:</p>
 6:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty6 linux
 </code></pre>
 
-<hr>
-
-<h2>EFI elilo setup</h2>
+<h3>EFI elilo setup</h3>
 
 <p>I couldn't get grub working, so we'll stay with elilo.</p>
 
@@ -373,9 +376,7 @@ image=/EFI/boot/vmlinux-3.14.79-NS-SN2
         read-only
 </code></pre>
 
-<hr>
-
-<h2>Reboot, we are ready to boot</h2>
+<h3>Reboot, we are ready to boot</h3>
 
 <p>Exit the chroot, and reboot.</p>
 
@@ -398,6 +399,11 @@ t2 install sudo
 <p><a href="https://t2sde.org/packages/">Here's the list of packages in T2</a> <br>
 Note that not all work on Itanium</p>
 
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Future work</div>
+<div class="main-body"><content>
 <h2>Future work</h2>
 
 <ul>
@@ -405,8 +411,9 @@ Note that not all work on Itanium</p>
 <li>I want to install Java (I think Java 6 is the latest that works on IA64)</li>
 <li>I want to play Minecraft on an Altix</li>
 </ul>
-            </content></div>
-</div></td>
+</content></div>
+</div>
+</td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>
 </html>
