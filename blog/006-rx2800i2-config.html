@@ -19,7 +19,8 @@
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
@@ -74,7 +75,8 @@
         </ul>
         </content></div>
 </div></td>
-<td class="main-body-td"><div class="main-body-container">
+<td class="main-body-td">
+<div class="main-body-container">
 <div class="window-title">Terminal - Configuring an HP Integrity rx2800 i2</div>
 <div class="main-body"><content>
 <h1>Configuring an HP Integrity rx2800 i2</h1>
@@ -83,19 +85,19 @@
 
 <p>I recently picked up an HP Integrity rx2800 i2 server in a lot of server equipment. This is the newest Itanium server I own. In this article I will walk through configuring the system including setting up RAID array on the integrated p410i controller and installing HP-UX 11.31, along with installing setting up a GCC toolchain (eventually).</p>
 
-<h2>First powerup</h2>
+<h3>First powerup</h3>
 
 <p>When I first powered on the server, all the warning lights for the RAM, were lit. It looks like somebody took RAM out of the server and reinstalled the RAM riser in the wrong slot. Following the diagrams on the lid, I moved the RAM into a valid configuration. Currently I have 64GB of RAM, which is way more than I need.</p>
 
 <p>The RAM test on these machines takes a long time. The POST on this system takes over 5 minutes.</p>
 
-<h2>iLO password</h2>
+<h3>iLO password</h3>
 
 <p>I followed <a href="https://portal-iam-ext-pro.it.hpe.com/hpesc/public/docDisplay?docId=c02728748&amp;docLocale=en_US">these instructions</a> to reset the iLO password. 
 Note that the username is Administrator on this version of iLO/MP, not Admin like the older servers. <br>
-Make sure you set a password for Administrator before the timer 15 minute timer runs out</p>
+Make sure you set a password for Administrator before the timer 15 minute timer runs out.</p>
 
-<h2>Configuring a RAID array on the p410i</h2>
+<h3>Configuring a RAID array on the p410i</h3>
 
 <p>There's no graphical menu on this system like the rx2660, so you need to drop to the EFI shell to load the array configration tool. The <a href="https://community.hpe.com/hpeb/attachments/hpeb/itrc-275/13000/1/rx2800-Maint.pdf">HP Integrity rx2800 i2 Server User Service Guide</a> is a great reference.</p>
 
@@ -107,7 +109,7 @@ Make sure you set a password for Administrator before the timer 15 minute timer 
 </li>
 </ul></li>
 <li><ul>
-<li>Run <code>drvcfg</code> and take nnote of the Ctrl ID of your Drv. In my case it was [9A]. The output looks like this:
+<li>Run <code>drvcfg</code> and take note of the Ctrl ID of your Drv. In my case it was [9A]. The output looks like this:
 <code>
 Shell&gt; drvcfg 9C
 Configurable Components
@@ -121,11 +123,11 @@ Drv[9C]  Ctrl[9A]  Lang[eng]
 </ul></li>
 </ul>
 
-<p>Note that I could not get the array config tool to accept my changes when viewing the serial console over a telnet iLO session. I had to use the remote serial console on a Windows XP machine. I'm sure connecting a VGA montitor and keyboard would have worked as well.</p>
+<p>Note that I could not get the array config tool to accept my changes when viewing the serial console over a telnet iLO session. I had to use the remote serial console on a Windows XP machine. I'm sure connecting a VGA monitor and keyboard would have worked as well.</p>
 
-<p>The manual I linked also has instructions for chaning the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. </p>
+<p>The manual I linked also has instructions for changing the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. </p>
 
-<h2>Installing HP-UX 11.31 (11i v3)</h2>
+<h3>Installing HP-UX 11.31 (11i v3)</h3>
 
 <p>I used HP-UX 11.31 DC-OE from Tenox's OS Archive:</p>
 
@@ -147,11 +149,17 @@ I also increase some of the partition sizes, but we can do all of that after ins
 
 <p>HP-UX installs take a LONG time. I think this install took about 3 hours</p>
 
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Next Steps</div>
+<div class="main-body"><content>
 <h2>Next Steps</h2>
 
-<p>Next I want to setup a modern GCC toolchain, but I have set this project asside for now. I will return at a later date. I'd also like to finally play with Integrity VM.</p>
-            </content></div>
-</div></td>
+<p>Next I want to setup a modern GCC toolchain, but I have set this project aside for now. I will return at a later date. I'd also like to finally play with Integrity VM.</p>
+</content></div>
+</div>
+</td>
 <td class="td-spacer"></td>
 </tr></tbody></table></body>
 </html>

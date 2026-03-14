@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - SPARC IPX</title>
+<title>nsafran.com - SPARCStation IPX</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/sun-back.css">
 </head>
@@ -19,7 +19,8 @@
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
-            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix.html">Altix</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
             <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
@@ -76,89 +77,98 @@
 </div></td>
 <td class="main-body-td">
 <div class="main-body-container">
-<div class="window-title">Terminal - SPARC IPX</div>
+<div class="window-title">Terminal - SPARCStation IPX</div>
 <div class="main-body"><content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
-            <h2>SPARCStation IPX</h2>
-            <p>I really enjoy the lunchbox form factor of the IPX. I purchased this SPARCStation IPX on
-                ebay as untested, but it did say it powered on. My system came with a dummy load
-                installed where the hard disk would be, so I'm assuming it never had a hard disk and net
-                booted Sun OS when it was in service.</p>
-            <p>I installed a 2.1 GB Hard disk and purchased a SCSI cable for it. Of course, the NVRAM
-                battery was dead. I repaired it by bypassing the internal battery and installing an
-                external battery holder as described on this page. <a href="http://www.tns-soft.com/nvram_redux.html" target="_blank" rel="noopener noreferrer">Sun NVRAM Repair</a></p>
-            <p>The system currently has 40MB of RAM and is running SunOS 4.1.4, the last release of the
-                BSD based operating system by Sun. The GUI on SunOS is pretty simplistic compared to the
-                later versions of Solaris, but it works. I compiled some modern tools for it including
-                bash, tar, gzip, and others. Its definitely the slowest workstation I have, but I enjoy
-                messing around with it.</p>
+<h1>SPARCStation IPX</h1>
 
-            <table class="image-showcase">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="image-showcase">
-                                <a href="/img/sun/ipxanddisk.jpg">
-                                    <img src="/img/sun/ipxanddisk.jpg" alt="IPX with disk">
-                                </a>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="image-showcase">
-                                <a href="/img/sun/ipx-bat.jpg">
-                                    <img src="/img/sun/ipx-bat.jpg" alt="Battery Mod">
-                                </a>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="image-showcase">
-                                <a href="/img/sun/sunos4.jpg">
-                                    <img src="/img/sun/sunos4.jpg" alt="Sun OS 4.1.4">
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            </content></div>
+<p><em>Last Updated: 02-May-2025</em></p>
+
+<p>I really enjoy the lunchbox form factor of the IPX. I purchased this SPARCStation IPX on
+ebay as untested, but it did say it powered on. My system came with a dummy load
+installed where the hard disk would be, so I'm assuming it never had a hard disk and net
+booted Sun OS when it was in service.</p>
+
+<p>I installed a 2.1 GB Hard disk and purchased a SCSI cable for it. Of course, the NVRAM
+battery was dead. I repaired it by bypassing the internal battery and installing an
+external battery holder as described on this page. </p>
+
+<p><a href="http://www.tns-soft.com/nvram_redux.html" target="_blank" rel="noopener noreferrer">Sun NVRAM Repair</a></p>
+
+<p>The system currently has 40MB of RAM and is running SunOS 4.1.4, the last release of the
+BSD based operating system by Sun. The GUI on SunOS is pretty simplistic compared to the
+later versions of Solaris, but it works. I compiled some modern tools for it including
+bash, tar, gzip, and others. Its definitely the slowest workstation I have, but I enjoy
+messing around with it.</p>
+
+<table class="image-showcase">
+    <tbody>
+        <tr>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/ipxanddisk.jpg">
+                        <img src="/img/sun/ipxanddisk.jpg" alt="IPX with disk">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/ipx-bat.jpg">
+                        <img src="/img/sun/ipx-bat.jpg" alt="Battery Mod">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/sunos4.jpg">
+                        <img src="/img/sun/sunos4.jpg" alt="Sun OS 4.1.4">
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</content></div>
 </div>
 <div class="main-body-container">
-<div class="window-title">Terminal - External Disk</div>
+<div class="window-title">Terminal - External Hard Disk</div>
 <div class="main-body"><content>
-            <h2>External Hard Disk</h2>
-                <p> I really like the form factor, so I purchased an external hard disk on eBay to go with
-                    it. This disk was sold as *not working, does not power up*. When it arrived, I opened up
-                    the PSU and saw what I expected—leaking capacitors. I ordered replacements on DigiKey
-                    for the four large capacitors and replaced them. Luckily, that was the only issue with
-                    the power supply. </p>
-                <table class="image-showcase">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="image-showcase">
-                                    <a href="/img/sun/ipx-psu1.jpg">
-                                        <img src="/img/sun/ipx-psu1.jpg" alt="PSU Damage">
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="image-showcase">
-                                    <a href="/img/sun/ipx-psu2.jpg">
-                                        <img src="/img/sun/ipx-psu2.jpg" alt="PSU Repaired">
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="image-showcase">
-                                    <a href="/img/sun/fullheigh-disk.jpg">
-                                        <img src="/img/sun/fullheigh-disk.jpg" alt="Big disk VS SSD">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </content></div>
+<h2>External Hard Disk</h2>
+
+<p>I really like the form factor, so I purchased an external hard disk on eBay to go with
+it. This disk was sold as <em>not working, does not power up</em>. When it arrived, I opened up
+the PSU and saw what I expected—leaking capacitors. I ordered replacements on DigiKey
+for the four large capacitors and replaced them. Luckily, that was the only issue with
+the power supply. </p>
+
+<table class="image-showcase">
+    <tbody>
+        <tr>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/ipx-psu1.jpg">
+                        <img src="/img/sun/ipx-psu1.jpg" alt="PSU Damage">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/ipx-psu2.jpg">
+                        <img src="/img/sun/ipx-psu2.jpg" alt="PSU Repaired">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sun/fullheigh-disk.jpg">
+                        <img src="/img/sun/fullheigh-disk.jpg" alt="Big disk VS SSD">
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</content></div>
 </div>
 </td>
 <td class="td-spacer"></td>

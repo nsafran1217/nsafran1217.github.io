@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Z90 Clock</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Z90 Clock</window-title>
+            <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Z80 Clock Board</h2>
+            <p>This board just controls the clock and reset signal for the computer. I do not have a
+                reset circuit when the computer is turned on, so the computer needs to be manually
+                reset. You can halt the computer with a switch and manually step the processor with a
+                button on the front.<br></br>
+            The board design is based on Ben Eater's design for his 6502 computer.</p>
+            <p>The schematic is not complete.</p>
+            <a href="/img/z80/clock-board.jpg">
+            <img src="/img/z80/clock-board.jpg" alt="Z80 Clock" class="fullwidth"></img>
+            </a>
+            <a href="/img/z80/clock-sch.png">
+            <img src="/img/z80/clock-sch.png" alt="Z80 Clock" class="fullwidth"></img>
+            </a>
+            </content>
+        </section>
+    </sections>
+</page>

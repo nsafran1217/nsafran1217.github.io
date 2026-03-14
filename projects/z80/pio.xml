@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Z80 PIO</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Z80 PIO</window-title>
+            <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Z80 PIO Board</h2>
+            <p>
+            I wanted to try out wire wrap, but I didn't have enough space on the back of the board,
+            or any wire wrap sockets. So, I soldered pin headers on either side of the ICs and wire
+            wrapped on the top of the board. Its not the nicest looking wire wrap, but I'm happy
+            with how it came out. It's also easy than doing point to point soldering in my opinion.
+            </p>
+            <p>
+            I don't have an application yet, but eventually I'd like to write a clock program to
+            write to my 
+            <a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">
+            VFD Board</a>
+            I designed. I was planning to read the time from an i2C clock chip by bit banging with the PIO.
+            </p>
+            <a href="/img/z80/pio-board.jpg">
+            <img src="/img/z80/pio-board.jpg" alt="Z80 PIO" class="fullwidth"></img>
+                    </a>
+            <a href="/img/z80/pio-sch.png">
+            <img src="/img/z80/pio-sch.png" alt="Z80 PIO" class="fullwidth"></img>
+                    </a>
+            </content>
+        </section>
+    </sections>
+</page>

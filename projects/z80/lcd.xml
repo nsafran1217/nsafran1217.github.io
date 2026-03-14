@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Z80 LCD</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Z80 LCD</window-title>
+            <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Z80 LCD Board</h2>
+            <p>
+            I don't really have an application for this board, and I'm not sure why I built it. It
+            works. Originally I didn't have a bus transceiver, but that didn't work with the
+            graphical LCD I was trying to use, so I added one.</p>
+            <p>
+            I wrote subroutines to control both 1602 and 2004 LCD screens (in 
+            <a href="https://github.com/nsafran1217/z80-asm/tree/master/myCode/DeviceDemos" 
+            target="_blank" rel="noopener noreferrer">DeviceDemos</a>
+            )
+            </p>
+            <a href="/img/z80/lcd-board.jpg">
+            <img src="/img/z80/lcd-board.jpg" alt="Z80 LCD" class="fullwidth"></img>
+            </a>
+            <a href="/img/z80/lcd-sch.png">
+            <img src="/img/z80/lcd-sch.png" alt="Z80 LCD" class="fullwidth"></img>
+                    </a>
+            </content>
+        </section>
+    </sections>
+</page>

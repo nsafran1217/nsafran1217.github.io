@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Z80 LAIR</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Z80 LAIR</window-title>
+            <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Z80 Logic Analyzer Interface Board</h2>
+            <p>
+            When I was first getting started with writing assembly, I found it very difficult to
+            know what was happening after I burned the ROM and turned the computer on.<br></br>
+            I purchased an Agilent 1670G to connect to the computer and get some viability into
+            what the computer was doing. There is an inverse z80 assembler available for the 1670G,
+            which make it very easy to decode what the computer is doing.
+            <br></br>
+            This board is a clone of the 
+            <a href="https://github.com/MustBeArt/LAIR" target="_blank" rel="noopener noreferrer">LAIR Pro</a>
+            for the RC-2014 bus. I only changed the bus connection to fit my 40 pin layout.
+            </p>
+            <a href="/img/z80/lair-board.jpg">
+            <img src="/img/z80/lair-board.jpg" alt="Z80 LAIR" class="fullwidth"></img>
+            </a>
+            </content>
+        </section>
+    </sections>
+</page>

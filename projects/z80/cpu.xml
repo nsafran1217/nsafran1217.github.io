@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Z80 CPU</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Z80 CPU</window-title>
+            <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <h2>Z80 CPU and Memory Board</h2>
+            <p>
+            This was the first board I built for the computer. I'm not happy with how it looks, but
+            it works. I improved my construction techniques in the later boards.<br></br>
+            This board has the z80 CPU, Flash, SRAM, an OR gate for memory address decoding, 
+            a 3 to 8 demux for IO address decoding, and a latch that disables the ROM.
+            </p>
+            <p>The only change I needed to make to this board was adding the latch and IO decoding.</p>
+            <a href="/img/z80/cpu-board.jpg">
+            <img src="/img/z80/cpu-board.jpg" alt="Z80 CPU and Memory Board" class="fullwidth"></img>
+            </a>
+            <a href="/img/z80/cpu-sch.png">
+            <img src="/img/z80/cpu-sch.png" alt="Z80 CPU and Memory Board" class="fullwidth"></img>
+            </a>
+            </content>
+        </section>
+    </sections>
+</page>
