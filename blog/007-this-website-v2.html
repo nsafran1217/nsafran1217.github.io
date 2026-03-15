@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nsafran.com - This Website's Design</title>
+<title>nsafran.com - This Website's Design Version 2</title>
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/default-back.css">
 </head>
@@ -76,47 +76,29 @@
         </content></div>
 </div></td>
 <td class="main-body-td"><div class="main-body-container">
-<div class="window-title">Terminal - This Website's Design</div>
+<div class="window-title">Terminal - This Website's Design Version 2</div>
 <div class="main-body"><content>
-<h1>This Website's Design</h1>
+<h1>This Website's Design Version 2</h1>
 
-<p><em>Published: 22-May-2025 - Last Updated: 15-Mar-2026</em></p>
+<p><em>Published: 15-Mar-2026 - Last Updated: 15-Mar-2026</em></p>
 
-<h3>This is outdated. New version described here: <a href="007-this-website-v2.html">This Website Version 2</a>
-</h3>
+<p>I have redesigned the build process for this website. With the new build system, I can now write all website content in markdown files. These markdown files are then converted to xml files, which are still processed with <code>xsltproc</code>. <br>
+Writing in markdown is much easier than writing HTML, so maybe this will encourage me to make more pages and keep everything up to date.</p>
 
-<p>When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked fine, but I wanted a bit more control over the layout and organization of the site.</p>
+<p>Then to build the site, all i have to do it run <code>make</code>. Only the changed files are rebuilt, and I don't have to manually copy the output to the website repo.</p>
 
-<p>I had a few goals for the site: Make it static so I can host it on GitHub Pages, no Javascript so older browsers can at least load the site, and for it to be somewhat easy to update with new content.
-<a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a></p>
+<p>This setup was inspired by <a href="http://nuclear.mutantstargoat.com/blog/">Nuclear's Blog</a></p>
 
-<h3>Inspiration</h3>
+<p>I still need to go through and convert the projects pages to markdown, but the Makefile has support for processing xml files as well. I will probably remove that line from the Makefile 
+once I convert those pages.</p>
 
-<p><a href="http://www.cosam.org/">cosam.org</a> was my inspiration for the layout of the site, with a sidebar that changed depending on the page. <br>
-<a href="https://www.4dwm.com/">4dwm.com</a> inspired me to make the site look like a CDE/HP VUE/4DWM desktop. </p>
+<p>Adding additional sections will be as easy as making a new folder and adding it to the source file list in the Makefile. <br>
+The navigation menu is still manually defined in nav.xml, but maybe in the future that can be automated as well.</p>
 
-<p>Making this website ended up being a lot of work since I have no experience with web design, except for one class I took in 10th grade making websites in Adobe Dreamweaver CS3 (which was very outdated by then).
-Originally, it was going to look much closer to cosam.org with a simpler theme. I was planning on using <a href="https://simplecss.org/">https://simplecss.org/</a> for the styling, but I got inspired when I saw 4dwm.com.</p>
+<p>Any additional changes to the build system will be made to the github.io repository here: <a href="https://github.com/nsafran1217/nsafran1217.github.io">https://github.com/nsafran1217/nsafran1217.github.io</a> <br>
+More details are listed on the repo's README.md</p>
 
-<h3>Details</h3>
-
-<p>The first draft of the site was all HTML with a small amount of Javascript to load the navbar on each page, but that didn't meet my goal for no JS. I then came across <a href="https://www.w3schools.com/xml/xsl_intro.asp">xslt</a>, which allows you to use a template file to convert an XML file into an HTML file.</p>
-
-<p>With some help from ChatGPT, I started tweaking the template to insert the navbar template on each site. The xslt template also let me generate multiple "Windows" on the site relatively easily. </p>
-
-<p>XSLT templates are in <code>/src/templates</code>. All the XML and MD files are in <code>/src/content</code>. </p>
-
-<p><code>make-website.sh</code> calls <code>gen-blog.sh</code>, which converts the markdown into xml, then creates the <code>index.html</code> page for the blog list. </p>
-
-<p><code>gen-articles.py</code> converts all the xml files into html with xsltproc. ChatGPT made this script and is over complicated. One day I'll replace it with a shell script.</p>
-
-<p><code>gen-index.py</code> is currently a mess. The goal was to get an excerpt from each blog entry to have on the home page. It kind of works, but is very complicated. Also written by ChatGPT.</p>
-
-<p>I need to come back to this and try to integrate it into the main github pages repo. Currently, I manually copy the contents of OUTPUT into the github pages repo to update the site.</p>
-
-<h3>Conclusion</h3>
-
-<p>I'm happy with how the website looks on modern browsers, but old browsers struggle a lot with most of the css formatting used to make the "windows". I'm not sure if there's a solution to that, but at least the text loads on old browsers.</p>
+<p><a href="000-this-website.html">Original Design Description</a></p>
 </content></div>
 </div></td>
 <td class="td-spacer"></td>

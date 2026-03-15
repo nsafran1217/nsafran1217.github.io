@@ -4,7 +4,7 @@ TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.
 src_md = $(shell find . -mindepth 2 -name '*.md' -not -path './src/*' )
 src_xml = $(shell find . -name '*.xml' -not -path './src/*' -not -path './sitemap.xml' -not -path './blog/index.xml')
 
-posts   = index.html $(src_md:.md=.html) $(src_xml:.xml=.html)
+posts   = index.html blog/index.html $(src_md:.md=.html) $(src_xml:.xml=.html)
 
 all: $(posts) sitemap.xml
 

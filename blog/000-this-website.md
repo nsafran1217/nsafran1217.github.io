@@ -1,5 +1,7 @@
 # This Website's Design
-*Published: 22-May-2025 - Last Updated: 22-May-2025*
+*Published: 22-May-2025 - Last Updated: 15-Mar-2026*
+
+### This is outdated. New version described here: [This Website Version 2](007-this-website-v2.html)
 
 When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked fine, but I wanted a bit more control over the layout and organization of the site.
 
