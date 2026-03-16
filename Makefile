@@ -1,8 +1,8 @@
 TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.xslt src/templates/blog_index_head.x
 
 # Get all md and xml files, with some exclusions
-src_md = $(shell find . -mindepth 2 -name '*.md' -not -path './src/*' )
-src_xml = $(shell find . -name '*.xml' -not -path './src/*' -not -path './sitemap.xml' -not -path './blog/index.xml')
+src_md = $(shell find . -mindepth 2 -name '*.md' -not -path './src/*' -not -path './img/*')
+src_xml = $(shell find . -name '*.xml' -not -path './src/*' -not -path './img/*' -not -path './sitemap.xml' -not -path './blog/index.xml')
 
 posts   = index.html blog/index.html $(src_md:.md=.html) $(src_xml:.xml=.html)
 

@@ -4,3 +4,5 @@ I am interested in '90s and 2000s UNIX computers (as you can tell from the site 
 I also enjoy working on electronics projects. I mainly focus on digital electronics.
 
 [My GitHub](https://github.com/nsafran1217)
+
+Email me: [admin] AT [this website's address.]
