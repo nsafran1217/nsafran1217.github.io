@@ -12,7 +12,7 @@ The SGI Altix is a ccNUMA SSI (Single System Image) supercomputer designed and m
 The first version, the Altix 3000 was released in 2003 and was the first computer to support running Linux with more than 64 CPUs in a single system image. 
 After releasing the "2nd generation" Itanium based Altix machines, the 450 and 4000, SGI moved to x86-64 processors for the Altix XE, Altix ICE, and Altix UV.
 
-Read the [Wikipedia page for more information](https://en.wikipedia.org/wiki/SGI_Altix)
+Read the [Wikipedia page for more information](https://en.wikipedia.org/wiki/SGI_Altix).
 
 Altix (also called SN2 {scalable node 2}) was 
 [removed from the Linux kernel for v5.4](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=76f0f227cffb570bc5ce343b1750f14907371d80) in 2019 
@@ -22,9 +22,12 @@ This makes adding SN2 support back in more difficult than just reversing the pat
 I suppose you could undo everything and re-add the machine vector infrastructure, but in my opinion,
 this option seemed too invasive and likely to cause bugs.
 
+*Since we don't re-add the machvec infrastructure, support for SN2 is decided at compile time, not at runtime.*
+*Meaning a kernel compiled for SN2 will not run on a generic ia64 machine, and vice versa.*
+
 
 ### Motivation
-I don't really know why I did this. Altix had been abandoned since about v3.10, and was fully broken after v4.0. 
+I don't know, it sounded fun/interesting. Altix had been abandoned since about v3.10, and was fully broken after v4.0. 
 I originally stopped at Linux v4.19.325, but I really wanted to work on getting the radeon driver working on Altix. 
 I convinced myself that I needed a modern Linux distro to do this, and some folks in the T2 community suggested 
 adding SN2 support back would be easier than building T2 with an older kernel.
@@ -70,7 +73,7 @@ And it generated a [plan](img/blog/008-PLAN-v5.4.md) and generated the patches. 
 All without reimplementing machvec and touching all arch/ia64 files. This gave me the confidence to continue moving up in versions.
 
 So I started working through the versions,  5.4 -> 5.5 -> 5.10 -> 5.15 -> 6.1 -> 6.2 -> 6.3 -> 6.4 -> 6.6,  
-and then the first one since ia64 was removed from the kernel, 6.16
+and then jumped to 6.16 with the [Linux v6.16-eipc2 patches](https://github.com/linux-ia64/linux-ia64/releases/tag/v6.16-epic2).
 
 I kept track of the patches in this repo: [https://github.com/nsafran1217/sn2-kernel-tools/tree/main/diff](https://github.com/nsafran1217/sn2-kernel-tools/tree/main/diff).  
 Also contained in the repo is some build scripts, some notes on bisecting issues, and my kernel configs I used for test. 
@@ -121,6 +124,9 @@ Also during the jump to v6.16, a major bug was introduced which prevented the ke
 was already introduced in other architectures, but was missed in ia64 since it was removed from Linux. 
 HP Integrity and Ski were unaffected, but SN2 did not get lucky. This patch has been [applied to the linux-ia64 branch.](https://github.com/linux-ia64/linux-ia64/commit/a33ae1fea116653cea50f184c5c667cb64e5c17a)
 
+The `sgiioc4` driver, which is IDE, was removed for the 5.15 patch since legacy IDE was removed in 5.14.  
+Claude was able to [rewrite the driver](https://github.com/torvalds/linux/commit/12ab3946928b87c8b4844297d28b862079b49121) 
+for `libata` so we continue to support all the original Altix hardware.
 
 ### Conclusion
 

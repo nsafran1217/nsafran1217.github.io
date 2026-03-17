@@ -34,7 +34,7 @@ My goals for the Altix are listed on the [Altix 350 page](/computers/sgi/altix35
 
 ---
 
-Honestly, the Altix 3700 is too much for what I need, but I couldn't let it get scrapped. If anyone has interest in taking it off my hands, please get in touch with me.
+Honestly, the Altix 3700 is too much for what I need, but I couldn't let it get scrapped. If anyone has interest in taking it off my hands, please [get in touch with me](blog/about.html).
 
 
 ## Pictures

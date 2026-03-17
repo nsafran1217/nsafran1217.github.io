@@ -13,7 +13,7 @@ I found two articles that were published when the computers were purchased:
 * [HPC Wire](https://www.hpcwire.com/2004/07/16/duquesne-u-selects-sgi-for-state-of-the-art-research)
 * [Duequese University News](https://digital.library.duq.edu/digital/api/collection/utimes/id/1161/download)
 
-My Altix 350 system consists of 8 compute bricks and 1 N4LR router. When I purchased the lot, I got 16 bricks, but some had small issues like failed power supplies or failed memory. 
+My Altix 350 system consists of 8 compute bricks and 1 N4LR router. I purchased the system as a maxed out 16 brick setup, but some had small issues like failed power supplies or failed memory. 
 I have no need for a full 16 brick system, so I sold some bricks for parts and plan to keep 8. 
 
 Currently the N4LR router is broken with a bad power supply. I will document the process of replacing it when I get around to it.
@@ -41,11 +41,15 @@ If you wanted video output on an Altix, you had to buy a Prism brick, which had 
         <tr>
             <td>
                 <div class="image-showcase">
-                    <a href="/img/sgi/350-front.jpg"><img src="/img/sgi/350-front.jpg" alt="3700"></img></a>
+                    <a href="/img/sgi/350-front.jpg"><img src="/img/sgi/350-front.jpg" alt="350-front"></img></a>
                 </div>
                 Current Setup
             </td>
             <td>
+                <div class="image-showcase">
+                    <a href="/img/sgi/350-rear.jpg"><img src="/img/sgi/350-rear.jpg" alt="350-rear"></img></a>
+                </div>
+                NUMALink cables. Base compute node currently disconnected
             </td>
             <td>
                 <div class="image-showcase">
