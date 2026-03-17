@@ -1,4 +1,4 @@
-TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.xslt src/templates/blog_index_head.x
+TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.xslt src/templates/blog_index_head.x src/templates/nav.xml
 
 # Get all md and xml files, with some exclusions
 src_md = $(shell find . -mindepth 2 -name '*.md' -not -path './src/*' -not -path './img/*')
