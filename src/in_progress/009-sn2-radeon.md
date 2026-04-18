@@ -2,13 +2,12 @@
 *Published: 18-Apr-2026 - Last Updated: 18-Apr-2026*
 
 For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration
-on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work.
+on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. 
+You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find 
+PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most 
+recent Linux kernel on T2 Linux.
 
-Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find
- PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most 
- recent Linux kernel on T2 Linux.
-
-### Getting it working
+### Tested OSs and Kernels
 To do this, you're going to need one of the following OS's installed on your Altix. Any OS's not listed have not been tested. 
 Since these are kernel driver changes, any OS should work.
 
@@ -17,20 +16,26 @@ Since these are kernel driver changes, any OS should work.
 - SLES 11*
 - SLES 9*
 
-*\*your GPU must be supported in that kernel version*
+*\*your GPU must be supported in that kernel version*  
 
-I recommend a modern OS like T2 or Epic-Slack
+I recommend a modern OS like T2 or Epic-Slack.
 
 #### Tested GPUs
+All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily avaliable 
+on ebay for about $30 USD. They have a full size PCI-E slot. 
+The only other adapter availabe is one made by startech. This adapter has NOT been tested 
+and WILL NOT work without modifications to the plx_bridge_fixup.c file.
+
 - AMD Radeon R5 430 (Best tested so far) - Cheap, easy to find with low profile bracket
 - AMD Radeon HD 7570 (Dell OEM) - Cheap, easy to find with low profile bracket
 
 ## Setup
-The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it.
+The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it.  
+You should have a working install of Linux. This is written assuming T2, but the general steps are the same.  
+See instructions for setting up T2 on Altix here.
 
+TODO: Put instructions, compile some kernels for SN2 and host on Github.
 
-#### Kernel Patches
-I have pre-built kernels avaliable for the following versions, or you can take a patch file and compile your own kernel.
 
 ## What needed fixed?
 The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.
