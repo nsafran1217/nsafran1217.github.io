@@ -80,7 +80,7 @@
 <div class="main-body"><content>
 <h1>Adding support for SGI Altix back into Linux</h1>
 
-<p><em>Published: 16-Mar-2026 - Last Updated: 16-Mar-2026</em></p>
+<p><em>Published: 16-Mar-2026 - Last Updated: 17-Apr-2026</em></p>
 
 <p>An alternate title for this could be "Using an LLM to support vintage computers", as I never would have been able to do this without extensive use of Claude Opus. 
 I kind of feel guilty for taking any credit, as the LLM did much of the heavy lifting. 
@@ -93,7 +93,7 @@ after support for it had been broken for over 10 years.</p>
 The first version, the Altix 3000 was released in 2003 and was the first computer to support running Linux with more than 64 CPUs in a single system image. 
 After releasing the "2nd generation" Itanium based Altix machines, the 450 and 4000, SGI moved to x86-64 processors for the Altix XE, Altix ICE, and Altix UV.</p>
 
-<p>Read the <a href="https://en.wikipedia.org/wiki/SGI_Altix">Wikipedia page for more information</a>.</p>
+<p>Read the <a href="https://en.wikipedia.org/wiki/SGI_Altix">Wikipedia page for more information</a> or the <a href="https://wiki.preterhuman.net/SGI_Altix">higher intellect wiki page</a>.</p>
 
 <p>Altix (also called SN2 {scalable node 2}) was 
 <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=76f0f227cffb570bc5ce343b1750f14907371d80">removed from the Linux kernel for v5.4</a> in 2019 
@@ -117,7 +117,7 @@ adding SN2 support back would be easier than building T2 with an older kernel.</
 
 <p>I knew that I could not do this. I am not a kernel dev, I am not proficient at git, 
 I am a beginner at C/C++. All my C/C++ experience comes from embedded projects on Ardiuno or ESP32, so jumping to the Linux kernel
-would be too much for me.</p>
+would be a large leap.</p>
 
 <p>However, it's 2026, and I have access to Claude.ai. I had used claude opus for a <a href="https://github.com/nsafran1217/Pertec-Interface-Tape-Controller/tree/HostUSBOnly">different C project</a>
  a few weeks before starting this and was impressed with its output. I had tried to use ChatGPT and Copilot for help with getting radeon
@@ -128,7 +128,7 @@ I got modern Linux working on SN2 again.</p>
 
 <h3>The Process</h3>
 
-<p>So how will we do this? I figured we should start with v5.4 and what it will take to add SN2 back as it was removed; 
+<p>So how will we do this? I figured we should start with v5.4 and see what it will take to add SN2 back as it was removed; 
 basically just reversing the removal patch. This mostly worked after fixing a few small changes in the kernel API. 
 But reversing the patch touched a ton of files unrelated to SN2. I used claude and did this for v5.4 and 5.5, but 
 I knew this wasn't a good way to do this.</p>
@@ -160,6 +160,8 @@ All without reimplementing machvec and touching all arch/ia64 files. This gave m
 <p>So I started working through the versions,  5.4 -&gt; 5.5 -&gt; 5.10 -&gt; 5.15 -&gt; 6.1 -&gt; 6.2 -&gt; 6.3 -&gt; 6.4 -&gt; 6.6, <br>
 and then jumped to 6.16 with the <a href="https://github.com/linux-ia64/linux-ia64/releases/tag/v6.16-epic2">Linux v6.16-eipc2 patches</a>.</p>
 
+<p>After a 2 week break, I returned to the project and got SN2 support working on the <a href="https://github.com/linux-ia64/linux-ia64">master-epic branch of linuxia64</a>.</p>
+
 <p>I kept track of the patches in this repo: <a href="https://github.com/nsafran1217/sn2-kernel-tools/tree/main/diff">https://github.com/nsafran1217/sn2-kernel-tools/tree/main/diff</a>. <br>
 Also contained in the repo is some build scripts, some notes on bisecting issues, and my kernel configs I used for test. 
 Most of the individual version directories have a readme or a fixes.md outlining the changes from the previous version. <br>
@@ -167,7 +169,7 @@ Not all of the patches have all of the fixes that were found during this process
 started behaving strangely. This was fixed with a <a href="https://github.com/nsafran1217/sn2-kernel-tools/blob/main/diff/sn2-serial-console-bug.patch">small patch</a>, 
 but I did not confirm if all versions have the fix.</p>
 
-<p>In general, my <a href="https://github.com/nsafran1217/linux-sn2/tree/v6.16-sn2">fork of linux</a> has all the patches and should be used to generate patch files if needed.</p>
+<p>In general, my <a href="https://github.com/nsafran1217/linux-sn2/">fork of linux</a> has all the patches and should be used to generate patch files if needed.</p>
 
 <hr>
 
@@ -217,10 +219,12 @@ for <code>libata</code> so we continue to support all the original Altix hardwar
 
 <h3>Conclusion</h3>
 
-<p>At this point, I just have to continue pushing the version forward until we reach current mainline linux, 
-and then maybe the patch will be merged into the linux-ia64 fork and SN2 will be a "supported" machine type once again.</p>
+<p>At this point, I want to do some final cleanup and see if we can merge the changes into to <a href="https://github.com/linux-ia64/linux-ia64">linux-ia64 repo</a>.</p>
 
-<p>NOT FINISHED YET</p>
+<p>Next steps:
+1. Get radeon PCI GPUs working on Altix <br>
+2. Fix Grub2 on Altix <br>
+3. Write a guide for installing T2 Linux  </p>
 </content></div>
 </div></td>
 <td class="td-spacer"></td>

@@ -12,7 +12,7 @@ The SGI Altix is a ccNUMA SSI (Single System Image) supercomputer designed and m
 The first version, the Altix 3000 was released in 2003 and was the first computer to support running Linux with more than 64 CPUs in a single system image. 
 After releasing the "2nd generation" Itanium based Altix machines, the 450 and 4000, SGI moved to x86-64 processors for the Altix XE, Altix ICE, and Altix UV.
 
-Read the [Wikipedia page for more information](https://en.wikipedia.org/wiki/SGI_Altix).
+Read the [Wikipedia page for more information](https://en.wikipedia.org/wiki/SGI_Altix) or the [higher intellect wiki page](https://wiki.preterhuman.net/SGI_Altix).
 
 Altix (also called SN2 {scalable node 2}) was 
 [removed from the Linux kernel for v5.4](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=76f0f227cffb570bc5ce343b1750f14907371d80) in 2019 
@@ -132,9 +132,9 @@ for `libata` so we continue to support all the original Altix hardware.
 
 ### Conclusion
 
-At this point, I jwant to do some final cleanup and see if we can merge the changes into to [linux-ia64 repo](https://github.com/linux-ia64/linux-ia64).
+At this point, I want to do some final cleanup and see if we can merge the changes into to [linux-ia64 repo](https://github.com/linux-ia64/linux-ia64).
 
 Next steps:
-1. Get radeon PCI GPUs working on Altix
-2. Fix Grub2 on Altix
-3. Write a guide for installing T2 Linux.
+1. Get radeon PCI GPUs working on Altix  
+2. Fix Grub2 on Altix  
+3. Write a guide for installing T2 Linux  
