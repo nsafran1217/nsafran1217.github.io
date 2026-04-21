@@ -18,10 +18,19 @@ Boot the DVD as you would any other disk on an Altix. The serial console is alre
 The boot will take a while... Be patient.  It will likely get stuck at some points when starting services.  
 It will hang on ldconfig.service/start for a while. 5+ minutes   
 Also don't panic if you see a stack trace or two.  
-If you get a kernel panic, reboot and try again.  
+If you get a kernel panic, reboot and try again. Its a little unstable.   
 
 
 Once booted, login with username=`root`, password=`password`
+
+Clear off the disk you want to install to before starting the installer.
+```
+fdisk /dev/sdX
+g
+w
+```
+If you get a message that the kernel still uses the old partition, reboot and start the installer.
+
 
 Run `stone install` to start the T2 installer.
 
