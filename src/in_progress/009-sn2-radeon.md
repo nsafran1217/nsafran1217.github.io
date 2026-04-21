@@ -1,5 +1,5 @@
 # Fixing the Radeon driver on SGI Altix
-*Published: 18-Apr-2026 - Last Updated: 18-Apr-2026*
+*Published: 20-Apr-2026 - Last Updated: 20-Apr-2026*
 
 For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration
 on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. 
@@ -12,13 +12,12 @@ To do this, you're going to need one of the following OS's installed on your Alt
 Since these are kernel driver changes, any OS should work.
 
 - T2 26.3 +
-- Epic-Slack
 - SLES 11*
 - SLES 9*
 
 *\*your GPU must be supported in that kernel version*  
 
-I recommend a modern OS like T2 or Epic-Slack.
+I recommend a modern OS like T2 or EPIC-Slack. (I have not tested EPIC-Slack)
 
 #### Tested GPUs
 All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily avaliable 
@@ -32,10 +31,11 @@ and WILL NOT work without modifications to the plx_bridge_fixup.c file.
 ## Setup
 The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it.  
 You should have a working install of Linux. This is written assuming T2, but the general steps are the same.  
-See instructions for setting up T2 on Altix here.
+[/blog/010-sn2-t2-install.html](See instructions for setting up T2 on Altix here.)
 
 TODO: Put instructions, compile some kernels for SN2 and host on Github.
 
+[https://github.com/nsafran1217/linux-sn2/releases/tag/v7.0-rc1-epic1-sn2-beta](https://github.com/nsafran1217/linux-sn2/releases/tag/v7.0-rc1-epic1-sn2-beta)
 
 ## What needed fixed?
 The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.
