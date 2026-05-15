@@ -12,21 +12,25 @@ To do this, you're going to need one of the following OS's installed on your Alt
 Since these are kernel driver changes, any OS should work.
 
 - T2 26.3 +
-- SLES 11*
-- SLES 9*
 
-*\*your GPU must be supported in that kernel version*  
+I want to eventually check if this can be backported to SLES9/11, but I might not 
+do that unless someone asks for it. Open an issue on github if you want me to try.  
 
 I recommend a modern OS like T2 or EPIC-Slack. (I have not tested EPIC-Slack)
 
 #### Tested GPUs
-All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily avaliable 
+All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily available 
 on ebay for about $30 USD. They have a full size PCI-E slot. 
-The only other adapter availabe is one made by startech. This adapter has NOT been tested 
+The only other adapter available is one made by startech. This adapter has NOT been tested 
 and WILL NOT work without modifications to the plx_bridge_fixup.c file.
 
-- AMD Radeon R5 430 (Best tested so far) - Cheap, easy to find with low profile bracket
+- AMD Radeon R5 430 (Best tested so far, recommended) - Cheap, easy to find with low profile bracket
 - AMD Radeon HD 7570 (Dell OEM) - Cheap, easy to find with low profile bracket
+
+### Known Issues
+In some situations, under heavy load, the GPU will lockup or the system will crash. With `radeon`, usually the GPU locks up then recovers. With `amdgpu`, the system tends to freeze, then crash with an MCA. Overall, `amdgpu` seems to be more stable than `radeon`.
+
+The terrain scene in glmark2 will usually cause this.
 
 ## Setup
 The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it.  
@@ -112,4 +116,19 @@ This issue caused the system to lock up when loading `amdgpu` unless you loaded 
 The root cause was raw pointer stores to an iomem-kmap'd VRAM BO that get compiler-optimized/merged in ways that overwhelm SN2's PIO write pipeline, triggering `PIO_TO_ERR` in the SHub.
 The fix: convert those stores to `writel()` and type the pointer as `u32 __iomem *`. This forces each store to be a discrete, 
 non-mergeable volatile write, matching what SN2's PIO pipeline can handle (and what `radeon` has always done).
+
+### 5. Enable ZONE_DMA32 to prevent ATE exhaustion
+
+On Altix, PCI DMA has three paths: Direct32, ATE, or Direct64. We are concerned with the first two.
+
+The PIC bridge's Direct32 path provides a fixed 2GB window into system memory. PROM programs this window via the `p_dir_map` register to cover node 0's bottom 2GB (phys 0x3000000000..0x307FFFFFFF on this system). DMA inside this window translate with zero overhead.
+
+DMA targets outside the window fall back to the ATE (Address Translation Entry) mechanism, which uses a 1024-entry table where each entry maps one page. Under heavy GPU DMA, the ATE pool is quickly exhausted and DMA mappings fail with "`sn_dma_map_phys: out of ATEs`".
+
+On SN2, ZONE_DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX_DMA_ADDRESS was `PAGE_OFFSET + MAX_PHYS_MEMORY`, which is just all memory. I'm not sure exactly why.
+
+When the GPU driver is assigned memory for TTM, where this memory falls is random and can be anywhere in the physical memory of the system. Crashes appeared random because the fraction of "good" vs "bad" allocations was random.
+
+To solve the issue, we remove the restrictions on ZONE_DMA32 and SWIOTLB and enable them. We also set `MAX_DMA_ADDRESS = PAGE_OFFSET + 0x3080000000UL` in `arch/ia64/sn/kernel/setup.c`, so that drivers which do DMA are assigned memory below the 2GB mark. This does mean that all memory used for DMA will be on node 0, but I don't expect this to be an issue for hobbyist use. No additional driver changes were required for this fix.
+
 

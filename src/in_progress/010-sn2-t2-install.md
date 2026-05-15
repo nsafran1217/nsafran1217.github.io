@@ -1,5 +1,5 @@
-# Installing T2 Linux 26.3 on SGI Altix
-*Published: 20-Apr-2026 - Last Updated: 20-Apr-2026*
+# Installing T2 Linux 26.5 on SGI Altix
+*Published: 16-May-2026 - Last Updated: 16-May-2026*
 
 ROUGH FIRST DRAFT
 
@@ -55,7 +55,7 @@ Create a user
 
 pick a timezone
 
-pick a local (C)
+pick a locale (C)
 
 Yes configure grub
 

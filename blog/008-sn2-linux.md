@@ -1,5 +1,5 @@
 # Adding support for SGI Altix back into Linux
-*Published: 16-Mar-2026 - Last Updated: 17-Apr-2026*
+*Published: 16-Mar-2026 - Last Updated: 15-May-2026*
 
 An alternate title for this could be "Using an LLM to support vintage computers", as I never would have been able to do this without extensive use of Claude Opus. 
 I kind of feel guilty for taking any credit, as the LLM did much of the heavy lifting. 
@@ -33,9 +33,8 @@ I convinced myself that I needed a modern Linux distro to do this, and some folk
 adding SN2 support back would be easier than building T2 with an older kernel.
 
 ### Preamble
-I knew that I could not do this. I am not a kernel dev, I am not proficient at git, 
-I am a beginner at C/C++. All my C/C++ experience comes from embedded projects on Ardiuno or ESP32, so jumping to the Linux kernel
-would be a large leap.
+I knew that I could not do this by myself. I am not a kernel dev, I am not proficient at git, and
+I would consider myself as a beginner at C/C++. All my C/C++ experience comes from embedded projects on Ardiuno or ESP32, so jumping to the Linux kernel would be a large leap.
 
 However, it's 2026, and I have access to Claude.ai. I had used claude opus for a [different C project](https://github.com/nsafran1217/Pertec-Interface-Tape-Controller/tree/HostUSBOnly)
  a few weeks before starting this and was impressed with its output. I had tried to use ChatGPT and Copilot for help with getting radeon
@@ -135,6 +134,7 @@ for `libata` so we continue to support all the original Altix hardware.
 At this point, I want to do some final cleanup and see if we can merge the changes into to [linux-ia64 repo](https://github.com/linux-ia64/linux-ia64).
 
 Next steps:
-1. Get radeon PCI GPUs working on Altix  
-2. Fix Grub2 on Altix  
+1. [Get radeon PCI GPUs working on Altix - Done](/blog/009-sn2-radeon.md)
+2. [Fix Grub2 on Altix - Done, issue submitted](https://gitlab.freedesktop.org/gnu-grub/grub/-/work_items/29)
 3. Write a guide for installing T2 Linux  
+4. Investigate minimal machvec so generic kernels work on Altix
