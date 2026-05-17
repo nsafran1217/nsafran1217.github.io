@@ -58,7 +58,7 @@ If you ever want the setup menu again, just run `stone`
 
 ---
 
-*If youre running Version 26.3, after first boot, fix some issues. T2-26.3 shipped with a bad SVN database.*
+*If youre running Version 26.3, after first boot, fix some issues. T2-26.3 shipped with a bad SVN database. This is not needed on any other version.*
 
 ```
 cd /usr/src/t2-src
@@ -74,6 +74,7 @@ for example:
 t2 inst btop
 t2 inst fastfetch
 ```
+Package list is here: [https://t2linux.com/packages/](https://t2linux.com/packages/)
 
 ### GPU Setup
 
@@ -113,6 +114,6 @@ After rebooting, you can try plasma.  Make sure LD_PRELOAD is set before startin
 ## Known Issues
 
 * Wayland does not work
-* The login manager does not work
+* The login manager does not work (it uses wayland)
 * The GPU driver sometimes crashes under very heavy load
 * SN2 devices (IOC4) must be built into the kernel. They do not work as modules.
