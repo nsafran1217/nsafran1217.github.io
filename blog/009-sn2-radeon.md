@@ -1,5 +1,5 @@
 # Fixing the Radeon driver on SGI Altix
-*Published: 20-Apr-2026 - Last Updated: 20-Apr-2026*
+*Published: 17-May-2026 - Last Updated: 17-May-2026*
 
 For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration
 on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. 
@@ -7,11 +7,18 @@ You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find
 PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most 
 recent Linux kernel on T2 Linux.
 
+### Github Repo
+
+The GPU enabled version is here:  
+[https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu](https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu)
+
+
 ### Tested OSs and Kernels
 To do this, you're going to need one of the following OS's installed on your Altix. Any OS's not listed have not been tested. 
 Since these are kernel driver changes, any OS should work.
 
-- T2 26.3 +
+- T2 26.3
+- T2 26.5
 
 I want to eventually check if this can be backported to SLES9/11, but I might not 
 do that unless someone asks for it. Open an issue on github if you want me to try.  
@@ -33,13 +40,12 @@ In some situations, under heavy load, the GPU will lockup or the system will cra
 The terrain scene in glmark2 will usually cause this.
 
 ## Setup
-The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it.  
-You should have a working install of Linux. This is written assuming T2, but the general steps are the same.  
-[/blog/010-sn2-t2-install.html](See instructions for setting up T2 on Altix here.)
+The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. 
 
-TODO: Put instructions, compile some kernels for SN2 and host on Github.
+[See instructions for setting up T2 on Altix here.](/blog/010-sn2-t2-install.html)
 
-[https://github.com/nsafran1217/linux-sn2/releases/tag/v7.0-rc1-epic1-sn2-beta](https://github.com/nsafran1217/linux-sn2/releases/tag/v7.0-rc1-epic1-sn2-beta)
+Kernel releases: 
+[https://github.com/nsafran1217/linux-sn2/releases](https://github.com/nsafran1217/linux-sn2/releases)
 
 ## What needed fixed?
 The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.

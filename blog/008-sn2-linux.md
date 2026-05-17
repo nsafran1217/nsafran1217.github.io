@@ -1,10 +1,16 @@
 # Adding support for SGI Altix back into Linux
-*Published: 16-Mar-2026 - Last Updated: 15-May-2026*
+*Published: 16-Mar-2026 - Last Updated: 17-May-2026*
 
 An alternate title for this could be "Using an LLM to support vintage computers", as I never would have been able to do this without extensive use of Claude Opus. 
 I kind of feel guilty for taking any credit, as the LLM did much of the heavy lifting. 
 I think this project is a good example of using an LLM to keep an old computer alive
 after support for it had been broken for over 10 years.
+
+### Github Repo
+[https://github.com/nsafran1217/linux-sn2](https://github.com/nsafran1217/linux-sn2)
+
+The GPU enabled version is here:  
+[https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu](https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu)
 
 ### Background
 
