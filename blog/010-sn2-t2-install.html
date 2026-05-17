@@ -1,0 +1,241 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Installing T2 Linux 26.5 on SGI Altix, with GPU</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
+</head>
+<body><table class="main-body-table"><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
+
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td class="main-body-td">
+<div class="main-body-container">
+<div class="window-title">Terminal - Installing T2 Linux 26.5 on SGI Altix, with GPU</div>
+<div class="main-body"><content>
+<h1>Installing T2 Linux 26.5 on SGI Altix, with GPU</h1>
+
+<p><em>Published: 17-May-2026 - Last Updated: 17-May-2026</em></p>
+
+<p>Below are instructions for installing T2 Linux on an SGI Altix with a custom kernel that includes Altix support and patches to enable PCI GPUs to work.</p>
+
+<h3>Create the ISO</h3>
+
+<p>Download the script from here and follow it's instructions. The vanilla T2 iso will not boot on Altix.</p>
+
+<p><a href="https://github.com/nsafran1217/sn2-kernel-tools/tree/main/T2-SN2">https://github.com/nsafran1217/sn2-kernel-tools/tree/main/T2-SN2</a></p>
+
+<h3>Installation</h3>
+
+<p>Boot the DVD or hard drive as you would any other disk on an Altix. The serial console is already defined for you in the grub boot entry. <br>
+<em>note that the timeout doesn't work on grub2 on Altix, so you need to press enter</em></p>
+
+<p>After pressing enter, the screen will be blank while the kernel loads. Give it time. <br>
+The boot will take a while... Be patient.  It will likely get stuck at some points when starting services. <br>
+It will hang on ldconfig.service/start for a while. <br>
+Don't panic if you see a stack trace or two. <br>
+If you get a kernel panic, reboot and try again. It appears unstable, 
+but that might be my CD-ROM drive  </p>
+
+<ul>
+<li>Once booted, login with username=<code>root</code>, password=<code>password</code>
+</li>
+<li>Run <code>stone install</code> to start the T2 installer.</li>
+<li>Select <code>Edit partition table of</code> whatever disk you want  </li>
+<li>Select <code>Classsic Partitions</code>
+</li>
+<li>Erasing all data  </li>
+<li>Choose how big to make <code>/</code>. the rest will be swap <br>
+I use ext4 for my root filesystem.</li>
+</ul>
+
+<p>After this, you should see the partitions are mounted.</p>
+
+<ul>
+<li>Select <code>Install the system</code>  </li>
+<li>Select <code>Start Package Manager</code>  </li>
+</ul>
+
+<p>This will install all the packages. It will take a while. <br>
+It needs to copy ~8 GB</p>
+
+<hr>
+
+<ul>
+<li>Create a user and passwword</li>
+<li>Select your timezone</li>
+<li>Select a locale (C or English)</li>
+<li>Yes configure grub</li>
+</ul>
+
+<p>When installing grub, select "edit grub.cfg" and add the following to the <code>linux</code> line:  </p>
+
+<pre><code>rootwait modprobe.blacklist=amdgpu,radeon systemd.unit=multi-user.target
+</code></pre>
+
+<hr>
+
+<ul>
+<li>select Continue</li>
+<li>Create a ssh host keypair</li>
+<li>select Continue</li>
+</ul>
+
+<p>Quit and reboot the system. <br>
+If you ever want the setup menu again, just run <code>stone</code></p>
+
+<hr>
+
+<p><em>If you're running Version 26.3, after first boot, fix some issues. T2-26.3 shipped with a bad SVN database. This is not needed on any other version.</em></p>
+
+<pre><code>cd /usr/src/t2-src
+sqlite3 .svn/wc.db "delete from ACTUAL_NODE"
+</code></pre>
+
+<ul>
+<li>Run <code>t2 up</code>
+</li>
+<li>Now you can install applications with <code>t2 inst</code>.</li>
+</ul>
+
+<p>for example:</p>
+
+<pre><code>t2 inst btop
+t2 inst fastfetch
+</code></pre>
+
+<p>Package list is here: <a href="https://t2linux.com/packages/">https://t2linux.com/packages/</a></p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - GPU Setup</div>
+<div class="main-body"><content>
+<h2>GPU Setup</h2>
+
+<p>See <a href="/blog/009-sn2-gpu.html">this post</a> for tested GPUs and PCI-e bridges.</p>
+
+<p>The GPU <strong>MUST</strong> be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. </p>
+
+<p>After first boot, load your graphics drivers if you have a card installed. 
+Depending which card you have, you will either run <code>modprobe radeon</code> or <code>modprobe amdgpu</code>. <br>
+Watch your serial console while loading. If its successful, the VGA console should change resolution.</p>
+
+<ul>
+<li>run <code>stone</code>
+</li>
+<li>select x11 config.  </li>
+<li>select Run XcfgT2 (the T2 LiveCD auto configuration)</li>
+</ul>
+
+<p><em>For me it selected the wrong driver, and I had to manually change it.</em> <br>
+Edit <code>/etc/X11/xorg.conf</code> and confirm the correct driver, either <code>radeon</code> or <code>amdgpu</code>, is listed in <code>Section "Device"</code></p>
+
+<p>Due to a bug in glibc, we need to set LD_PRELOAD for 3D acceleration to work.
+Run this command before starting X:  </p>
+
+<pre><code>export LD_PRELOAD="/usr/lib/libgallium-26.0.6.so /usr/lib/libGLX_mesa.so.0 /usr/lib/libEGL_mesa.so.0.0.0"
+</code></pre>
+
+<p>You can add this to your <code>~/.profile</code>.</p>
+
+<p>And launch X: <code>startx</code></p>
+
+<p>This will load TWM. Confirm that you have 3D acceration: <br>
+<code>glxinfo | grep render</code></p>
+
+<p>You should see <code>Direct rendering: Yes</code> and your GPU driver as the renderer.</p>
+
+<p>After this, remove the modprobe.blacklist from <code>/boot/grub/grub.cfg</code> for both drivers and reboot. Make sure the system comes up. <br>
+You should probably add a fallback option in grub that has the blacklist if you have problems.</p>
+
+<p>After rebooting, you can try plasma.  Make sure LD_PRELOAD is set before starting plasma or you will only have software acceleration.</p>
+
+<pre><code>startx /usr/bin/startplasma-x11
+</code></pre>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Known Issues</div>
+<div class="main-body"><content>
+<h2>Known Issues</h2>
+
+<ul>
+<li>Wayland does not work</li>
+<li>The login manager does not work (it uses wayland)</li>
+<li>The GPU driver sometimes crashes under very heavy load</li>
+<li>SN2 devices (IOC4) must be built into the kernel. They do not work as modules.</li>
+</ul>
+</content></div>
+</div>
+</td>
+<td class="td-spacer"></td>
+</tr></tbody></table></body>
+</html>

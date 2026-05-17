@@ -1,0 +1,277 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Fixing the radeon and amggpu driver on SGI Altix</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
+</head>
+<body><table class="main-body-table"><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
+
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td class="main-body-td">
+<div class="main-body-container">
+<div class="window-title">Terminal - Fixing the radeon and amggpu driver on SGI Altix</div>
+<div class="main-body"><content>
+<h1>Fixing the radeon and amggpu driver on SGI Altix</h1>
+
+<p><em>Published: 17-May-2026 - Last Updated: 17-May-2026</em></p>
+
+<p>For <a href="https://nekonomicon.irixnet.org/forum/3/16723530/1.html">over 15 years</a>, people have been trying to use GPUs with acceleration on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find PLX based PCI to PCI-e adapter boards. The <code>radeon</code> and <code>amdgpu</code> drivers WORKS with full 3d acceleration on the most recent Linux kernel on T2 Linux. <br>
+We can even play minecraft!</p>
+
+<table class="image-showcase">
+    <tbody>
+        <tr>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/blog/009-kde.jpg"><img src="/img/blog/009-kde.jpg" alt="kde"></a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/blog/009-minecraft.jpg"><img src="/img/blog/009-minecraft.jpg" alt="minecraft"></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Github Repo</h3>
+
+<p>The GPU enabled version is here: <br>
+<a href="https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu">https://github.com/nsafran1217/linux-sn2/tree/master-epic-sn2-gpu</a></p>
+
+<h3>Tested OSs and Kernels</h3>
+
+<p>To do this, you're going to need one of the following OS's installed on your Altix. Any OS's not listed have not been tested. 
+Since these are kernel driver changes, any OS should work.</p>
+
+<ul>
+<li>T2 26.3</li>
+<li>T2 26.5</li>
+</ul>
+
+<p>I want to eventually check if this can be backported to SLES9/11, but I might not 
+do that unless someone asks for it. Open an issue on github if you want me to try.  </p>
+
+<p>I recommend a modern OS like T2 or EPIC-Slack. (I have not tested EPIC-Slack yet)</p>
+
+<h4>Tested GPUs</h4>
+
+<p>All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily available 
+on ebay for about $30 USD. They have a full size PCI-E slot. 
+The only other adapter available is one made by startech. This adapter has NOT been tested 
+and WILL NOT work without modifications to the <code>plx_bridge_fixup.c</code> file.</p>
+
+<ul>
+<li>AMD Radeon R5 430 (Best tested so far, recommended) - Cheap, easy to find with low profile bracket</li>
+<li>AMD Radeon HD 7570 (Dell OEM) - Cheap, easy to find with low profile bracket</li>
+</ul>
+
+<h3>Known Issues</h3>
+
+<p>In some situations, under heavy load, the GPU will lockup or the system will crash. With <code>radeon</code>, usually the GPU locks up then recovers. With <code>amdgpu</code>, the system tends to freeze, then crash with an MCA. Overall, <code>amdgpu</code> seems to be more stable than <code>radeon</code>.</p>
+
+<p>The terrain scene in glmark2 will usually cause this.</p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Setup</div>
+<div class="main-body"><content>
+<h2>Setup</h2>
+
+<p>The GPU <strong>MUST</strong> be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. </p>
+
+<p><br>
+<a href="/img/blog/009-gpu-pci-s.jpg"><img src="/img/blog/009-gpu-pci-s.jpg" height="400px" class="fullwidth"></a></p>
+
+<p><a href="/blog/010-sn2-t2-install.html">See instructions for setting up T2 on Altix here.</a></p>
+
+<p>Kernel releases: 
+<a href="https://github.com/nsafran1217/linux-sn2/releases">https://github.com/nsafran1217/linux-sn2/releases</a></p>
+
+<p>I remove the metal bracket from the PCI-E bridge and screw the low profile bracket of the GPU into the slot below it.</p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - What needed fixed?</div>
+<div class="main-body"><content>
+<h2>What needed fixed?</h2>
+
+<p>The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.
+When SGI wanted to add a GPU to the system, they developed the TIOCA AGP Riser for the Prism.
+The TIOCA has support for 1024 GART entries built into its ASIC, and the proprietary ATi <code>fglrx</code> driver has calls
+for SN2 specific DMA flush routines after every read and write the GPU makes.</p>
+
+<p>Note that AI was used in fixing this issue. What follows is a summary of the fixes. I will link the AI generated analysis docs further down the page.</p>
+
+<p>There were two main issues with bringing up a PCI GPU, one issue using it behind a PCI bridge, and one additional issue with <code>amdgpu</code>.</p>
+
+<ol>
+<li>The firmware does not properly setup the PCI bridge's prefetchable memory window</li>
+<li>The SN2 architecture does not support write combining for PIO transfers</li>
+<li>Heavy DMA reads performed by the GPU on memory which is cached overloads the FSB table tracking modified cache lines</li>
+<li>UVD ring test fails on AMDGPU due to overloading the system with PIO writes</li>
+</ol>
+
+<h3>1. PCI Bridge prefetchable memory window</h3>
+
+<p>The SN2 firmware has no mechanism in the EFI firmware to deal with PCI bridges and properly program the PLX bridge prefetchable memory window. 
+We must manually program the PLX bridge. <br>
+During testing, I ran these two commands to program the window:</p>
+
+<pre><code>setpci -s 0002:00:02.0 24.W=0x1000
+setpci -s 0002:00:02.0 26.W=0x1ff0
+</code></pre>
+
+<p>This fix allowed the radeon driver to load. <br>
+To make this seamless and hopefully support GPUs or other PCI-E cards with different window sizes, I made a small fixup function
+which runs during boot and automatically programs the window into the PLX based on detected BARs.
+The kernel config option for this is <code>CONFIG_SN2_PLX_GPU=y</code>. It's available to select under <code>SN Devices</code> in <code>menuconfig</code>.</p>
+
+<h3>2. PIO writes must be uncached</h3>
+
+<p>When the driver tried to write to the GPU with PIO, the data never reached the GPU because the writes were write-combined.
+The ia64 CPU's write-combine buffers accumulate stores destined for PIO space, but the SHub and NUMAlink fabric do not provide
+the completion signals the CPU's WC drain logic expects. The result: writes pile up in CPU-internal buffers and never propagate to the device.
+This manifested as a 15-second hang followed by an RCU stall any time userspace touched mmapped VRAM:</p>
+
+<pre><code>rcu: INFO: rcu_sched detected stalls on CPUs/tasks:
+task:modetest  state:R  running task
+</code></pre>
+
+<p>The CPU was actively executing stores but none of them reached the GPU.
+Changing the TTM buffer objects to <code>pgprot_noncached()</code> fixed the issue and was a major stepping stone.
+This matches exactly what the SGI Altix Porting Guide (007-4520-007, PCI-X Memory Resource Address, Page 67) 
+says: user mappings of PCI device memory must use <code>pgprot_noncached()</code>.
+At this point, we had X working, <code>glxgears</code> working and full 3D rendering working. However,
+any significant 3D rendering caused the system to lock up and MCA.</p>
+
+<h3>3. DMA on cached memory</h3>
+
+<p>To fix heavy 3D rendering, I needed more information than the AI added instrumentation provided, so I used the <code>errdmp</code>
+command included on the SGI internal support tools CD. This command can dump status about every chip and ASIC in the system.
+It's a very powerful tool. Combined with AI, analysis of the dumps was much easier.</p>
+
+<p>When launching Minecraft, the system would lock up, then MCA 20 seconds later. When running <code>errdmp</code> during this lockup,
+we found the following info: <code>SH_PI_FIRST_ERROR=0x01 (FSB_PROTO_ERR)</code>. The FSB was in error. Drilling further into the dump:</p>
+
+<ul>
+<li>
+<code>DETAIL_1 cmd=0x01 (RDEXC)</code> — the failing transaction was a <strong>Read-Exclusive directory intervention</strong>
+</li>
+<li>
+<code>DETAIL_2 source chiplet = MD</code> — it originated in the Memory Directory chiplet, not the PIC</li>
+<li>
+<code>BUS1_DEV2_REG = 0x12040000</code>, bit 16 (COHERENT) = 0 — so this wasn't about DMA <em>writes</em> being coherent</li>
+<li>The error address was always in the TTM buffer object region, inside the GPU's Direct32 DMA range</li>
+</ul>
+
+<p>Combining all that told the real story: the GPU was DMA-<strong>reading</strong> GTT pages that the CPU had just touched. 
+Because the kernel zeros pages and fills indirect buffers through the WB identity map, every one of those pages had <strong>Modified</strong> cache lines 
+sitting in a CPU's L2. Every GPU DMA read of a Modified line triggered an RDEXC directory intervention from the MD chiplet, 
+routed MD → PI → FSB → CPU. Under Minecraft-level load this saturated the FSB transaction table, the protocol error fired, and the box MCA'd.</p>
+
+<p>The obvious "just mark those pages uncached" fix doesn't actually work on ia64. Unlike x86, 
+ia64 has no per-page PAT — the kernel identity map (region 7) is <em>always</em> WB, and <code>set_pages_array_uc()</code> is a no-op. 
+You cannot change a physical page's cache attribute from the kernel side. The only way to avoid Modified lines is to flush them yourself.</p>
+
+<p>The fix was two lines of logic in <code>ttm_pool_alloc_page()</code>: right after <code>alloc_pages_node()</code> returns freshly-zeroed WB pages, 
+call <code>sn_flush_all_caches()</code> to issue <code>fc.i</code> across the page and write the dirty lines back to memory. 
+By the time the GPU ever sees the page, it's clean, and no directory intervention is needed. Minecraft no longer MCAs the box.</p>
+
+<h3>4. UVD writes overload PIO</h3>
+
+<p>This issue caused the system to lock up when loading <code>amdgpu</code> unless you loaded it like this: <code>modprobe amdgpu ip_block_mask=0xffffff7f</code>, which disables UVD.
+The root cause was raw pointer stores to an iomem-kmap'd VRAM BO that get compiler-optimized/merged in ways that overwhelm SN2's PIO write pipeline, triggering <code>PIO_TO_ERR</code> in the SHub.
+The fix: convert those stores to <code>writel()</code> and type the pointer as <code>u32 __iomem *</code>. This forces each store to be a discrete, 
+non-mergeable volatile write, matching what SN2's PIO pipeline can handle (and what <code>radeon</code> has always done).</p>
+
+<h3>5. Enable ZONE_DMA32 to prevent ATE exhaustion</h3>
+
+<p>On Altix, PCI DMA has three paths: Direct32, ATE, or Direct64. We are concerned with the first two.</p>
+
+<p>The PIC bridge's Direct32 path provides a fixed 2GB window into system memory. PROM programs this window via the <code>p_dir_map</code> register to cover node 0's bottom 2GB (phys 0x3000000000..0x307FFFFFFF on this system). DMA inside this window translate with zero overhead.</p>
+
+<p>DMA targets outside the window fall back to the ATE (Address Translation Entry) mechanism, which uses a 1024-entry table where each entry maps one page. Under heavy GPU DMA, the ATE pool is quickly exhausted and DMA mappings fail with "<code>sn_dma_map_phys: out of ATEs</code>".</p>
+
+<p>On SN2, ZONE<em>DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX</em>DMA_ADDRESS was <code>PAGE_OFFSET + MAX_PHYS_MEMORY</code>, which is just all memory. I'm not sure exactly why.</p>
+
+<p>When the GPU driver is assigned memory for TTM, where this memory falls is random and can be anywhere in the physical memory of the system. Crashes appeared random because the fraction of "good" vs "bad" allocations was random.</p>
+
+<p>To solve the issue, we remove the restrictions on ZONE_DMA32 and SWIOTLB and enable them. We also set <code>MAX_DMA_ADDRESS = PAGE_OFFSET + 0x3080000000UL</code> in <code>arch/ia64/sn/kernel/setup.c</code>, so that drivers which do DMA are assigned memory below the 2GB mark. This does mean that all memory used for DMA will be on node 0, but I don't expect this to be an issue for hobbyist use. No additional driver changes were required for this fix.</p>
+</content></div>
+</div>
+</td>
+<td class="td-spacer"></td>
+</tr></tbody></table></body>
+</html>

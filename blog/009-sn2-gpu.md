@@ -1,11 +1,25 @@
-# Fixing the Radeon driver on SGI Altix
+# Fixing the radeon and amggpu driver on SGI Altix
 *Published: 17-May-2026 - Last Updated: 17-May-2026*
 
-For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration
-on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. 
-You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find 
-PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most 
-recent Linux kernel on T2 Linux.
+For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most recent Linux kernel on T2 Linux.  
+We can even play minecraft!
+
+<table class="image-showcase">
+    <tbody>
+        <tr>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/blog/009-kde.jpg"><img src="/img/blog/009-kde.jpg" alt="kde"></img></a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/blog/009-minecraft.jpg"><img src="/img/blog/009-minecraft.jpg" alt="minecraft"></img></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### Github Repo
 
@@ -23,13 +37,13 @@ Since these are kernel driver changes, any OS should work.
 I want to eventually check if this can be backported to SLES9/11, but I might not 
 do that unless someone asks for it. Open an issue on github if you want me to try.  
 
-I recommend a modern OS like T2 or EPIC-Slack. (I have not tested EPIC-Slack)
+I recommend a modern OS like T2 or EPIC-Slack. (I have not tested EPIC-Slack yet)
 
 #### Tested GPUs
 All were used with a PCI to PCI-e adapter with the PLX 8111/8112 bridge chip. They are readily available 
 on ebay for about $30 USD. They have a full size PCI-E slot. 
 The only other adapter available is one made by startech. This adapter has NOT been tested 
-and WILL NOT work without modifications to the plx_bridge_fixup.c file.
+and WILL NOT work without modifications to the `plx_bridge_fixup.c` file.
 
 - AMD Radeon R5 430 (Best tested so far, recommended) - Cheap, easy to find with low profile bracket
 - AMD Radeon HD 7570 (Dell OEM) - Cheap, easy to find with low profile bracket
@@ -42,10 +56,16 @@ The terrain scene in glmark2 will usually cause this.
 ## Setup
 The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. 
 
+<br></br>
+<a href="/img/blog/009-gpu-pci-s.jpg"><img src="/img/blog/009-gpu-pci-s.jpg" height="400px" class="fullwidth"></img></a>
+
+
 [See instructions for setting up T2 on Altix here.](/blog/010-sn2-t2-install.html)
 
 Kernel releases: 
 [https://github.com/nsafran1217/linux-sn2/releases](https://github.com/nsafran1217/linux-sn2/releases)
+
+I remove the metal bracket from the PCI-E bridge and screw the low profile bracket of the GPU into the slot below it.
 
 ## What needed fixed?
 The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.

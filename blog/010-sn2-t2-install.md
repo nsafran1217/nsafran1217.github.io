@@ -1,5 +1,8 @@
-# Installing T2 Linux 26.5 on SGI Altix
+# Installing T2 Linux 26.5 on SGI Altix, with GPU
 *Published: 17-May-2026 - Last Updated: 17-May-2026*
+
+Below are instructions for installing T2 Linux on an SGI Altix with a custom kernel that includes Altix support and patches to enable PCI GPUs to work.
+
 
 ### Create the ISO
 Download the script from here and follow it's instructions. The vanilla T2 iso will not boot on Altix.
@@ -42,10 +45,8 @@ It needs to copy ~8 GB
 * Yes configure grub
 
 When installing grub, select "edit grub.cfg" and add the following to the `linux` line:  
-```
-rootwait modprobe.blacklist=amdgpu,radeon systemd.unit=multi-user.target
-```
-I also remove the whole `if` block so the console goes to the serial console, and remove the `resume=` option
+
+    rootwait modprobe.blacklist=amdgpu,radeon systemd.unit=multi-user.target
 
 ---
 
@@ -58,25 +59,28 @@ If you ever want the setup menu again, just run `stone`
 
 ---
 
-*If youre running Version 26.3, after first boot, fix some issues. T2-26.3 shipped with a bad SVN database. This is not needed on any other version.*
+*If you're running Version 26.3, after first boot, fix some issues. T2-26.3 shipped with a bad SVN database. This is not needed on any other version.*
 
-```
-cd /usr/src/t2-src
-sqlite3 .svn/wc.db "delete from ACTUAL_NODE"
-```
+
+    cd /usr/src/t2-src
+    sqlite3 .svn/wc.db "delete from ACTUAL_NODE"
+
 
 * Run `t2 up`
 * Now you can install applications with `t2 inst`.
 
 for example:
 
-```
-t2 inst btop
-t2 inst fastfetch
-```
+    t2 inst btop
+    t2 inst fastfetch
+
 Package list is here: [https://t2linux.com/packages/](https://t2linux.com/packages/)
 
-### GPU Setup
+## GPU Setup
+
+See [this post](/blog/009-sn2-gpu.html) for tested GPUs and PCI-e bridges.
+
+The GPU **MUST** be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. 
 
 After first boot, load your graphics drivers if you have a card installed. 
 Depending which card you have, you will either run `modprobe radeon` or `modprobe amdgpu`.  
@@ -89,11 +93,11 @@ Watch your serial console while loading. If its successful, the VGA console shou
 *For me it selected the wrong driver, and I had to manually change it.*  
 Edit `/etc/X11/xorg.conf` and confirm the correct driver, either `radeon` or `amdgpu`, is listed in `Section "Device"`
 
-Due to a bug in glibc, we need to set LD_PRELOAD for 3d acceleration to work.
+Due to a bug in glibc, we need to set LD_PRELOAD for 3D acceleration to work.
 Run this command before starting X:  
-```
-export LD_PRELOAD="/usr/lib/libgallium-26.0.6.so /usr/lib/libGLX_mesa.so.0 /usr/lib/libEGL_mesa.so.0.0.0"
-```
+
+    export LD_PRELOAD="/usr/lib/libgallium-26.0.6.so /usr/lib/libGLX_mesa.so.0 /usr/lib/libEGL_mesa.so.0.0.0"
+
 You can add this to your `~/.profile`.
 
 And launch X: `startx`
@@ -106,10 +110,9 @@ You should see `Direct rendering: Yes` and your GPU driver as the renderer.
 After this, remove the modprobe.blacklist from `/boot/grub/grub.cfg` for both drivers and reboot. Make sure the system comes up.  
 You should probably add a fallback option in grub that has the blacklist if you have problems.
 
-
 After rebooting, you can try plasma.  Make sure LD_PRELOAD is set before starting plasma or you will only have software acceleration.
 
-`startx /usr/bin/startplasma-x11`
+    startx /usr/bin/startplasma-x11
 
 ## Known Issues
 

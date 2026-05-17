@@ -1,10 +1,14 @@
 # Adding support for SGI Altix back into Linux
 *Published: 16-Mar-2026 - Last Updated: 17-May-2026*
 
+Linux removed support for the Altix in 2019, although it had been broken since 4.0 in 2015. To make matters worse, Itanium was removed from Linux in 2021. However, in 2026 with modern LLM tools, adding back support for a rare supercomputer is possible by one person that is not a kernel developer. This is an overview of my project to add support for the SGI Altix back into Linux.
+
 An alternate title for this could be "Using an LLM to support vintage computers", as I never would have been able to do this without extensive use of Claude Opus. 
-I kind of feel guilty for taking any credit, as the LLM did much of the heavy lifting. 
+The LLM did much of the heavy lifting. I just directed it. 
 I think this project is a good example of using an LLM to keep an old computer alive
-after support for it had been broken for over 10 years.
+after support for it had been broken for over 10 years.  
+<br></br>
+<img src="/img/blog/008-sn2-linux.PNG" height="280px" class="fullwidth"></img>
 
 ### Github Repo
 [https://github.com/nsafran1217/linux-sn2](https://github.com/nsafran1217/linux-sn2)
@@ -29,7 +33,8 @@ I suppose you could undo everything and re-add the machine vector infrastructure
 this option seemed too invasive and likely to cause bugs.
 
 *Since we don't re-add the machvec infrastructure, support for SN2 is decided at compile time, not at runtime.*
-*Meaning a kernel compiled for SN2 will not run on a generic ia64 machine, and vice versa.*
+*Meaning a kernel compiled for SN2 will not run on a generic ia64 machine, and vice versa.*  
+*[This may change in the future...](https://github.com/nsafran1217/linux-sn2/tree/sn2-machvec)*
 
 
 ### Motivation
@@ -46,14 +51,12 @@ However, it's 2026, and I have access to Claude.ai. I had used claude opus for a
  a few weeks before starting this and was impressed with its output. I had tried to use ChatGPT and Copilot for help with getting radeon
  working about a year ago, but never really got anywhere with it. I couldn't give it enough context (at least with the free version).
 
-I don't claim to be good at using LLM tools, or programming, or anything. This is just a description of how
-I got modern Linux working on SN2 again.
 
 ### The Process
 So how will we do this? I figured we should start with v5.4 and see what it will take to add SN2 back as it was removed; 
 basically just reversing the removal patch. This mostly worked after fixing a few small changes in the kernel API. 
 But reversing the patch touched a ton of files unrelated to SN2. I used claude and did this for v5.4 and 5.5, but 
-I knew this wasn't a good way to do this.
+I knew this wasn't a good way, especially if my target is v7.0.
 
 ---
 
@@ -115,7 +118,7 @@ After jumping to v6.16 from 6.6, the issue came back as the overrides we were us
 were no longer possible. Claude did recognize it would come back, though it recommended building modules into the kernel as a fix. 
 After telling it to fix it, claude was able to implement [a fix](https://github.com/torvalds/linux/commit/875bba42b8743ce56c1625b1e9bf9dbf2a03f4fb) 
 that is SN2 specific and hopefully continues to work 
-for many more versions. Description [here](c:\Users\Nathan\Downloads\build-issues.md).
+for many more versions. Description [here](https://github.com/nsafran1217/sn2-kernel-tools/blob/main/diff/sn2-6.16/build-issues.md#0012--archia64snkernelsetupc-module-notifier-to-suppress-vm_flush_reset_perms).
 
 The real root cause is an unfinished implementation in `arch/ia64/include/asm/tlbflush.h` for `flush_tlb_kernel_range`, where they just flush all.
 
@@ -139,8 +142,8 @@ for `libata` so we continue to support all the original Altix hardware.
 
 At this point, I want to do some final cleanup and see if we can merge the changes into to [linux-ia64 repo](https://github.com/linux-ia64/linux-ia64).
 
-Next steps:
-1. [Get radeon PCI GPUs working on Altix - Done](/blog/009-sn2-radeon.md)
-2. [Fix Grub2 on Altix - Done, issue submitted](https://gitlab.freedesktop.org/gnu-grub/grub/-/work_items/29)
-3. Write a guide for installing T2 Linux  
-4. Investigate minimal machvec so generic kernels work on Altix
+Next steps:  
+1. [Get radeon PCI GPUs working on Altix - Done](/blog/009-sn2-gpu.html)  
+2. [Fix Grub2 on Altix - Done, issue submitted](https://gitlab.freedesktop.org/gnu-grub/grub/-/work_items/29)  
+3. [Write a guide for installing T2 Linux - Done](/blog/010-sn2-t2-install.html)   
+4. Investigate minimal machvec so generic kernels work on Altix  
