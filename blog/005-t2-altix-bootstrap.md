@@ -1,9 +1,11 @@
 # Bootstraping T2 SDE Linux on SGI Altix From SLES
-*Published: 10-Jun-2025 - Last Updated: 13-Mar-2026*
+*Published: 10-Jun-2025 - Last Updated: 3-Jun-2026*
 
 T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.
 
 In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix. 
+
+**These are outdated. View the new instructions here: [https://nsafran.com/blog/010-sn2-t2-install.html](https://nsafran.com/blog/010-sn2-t2-install.html)**
 
 # Overview
 To get T2 on an Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux kernel versions 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.
