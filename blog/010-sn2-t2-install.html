@@ -81,7 +81,7 @@
 <div class="main-body"><content>
 <h1>Installing T2 Linux 26.6 on SGI Altix, with GPU</h1>
 
-<p><em>Published: 17-May-2026 - Last Updated: 3-Jun-2026</em></p>
+<p><em>Published: 17-May-2026 - Last Updated: 21-Jul-2026</em></p>
 
 <p>Below are instructions for installing T2 Linux on an SGI Altix with a custom kernel that includes Altix support and patches to enable PCI GPUs to work.</p>
 
@@ -197,14 +197,6 @@ Watch your serial console while loading. If its successful, the VGA console shou
 <p><em>For me it selected the wrong driver, and I had to manually change it.</em> <br>
 Edit <code>/etc/X11/xorg.conf</code> and confirm the correct driver, either <code>radeon</code> or <code>amdgpu</code>, is listed in <code>Section "Device"</code></p>
 
-<p>Due to a bug in glibc, we need to set LD_PRELOAD for 3D acceleration to work.
-Run this command before starting X:  </p>
-
-<pre><code>export LD_PRELOAD="/usr/lib/libgallium-26.0.6.so /usr/lib/libGLX_mesa.so.0 /usr/lib/libEGL_mesa.so.0.0.0"
-</code></pre>
-
-<p>You can add this to your <code>~/.profile</code>.</p>
-
 <p>And launch X: <code>startx</code></p>
 
 <p>This will load TWM. Confirm that you have 3D acceration: <br>
@@ -228,7 +220,7 @@ You should probably add a fallback option in grub that has the blacklist if you 
 <h2>Known Issues</h2>
 
 <ul>
-<li>Wayland does not work</li>
+<li>Wayland does not work well</li>
 <li>The login manager does not work (it uses wayland)</li>
 <li>The GPU driver sometimes crashes under very heavy load</li>
 <li>SN2 devices (IOC4) must be built into the kernel. They do not work as modules.</li>

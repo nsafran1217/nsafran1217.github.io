@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://nsafran.com/computers/sgi/altix-kb.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/computers/sgi/sgi.html</loc>
@@ -153,12 +153,16 @@
     <lastmod>2026-05-17</lastmod>
   </url>
   <url>
+    <loc>https://nsafran.com/blog/011-sparc-m4000-xscf-rescue.html</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
     <loc>https://nsafran.com/blog/002-c360-hpux-install.html</loc>
     <lastmod>2026-05-17</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/blog/010-sn2-t2-install.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/blog/001-altix-linux.html</loc>
@@ -194,7 +198,7 @@
   </url>
   <url>
     <loc>https://nsafran.com/blog/index.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/blog/003-synergy-unix.html</loc>
@@ -206,6 +210,6 @@
   </url>
   <url>
     <loc>https://nsafran.com/index.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
 </urlset>

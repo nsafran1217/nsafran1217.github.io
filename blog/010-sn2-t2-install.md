@@ -1,5 +1,5 @@
 # Installing T2 Linux 26.6 on SGI Altix, with GPU
-*Published: 17-May-2026 - Last Updated: 3-Jun-2026*
+*Published: 17-May-2026 - Last Updated: 21-Jul-2026*
 
 Below are instructions for installing T2 Linux on an SGI Altix with a custom kernel that includes Altix support and patches to enable PCI GPUs to work.
 
@@ -93,13 +93,6 @@ Watch your serial console while loading. If its successful, the VGA console shou
 *For me it selected the wrong driver, and I had to manually change it.*  
 Edit `/etc/X11/xorg.conf` and confirm the correct driver, either `radeon` or `amdgpu`, is listed in `Section "Device"`
 
-Due to a bug in glibc, we need to set LD_PRELOAD for 3D acceleration to work.
-Run this command before starting X:  
-
-    export LD_PRELOAD="/usr/lib/libgallium-26.0.6.so /usr/lib/libGLX_mesa.so.0 /usr/lib/libEGL_mesa.so.0.0.0"
-
-You can add this to your `~/.profile`.
-
 And launch X: `startx`
 
 This will load TWM. Confirm that you have 3D acceration:  
@@ -116,7 +109,7 @@ After rebooting, you can try plasma.  Make sure LD_PRELOAD is set before startin
 
 ## Known Issues
 
-* Wayland does not work
+* Wayland does not work well
 * The login manager does not work (it uses wayland)
 * The GPU driver sometimes crashes under very heavy load
 * SN2 devices (IOC4) must be built into the kernel. They do not work as modules.
