@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://nsafran.com/computers/hp/hp.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/computers/hp/c8000.html</loc>
@@ -86,7 +86,15 @@
   </url>
   <url>
     <loc>https://nsafran.com/computers/sun/sun.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://nsafran.com/computers/sun/m4000.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://nsafran.com/computers/sun/m3000.html</loc>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/computers/sun/sparc5.html</loc>
@@ -173,6 +181,10 @@
     <lastmod>2026-05-17</lastmod>
   </url>
   <url>
+    <loc>https://nsafran.com/blog/012-sparc-m3000-m4000-firmware.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
     <loc>https://nsafran.com/blog/004-ultra10-setup.html</loc>
     <lastmod>2026-05-17</lastmod>
   </url>
@@ -198,7 +210,7 @@
   </url>
   <url>
     <loc>https://nsafran.com/blog/index.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
     <loc>https://nsafran.com/blog/003-synergy-unix.html</loc>
@@ -210,6 +222,6 @@
   </url>
   <url>
     <loc>https://nsafran.com/index.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-29</lastmod>
   </url>
 </urlset>

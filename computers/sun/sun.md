@@ -43,12 +43,30 @@ I find the S-BUS systems more interesting than the later PCI systems.
                     <a href="/computers/sun/sparc5.html">SPARCStation 5</a>
                 </div>
             </td>
+            </tr>
+            <tr>
             <td>
                 <div class="image-showcase">
                     <a href="/computers/sun/ultra10.html">
                         <img src="/img/sun/ultra10-logo.jpg" alt="Ultra 10"></img>
                     </a>
                     <a href="/computers/sun/ultra10.html">Ultra 10</a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/computers/sun/m3000.html">
+                        <img src="/img/sun/m3000.jpg" alt="m3000"></img>
+                    </a>
+                    <a href="/computers/sun/m3000.html">SPARC Enterprise M3000</a>
+                </div>
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/computers/sun/m4000.html">
+                        <img src="/img/sun/m4000.jpg" alt="m4000"></img>
+                    </a>
+                    <a href="/computers/sun/m4000.html">SPARC Enterprise M4000</a>
                 </div>
             </td>
         </tr>
@@ -148,6 +166,24 @@ Will update eventually with all specs
             <td>None</td>
             <td>2x 73 GB SCSI</td>
             <td>Solaris 10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fujitsu SPARC Enterprise M3000</td>
+            <td>SPARC64-VII (Jupiter) 2.75 GHz</td>
+            <td>32 GB</td>
+            <td>None</td>
+            <td>Netboot</td>
+            <td>OpenBSD, T2 Linux</td>
+            <td></td>
+        </tr>
+                <tr>
+            <td>Fujitsu SPARC Enterprise M4000</td>
+            <td>2x SPARC64-VII (Jupiter) 2.53 GHz</td>
+            <td>64 GB</td>
+            <td>None</td>
+            <td>Netboot</td>
+            <td>OpenBSD, T2 Linux</td>
             <td></td>
         </tr>
     </tbody>

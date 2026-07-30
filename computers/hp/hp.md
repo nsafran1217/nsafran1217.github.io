@@ -1,5 +1,5 @@
 # HP
-*Last Updated: 28-May-2025*
+*Last Updated: 29-Jul-2025*
 <img src="/img/hp/hp-logo.jpg" alt="HP Logo" class="inline" width="200px"></img>
 
 I currently have four HP-UX machines. HP and HP-UX feel very "business-like" when
@@ -106,20 +106,20 @@ Will update eventually with all specs
         </tr>
         <tr>
             <td>Integrity rx2660</td>
-            <td>Itanium2</td>
+            <td>1x Itanium2  9020 Montecito</td>
             <td>4 GB</td>
             <td>Integrated</td>
             <td>300 GB SAS</td>
-            <td>HP-UX 11.31 / OpenVMS 8.4</td>
+            <td>T2 Linux / HP-UX 11.31 / OpenVMS 8.4</td>
             <td></td>
         </tr>
         <tr>
             <td>Integrity rx2800i2</td>
-            <td>Itanium2</td>
+            <td>2x Itanium2</td>
             <td>64 GB</td>
             <td>Integrated</td>
             <td>300 GB SAS</td>
-            <td>HP-UX 11.31</td>
+            <td>T2 Linux / HP-UX 11.31</td>
             <td><a href="/blog/006-rx2800i2-config.html">Blog about Setup</a></td>
         </tr>
     </tbody>
