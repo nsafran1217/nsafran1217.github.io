@@ -138,7 +138,7 @@ Will update eventually with all specs
         </tr>
         <tr>
             <td>Altix 3700</td>
-            <td>32x Itanium2 1.4 Ghz</td>
+            <td>32x Itanium2 1.3 Ghz</td>
             <td>64GB</td>
             <td>None</td>
             <td></td>
@@ -147,7 +147,7 @@ Will update eventually with all specs
         </tr>
         <tr>
             <td>Altix 350</td>
-            <td>16x Itanium2 1.4 Ghz</td>
+            <td>16x Itanium2 1.5 Ghz</td>
             <td>32GB</td>
             <td>None</td>
             <td></td>
