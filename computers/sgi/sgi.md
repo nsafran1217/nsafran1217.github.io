@@ -44,7 +44,7 @@ Systems which I have more to say about
                     <a href="/computers/sgi/octane.html">
                         <img src="/img/sgi/octane.jpg" height="100px" alt="Octane"></img>
                     </a>
-                    <a href="sgi/octane.html">Octane</a>
+                    <a href="/computers/sgi/octane.html">Octane</a>
                 </div>
             </td>
             <td>

@@ -77,7 +77,7 @@ So I started a new project and chat in claude and sent this as the prompt:
 > If you need additional files, let me know.
 > Lets go over your planned changes before executing on them.
 
-And it generated a [plan](img/blog/008-PLAN-v5.4.md) and generated the patches. And after a few build issues and one DMA issue on boot, it works. 
+And it generated a [plan](/img/blog/008-PLAN-v5.4.md) and generated the patches. And after a few build issues and one DMA issue on boot, it works. 
 All without reimplementing machvec and touching all arch/ia64 files. This gave me the confidence to continue moving up in versions.
 
 So I started working through the versions,  5.4 -> 5.5 -> 5.10 -> 5.15 -> 6.1 -> 6.2 -> 6.3 -> 6.4 -> 6.6,  
