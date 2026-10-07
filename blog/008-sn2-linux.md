@@ -1,5 +1,5 @@
 # Adding support for SGI Altix back into Linux
-*Published: 16-Mar-2026 - Last Updated: 17-May-2026*
+*Published: 16-Mar-2026 - Last Updated: 6-Oct-2026*
 
 Linux removed support for the Altix in 2019, although it had been broken since 4.0 in 2015. To make matters worse, Itanium was removed from Linux in 2021. However, in 2026 with modern LLM tools, adding back support for a rare supercomputer is possible by one person that is not a kernel developer. This is an overview of my project to add support for the SGI Altix back into Linux.
 
@@ -128,7 +128,9 @@ The real root cause is an unfinished implementation in `arch/ia64/include/asm/tl
             flush_tlb_all();        /* XXX fix me */
     }
 
-*24 years later, it was never fixed.*
+*24 years later, it was never fixed.*  
+**Update!** [It was finally fixed!](https://github.com/torvalds/linux/commit/618e86355c423b8d693479c23d933c6f69ff6f6d)  
+I was able to drop the hack in the 7.3-rc3 kernel release!
 
 Also during the jump to v6.16, a major bug was introduced which prevented the kernel from loading any binaries. This turned out to be a fix that 
 was already introduced in other architectures, but was missed in ia64 since it was removed from Linux. 

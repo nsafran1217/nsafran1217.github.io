@@ -80,7 +80,7 @@
 <div class="main-body"><content>
 <h1>Adding support for SGI Altix back into Linux</h1>
 
-<p><em>Published: 16-Mar-2026 - Last Updated: 17-May-2026</em></p>
+<p><em>Published: 16-Mar-2026 - Last Updated: 6-Oct-2026</em></p>
 
 <p>Linux removed support for the Altix in 2019, although it had been broken since 4.0 in 2015. To make matters worse, Itanium was removed from Linux in 2021. However, in 2026 with modern LLM tools, adding back support for a rare supercomputer is possible by one person that is not a kernel developer. This is an overview of my project to add support for the SGI Altix back into Linux.</p>
 
@@ -215,7 +215,9 @@ for many more versions. Description <a href="https://github.com/nsafran1217/sn2-
 }
 </code></pre>
 
-<p><em>24 years later, it was never fixed.</em></p>
+<p><em>24 years later, it was never fixed.</em> <br>
+<strong>Update!</strong> <a href="https://github.com/torvalds/linux/commit/618e86355c423b8d693479c23d933c6f69ff6f6d">It was finally fixed!</a> <br>
+I was able to drop the hack in the 7.3-rc3 kernel release!</p>
 
 <p>Also during the jump to v6.16, a major bug was introduced which prevented the kernel from loading any binaries. This turned out to be a fix that 
 was already introduced in other architectures, but was missed in ia64 since it was removed from Linux. 
