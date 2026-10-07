@@ -6,7 +6,9 @@ src_xml = $(shell find . -name '*.xml' -not -path './src/*' -not -path './img/*'
 
 posts   = index.html blog/index.html $(src_md:.md=.html) $(src_xml:.xml=.html)
 
-all: $(posts) sitemap.xml
+all: strip-metadata $(posts) sitemap.xml
+
+.PHONY: all strip-metadata
 
 
 # Generate all pages stored as .md
@@ -29,3 +31,7 @@ index.html: index.md $(wildcard blog/*.md) $(TEMPLATES)
 # make sitemap
 sitemap.xml: $(posts)
 	./src/gen-sitemap.sh
+
+# Strip EXIF/GPS metadata from images
+strip-metadata:
+	./src/strip-metadata.sh
