@@ -81,7 +81,7 @@
 <div class="main-body"><content>
 <h1>Fixing the radeon and amggpu driver on SGI Altix</h1>
 
-<p><em>Published: 17-May-2026 - Last Updated: 3-Jun-2026</em></p>
+<p><em>Published: 17-May-2026 - Last Updated: 10-Oct-2026</em></p>
 
 <p>For <a href="https://nekonomicon.irixnet.org/forum/3/16723530/1.html">over 15 years</a>, people have been trying to use GPUs with acceleration on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find PLX based PCI to PCI-e adapter boards. The <code>radeon</code> and <code>amdgpu</code> drivers WORKS with full 3d acceleration on the most recent Linux kernel on T2 Linux. <br>
 We can even play minecraft!</p>
@@ -216,6 +216,13 @@ says: user mappings of PCI device memory must use <code>pgprot_noncached()</code
 At this point, we had X working, <code>glxgears</code> working and full 3D rendering working. However,
 any significant 3D rendering caused the system to lock up and MCA.</p>
 
+<p><strong>UPDATE</strong>: The original patch caused all TTM memory to be uncached, meaning both GTT and VRAM. GTT is in system memory 
+so really did not need to be uncached. GTT being uncached causes terrible performance in heavy 3D workloads like 
+minecraft. <a href="https://github.com/nsafran1217/linux-sn2/commit/69571599c577ed4889d11c9b45f1e517f6110b2b">This patch</a> 
+turns on write combining for GTT while still keeping VRAM uncached. VRAM writes are still slow, but now GTT is fast. 
+See <a href="https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md">This documents</a> for 
+more details</p>
+
 <h3>3. DMA on cached memory</h3>
 
 <p>To fix heavy 3D rendering, I needed more information than the AI added instrumentation provided, so I used the <code>errdmp</code>
@@ -264,7 +271,7 @@ non-mergeable volatile write, matching what SN2's PIO pipeline can handle (and w
 
 <p>DMA targets outside the window fall back to the ATE (Address Translation Entry) mechanism, which uses a 1024-entry table where each entry maps one page. Under heavy GPU DMA, the ATE pool is quickly exhausted and DMA mappings fail with "<code>sn_dma_map_phys: out of ATEs</code>".</p>
 
-<p>On SN2, ZONE<em>DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX</em>DMA_ADDRESS was <code>PAGE_OFFSET + MAX_PHYS_MEMORY</code>, which is just all memory. I'm not sure exactly why.</p>
+<p>On SN2, ZONE_DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX_DMA_ADDRESS was <code>PAGE_OFFSET + MAX_PHYS_MEMORY</code>, which is just all memory. I'm not sure exactly why.</p>
 
 <p>When the GPU driver is assigned memory for TTM, where this memory falls is random and can be anywhere in the physical memory of the system. Crashes appeared random because the fraction of "good" vs "bad" allocations was random.</p>
 

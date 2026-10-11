@@ -1,5 +1,5 @@
 # Fixing the radeon and amggpu driver on SGI Altix
-*Published: 17-May-2026 - Last Updated: 3-Jun-2026*
+*Published: 17-May-2026 - Last Updated: 10-Oct-2026*
 
 For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most recent Linux kernel on T2 Linux.  
 We can even play minecraft!
@@ -111,6 +111,13 @@ says: user mappings of PCI device memory must use `pgprot_noncached()`.
 At this point, we had X working, `glxgears` working and full 3D rendering working. However,
 any significant 3D rendering caused the system to lock up and MCA.
 
+**UPDATE**: The original patch caused all TTM memory to be uncached, meaning both GTT and VRAM. GTT is in system memory 
+so really did not need to be uncached. GTT being uncached causes terrible performance in heavy 3D workloads like 
+minecraft. [This patch](https://github.com/nsafran1217/linux-sn2/commit/69571599c577ed4889d11c9b45f1e517f6110b2b) 
+turns on write combining for GTT while still keeping VRAM uncached. VRAM writes are still slow, but now GTT is fast. 
+See [This documents](https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md) for 
+more details
+
 ### 3. DMA on cached memory
 To fix heavy 3D rendering, I needed more information than the AI added instrumentation provided, so I used the `errdmp`
 command included on the SGI internal support tools CD. This command can dump status about every chip and ASIC in the system.
@@ -151,7 +158,7 @@ The PIC bridge's Direct32 path provides a fixed 2GB window into system memory. P
 
 DMA targets outside the window fall back to the ATE (Address Translation Entry) mechanism, which uses a 1024-entry table where each entry maps one page. Under heavy GPU DMA, the ATE pool is quickly exhausted and DMA mappings fail with "`sn_dma_map_phys: out of ATEs`".
 
-On SN2, ZONE_DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX_DMA_ADDRESS was `PAGE_OFFSET + MAX_PHYS_MEMORY`, which is just all memory. I'm not sure exactly why.
+On SN2, ZONE\_DMA32 and SWIOTLB were disabled in the Kconfig for the platform, and MAX\_DMA\_ADDRESS was `PAGE_OFFSET + MAX_PHYS_MEMORY`, which is just all memory. I'm not sure exactly why.
 
 When the GPU driver is assigned memory for TTM, where this memory falls is random and can be anywhere in the physical memory of the system. Crashes appeared random because the fraction of "good" vs "bad" allocations was random.
 
