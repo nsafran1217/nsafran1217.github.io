@@ -2,6 +2,7 @@
 
 body {
     background: url(/img/bgs/scatter.png) left top repeat;
+    background-color: #779d9d; /* fallback while tile loads */
 }
 .cde-menu ul li.sgi-nested {
     display: block;
@@ -60,6 +61,7 @@ div.navbar {
     background: url(/img/sgi-css/navmenu-top.png) top center no-repeat,
         url(/img/sgi-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/sgi-css/navmenu-mid.png) center center repeat-y;
+    background-color: #d9d9d9; /* fallback while frame loads */
 }
 /* text color */
 .cde-menu ul li,

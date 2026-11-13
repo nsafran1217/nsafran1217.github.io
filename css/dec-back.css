@@ -2,6 +2,7 @@
 
 body {
     background: url(/img/bgs/water.png) left top repeat;
+    background-color: #717d8a; /* fallback while tile loads */
 }
 .cde-menu ul li.dec-nested {
     display: block;
@@ -22,6 +23,7 @@ body {
         url(/img/decibm-css/term-botmiddle.png) bottom center repeat-x,
         url(/img/decibm-css/term-centermiddle.png) center center repeat;
 
+    background-color: #686f82; /* fallback while frame loads */
 }
 
 div.navbar {
@@ -29,6 +31,7 @@ div.navbar {
     background: url(/img/decibm-css/navmenu-top.png) top center no-repeat,
         url(/img/decibm-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/decibm-css/navmenu-mid.png) center center repeat-y;
+    background-color: #999999; /* fallback while frame loads */
 }
 
 .cde-menu ul li.section-link,

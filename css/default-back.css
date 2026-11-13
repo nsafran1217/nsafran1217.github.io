@@ -2,6 +2,7 @@
 
 body {
     background: url(/img/bgs/toronto.png) left top repeat;
+    background-color: #697482; /* fallback while tile loads */
 }
 
 /*Mainly setups up the terminal background*/
@@ -28,6 +29,7 @@ div.navbar {
     background: url(/img/default-css/navmenu-top.png) top center no-repeat,
         url(/img/default-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/default-css/navmenu-mid.png) center center repeat-y;
+    background-color: #4992a7; /* fallback while frame loads */
 }
 /* text color */
 .cde-menu ul li,

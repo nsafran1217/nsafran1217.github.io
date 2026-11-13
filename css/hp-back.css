@@ -50,6 +50,7 @@ div.navbar {
     background: url(/img/hp-css/navmenu-top.png) top center no-repeat,
         url(/img/hp-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/hp-css/navmenu-mid.png) center center repeat-y;
+    background-color: #78a0d4; /* fallback while frame loads */
 }
 
 .cde-menu ul li.section-link,

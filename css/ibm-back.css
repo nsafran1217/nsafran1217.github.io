@@ -2,6 +2,7 @@
 
 body {
     background: url(/img/bgs/brick.png) left top repeat;
+    background-color: #626d7a; /* fallback while tile loads */
 }
 /* Dont expose buttons yet. pages not made
 .cde-menu ul li.ibm-nested {
@@ -24,6 +25,7 @@ body {
         url(/img/decibm-css/term-botmiddle.png) bottom center repeat-x,
         url(/img/decibm-css/term-centermiddle.png) center center repeat;
 
+    background-color: #686f82; /* fallback while frame loads */
 }
 
 div.navbar {
@@ -31,6 +33,7 @@ div.navbar {
     background: url(/img/decibm-css/navmenu-top.png) top center no-repeat,
         url(/img/decibm-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/decibm-css/navmenu-mid.png) center center repeat-y;
+    background-color: #999999; /* fallback while frame loads */
 }
 
 .cde-menu ul li.section-link,

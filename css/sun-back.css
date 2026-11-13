@@ -2,6 +2,7 @@
 
 body {
     background: url(/img/bgs/solarislogo.png) left top repeat;
+    background-color: #574c8f; /* fallback while tile loads */
 }
 .cde-menu ul li.sun-nested {
     display: block;
@@ -30,6 +31,7 @@ div.navbar {
     background: url(/img/sun-css/navmenu-top.png) top center no-repeat,
         url(/img/sun-css/navmenu-bot.png) bottom center no-repeat,
         url(/img/sun-css/navmenu-mid.png) center center repeat-y;      
+    background-color: #aeb2c3; /* fallback while frame loads */
 }
 /* THIS works, but not sure if I want to use it.
 div.navbar {
