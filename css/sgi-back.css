@@ -1,36 +1,33 @@
 /*Set images for default CDE theme*/
 
 body {
-    background: url(/img/bgs/scatter.png) left top repeat;
+    background: url(/img/bgs/scatter.gif) left top repeat;
     background-color: #779d9d; /* fallback while tile loads */
 }
 .cde-menu ul li.sgi-nested {
     display: block;
 }
 
-/*Mainly setups up the terminal background*/
-.main-body-container {
-    /*order is important*/
-    background: url(/img/sgi-css/term-topleft.png) top left no-repeat,
-        url(/img/sgi-css/term-topright.png) top right no-repeat,
-        url(/img/sgi-css/term-topmiddle.png) top center repeat-x,
-
-        url(/img/sgi-css/term-botleft.png) bottom left no-repeat,
-        url(/img/sgi-css/term-botright.png) bottom right no-repeat,
-
-        url(/img/sgi-css/term-centerleft.png) center left repeat-y,
-        url(/img/sgi-css/term-centerright.png) center right repeat-y,
-
-        url(/img/sgi-css/term-botmiddle.png) bottom center repeat-x;
-        
-
-        background-color: #00003f;
-
-}
-/* custom for winterm */
+/*Terminal window frame: one image per cell (structure is in main.css, table.win-row)*/
+td.win-tl   { background: #00003f url(/img/sgi-css/term-topleft.gif) no-repeat left top; }
+td.win-t    { background: #00003f url(/img/sgi-css/term-topmiddle.gif) repeat-x left top; }
+td.win-tr   { background: #00003f url(/img/sgi-css/term-topright.gif) no-repeat right top; }
+td.win-l    { background: #00003f url(/img/sgi-css/term-centerleft.gif) repeat-y left top; }
+td.win-body { background-color: #00003f; }
+td.win-r    { background: #00003f url(/img/sgi-css/term-centerright.gif) repeat-y right top; }
+td.win-bl   { background: #00003f url(/img/sgi-css/term-botleft.gif) no-repeat left bottom; }
+td.win-b    { background: #00003f url(/img/sgi-css/term-botmiddle.gif) repeat-x left bottom; }
+td.win-br   { background: #00003f url(/img/sgi-css/term-botright.gif) no-repeat right bottom; }
+/* custom for winterm: frame piece sizes differ from the dtterm defaults in main.css */
+td.win-tl   { width: 40px; height: 40px; }
+td.win-t    { height: 40px; }
+td.win-tr   { width: 55px; height: 40px; }
+td.win-l,
+td.win-r    { width: 8px; }
+td.win-bl,
+td.win-br   { width: 32px; }
+td.win-body { padding: 0 12px; } /* thin 8px edges, so pad content off the frame */
 .main-body {
-    margin-top: 20px;
-    /* space down for terminal png*/
     color: #ebebeb;
 }
 .window-title {
@@ -56,13 +53,11 @@ body {
 .cde-menu ul li a {
     color: black;
 }
-div.navbar {
-    /*order is important*/
-    background: url(/img/sgi-css/navmenu-top.png) top center no-repeat,
-        url(/img/sgi-css/navmenu-bot.png) bottom center no-repeat,
-        url(/img/sgi-css/navmenu-mid.png) center center repeat-y;
-    background-color: #d9d9d9; /* fallback while frame loads */
-}
+/*Navigation panel frame: one image per block*/
+div.navbar  { background-color: #d9d9d9; /* fallback while frame loads */ }
+div.nav-top { background: url(/img/sgi-css/navmenu-top.gif) no-repeat center top; }
+div.nav-mid { background: url(/img/sgi-css/navmenu-mid.gif) repeat-y center top; }
+div.nav-bot { background: url(/img/sgi-css/navmenu-bot.gif) no-repeat center bottom; }
 /* text color */
 .cde-menu ul li,
 .cde-menu ul li a {
@@ -70,7 +65,7 @@ div.navbar {
 }
 /* Section headings */
 .section-heading {
-    background: url(/img/sgi-css/navmenu-mid-section.png) top center no-repeat;
+    background: url(/img/sgi-css/navmenu-mid-section.gif) top center no-repeat;
     color: black
 }
 

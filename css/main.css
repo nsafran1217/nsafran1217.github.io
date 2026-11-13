@@ -65,20 +65,70 @@ td.td-spacer {
 }
 
 
-/*Mainly setups up the terminal background*/
+/*Outer wrapper for one window. The frame itself is drawn by the win-row tables below*/
 .main-body-container {
     /*flex-grow: 1; TEST REMOVE */
-    padding: 20px;
+    padding: 0;
     position: relative;
     text-align: left;
    /* vertical-align: top; TEST REMOVE*/
-    max-width: 1000px;
+    max-width: 1040px; /* was 1000px + 20px padding each side before the frame moved into tables */
     margin: 0 auto;
     min-width: 300px;
     margin-bottom: 20px;
    
     /*transform: translateX(-125px);*/
 }
+
+/*
+ * Window frame: three one-row tables (top / middle / bottom), one background
+ * image per cell, so no CSS multiple backgrounds are needed (old browser support).
+ * Images are set in the *-back.css theme files. Sizes below match the
+ * dtterm-style frames (default, dec, ibm, sun); hp and sgi override them.
+ */
+table.win-row {
+    width: 100%;
+    table-layout: fixed; /* keeps wide images from stretching the window */
+    border: none;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+}
+td.win-tl, td.win-t, td.win-tr,
+td.win-l, td.win-r,
+td.win-bl, td.win-b, td.win-br {
+    padding: 0;
+    border: none;
+    font-size: 1px;   /* the &nbsp; in these cells must not add height */
+    line-height: 1px;
+}
+td.win-tl { width: 150px; height: 60px; }
+td.win-t  { height: 60px; }
+td.win-tr { width: 50px; height: 60px; }
+/*
+ * Sides and bottom are cut 5-10px smaller than their images: the cropped part is
+ * plain interior color, and this puts content 20px from the edge as before.
+ */
+td.win-l,
+td.win-r  { width: 20px; }
+td.win-bl,
+td.win-br { width: 25px; height: 20px; }
+td.win-b  { height: 20px; }
+td.win-body {
+    padding: 0;
+    border: none;
+    vertical-align: top;
+}
+/* Nav panel: top / middle / bottom blocks, one background image each */
+div.nav-top,
+div.nav-bot {
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+}
+div.nav-top { height: 40px; }
+div.nav-bot { height: 20px; }
+
 /*Inline code*/
 code {
     color: #ffc074;
@@ -106,19 +156,23 @@ table.specs td {
     font-size: 14px;
     height: 14px;
     overflow: hidden;
-    left: 50%;
-    /* Center horizontally */
-    transform: translateX(-50%);
-    /* Ensures exact centering */
+    /* Full width + text-align centers the title without transform (old browser support) */
+    left: 0;
+    width: 100%;
     color: white;
-    padding: 5px;
+    padding: 5px 0;
     text-align: center;
 }
 
 .main-body {
-    margin-top: 40px;
-    /* space down for terminal png*/
+    margin-top: 0;
+    /* the top win-row table provides the space below the title bar */
     color: white;
+}
+/* First heading sits right under the title bar; the top win-row already provides the space.
+   (IE6 doesn't support this selector and just shows a little extra space.) */
+.main-body > :first-child {
+    margin-top: 0;
 }
 
 /*Links in main body*/
@@ -192,7 +246,7 @@ td.navbar {
     /*background-size: 100% auto, 100% auto, 100% auto; TEST REMOVE */
     /*vertical-align: top;TEST REMOVE */
     /*position: relative;TEST REMOVE */
-    padding-bottom: 20px;
+    padding-bottom: 0; /* div.nav-bot provides the bottom space */
 
 }
 
@@ -205,7 +259,7 @@ td.navbar {
 
 .cde-menu ul {
     list-style-type: none;
-    padding: 10px;
+    padding: 2px 10px 10px 10px; /* top is small: div.nav-top already adds 40px */
     margin: 0;
     border: 0px;   
 }
@@ -238,7 +292,7 @@ td.navbar {
     margin-bottom: 4px;
     padding: 6px 20px;
     margin: 15px;
-    margin-top: 32px;
+    margin-top: 0;
 }
 /* section headings */
 .cde-menu li.section-heading {

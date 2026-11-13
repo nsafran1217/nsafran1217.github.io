@@ -1,7 +1,7 @@
 /*Set images for default CDE theme*/
 
 body {
-    background: url(/img/bgs/brick.png) left top repeat;
+    background: url(/img/bgs/brick.gif) left top repeat;
     background-color: #626d7a; /* fallback while tile loads */
 }
 /* Dont expose buttons yet. pages not made
@@ -9,32 +9,22 @@ body {
     display: block;
 }
 */
-/*Mainly setups up the terminal background*/
-.main-body-container {
-    /*order is important*/
-    background: url(/img/decibm-css/term-topleft.png) top left no-repeat,
-        url(/img/decibm-css/term-topright.png) top right no-repeat,
-        url(/img/decibm-css/term-topmiddle.png) top center repeat-x,
+/*Terminal window frame: one image per cell (structure is in main.css, table.win-row)*/
+td.win-tl   { background: #686f82 url(/img/decibm-css/term-topleft.gif) no-repeat left top; }
+td.win-t    { background: #686f82 url(/img/decibm-css/term-topmiddle.gif) repeat-x left top; }
+td.win-tr   { background: #686f82 url(/img/decibm-css/term-topright.gif) no-repeat right top; }
+td.win-l    { background: #686f82 url(/img/decibm-css/term-centerleft.gif) repeat-y left top; }
+td.win-body { background-color: #686f82; }
+td.win-r    { background: #686f82 url(/img/decibm-css/term-centerright.gif) repeat-y right top; }
+td.win-bl   { background: #686f82 url(/img/decibm-css/term-botleft.gif) no-repeat left bottom; }
+td.win-b    { background: #686f82 url(/img/decibm-css/term-botmiddle.gif) repeat-x left bottom; }
+td.win-br   { background: #686f82 url(/img/decibm-css/term-botright.gif) no-repeat right bottom; }
 
-        url(/img/decibm-css/term-botleft.png) bottom left no-repeat,
-        url(/img/decibm-css/term-botright.png) bottom right no-repeat,
-
-        url(/img/decibm-css/term-centerleft.png) center left repeat-y,
-        url(/img/decibm-css/term-centerright.png) center right repeat-y,
-
-        url(/img/decibm-css/term-botmiddle.png) bottom center repeat-x,
-        url(/img/decibm-css/term-centermiddle.png) center center repeat;
-
-    background-color: #686f82; /* fallback while frame loads */
-}
-
-div.navbar {
-    /*order is important*/
-    background: url(/img/decibm-css/navmenu-top.png) top center no-repeat,
-        url(/img/decibm-css/navmenu-bot.png) bottom center no-repeat,
-        url(/img/decibm-css/navmenu-mid.png) center center repeat-y;
-    background-color: #999999; /* fallback while frame loads */
-}
+/*Navigation panel frame: one image per block*/
+div.navbar  { background-color: #999999; /* fallback while frame loads */ }
+div.nav-top { background: url(/img/decibm-css/navmenu-top.gif) no-repeat center top; }
+div.nav-mid { background: url(/img/decibm-css/navmenu-mid.gif) repeat-y center top; }
+div.nav-bot { background: url(/img/decibm-css/navmenu-bot.gif) no-repeat center bottom; }
 
 .cde-menu ul li.section-link,
 .cde-menu ul li.subsection-link,
@@ -54,7 +44,7 @@ div.navbar {
 }
 /* Section headings */
 .section-heading {
-    background: url(/img/decibm-css/navmenu-mid-section.png) top center no-repeat;
+    background: url(/img/decibm-css/navmenu-mid-section.gif) top center no-repeat;
     color: white;
 }
 

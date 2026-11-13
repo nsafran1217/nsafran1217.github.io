@@ -1,17 +1,17 @@
 /*Set images for HP-VUE theme*/
 
 body {
-    background: url(/img/hp-css/bg-topleft.png) top left no-repeat,
-    url(/img/hp-css/bg-topright.png) top right no-repeat,
-    url(/img/hp-css/bg-topmid.png) top center repeat-x,
+    background: url(/img/hp-css/bg-topleft.gif) top left no-repeat,
+    url(/img/hp-css/bg-topright.gif) top right no-repeat,
+    url(/img/hp-css/bg-topmid.gif) top center repeat-x,
 
-    url(/img/hp-css/bg-botleft.png) bottom left no-repeat,
-    url(/img/hp-css/bg-botright.png) bottom right no-repeat,
+    url(/img/hp-css/bg-botleft.gif) bottom left no-repeat,
+    url(/img/hp-css/bg-botright.gif) bottom right no-repeat,
 
-    url(/img/hp-css/bg-midleft.png) center left repeat-y,
-    url(/img/hp-css/bg-midright.png) center right repeat-y,
+    url(/img/hp-css/bg-midleft.gif) center left repeat-y,
+    url(/img/hp-css/bg-midright.gif) center right repeat-y,
 
-    url(/img/hp-css/bg-botmid.png) bottom center repeat-x;
+    url(/img/hp-css/bg-botmid.gif) bottom center repeat-x;
     background-color: #252c3f;
 }
 .cde-menu ul li.hp-nested {
@@ -22,36 +22,29 @@ body {
     position: absolute;
     top: 7px;
 }
-/*Mainly setups up the terminal background*/
-.main-body-container {
-    /*order is important*/
-    background: url(/img/hp-css/term-topleft.png) top left no-repeat,
-        url(/img/hp-css/term-topright.png) top right no-repeat,
-        url(/img/hp-css/term-topmiddle.png) top center repeat-x,
-
-        url(/img/hp-css/term-botleft.png) bottom left no-repeat,
-        url(/img/hp-css/term-botright.png) bottom right no-repeat,
-
-        url(/img/hp-css/term-centerleft.png) center left repeat-y,
-        url(/img/hp-css/term-centerright.png) center right repeat-y,
-
-        url(/img/hp-css/term-botmiddle.png) bottom center repeat-x;
-    background-color: #78a0d4;
-        
-
-}
-/* custom for hpterm */
-.main-body {
-    margin-top: 20px;
-    /* space down for terminal png*/
-}
-div.navbar {
-    /*order is important*/
-    background: url(/img/hp-css/navmenu-top.png) top center no-repeat,
-        url(/img/hp-css/navmenu-bot.png) bottom center no-repeat,
-        url(/img/hp-css/navmenu-mid.png) center center repeat-y;
-    background-color: #78a0d4; /* fallback while frame loads */
-}
+/*Terminal window frame: one image per cell (structure is in main.css, table.win-row)*/
+td.win-tl   { background: #78a0d4 url(/img/hp-css/term-topleft.gif) no-repeat left top; }
+td.win-t    { background: #78a0d4 url(/img/hp-css/term-topmiddle.gif) repeat-x left top; }
+td.win-tr   { background: #78a0d4 url(/img/hp-css/term-topright.gif) no-repeat right top; }
+td.win-l    { background: #78a0d4 url(/img/hp-css/term-centerleft.gif) repeat-y left top; }
+td.win-body { background-color: #78a0d4; }
+td.win-r    { background: #78a0d4 url(/img/hp-css/term-centerright.gif) repeat-y right top; }
+td.win-bl   { background: #78a0d4 url(/img/hp-css/term-botleft.gif) no-repeat left bottom; }
+td.win-b    { background: #78a0d4 url(/img/hp-css/term-botmiddle.gif) repeat-x left bottom; }
+td.win-br   { background: #78a0d4 url(/img/hp-css/term-botright.gif) no-repeat right bottom; }
+/* custom for hpterm: frame piece sizes differ from the dtterm defaults in main.css */
+td.win-tl   { width: 35px; height: 35px; }
+td.win-t    { height: 35px; }
+td.win-tr   { width: 60px; height: 35px; }
+td.win-bl,
+td.win-br   { width: 35px; }
+td.win-body { padding-top: 5px; } /* space down for terminal png*/
+div.nav-bot { height: 36px; }
+/*Navigation panel frame: one image per block*/
+div.navbar  { background-color: #78a0d4; /* fallback while frame loads */ }
+div.nav-top { background: url(/img/hp-css/navmenu-top.gif) no-repeat center top; }
+div.nav-mid { background: url(/img/hp-css/navmenu-mid.gif) repeat-y center top; }
+div.nav-bot { background: url(/img/hp-css/navmenu-bot.gif) no-repeat center bottom; }
 
 .cde-menu ul li.section-link,
 .cde-menu ul li.subsection-link,
@@ -71,7 +64,7 @@ div.navbar {
 }
 /* Section headings */
 .section-heading {
-    background: url(/img/hp-css/navmenu-mid-section.png) top center no-repeat;
+    background: url(/img/hp-css/navmenu-mid-section.gif) top center no-repeat;
     color: white;
 }
 

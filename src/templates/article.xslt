@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="html" encoding="UTF-8"/>
     <xsl:template match="/page">
-        <html>
+        <!-- Standards mode in modern browsers; very old browsers ignore it -->
+        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;&#10;</xsl:text>
+        <html lang="en">
             <head>
                 <title><xsl:value-of select="title"/></title>
                 
@@ -36,12 +39,42 @@
                                 </div>
                             </td>
                             <td class="main-body-td">
+                                <!--
+                                    Each window is three one-row tables (top / middle / bottom),
+                                    with exactly one background image per cell. This avoids CSS
+                                    multiple backgrounds so the frame renders in old browsers.
+                                    Rows are separate tables because the corner pieces are wider
+                                    than the side edges (e.g. 150px title-bar corner vs 25px edge).
+                                -->
                                 <xsl:for-each select="sections/section">
                                     <div class="main-body-container">
                                         <div class="window-title"><xsl:value-of select="window-title"/></div>
-                                        <div class="main-body">
-                                            <xsl:copy-of select="content"/>
-                                        </div>
+                                        <table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td class="win-tl">&#160;</td>
+                                                <td class="win-t">&#160;</td>
+                                                <td class="win-tr">&#160;</td>
+                                            </tr>
+                                        </table>
+                                        <table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td class="win-l">&#160;</td>
+                                                <td class="win-body">
+                                                    <div class="main-body">
+                                                        <!-- content/node(): copy what's inside <content>, not the wrapper itself -->
+                                                        <xsl:copy-of select="content/node()"/>
+                                                    </div>
+                                                </td>
+                                                <td class="win-r">&#160;</td>
+                                            </tr>
+                                        </table>
+                                        <table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td class="win-bl">&#160;</td>
+                                                <td class="win-b">&#160;</td>
+                                                <td class="win-br">&#160;</td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </xsl:for-each>
                             </td>
@@ -53,10 +86,15 @@
         </html>
     </xsl:template>
     
+    <!-- Nav panel: top / middle / bottom blocks, one background image each -->
     <xsl:template match="navigation">
         <div class="window-title">Navigation</div>
-        <div class="cde-menu">
-            <xsl:copy-of select="content"/>
+        <div class="nav-top">&#160;</div>
+        <div class="nav-mid">
+            <div class="cde-menu">
+                <xsl:copy-of select="content/node()"/>
+            </div>
         </div>
+        <div class="nav-bot">&#160;</div>
     </xsl:template>
 </xsl:stylesheet>

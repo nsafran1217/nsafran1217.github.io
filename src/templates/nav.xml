@@ -4,10 +4,10 @@
         <ul class="cde-menu">
             <li class="home-link">
                 <a href="/index.html">
-                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"/> Home
+                    <img src="/img/icons/Fphome.l.gif" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"/> Home
                 </a>
             </li>
-            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"/> Computers</span></li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.gif" class="nav-icon" style="vertical-align: middle;"/> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
@@ -45,7 +45,7 @@
 
             <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;"/>Projects</span></li>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.gif" class="nav-icon" style="vertical-align: middle;"/>Projects</span></li>
 
             <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
@@ -60,7 +60,7 @@
             <li class="section-heading" style="padding-top: 16px;"></li>
             <li class="home-link" style="margin-top: 6px;">
                 <a href="/blog/index.html">
-                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"/> Blog
+                    <img src="/img/icons/Fppenpd.l.gif" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"/> Blog
                 </a>
             </li>
             <li class="section-link"><a href="/blog/about.html">About me</a></li>

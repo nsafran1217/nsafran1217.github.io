@@ -1,58 +1,48 @@
 /*Set images for SUN CDE theme*/
 
 body {
-    background: url(/img/bgs/solarislogo.png) left top repeat;
+    background: url(/img/bgs/solarislogo.gif) left top repeat;
     background-color: #574c8f; /* fallback while tile loads */
 }
 .cde-menu ul li.sun-nested {
     display: block;
 }
-/*Mainly setups up the terminal background*/
-.main-body-container {
-    /*order is important*/
-    background: url(/img/sun-css/term-topleft.png) top left no-repeat,
-        url(/img/sun-css/term-topright.png) top right no-repeat,
-        url(/img/sun-css/term-topmiddle.png) top center repeat-x,
+/*Terminal window frame: one image per cell (structure is in main.css, table.win-row)*/
+td.win-tl   { background: #686f82 url(/img/sun-css/term-topleft.gif) no-repeat left top; }
+td.win-t    { background: #686f82 url(/img/sun-css/term-topmiddle.gif) repeat-x left top; }
+td.win-tr   { background: #686f82 url(/img/sun-css/term-topright.gif) no-repeat right top; }
+td.win-l    { background: #686f82 url(/img/sun-css/term-centerleft.gif) repeat-y left top; }
+td.win-body { background-color: #686f82; }
+td.win-r    { background: #686f82 url(/img/sun-css/term-centerright.gif) repeat-y right top; }
+td.win-bl   { background: #686f82 url(/img/sun-css/term-botleft.gif) no-repeat left bottom; }
+td.win-b    { background: #686f82 url(/img/sun-css/term-botmiddle.gif) repeat-x left bottom; }
+td.win-br   { background: #686f82 url(/img/sun-css/term-botright.gif) no-repeat right bottom; }
 
-        url(/img/sun-css/term-botleft.png) bottom left no-repeat,
-        url(/img/sun-css/term-botright.png) bottom right no-repeat,
-
-        url(/img/sun-css/term-centerleft.png) center left repeat-y,
-        url(/img/sun-css/term-centerright.png) center right repeat-y,
-
-        url(/img/sun-css/term-botmiddle.png) bottom center repeat-x;
-        /*url(/img/sun-css/term-centermiddle.png) center center repeat;*/
-        background-color: #686f82;
-
-}
-
-div.navbar {
-    /* order is important */
-    background: url(/img/sun-css/navmenu-top.png) top center no-repeat,
-        url(/img/sun-css/navmenu-bot.png) bottom center no-repeat,
-        url(/img/sun-css/navmenu-mid.png) center center repeat-y;      
-    background-color: #aeb2c3; /* fallback while frame loads */
-}
+/*Navigation panel frame: one image per block*/
+div.navbar  { background-color: #aeb2c3; /* fallback while frame loads */ }
+div.nav-top { background: url(/img/sun-css/navmenu-top.gif) no-repeat center top; }
+div.nav-mid { background: url(/img/sun-css/navmenu-mid.gif) repeat-y center top; }
+div.nav-bot { background: url(/img/sun-css/navmenu-bot.gif) no-repeat center bottom; }
 /* THIS works, but not sure if I want to use it.
 div.navbar {
-        background: url(/img/sun-css/navmenu-topleft.png) top left no-repeat,
-        url(/img/sun-css/navmenu-topright.png) top right no-repeat,
-        url(/img/sun-css/navmenu-topmiddle.png) top center repeat-x,
+        background: url(/img/sun-css/navmenu-topleft.gif) top left no-repeat,
+        url(/img/sun-css/navmenu-topright.gif) top right no-repeat,
+        url(/img/sun-css/navmenu-topmiddle.gif) top center repeat-x,
 
-        url(/img/sun-css/navmenu-botleft.png) bottom left no-repeat,
-        url(/img/sun-css/navmenu-botright.png) bottom right no-repeat,
+        url(/img/sun-css/navmenu-botleft.gif) bottom left no-repeat,
+        url(/img/sun-css/navmenu-botright.gif) bottom right no-repeat,
 
-        url(/img/sun-css/navmenu-centerleft.png) center left repeat-y,
-        url(/img/sun-css/navmenu-centerright.png) center right repeat-y,
+        url(/img/sun-css/navmenu-centerleft.gif) center left repeat-y,
+        url(/img/sun-css/navmenu-centerright.gif) center right repeat-y,
 
-        url(/img/sun-css/navmenu-botmiddle.png) bottom center repeat-x,
-        url(/img/sun-css/navmenu-centermiddle.png) center center repeat;
+        url(/img/sun-css/navmenu-botmiddle.gif) bottom center repeat-x,
+        url(/img/sun-css/navmenu-centermiddle.gif) center center repeat;
 }
 
 .section-heading {
-    background: url(/img/sun-css/navmenu-section-left.png) top left no-repeat,
-    url(/img/sun-css/navmenu-section-right.png) top right no-repeat,
-    url(/img/sun-css/navmenu-section-middle.png) top center repeat-x;
+    background: url(/img/sun-css/navmenu-section-left.gif) top left no-repeat,
+    url(/img/sun-css/navmenu-section-right.gif) top right no-repeat,
+    url(/img/sun-css/navmenu-section-middle.gif) top center repeat-x;
     
     color: black;
     padding-left: 30px;
@@ -78,7 +68,7 @@ div.navbar {
 }
 /* Section headings */
 .section-heading {
-    background: url(/img/sun-css/navmenu-mid-section.png) top center no-repeat;
+    background: url(/img/sun-css/navmenu-mid-section.gif) top center no-repeat;
     color: black
 }
 .section-heading span {
