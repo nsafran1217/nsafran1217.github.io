@@ -7,6 +7,19 @@
                     <img src="/img/icons/Fphome.l.gif" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"/> Home
                 </a>
             </li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.gif" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"/> Blog
+                </a>
+            </li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/software/index.html">
+                    <img src="/img/icons/Dtapps.m.gif" height="40" alt="Software" class="nav-icon" style="vertical-align: middle;"/> Software
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+
+
             <li class="section-heading"><span><img src="/img/icons/Dtterm.m.gif" class="nav-icon" style="vertical-align: middle;"/> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
@@ -57,13 +70,6 @@
             <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
             <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
             
-            <li class="section-heading" style="padding-top: 16px;"></li>
-            <li class="home-link" style="margin-top: 6px;">
-                <a href="/blog/index.html">
-                    <img src="/img/icons/Fppenpd.l.gif" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"/> Blog
-                </a>
-            </li>
-            <li class="section-link"><a href="/blog/about.html">About me</a></li>
         </ul>
         </content>
 </navigation>

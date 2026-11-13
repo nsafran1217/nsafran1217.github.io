@@ -2,13 +2,15 @@
 *Last Updated: 29-Jul-2025*
 <img src="/img/hp/hp-logo.jpg" alt="HP Logo" class="inline" width="200px"></img>
 
-I currently have four HP-UX machines. HP and HP-UX feel very "business-like" when
-    interacting with them, similar to how IBM machines feel.  
-    HP-UX's system administration tool, SAM, is well-designed and feels complete. In later
-    versions of HP-UX, they transitioned from Motif GUI applications to a web-based
-    management tool called SMH, which has a similar look and feel to iLO interfaces. I
-    haven't spent much time with the later HP-UX versions yet, but I plan to experiment with
-    HP 9000 containers and Integrity VM.
+I currently have eight HP-UX machines, which is too many. For a while the PA-RISC systems were elusive, 
+but now I have 6, and I even turned one down that was offered to me. 
+HP and HP-UX feel very "business-like" when
+interacting with them, similar to how IBM machines feel.  
+HP-UX's system administration tool, SAM, is well-designed and feels complete. In later
+versions of HP-UX, they transitioned from Motif GUI applications to a web-based
+management tool called SMH, which has a similar look and feel to iLO interfaces. I
+haven't spent much time with the later HP-UX versions yet, but I plan to experiment with
+HP 9000 containers and Integrity VM.
 
 Of course, I'll also keep an OpenVMS 8.4 installation on my Integrity machine. One day, I
     hope to build a VMS cluster with x86-64, Itanium, Alpha, and VAX (if it's supported).
@@ -94,6 +96,15 @@ Will update eventually with all specs
             <td>36 GB</td>
             <td>HP-UX 11.11 (11i v1)</td>
             <td><a href="/blog/013-b2600-repair.html">Blog about PSU retrofit</a></td>
+        </tr>
+        <tr>
+            <td>K class k360</td>
+            <td>4x PA-8000? ?? MHz</td>
+            <td>1 GB</td>
+            <td></td>
+            <td></td>
+            <td>HP-UX 11.0</td>
+            <td>If someone wants it, email me</td>
         </tr>
         <tr>
             <td>C8000</td>

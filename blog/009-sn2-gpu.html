@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>nsafran.com - Fixing the radeon and amggpu driver on SGI Altix</title>
@@ -8,14 +9,28 @@
 <body><table class="main-body-table"><tbody><tr>
 <td class="navbar"><div class="navbar">
 <div class="window-title">Navigation</div>
-<div class="cde-menu"><content>
+<div class="nav-top"> </div>
+<div class="nav-mid"><div class="cde-menu">
         <ul class="cde-menu">
             <li class="home-link">
                 <a href="/index.html">
-                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                    <img src="/img/icons/Fphome.l.gif" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
                 </a>
             </li>
-            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.gif" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/software/index.html">
+                    <img src="/img/icons/Dtapps.m.gif" height="40" alt="Software" class="nav-icon" style="vertical-align: middle;"> Software
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+
+
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.gif" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
@@ -53,7 +68,7 @@
 
             <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.gif" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
 
             <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
@@ -65,20 +80,21 @@
             <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
             <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
             
-            <li class="section-heading" style="padding-top: 16px;">
-            <li class="home-link" style="margin-top: 6px;">
-                <a href="/blog/index.html">
-                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
-                </a>
-            </li>
-            <li class="section-link"><a href="/blog/about.html">About me</a></li>
         </ul>
-        </content></div>
+        </div></div>
+<div class="nav-bot"> </div>
 </div></td>
 <td class="main-body-td">
 <div class="main-body-container">
 <div class="window-title">Terminal - Fixing the radeon and amggpu driver on SGI Altix</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h1>Fixing the radeon and amggpu driver on SGI Altix</h1>
 
 <p><em>Published: 17-May-2026 - Last Updated: 10-Oct-2026</em></p>
@@ -141,11 +157,25 @@ and WILL NOT work without modifications to the <code>plx_bridge_fixup.c</code> f
 
 <p>The terrain scene in glmark2 will usually cause this.</p>
 
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 <div class="main-body-container">
 <div class="window-title">Terminal - Setup</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h2>Setup</h2>
 
 <p>The GPU <strong>MUST</strong> be installed in the top PCI slot. There must not be any card installed in the slot directly below it. Follow the instructions for installing T2 on Altix. </p>
@@ -160,11 +190,25 @@ and WILL NOT work without modifications to the <code>plx_bridge_fixup.c</code> f
 
 <p>I remove the metal bracket from the PCI-E bridge and screw the low profile bracket of the GPU into the slot below it.</p>
 
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 <div class="main-body-container">
 <div class="window-title">Terminal - What needed fixed?</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h2>What needed fixed?</h2>
 
 <p>The SGI Altix SN2 is a very strange architecture. The PCI riser was never intended to support a GPU.
@@ -177,7 +221,7 @@ for SN2 specific DMA flush routines after every read and write the GPU makes.</p
 <p>There were two main issues with bringing up a PCI GPU, one issue using it behind a PCI bridge, and one additional issue with <code>amdgpu</code>.</p>
 
 <ol>
-<li>The firmware does not properly setup the PCI bridge's prefetchable memory window</li>
+<li><s>The firmware does not properly setup the PCI bridge's prefetchable memory window </s></li>
 <li>The SN2 architecture does not support write combining for PIO transfers</li>
 <li>Heavy DMA reads performed by the GPU on memory which is cached overloads the FSB table tracking modified cache lines</li>
 <li>UVD ring test fails on AMDGPU due to overloading the system with PIO writes</li>
@@ -185,18 +229,22 @@ for SN2 specific DMA flush routines after every read and write the GPU makes.</p
 
 <h3>1. PCI Bridge prefetchable memory window</h3>
 
-<p>The SN2 firmware has no mechanism in the EFI firmware to deal with PCI bridges and properly program the PLX bridge prefetchable memory window. 
+<p><s>The SN2 firmware has no mechanism in the EFI firmware to deal with PCI bridges and properly program the PLX bridge prefetchable memory window. <br>
 We must manually program the PLX bridge. <br>
-During testing, I ran these two commands to program the window:</p>
+During testing, I ran these two commands to program the window:  </s></p>
 
 <pre><code>setpci -s 0002:00:02.0 24.W=0x1000
 setpci -s 0002:00:02.0 26.W=0x1ff0
 </code></pre>
 
-<p>This fix allowed the radeon driver to load. <br>
+<p><s>This fix allowed the radeon driver to load. <br>
 To make this seamless and hopefully support GPUs or other PCI-E cards with different window sizes, I made a small fixup function
 which runs during boot and automatically programs the window into the PLX based on detected BARs.
-The kernel config option for this is <code>CONFIG_SN2_PLX_GPU=y</code>. It's available to select under <code>SN Devices</code> in <code>menuconfig</code>.</p>
+The kernel config option for this is <code>CONFIG_SN2_PLX_GPU=y</code>. It's available to select under <code>SN Devices</code> in <code>menuconfig</code>.
+</s></p>
+
+<p><strong>UPDATE</strong> <a href="https://github.com/nsafran1217/linux-sn2/commit/24d78bf62c12c29086fa72bdfe0045b21e852bac">This patch</a> fixes this problem. Prevent 
+Linux from claiming the BARs and use the prom programed windows.</p>
 
 <h3>2. PIO writes must be uncached</h3>
 
@@ -220,7 +268,7 @@ any significant 3D rendering caused the system to lock up and MCA.</p>
 so really did not need to be uncached. GTT being uncached causes terrible performance in heavy 3D workloads like 
 minecraft. <a href="https://github.com/nsafran1217/linux-sn2/commit/69571599c577ed4889d11c9b45f1e517f6110b2b">This patch</a> 
 turns on write combining for GTT while still keeping VRAM uncached. VRAM writes are still slow, but now GTT is fast. 
-See <a href="https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md">This documents</a> for 
+See <a href="https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md">This document</a> for 
 more details</p>
 
 <h3>3. DMA on cached memory</h3>
@@ -276,7 +324,14 @@ non-mergeable volatile write, matching what SN2's PIO pipeline can handle (and w
 <p>When the GPU driver is assigned memory for TTM, where this memory falls is random and can be anywhere in the physical memory of the system. Crashes appeared random because the fraction of "good" vs "bad" allocations was random.</p>
 
 <p>To solve the issue, we remove the restrictions on ZONE_DMA32 and SWIOTLB and enable them. We also set <code>MAX_DMA_ADDRESS = PAGE_OFFSET + 0x3080000000UL</code> in <code>arch/ia64/sn/kernel/setup.c</code>, so that drivers which do DMA are assigned memory below the 2GB mark. This does mean that all memory used for DMA will be on node 0, but I don't expect this to be an issue for hobbyist use. No additional driver changes were required for this fix.</p>
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 </td>
 <td class="td-spacer"></td>

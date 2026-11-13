@@ -149,9 +149,9 @@ Will update eventually with all specs
             <td>Altix 350</td>
             <td>16x Itanium2 1.5 Ghz</td>
             <td>32GB</td>
-            <td>None</td>
+            <td>AMD R5 430 2GB</td>
             <td></td>
-            <td>SLES 10, 11, T2 SDE</td>
+            <td>SLES 9, 10, 11, T2 SDE</td>
             <td>8x Bricks, 1x Router</td>
         </tr>
     </tbody>

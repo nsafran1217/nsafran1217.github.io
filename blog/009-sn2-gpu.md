@@ -77,23 +77,28 @@ Note that AI was used in fixing this issue. What follows is a summary of the fix
 
 There were two main issues with bringing up a PCI GPU, one issue using it behind a PCI bridge, and one additional issue with `amdgpu`.
 
-1. The firmware does not properly setup the PCI bridge's prefetchable memory window
+1. <s>The firmware does not properly setup the PCI bridge's prefetchable memory window </s>
 2. The SN2 architecture does not support write combining for PIO transfers
 3. Heavy DMA reads performed by the GPU on memory which is cached overloads the FSB table tracking modified cache lines
 4. UVD ring test fails on AMDGPU due to overloading the system with PIO writes
 
 ### 1. PCI Bridge prefetchable memory window
-The SN2 firmware has no mechanism in the EFI firmware to deal with PCI bridges and properly program the PLX bridge prefetchable memory window. 
+<s>The SN2 firmware has no mechanism in the EFI firmware to deal with PCI bridges and properly program the PLX bridge prefetchable memory window.  
 We must manually program the PLX bridge.  
-During testing, I ran these two commands to program the window:
+During testing, I ran these two commands to program the window:  </s>
 
     setpci -s 0002:00:02.0 24.W=0x1000
     setpci -s 0002:00:02.0 26.W=0x1ff0
 
-This fix allowed the radeon driver to load.  
+<s>This fix allowed the radeon driver to load.  
 To make this seamless and hopefully support GPUs or other PCI-E cards with different window sizes, I made a small fixup function
 which runs during boot and automatically programs the window into the PLX based on detected BARs.
 The kernel config option for this is `CONFIG_SN2_PLX_GPU=y`. It's available to select under `SN Devices` in `menuconfig`.
+</s>
+
+**UPDATE** [This patch](https://github.com/nsafran1217/linux-sn2/commit/24d78bf62c12c29086fa72bdfe0045b21e852bac) fixes this problem. Prevent 
+Linux from claiming the BARs and use the prom programed windows.
+
 
 ### 2. PIO writes must be uncached
 When the driver tried to write to the GPU with PIO, the data never reached the GPU because the writes were write-combined.
@@ -115,7 +120,7 @@ any significant 3D rendering caused the system to lock up and MCA.
 so really did not need to be uncached. GTT being uncached causes terrible performance in heavy 3D workloads like 
 minecraft. [This patch](https://github.com/nsafran1217/linux-sn2/commit/69571599c577ed4889d11c9b45f1e517f6110b2b) 
 turns on write combining for GTT while still keeping VRAM uncached. VRAM writes are still slow, but now GTT is fast. 
-See [This documents](https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md) for 
+See [This document](https://github.com/nsafran1217/sn2-kernel-tools/blob/main/gpu_optimization/WC-FINDINGS.md) for 
 more details
 
 ### 3. DMA on cached memory

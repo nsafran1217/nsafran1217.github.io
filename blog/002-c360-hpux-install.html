@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>nsafran.com - Installing HP-UX 11.11 on a C360</title>
@@ -8,14 +9,28 @@
 <body><table class="main-body-table"><tbody><tr>
 <td class="navbar"><div class="navbar">
 <div class="window-title">Navigation</div>
-<div class="cde-menu"><content>
+<div class="nav-top"> </div>
+<div class="nav-mid"><div class="cde-menu">
         <ul class="cde-menu">
             <li class="home-link">
                 <a href="/index.html">
-                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                    <img src="/img/icons/Fphome.l.gif" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
                 </a>
             </li>
-            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.gif" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/software/index.html">
+                    <img src="/img/icons/Dtapps.m.gif" height="40" alt="Software" class="nav-icon" style="vertical-align: middle;"> Software
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+
+
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.gif" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
 
             <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
 
@@ -53,7 +68,7 @@
 
             <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
 
-            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.gif" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
 
             <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
 
@@ -65,20 +80,21 @@
             <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
             <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
             
-            <li class="section-heading" style="padding-top: 16px;">
-            <li class="home-link" style="margin-top: 6px;">
-                <a href="/blog/index.html">
-                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
-                </a>
-            </li>
-            <li class="section-link"><a href="/blog/about.html">About me</a></li>
         </ul>
-        </content></div>
+        </div></div>
+<div class="nav-bot"> </div>
 </div></td>
 <td class="main-body-td">
 <div class="main-body-container">
 <div class="window-title">Terminal - Installing HP-UX 11.11 on a C360</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h1>Installing HP-UX 11.11 on a C360</h1>
 
 <p><em>Published: 27-May-2025 - Last Updated: 02-Jun-2025</em></p>
@@ -151,11 +167,25 @@ Extract it and point swinstall at GOLDQPK11i_B.11.11.0912.483.depot</p>
 <p>I was having issues with my stty setting over telnet. I added this to my .bash_profile: <code>stty intr ^C erase ^H</code> <br>
 Also, bash is my shell for my user.</p>
 
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 <div class="main-body-container">
 <div class="window-title">Terminal - C compilers</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h2>C compilers</h2>
 
 <p>The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.</p>
@@ -246,11 +276,25 @@ I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it complet
 
 <p>DONE. You now have GCC 4.8.5 in /usr/local/gcc-4.8.5 with GNU as V2.23.2.</p>
 
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 <div class="main-body-container">
 <div class="window-title">Terminal - Software building</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h2>Software building</h2>
 
 <p>Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.</p>
@@ -287,11 +331,25 @@ Then I get this error:  </p>
 Fetched from gnu and it built without any issues. Build non wide character support: <br>
 <code>./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec</code></p>
 
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 <div class="main-body-container">
 <div class="window-title">Terminal - Adding a second disk</div>
-<div class="main-body"><content>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-tl"> </td>
+<td class="win-t"> </td>
+<td class="win-tr"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-l"> </td>
+<td class="win-body"><div class="main-body">
 <h2>Adding a second disk</h2>
 
 <p>I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.</p>
@@ -306,7 +364,14 @@ Next, I went to file systems and mounted the new LVs in temporary locations. I c
 <p><img src="/img/blog/002-lv.png" alt="LVM" title=""></p>
 
 <p>I also added my NFS server to auto mount at startup in Filesystems.</p>
-</content></div>
+</div></td>
+<td class="win-r"> </td>
+</tr></table>
+<table class="win-row" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td class="win-bl"> </td>
+<td class="win-b"> </td>
+<td class="win-br"> </td>
+</tr></table>
 </div>
 </td>
 <td class="td-spacer"></td>

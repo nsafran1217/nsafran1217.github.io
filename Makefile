@@ -8,7 +8,7 @@ posts   = index.html blog/index.html $(src_md:.md=.html) $(src_xml:.xml=.html)
 
 all: strip-metadata $(posts) sitemap.xml
 
-.PHONY: all strip-metadata
+.PHONY: all strip-metadata sync-mirror
 
 
 # Generate all pages stored as .md
@@ -35,3 +35,7 @@ sitemap.xml: $(posts)
 # Strip EXIF/GPS metadata from images
 strip-metadata:
 	./src/strip-metadata.sh
+
+# Sync file mirror
+sync-mirror:
+    rclone sync files.nsafran.com/ r2:ns-mirror --s3-no-check-bucket --size-only
