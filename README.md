@@ -14,6 +14,15 @@ Any H2 headings (two ##) will insert a "window break". The H2 heading will be th
 
 Tables should be in HTML formatting, not markdown.
 
+### Categories
+Any .md page (blog, computers, software, ...) can be put in one or more categories by adding a line at the end of the file:
+```
+Categories: SGI, Linux, Itanium
+```
+Pages without this line have no category. On the rendered page the line becomes links to each category page.
+
+Each category gets a generated page at `blog/category/<pagename>.html`, where the page name is the category lowercased with spaces/symbols replaced by `-` (`SGI Altix` -> `blog/category/sgi-altix.html`). Link to it from anywhere, e.g. `[All SGI articles](/blog/category/sgi.html)`. `blog/index.html` lists every category. Category pages are deleted and regenerated on every build, so a removed category's page goes away.
+
 ## Dependencies
 * [markdown](https://daringfireball.net/projects/markdown/syntax) (`apt install markdown`)
 * xsltproc (`apt install xsltproc`)
@@ -23,7 +32,11 @@ The Makefile uses 4 scripts to create the site.
 `gen-page.sh` - Take a .md filename as an argument. Selects the correct theme, converts to HTML, adds the header `src/templates/header.x` and the footer `src/templates/footer.x`. H2 headings are replaced a bottom of window, then a top of window. The heading is the window title.
 The theme, window titles are set. The generated xml file is then processed with `xsltproc` and the xml file is deleted.
 
-`gen-blog-index.sh` - Create the blog/index.html file. Uses src/templates/blog_index_head.x, then maually constructs a table. Runs `xsltproc` at the end
+`gen-blog-index.sh` - Create the blog/index.html file. Uses src/templates/blog_index_head.x, then maually constructs a table. Runs `xsltproc` at the end. Runs `gen-categories.sh` first and adds the category list.
+
+`gen-categories.sh` - Scans all .md pages for a `Categories:` line and generates `blog/category/<pagename>.html` for each category (using `src/templates/category_head.x`), newest first. Prints the category list for the blog index.
+
+`lib-categories.sh` - Shared helpers (`get_categories`, `category_pagename`) used by `gen-page.sh` and `gen-categories.sh`.
 
 `gen-home-page.sh` - Generates a "blog spotlight" of the last 7 blog entries. Then runs gen-page.sh on index_stage.md and deletes the temporary file.
 

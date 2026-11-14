@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+source src/lib-categories.sh
+
 file="$1"
 xmlfile="${file%.md}.xml"
 trap 'rm -f "$xmlfile"' EXIT
@@ -42,7 +44,19 @@ esac
 
 # Generate the XML file
 cat src/templates/header.x > "$xmlfile"
-markdown "$file" >> "$xmlfile"
+cats=$(get_categories "$file")
+if [ -n "$cats" ]; then
+    # Replace the "Categories:" line with links to each category page
+    links=""
+    while read -r name; do
+        [ -n "$links" ] && links="$links, "
+        links="$links[$name](/blog/category/$(category_pagename "$name").html)"
+    done <<< "$cats"
+    awk -v links="*Categories: $links*" '/^Categories:/ && !done { print links; done=1; next } { print }' "$file" \
+        | markdown >> "$xmlfile"
+else
+    markdown "$file" >> "$xmlfile"
+fi
 cat src/templates/footer.x >> "$xmlfile"
 
 # Replace placeholders

@@ -2,8 +2,17 @@
 
 set -e
 
+# Generate category pages and get the category list
+cats=$(./src/gen-categories.sh)
+
 cd blog
 cat ../src/templates/blog_index_head.x > index.xml
+
+if [ -n "$cats" ]; then
+    echo "<h3>Categories</h3><p>$cats</p><hr></hr>" >> index.xml
+fi
+
+echo "<table><tr><td>Title</td><td>Date Published</td></tr>" >> index.xml
 
 # Loop through all .md files and extract the date
 for file in `ls 0*.md | sort -r`; do

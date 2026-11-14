@@ -1,4 +1,4 @@
-TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.xslt src/templates/blog_index_head.x src/templates/nav.xml
+TEMPLATES = src/templates/header.x src/templates/footer.x src/templates/article.xslt src/templates/blog_index_head.x src/templates/nav.xml src/templates/category_head.x src/lib-categories.sh
 
 # Get all md and xml files, with some exclusions
 src_md = $(shell find . -mindepth 2 -name '*.md' -not -path './src/*' -not -path './img/*')
@@ -20,7 +20,7 @@ all: strip-metadata $(posts) sitemap.xml
 	xsltproc -o $@ src/templates/article.xslt $<
 
 # Generate blog index page
-blog/index.html: $(wildcard blog/*.md) $(TEMPLATES)
+blog/index.html: $(src_md) $(TEMPLATES) src/gen-categories.sh
 	./src/gen-blog-index.sh
 
 # Generate home page
