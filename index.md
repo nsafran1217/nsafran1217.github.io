@@ -4,7 +4,7 @@
 This website will serve as documentation for my computer and electronics projects.
 
 <ul>
-<li>Various UNIX workstations and servers:
+<li>Various UNIX workstations and servers: 
     <ul>
         <li><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
         <li><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>

@@ -19,8 +19,8 @@ for file in `ls blog/0*.md | sort -r`; do
 
     url="${file%.md}.html"
 
-    # Skip first 2 lines, drop empty lines, take first remaining line, trim to 300 chars
-    first_100=$(tail -n +3 "$file" | grep -v '^$' | head -1 | cut -c1-300)
+    # Skip first 3 lines, drop empty lines, take first remaining line, trim to 300 chars
+    first_100=$(tail -n +4 "$file" | grep -v '^$' | head -1 | cut -c1-300)
 
     echo "\n---\n" >> index_stage.md
     echo "[**$title - $date**]($url)  " >> index_stage.md
