@@ -1,5 +1,6 @@
 # AlphaServer 1000
 *Last Updated: 02-May-2025*
+Categories: Digital, UNIX, VMS
 
 ### AlphaServer 1000
 <img src="/img/dec/alpha-badge.jpg" alt="AlphaServer 1000" class="fullwidth"></img>

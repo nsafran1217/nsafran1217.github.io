@@ -1,5 +1,6 @@
 # Configuring an HP Integrity rx2800 i2
 *Published: 11-Nov-2025 - Last Updated: 11-Nov-2025*
+Categories: HP, UNIX
 
 I recently picked up an HP Integrity rx2800 i2 server in a lot of server equipment. This is the newest Itanium server I own. In this article I will walk through configuring the system including setting up RAID array on the integrated p410i controller and installing HP-UX 11.31, along with installing setting up a GCC toolchain (eventually).
 

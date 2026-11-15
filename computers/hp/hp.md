@@ -1,5 +1,6 @@
 # HP
-*Last Updated: 29-Jul-2025*
+*Last Updated: 13-Nov-2026*
+Categories: HP, UNIX
 <img src="/img/hp/hp-logo.jpg" alt="HP Logo" class="inline" width="200px"></img>
 
 I currently have eight HP-UX machines, which is too many. For a while the PA-RISC systems were elusive, 

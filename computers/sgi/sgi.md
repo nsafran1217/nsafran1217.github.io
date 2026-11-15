@@ -1,5 +1,6 @@
 # Silicon Graphics
 *Last Updated: 02-May-2025*
+Categories: SGI, UNIX, Linux
 
 Silicon Graphics workstations are legendary among Unix workstations, mostly for their
 impressive graphics hardware, and their unique case designs.

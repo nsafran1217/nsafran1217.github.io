@@ -1,5 +1,6 @@
 # Ultra 10
 *Last Updated: 02-May-2025*
+Categories: Sun, UNIX
 
 TThe Ultra 5 and Ultra 10 were the first Sun computers to adopt a more PC-like
 architecture. Both feature a PCI bus and IDE controllers for the hard disk and CD-ROM

@@ -1,5 +1,6 @@
 # Setting up Solaris 8 on Ultra 10
 *Published: 31-May-2025 - Last Updated: 31-May-2025*
+Categories: Sun, UNIX
 
 Some notes about setting up a build environment on Solaris 8, specifically my Ultra 10.
 

@@ -1,5 +1,6 @@
 #  Indy
 *Last Updated: 02-May-2025*
+Categories: SGI, UNIX
 
 The Indy is my favorite Silicon Graphics machine, just for the case design. I love the color, the speckled finish, and how the case looks like its fractured horizontally.
 

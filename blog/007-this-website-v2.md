@@ -1,5 +1,6 @@
 # This Website's Design Version 2
 *Published: 15-Mar-2026 - Last Updated: 15-Mar-2026*
+Categories: Website
 
 I have redesigned the build process for this website. With the new build system, I can now write all website content in markdown files. These markdown files are then converted to xml files, which are still processed with `xsltproc`.  
 Writing in markdown is much easier than writing HTML, so maybe this will encourage me to make more pages and keep everything up to date.

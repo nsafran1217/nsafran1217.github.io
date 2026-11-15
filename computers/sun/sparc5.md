@@ -1,5 +1,6 @@
 # SPARCStation5
 *Last Updated: 02-May-2025*
+Categories: Sun, UNIX
 
 This is another pizza box workstation, equipped with 32MB of RAM and a ~60MHz MicroSPARC
 processor. Unfortunately, the memory in this system is proprietary and relatively rare,

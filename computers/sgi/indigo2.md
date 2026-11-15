@@ -1,5 +1,6 @@
 # Indigo2
 *Last Updated: 02-May-2025*
+Categories: SGI, UNIX
 
 The Indigo2 was the first Silicon Graphics machine I acquired, and I'd love to add the purple model with High Impact graphics to my collection someday.  
 My system is equipped with a 150 MHz R4400 processor, 128MB of RAM, and GR3-XZ graphics.  

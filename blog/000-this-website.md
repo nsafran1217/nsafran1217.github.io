@@ -1,5 +1,6 @@
 # This Website's Design
 *Published: 22-May-2025 - Last Updated: 15-Mar-2026*
+Categories: Website
 
 ### This is outdated. New version described here: [This Website Version 2](007-this-website-v2.html)
 

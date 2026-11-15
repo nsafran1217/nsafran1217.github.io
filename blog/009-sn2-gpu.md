@@ -1,5 +1,6 @@
 # Fixing the radeon and amggpu driver on SGI Altix
 *Published: 17-May-2026 - Last Updated: 10-Oct-2026*
+Categories: Altix, Linux
 
 For [over 15 years](https://nekonomicon.irixnet.org/forum/3/16723530/1.html), people have been trying to use GPUs with acceleration on Silicon Graphics Altix 350s, however, no one has ever been able to get it to work. Finally, we have a fix. You can now use modern ATi/AMD PCI-e GPUs on SGI Altix 350s with easy to find PLX based PCI to PCI-e adapter boards. The `radeon` and `amdgpu` drivers WORKS with full 3d acceleration on the most recent Linux kernel on T2 Linux.  
 We can even play minecraft!

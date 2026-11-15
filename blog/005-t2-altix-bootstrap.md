@@ -1,5 +1,6 @@
 # Bootstraping T2 SDE Linux on SGI Altix From SLES
 *Published: 10-Jun-2025 - Last Updated: 3-Jun-2026*
+Categories: Altix, Linux
 
 T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.
 

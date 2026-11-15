@@ -1,5 +1,6 @@
 # IBM
 *Last Updated: 02-May-2025*
+Categories: IBM, UNIX
 
 Haven't had time to document much. I have AIX 4.3.2 on the 43p and have had some fun looking at AIX.
 

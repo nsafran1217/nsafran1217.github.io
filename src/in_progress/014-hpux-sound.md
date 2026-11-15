@@ -1,5 +1,6 @@
 # PCI Sounds Cards on HP-UX
 *Published: 11-Nov-2026 - Last Updated: 11-Nov-2026*
+Categories: HP, UNIX
 
 HP only supported specific cards on HP-UX. These are the cards I tested on HP-UX 11.11 in a B2600 and C8000
 

@@ -1,5 +1,6 @@
 # SPARCStation IPX
 *Last Updated: 02-May-2025*
+Categories: Sun, UNIX
 
 I really enjoy the lunchbox form factor of the IPX. I purchased this SPARCStation IPX on
 ebay as untested, but it did say it powered on. My system came with a dummy load

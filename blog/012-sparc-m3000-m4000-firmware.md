@@ -1,5 +1,6 @@
 # Upgrading firmware and clearing faults on M3000/M4000
 *Published: 29-Jul-2026 - Last Updated: 29-Jul-2026*
+Categories: Sun, Repair
 
 Old firmware version (At least older than XCP 1116) do not allow the customer to reset certain faulted FRUs in the SPARC Enterprise systems. Certain bugs in the serial code could cause the CPU to be faulted, basically bricking the system.
 Older version of OpenBSD would trigger this fault, but it appears to have since been fixed. OpenBSD 7.6 works fine on my M3000.

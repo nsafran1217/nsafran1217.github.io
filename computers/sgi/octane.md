@@ -1,5 +1,6 @@
 # Octane
 *Last Updated: 02-May-2025*
+Categories: SGI, UNIX
 
 The Octane was SGI's successor to the Indigo2, offering impressive graphics capabilities
 and a modular design. It supports dual CPUs and various expansion cards through its

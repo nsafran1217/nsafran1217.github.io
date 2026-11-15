@@ -1,5 +1,6 @@
 # Sun Microsystems
-*Last Updated: 28-May-2025*
+*Last Updated: 11-Nov-2026*
+Categories: Sun, UNIX
 
 <img src="/img/sun/sun.png" height="120px" class="fullwidth"></img>
 

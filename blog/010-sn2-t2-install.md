@@ -1,5 +1,6 @@
 # Installing T2 Linux 26.6 on SGI Altix, with GPU
 *Published: 17-May-2026 - Last Updated: 21-Jul-2026*
+Categories: Altix, Linux
 
 Below are instructions for installing T2 Linux on an SGI Altix with a custom kernel that includes Altix support and patches to enable PCI GPUs to work.
 

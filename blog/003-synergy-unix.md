@@ -1,5 +1,6 @@
 # Setting up Synergy on UNIX workstations to share mouse and keyboards
 *Published: 30-May-2025 - Last Updated: 30-May-2025*
+Categories: UNIX
 
 When I first read about Synergy when I was kid, I was so excited about it. I had a slight obsession with KVMs, and Synergy seemed like an even cooler experience. I remember I set it up on 2 Windows XP computers, but I think I had issues getting it to work on boot up, so I never ended up using it much.
 

@@ -1,5 +1,6 @@
 # Ultra 1
 *Last Updated: 02-May-2025*
+Categories: Sun, UNIX
 
 I have two Sun Ultra 1s. Both of these systems came out of a basement and have a decent
 amount of rust on the chassis. Unfortunately, one of the systems never worked correctly.

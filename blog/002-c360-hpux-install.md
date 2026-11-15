@@ -1,5 +1,6 @@
 # Installing HP-UX 11.11 on a C360
 *Published: 27-May-2025 - Last Updated: 02-Jun-2025*
+Categories: HP, Unix
 
 I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc.  
 So lets just install 11.11 (aka 11i v1)

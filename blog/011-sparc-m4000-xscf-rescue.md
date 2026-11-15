@@ -1,5 +1,6 @@
 # Recovering a corrupt XSCF on a SPARC Enterprise server
 *Published: 21-Jul-2026 - Last Updated: 21-Jul-2026*
+Categories: Sun, Repair
 
 I recently recieved a Fujitsu SPARC Enterprise M4000 server, however, the XSCF failed to boot properly with the following error:
 

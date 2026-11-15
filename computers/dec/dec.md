@@ -1,5 +1,6 @@
 # Digital Equipment Corporation
 *Last Updated: 02-May-2025*
+Categories: Digital, UNIX, VMS
 
 <img src="/img/dec/dec-logo.png" alt="DEC Logo" class="inline" width="200px"></img>
 Digital Equipment Corporation (DEC) fascinates me because of its significant impact on

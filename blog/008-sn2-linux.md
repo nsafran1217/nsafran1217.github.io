@@ -1,5 +1,6 @@
 # Adding support for SGI Altix back into Linux
 *Published: 16-Mar-2026 - Last Updated: 6-Oct-2026*
+Categories: Altix, Linux
 
 Linux removed support for the Altix in 2019, although it had been broken since 4.0 in 2015. To make matters worse, Itanium was removed from Linux in 2021. However, in 2026 with modern LLM tools, adding back support for a rare supercomputer is possible by one person that is not a kernel developer. This is an overview of my project to add support for the SGI Altix back into Linux.
 

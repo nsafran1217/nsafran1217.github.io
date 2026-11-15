@@ -1,5 +1,6 @@
 # SGI Altix 350
 *Last Updated: 17-May-2026*
+Categories: SGI, Linux
 
 I purchased this Altix 3700 and an [Altix 3700](/computers/sgi/altix3700.html) from a recycler, just before they were scrapped.  
 While I was able to save the NUMAlink cables and the systems themselves, the racks were unfortunately already gone.
